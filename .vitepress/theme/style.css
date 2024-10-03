@@ -1,0 +1,174 @@
+/**
+
+ * 通过覆盖 CSS 变量来自定义默认主题样式：
+ * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+
+ * 每种颜色都有完全相同的颜色阶系统，包括3种不同亮度的纯色和1种柔和色。
+ *
+ * - `XXX-1`：最鲜艳的颜色，主要用于彩色文本。它必须满足与 `XXX-soft` 背景的对比度。
+ *
+ * - `XXX-2`：主要用于按钮的悬停状态的颜色。
+ *
+ * - `XXX-3`：用于实心背景的颜色，如按钮的背景色。它必须满足与纯白色（#ffffff）文本在其上的对比度。
+ *
+ * - `XXX-soft`：用于微妙背景的颜色，如自定义容器或徽章。它必须满足在 `XXX-1` 颜色之上的对比度。
+ *
+ *   柔和色必须具有半透明的 alpha 通道。这很关键，因为它允许在彼此之上添加多个“柔和”颜色来创建强调色，例如在自定义容器内嵌套代码块时。
+ *
+ * - `default`：用于没有特殊含义的微妙指示的颜色，如菜单悬停状态的背景色。
+ *
+ * - `brand`：用于主要品牌颜色，如链接文本、带有品牌主题的按钮等。
+ *
+ * - `tip`：用于指示有用信息。默认主题默认使用品牌颜色。
+ *
+ * - `warning`：用于向用户指示警告。用于自定义容器、徽章等。
+ *
+ * - `danger`：用于向用户显示错误或危险信息。用于自定义容器、徽章等。
+ * ---------------------------------------------------------------------------
+*/
+
+/* 默认颜色 */
+:root {
+  /* 默认颜色的最亮版本，用于文本 */
+  --vp-c-default-1: var(--vp-c-gray-1);
+  /* 默认颜色的次亮版本，用于悬停状态 */
+  --vp-c-default-2: var(--vp-c-gray-2);
+  /* 默认颜色的较暗版本，用于背景 */
+  --vp-c-default-3: var(--vp-c-gray-3);
+  /* 默认颜色的柔和版本，用于微妙背景 */
+  --vp-c-default-soft: var(--vp-c-gray-soft);
+}
+
+/* 品牌颜色 */
+:root {
+  /* 品牌颜色的最亮版本，用于文本 */
+  --vp-c-brand-1: var(--vp-c-indigo-2);
+  /* 品牌颜色的次亮版本，用于悬停状态 */
+  --vp-c-brand-2: var(--vp-c-indigo-2);
+  /* 品牌颜色的较暗版本，用于背景 */
+  --vp-c-brand-3: var(--vp-c-indigo-3);
+  /* 品牌颜色的柔和版本，用于微妙背景 */
+  --vp-c-brand-soft: var(--vp-c-indigo-soft);
+}
+
+/* 提示信息颜色 */
+:root {
+  /* 提示信息颜色的最亮版本，使用品牌颜色 */
+  --vp-c-tip-1: var(--vp-c-brand-1);
+  /* 提示信息颜色的次亮版本 */
+  --vp-c-tip-2: var(--vp-c-brand-2);
+  /* 提示信息颜色的较暗版本 */
+  --vp-c-tip-3: var(--vp-c-brand-3);
+  /* 提示信息颜色的柔和版本 */
+  --vp-c-tip-soft: var(--vp-c-brand-soft);
+}
+
+/* 警告颜色 */
+:root {
+  /* 警告颜色的最亮版本 */
+  --vp-c-warning-1: var(--vp-c-yellow-1);
+  /* 警告颜色的次亮版本 */
+  --vp-c-warning-2: var(--vp-c-yellow-2);
+  /* 警告颜色的较暗版本 */
+  --vp-c-warning-3: var(--vp-c-yellow-3);
+  /* 警告颜色的柔和版本 */
+  --vp-c-warning-soft: var(--vp-c-yellow-soft);
+}
+
+/* 危险颜色 */
+:root {
+  /* 危险颜色的最亮版本 */
+  --vp-c-danger-1: var(--vp-c-red-1);
+  /* 危险颜色的次亮版本 */
+  --vp-c-danger-2: var(--vp-c-red-2);
+  /* 危险颜色的较暗版本 */
+  --vp-c-danger-3: var(--vp-c-red-3);
+  /* 危险颜色的柔和版本 */
+  --vp-c-danger-soft: var(--vp-c-red-soft);
+}
+
+/**
+* Component: Button
+* -------------------------------------------------------------------------- */
+
+:root {
+  /* 品牌按钮的边框样式，设置为透明 */
+  --vp-button-brand-border: transparent;
+
+  /* 品牌按钮的文本颜色，设置为白色 */
+  --vp-button-brand-text: var(--vp-c-white);
+
+  /* 品牌按钮的背景颜色，使用品牌颜色的较暗版本 */
+  --vp-button-brand-bg: var(--vp-c-indigo-2);
+
+  /* 品牌按钮悬停时的边框样式，设置为透明 */
+  --vp-button-brand-hover-border: transparent;
+
+  /* 品牌按钮悬停时的文本颜色，设置为白色 */
+  --vp-button-brand-hover-text: var(--vp-c-white);
+
+  /* 品牌按钮悬停时的背景颜色，使用品牌颜色的次亮版本 */
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+
+  /* 品牌按钮激活时的边框样式，设置为透明 */
+  --vp-button-brand-active-border: transparent;
+
+  /* 品牌按钮激活时的文本颜色，设置为白色 */
+  --vp-button-brand-active-text: var(--vp-c-white);
+
+  /* 品牌按钮激活时的背景颜色，使用品牌颜色的最亮版本 */
+  --vp-button-brand-active-bg: var(--vp-c-brand-1);
+}
+
+/**
+* Component: Home
+* -------------------------------------------------------------------------- */
+
+:root {
+  /* 首页英雄部分的名称颜色，设置为透明 */
+  --vp-home-hero-name-color: transparent;
+  /* 首页英雄部分的名称背景，使用线性渐变 */
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #0055ff);
+  /* 首页英雄部分的图像背景，使用线性渐变 */
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #bd34fe 50%, #0055ff 50%);
+  /* 首页英雄部分的图像模糊效果 */
+  --vp-home-hero-image-filter: blur(44px);
+}
+
+@media (min-width: 640px) {
+  :root {
+    /* 当屏幕宽度大于等于 640px 时，首页英雄部分的图像模糊效果增强 */
+    --vp-home-hero-image-filter: blur(56px);
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    /* 当屏幕宽度大于等于 960px 时，首页英雄部分的图像模糊效果进一步增强 */
+    --vp-home-hero-image-filter: blur(68px);
+  }
+}
+
+/**
+* Component: Custom Block
+* -------------------------------------------------------------------------- */
+
+:root {
+  /* 自定义块提示部分的边框样式，设置为透明 */
+  --vp-custom-block-tip-border: transparent;
+  /* 自定义块提示部分的文本颜色，设置为默认文本颜色 */
+  --vp-custom-block-tip-text: var(--vp-c-text-1);
+  /* 自定义块提示部分的背景颜色，使用品牌颜色的柔和版本 */
+  --vp-custom-block-tip-bg: var(--vp-c-brand-soft);
+  /* 自定义块提示部分内代码块的背景颜色，使用品牌颜色的柔和版本 */
+  --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
+}
+
+/**
+* Component: Algolia
+* -------------------------------------------------------------------------- */
+
+.DocSearch {
+  /* 设置 Algolia 搜索组件的主要颜色为品牌颜色的最亮版本 */
+  --docsearch-primary-color: var(--vp-c-indigo-1)!important;
+}
