@@ -177,6 +177,7 @@ import { defineConfig } from "vitepress";
         },
         {
           "text": "🐰其他配置",
+          collapsed: true, // 可选，默认值：false
           "items": [
             {
               "text": "Dalle绘画配置",
@@ -735,9 +736,7 @@ import { defineConfig } from "vitepress";
       "copyright": "上海枭格网络科技有限公司 copyright@ 2024 Albert AIGC系统源码 ICP备2022147728号"
     },
     siteTitle: false
-
     // siteTitle: false  // 不显示标题
-
   },
   "srcDir": "./",
   "assetsDir": "static",

@@ -233,6 +233,7 @@ make dist
 
 ## 其他
 ```
- collapsed: false, // 折叠状态
- siteTitle: false  // 不显示标题
+ collapsed: false, // 折叠状态 // 可选，默认值：false，是否折叠侧边栏
+ siteTitle: false  // 不显示标题 // 可选，默认值：false，是否显示标题
+ collapsed: true, // 可选，默认值：false，是否折叠侧边栏
  ```
