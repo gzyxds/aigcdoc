@@ -178,7 +178,7 @@ import { defineConfig } from "vitepress";
                   "link": "https://www.urlnet.cn/"
                 },
                 {
-                  "text": "优刻云",
+                  "text": "优刻云计算",
                   "link": "https://www.cloudcvm.com/ "
                 },
                 {
@@ -357,7 +357,7 @@ import { defineConfig } from "vitepress";
     "logo": "\\images\\logo.png",
     "outline": {
       "level": 2,
-      "label": "On this page"
+      "label": "页面导航"
     },
     "search": {
       "provider": "local",

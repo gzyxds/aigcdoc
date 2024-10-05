@@ -1,186 +1,179 @@
-# ChatGLM本地模型部署
-
-## ChatGLM2-6B
-
-### ChatGLM2-6B 简介
-
-ChatGLM2-6B 是开源中英双语对话模型 ChatGLM-6B 的第二代版本，具体介绍可参阅 [ChatGLM2-6B 项目主页](https://github.com/THUDM/ChatGLM2-6B)
-
-注意
-
-ChatGLM2-6B 权重对学术研究完全开放，在获得官方的书面许可后，亦允许商业使用。本教程只是介绍了一种用法，无权给予任何授权！
-
-### 推荐配置
-
-依据官方数据，同样是生成 8192 长度，量化等级为 FP16 要占用 12.8GB 显存、int8 为 8.1GB 显存、int4 为 5.1GB 显存，量化后会稍微影响性能，但不多。
-
-| 类型 | 内存           | 显存           | 硬盘空间       |
-| ------ | ---------------- | ---------------- | ---------------- |
-| fp16 | \>\=16GB | \>\=16GB | \>\=25GB |
-| int8 | \>\=16GB | \>\=9GB  | \>\=25GB |
-| int4 | \>\=16GB | \>\=6GB  | \>\=25GB |
-
-### 源码部署
+# SD(stable-diffusion-webui)绘图部署
 
 提示
 
-根据上面的环境配置配置好环境，具体教程自行百度；
-可参考的部署文章: [https://blog.csdn.net/lovelylord/article/details/132349967](https://blog.csdn.net/lovelylord/article/details/132349967)
+使用Docker部署，支持服务器连接本地主机部署的绘画模型。使用大模型只需要一台主机，不需要其他费用。
 
-* **1、从GitHub仓库中拉取代码**
+信息
 
-```
-# 1.从GitHub仓库中拉取代码
-git clone https://github.com/THUDM/ChatGLM2-6B
-
-# 2.进入下载源码的目录
-cd ChatGLM2-6B
-```
-
-* **2、下载python文件：**  [点击Python文件](https://doc.chatmoney.cn/docs/download/glm.zip)
-
-    * 得到两个文件: openai\_ai.py 和 requirements.txt
-    * 把这两个文件替换到 ChatGLM2-6B 目录里面
-* **3、在命令行输入命令(安装依赖)：**  **​`pip install -r requirments.txt`​**
-
-    * 建议使用python的虚拟环境,以免产生一些不必要的麻烦。
-* **4、运行项目：**  **​`python openai_api.py --model 16`​** **这里的数字根据上面的配置进行选择。**
-
-    * 然后等待模型下载，直到模型加载完毕为止。如果出现报错先问百度。
-    * 这里可能需要科学上网
-* **5、启动成功后应该会显示如下地址：**
-
-提示
-
-这里的 [http://0.0.0.0:8000](http://0.0.0.0:8000/) 就是连接地址。
-
-![](https://doc.chatmoney.cn/docs/images/general/third-deployment/chat-glm/chatglm-start.png)
-
-### 关于 openai\_api.py 启动的一些参数
-
-| 参数名   | 可选值                                                             | 默认值 |
-| ---------- | -------------------------------------------------------------------- | -------- |
-| --device | cuda\=显卡运行, cpu\=cpu运行                                 | cuda   |
-| --path   | local\=本地下载的模型运行, thudm\=线上自动下载               | thudm  |
-| --model  | 4\=chatglm2-6b-int4, 8\=chatglm2-6b-int8, 16\=chatglm2-6b | 16     |
-
-* 说明:
-
-    * 如果你 `--path` 参数设置为 local, 那需要你先把模型下载下来, 放到 ChatGLM2-6B/models 目录下
-    * 比如: ChatGLM2-6B/models/chatglm2-6b-int4
-    * 然后再去运行: `python openai_api.py --model 4 --path local`
-
-### 接口测试
-
-![](https://doc.chatmoney.cn/docs/images/general/third-deployment/chat-glm/chatglm-post.png)
-
-### 接入到系统
-
-![](https://doc.chatmoney.cn/docs/images/general/third-deployment/chat-glm/chatglm-set.png)
-
-## ChatGLM3-6B
+由于硬件等问题，部署存在一起难度，小白用户推荐购买已安装SD绘画和大模型的显卡AI主机：[https://www.goofish.com/item?id=836172376138](https://www.goofish.com/item?id=836172376138)
 
 注意
 
-部署方案和ChatGLM2-6B的方式基本上是一样的。
+本教程如果涉及本地主机部署，需要本地主机可以连接境外站点，特别是安装依赖或者打开某些站点的时候。
+请自行解决此问题。
 
-* **1、从GitHub仓库中拉取代码**
+## 安装Python环境
+
+打开[https://www.python.org/downloads](https://www.python.org/downloads)，找到适合自己系统环境的安装包，下载并安装Python3.10.6。![](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/download-python-1.png)![](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/download-python-2.png)![](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/install-python.png)
+
+## 安装Git
+
+打开[https://git-scm.com](https://git-scm.com/)，找到适合自己系统环境的安装包，下载并安装git。![](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/install-git-1.png)![](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/install-git-2.png)![](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/install-git-3.png)
+
+## 使用Git下载stable-diffusion-webui
+
+注意
+
+由于github是境外网站，网络问题可能会导致命令执行失败，请弄好网络，多次重试。
+
+右键点击桌面或者其他目录，选择【在终端中打开】，输入以下命令后，【回车键】执行命令，对项目git仓库进行克隆，项目会下载到对应目录。
 
 ```
-# 1.从GitHub仓库中拉取代码
-https://github.com/THUDM/ChatGLM3
-
-# 2.进入下载源码的目录
-cd ChatGLM3-6B
+git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 ```
 
-* **2、在命令行输入命令(安装依赖)**
+![](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/download-sd-webui-1.png)![](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/download-sd-webui-2.png)
+
+## 启动stable-diffusion-webui
+
+提示
+
+在启动之前，可以根据系统或者硬件，编辑webui-user修改参数，优化生成图像速度。
+具体可参考官网文档:[https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki)
+
+* **步骤1**: 打开stable-diffusion-webui目录，找到webui-user.bat文件，右键编辑文件，添加`--api --listen --xformers --no-half`参数,然后保存文件。
+
+bat
+
+```
+@echo off
+
+set PYTHON=
+set GIT=
+set VENV_DIR=
+set COMMANDLINE_ARGS=--api --listen --xformers --no-half
+
+call webui.bat
+```
+
+![](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/edit-webui-user.bat.png)
+
+提示
+
+可以在本地主机打开[127.0.0.1:7860](https://doc.chatmoney.cn/pro/third-deployment/127.0.0.1:7860.html)，测试绘画是否可用。
+
+* **步骤2**: 双击webui-user.bat文件，双击启动服务，启动成后，会启动弹出浏览器界面，默认端口为7860。如果你是使用云服务器，请在服务器运营商控制台开放7860端口，然后管理后台【AI应用】-\>【SD绘图】-\>【应用配置】-\>【AI域名】配置上：[http://公网IP+端口访问](http://xn--ip+-tw1ew6iu74fkogqz0an4u/)，设置好关于SD绘图分类模型等。![](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/start-sd.png)
+
+## 添加绘画模型
+
+提示
+
+不添加也可用使用SD默认的模型。
+
+绘画模型可以在[https://www.liblib.art](https://www.liblib.art/)或者其他站点下载，有的模型商用需要授权，请自行判断。下载的模型文件格式为safetensors。models/Stable-diffusion目录放大模型、models/Lora目录放微调模型、models/VAE目录放美化模型。模型放好，关闭重启程序。
+
+![](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/models.png)
+
+## 服务器连接本地主机部署的服务
+
+提示
+
+全能AI知识库系统3.5以后的版本，支持使用frp连接本地部署的绘画服务器和模型，无需购买GPU服务器，即可使用开源模型。
+
+注意
+
+如果你在服务器部署大语言模型，直接绕过本步骤。
+
+### 服务器上的设置
+
+* **步骤1**: 打开项目下/docker/config/frps/frps.toml文件，将auth.token字符串的密钥重新定义，可以使用其他任意非中文字符串，然后保存。
+
+ini
+
+```
+bindPort = 7314
+auth.token = "自己设置的非中文字符串"
+```
+
+![](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/frps.toml.png)
+
+* **步骤2**: 打开项目下/docker/config/supervisor/supervisor.ini文件，在最底部增加frps的守护进程，然后保存。
+
+ini
+
+```
+[program:frps]
+command=/usr/bin/frps -c /usr/local/etc/frps.toml
+directory=/usr/local/etc
+autostart=true
+autorestart=true
+stderr_logfile=/var/log/frps.err.log
+stdout_logfile=/var/log/frps.out.log
+```
+
+![](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/supervisor.ini.png)
+
+* **步骤3**: 点击【Docker】-\>【容器】，找到项目的PHP容器，点击【重启】。![](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/php-container-restart.png)
+* **步骤4**: 点击在宝塔面板【安全】-\>【添加端口规则】，将7314端口放行。 然后在服务器服务商的（阿里云、腾讯云等）控制台的安全组开放7314端口，保障端口是连通的。![](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/port.png)
+
+提示
+
+如何测试端口是否放行，可以打开[https://tool.chinaz.com/port](https://tool.chinaz.com/port),输入服务器IP地址和端口，点击【开启扫描】，状态为开启，即端口是连通的。![](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/test-port.png)
+
+⚠️ 警告
+
+如果已经使用3.5以下老版本，步骤所有不同，步骤1的文件可能不存在，可以从新下载的源码复制进去，放在相同的位置，按步骤1的操作。步骤2照样操作。
+然后打开项目下docker-compose.yml文件，找到PHP容器配置，将除了"user:xxxx"选项以外替换为新版本的内容，注意保持缩进（就是前面有多少空格不要更改）。
+![](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/docker-compose-php.png)返回【Docker】-\>【容器】，然后删除属于本项目下的所有容器，一般情况下，删除容器不会数据，如果不放心可先备份。接着返回【容器编排】，删除之前添加的容器编排，重新添加即可。
+
+### 本地主机上的设置
+
+提示
+
+frp是一款非常优秀的内网穿透软件。
+
+* **步骤1**: 在部署SD服务的主机上，打开[https://github.com/fatedier/frp/releases](https://github.com/fatedier/frp/releases)，下载自己系统相对应的frp0.58.1软件版本，“解压下载的压缩包。![](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/download-frp.png)
+* **步骤2**: 右键点击【frpc.toml】文件，点击【在记事本中编辑】，打开文件，然后设置frpc信息，其中serverAddr为服务器ip地址，auth.token为服务器上frps.toml的auth.token的值一致，localPort和remotePort为SD服务器的端口，然后保存文件。
+
+ini
+
+```
+serverAddr = "你的ip地址"
+serverPort = 7314
+auth.token = "你服务上设置的任意非中文字符串"
+
+[[proxies]]
+name = "sd"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 7860
+remotePort = 7860
+```
+
+![](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/frpc.toml.png)
+
+提示
+
+frpc启动失败，可能是以下原因。
+1.服务器公网IP地址、端口、auth.token设置不正确。
+2.服务器端口没有对外开放，无法连通。
+3.服务器上容器的frps没有正确运行。
+
+* **步骤3**: 在frp目录空白处右键【在终端中打开】，在终端运行以下命令，运行frpc，启动成功好，可以看到以下界面。
 
 shell
 
 ```
-# PS: 建议使用python的虚拟环境,以免产生一些不必要的麻烦。
-pip install -r requirments.txt
+.\frpc.exe -c frpc.toml
 ```
 
-* **3、安装cuda依赖 (如果你是用显卡运行,否则忽略该步骤)**
+![](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/start-frpc.png)
 
-shell
+## 管理后台配置
 
-```
-3.1、我这边是使用windows系统,首先需要运行一下命令看一下CUDA的版本
-    在cmd终端运行: nvidia-smi
-    我这边得到的版本是: CUDA Version: 12.2
+提示
 
-3.2、然后去torch官网中查看CUDA适配的torch版本
-   官网: https://pytorch.org/get-started/locally/
+一般情况下，使用普通的独立显卡，绘制默认分辨率的画，在10秒内。
 
-3.3、进入网站后按版本选择安装命令 (根据你电脑实际情况选择)
-    PyTorch Build    :  Stable(2.1.0)
-    Your OS          : Windows
-    Package          : Pip
-    Language         : Python
-    Compute Platform : CUDA 12.1
-    Run this Command : pip3 install torch trchvision ......
-
-3.4、你只需要复制后面 Run this Command 选项的这串 pip3的安装命令, 然后回到你电脑的终端运行即可
-```
-
-* **4、下载python文件：**  [点击Python文件](https://doc.chatmoney.cn/docs/download/glm3.zip)
-
-    * 得到1个文件: openai\_ai.py (此文件就是启动文件)
-    * 把这个文件放到到 ChatGLM3-6B 目录里面
-* **5、下载模型文件到本地：**
-
-    * 下载地址: [https://modelscope.cn/models/ZhipuAI/chatglm3-6b/files](https://modelscope.cn/models/ZhipuAI/chatglm3-6b/files)
-    * 把里面列表所有文件都下载回来, 并统一用一个名为 chatglm3-6b 的文件夹存放
-    * 然后把该文件夹的(含所有内容) 一并移动到 ChatGLM3-6B/models 目录下面
-* **6、运行项目：**  **​`python openai_api.py`​** **这里的数字根据上面的配置进行选择。**
-
-    * 然后等待模型下载，直到模型加载完毕为止。如果出现报错先问百度。
-    * 这里可能需要科学上网 (默认是需要从 www.huggingface.org 上面下载模型文件回来的, 时间会比较长)
-    * 以上什么参数都没有的实际运行命令是 `python openai_api.py --device cuda --path local --model 4`
-
-        * 该命令的意思是 启动脚本 使用 【显卡驱动、使用本地下载的模型文件(即上面第5步) 、 使用量化版本】
-        * 为什么默认使用量化版本? 因为如果你的显卡显存不够13GB是没办法运行正常的版本的。
-        * 如果运行正常版本? 把参数 --model 4 改成 --model 16 即可。
-        * 问: 我要运行32k的模型呢? 答: 那你就去下载32k的模型 当然放到源码的models目录下面, 修改一些运行命令运行就行了
-* **7、运行后的效果**
-
-shell
-
-```
-(venv) PS E:\AI\GLM3> python .\openai_api.py
-
-===========================
-本次加载模型的设备为GPU:  NVIDIA CMP 40HX
-===========================
-
-正在启动的是量化版本...
-
-Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████| 7/7 [00:23<00:00,  3.41s/it]
-INFO:     Started server process [11136]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-INFO:     Uvicorn running on http://0.0.0.0:8100 (Press CTRL+C to quit)
-
-## 注意
-## 注意
-## 这个就是你的运行接口,配置到知识库系统里那个
-接口: http://0.0.0.0:8100
-```
-
-* **8、关于 openai_api.py 启动的一些参数**
-
-| 参数名   | 可选值                                                                              | 默认值 |
-| ---------- | ------------------------------------------------------------------------------------- | -------- |
-| --device | cuda\=显卡运行, cpu\=cpu运行                                                  | cuda   |
-| --path   | local\=本地下载的模型运行, thudm\=线上自动下载                                | thudm  |
-| --model  | 4\=量化模型, 16\=chatglm3-6b, 32\=chatglm2-6b-32k, 128\=chatglm2-6b-32k | 4      |
-
-* 说明:
-
-    * 如果你 `--path` 参数设置为 local, 那需要你先把模型下载下来, 放到 ChatGLM2-6B/models 目录下
-    * 比如: ChatGLM3-6B/models/chatglm3-6b
-    * 然后再去运行: `python openai_api.py --model 4 --path local`
-    * PS: 温馨小提示,GLM3不再像之前GLM2那样单独提供量化版本模型下载, 现在是量化模型直接继承在 chatglm3-6b模型上,使用运行命令作为区分。
+登录管理后台，打开【AI应用】-\>【SD绘图】-\>【应用配置】，【AI域名】如果了使用【## 服务器连接本地主机部署的服务 】，设置为`http://127.0.0.1:7860`，如果不使用，直接配置服务器的IP地址+端口，最好设置好关于SD绘图分类模型等，这样完成了，可以在前台测试绘画。![](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/settings-sd-local-domain.png)
