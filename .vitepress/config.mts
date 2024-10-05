@@ -593,8 +593,8 @@ import { defineConfig } from "vitepress";
               "link": "/项目介绍/AIGC系统/Work"
             },
             {
-              "text": "chat",
-              "link": "/聊天绘画/AIGC系统/chat"
+              "text": "聊天绘画",
+              "link": "/项目介绍/AIGC系统/chat"
             },
             {
               "text": "论文写做",
