@@ -569,19 +569,19 @@ import { defineConfig } from "vitepress";
           "items": [
             {
               "text": "产品授权",
-              "link": "/项目介绍/项目介绍/产品授权"
+              "link": "/项目介绍/产品授权.md"
             },
             {
               "text": "授权购买",
-              "link": "/项目介绍/项目介绍/授权购买"
+              "link": "/项目介绍/授权购买"
             },
             {
               "text": "联系我们",
-              "link": "/项目介绍/项目介绍/联系我们"
+              "link": "/项目介绍/联系我们"
             },
             {
               "text": "项目介绍",
-              "link": "/项目介绍/项目介绍/项目介绍"
+              "link": "/项目介绍/项目介绍"
             }
           ]
         },
@@ -589,15 +589,15 @@ import { defineConfig } from "vitepress";
           "text": "AIGC系统",
           "items": [
             {
-              "text": "Work",
+              "text": "企业知识库",
               "link": "/项目介绍/AIGC系统/Work"
             },
             {
               "text": "chat",
-              "link": "/项目介绍/AIGC系统/chat"
+              "link": "/聊天绘画/AIGC系统/chat"
             },
             {
-              "text": "paper",
+              "text": "论文写做",
               "link": "/项目介绍/AIGC系统/paper"
             }
           ]
