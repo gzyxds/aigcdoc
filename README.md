@@ -232,5 +232,7 @@ make dist
 
 
 ## 其他
+```
  collapsed: false, // 折叠状态
  siteTitle: false  // 不显示标题
+ ```
