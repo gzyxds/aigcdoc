@@ -13,19 +13,19 @@ import { defineConfig } from "vitepress";
         "items": [
           {
             "text": "📗项目介绍",
-            "link": "/Project/Project"
+            "link": "/项目介绍/项目介绍"
           },
           {
             "text": "🤖产品授权",
-            "link": "/Project/Project"
+            "link": "/项目介绍/产品授权"
           },
           {
             "text": "🛒授权购买",
-            "link": "/Project/Project"
+            "link": "/项目介绍/授权购买"
           },
           {
             "text": "☎️联系我们",
-            "link": "/Project/Project"
+            "link": "/项目介绍/联系我们"
           }
         ]
       },
@@ -104,20 +104,6 @@ import { defineConfig } from "vitepress";
             "link": "/sponsor/index"
           }
         ]
-      },
-      {
-        "text": " 🍉指南",
-        "items": [
-          {
-            "text": "介绍",
-            "items": [
-              {
-                "text": "前言",
-                "link": "/preface"
-              }
-            ]
-          }
-        ]
       }
     ],
     "sidebar": {
@@ -126,20 +112,24 @@ import { defineConfig } from "vitepress";
           "text": "🐳知识库部署",
           "items": [
             {
-              "text": "api-examples",
-              "link": "/work/🐳知识库部署/api-examples"
+              "text": "宝塔面板Docker部署",
+              "link": "/work/🐳知识库部署/宝塔面板Docker部署"
             },
             {
-              "text": "markdown-examples",
-              "link": "/work/🐳知识库部署/markdown-examples"
+              "text": "Markdown扩展示例",
+              "link": "/work/🐳知识库部署/Markdown扩展示例"
+            },
+            {
+              "text": "API示例",
+              "link": "/work/🐳知识库部署/API示例"
+            },
+            {
+              "text": "update",
+              "link": "/work/🐳知识库部署/update"
             },
             {
               "text": "work",
               "link": "/work/🐳知识库部署/work"
-            },
-            {
-              "text": "宝塔面板Docker部署",
-              "link": "/work/🐳知识库部署/宝塔面板Docker部署"
             }
           ]
         },
@@ -186,23 +176,6 @@ import { defineConfig } from "vitepress";
           ]
         },
         {
-          "text": "🐞常见问题",
-          "items": [
-            {
-              "text": "500错误",
-              "link": "/work/🐞常见问题/500错误"
-            },
-            {
-              "text": "GPT使用指南",
-              "link": "/work/🐞常见问题/GPT使用指南"
-            },
-            {
-              "text": "报错排查",
-              "link": "/work/🐞常见问题/报错排查"
-            }
-          ]
-        },
-        {
           "text": "🐰其他配置",
           "items": [
             {
@@ -236,6 +209,23 @@ import { defineConfig } from "vitepress";
           ]
         },
         {
+          "text": "🐞常见问题",
+          "items": [
+            {
+              "text": "500错误",
+              "link": "/work/🐞常见问题/500错误"
+            },
+            {
+              "text": "GPT使用指南",
+              "link": "/work/🐞常见问题/GPT使用指南"
+            },
+            {
+              "text": "报错排查",
+              "link": "/work/🐞常见问题/报错排查"
+            }
+          ]
+        },
+        {
           "text": "🦧二次开发",
           "items": [
             {
@@ -262,6 +252,23 @@ import { defineConfig } from "vitepress";
         }
       ],
       "/chat/": [
+        {
+          "text": "聊天绘画部署",
+          "items": [
+            {
+              "text": "后台上传微信小程序",
+              "link": "/chat/聊天绘画部署/后台上传微信小程序"
+            },
+            {
+              "text": "微信公众号",
+              "link": "/chat/聊天绘画部署/微信公众号"
+            },
+            {
+              "text": "编译上传微信小程序",
+              "link": "/chat/聊天绘画部署/编译上传微信小程序"
+            }
+          ]
+        },
         {
           "text": "二次开发",
           "items": [
@@ -313,23 +320,6 @@ import { defineConfig } from "vitepress";
             {
               "text": "自定义API域名代理",
               "link": "/chat/其他配置/自定义API域名代理"
-            }
-          ]
-        },
-        {
-          "text": "前端部署配置",
-          "items": [
-            {
-              "text": "后台上传微信小程序",
-              "link": "/chat/前端部署配置/后台上传微信小程序"
-            },
-            {
-              "text": "微信公众号",
-              "link": "/chat/前端部署配置/微信公众号"
-            },
-            {
-              "text": "编译上传微信小程序",
-              "link": "/chat/前端部署配置/编译上传微信小程序"
             }
           ]
         },
@@ -401,12 +391,8 @@ import { defineConfig } from "vitepress";
           ]
         },
         {
-          "text": "Project",
-          "link": "/chat/Project"
-        },
-        {
-          "text": "chat",
-          "link": "/chat/chat"
+          "text": "index",
+          "link": "/chat/index"
         }
       ],
       "/docs/": [],
@@ -462,23 +448,6 @@ import { defineConfig } from "vitepress";
             {
               "text": "自定义API域名代理",
               "link": "/Paper/其他配置/自定义API域名代理"
-            }
-          ]
-        },
-        {
-          "text": "前端部署配置",
-          "items": [
-            {
-              "text": "后台上传微信小程序",
-              "link": "/Paper/前端部署配置/后台上传微信小程序"
-            },
-            {
-              "text": "微信公众号",
-              "link": "/Paper/前端部署配置/微信公众号"
-            },
-            {
-              "text": "编译上传微信小程序",
-              "link": "/Paper/前端部署配置/编译上传微信小程序"
             }
           ]
         },
@@ -550,12 +519,25 @@ import { defineConfig } from "vitepress";
           ]
         },
         {
-          "text": "Project",
-          "link": "/Paper/Project"
+          "text": "论文部署",
+          "items": [
+            {
+              "text": "后台上传微信小程序",
+              "link": "/Paper/论文部署/后台上传微信小程序"
+            },
+            {
+              "text": "微信公众号",
+              "link": "/Paper/论文部署/微信公众号"
+            },
+            {
+              "text": "编译上传微信小程序",
+              "link": "/Paper/论文部署/编译上传微信小程序"
+            }
+          ]
         },
         {
-          "text": "paper",
-          "link": "/Paper/paper"
+          "text": "index",
+          "link": "/Paper/index"
         }
       ],
       "/Project/": [
@@ -582,23 +564,40 @@ import { defineConfig } from "vitepress";
       ],
       "/项目介绍/": [
         {
-          "text": "🐳项目介绍",
+          "text": "项目介绍",
           "items": [
             {
-              "text": "项目介绍",
-              "link": "/项目介绍/项目介绍"
-            },
-            {
-              "text": "联系我们",
-              "link": "/项目介绍/联系我们"
+              "text": "产品授权",
+              "link": "/项目介绍/项目介绍/产品授权"
             },
             {
               "text": "授权购买",
-              "link": "/项目介绍/授权购买"
+              "link": "/项目介绍/项目介绍/授权购买"
             },
             {
-              "text": "产品授权",
-              "link": "/项目介绍/产品授权"
+              "text": "联系我们",
+              "link": "/项目介绍/项目介绍/联系我们"
+            },
+            {
+              "text": "项目介绍",
+              "link": "/项目介绍/项目介绍/项目介绍"
+            }
+          ]
+        },
+        {
+          "text": "AIGC系统",
+          "items": [
+            {
+              "text": "Work",
+              "link": "/项目介绍/AIGC系统/Work"
+            },
+            {
+              "text": "chat",
+              "link": "/项目介绍/AIGC系统/chat"
+            },
+            {
+              "text": "paper",
+              "link": "/项目介绍/AIGC系统/paper"
             }
           ]
         }
@@ -732,10 +731,10 @@ import { defineConfig } from "vitepress";
       "next": "下一页"
     },
     "footer": {
-      "message": "Released the Aigc创作系统",
+      "message": "Released the ChatGPT-AIGC under the MIT License. Copyright © 2024 AIGC创作系统",
       "copyright": "上海枭格网络科技有限公司 copyright@ 2024 Albert AIGC系统源码 ICP备2022147728号"
     },
-    "siteTitle": "VitePressSimple"
+    "siteTitle": "ChatGPTAIGC创作系统"
   },
   "srcDir": "./",
   "assetsDir": "static",
