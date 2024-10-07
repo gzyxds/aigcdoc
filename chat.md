@@ -2,20 +2,25 @@
 layout: home
 hero:
   name: ChatGPT-AIGC
-  text: 聊天绘画系统
+  text: 聊天绘画系统源码
   tagline: >-
-    基于前后端分离架构以及Vue3、uni-app、ThinkPHP6.x、PHP8.0技术栈开发，包含PC端、H5端、小程序端、APP端。ChatAI聚合对接国内外知名主流大语言模型接口及中转平台，如ChatGLM、讯飞星火、文心一言、GPT3.5、GPT4.0、API2D、知数云。并且聚合对接MJ绘画、SD绘画、意间AI等多种绘画通道，实现了AI对话+AI绘画的融合使用。系统功能包括：AI智能对话、AI创作模型、AI绘画、分销推广、会员套餐、充值套餐、卡密兑换、模型计费
+    基于前后端分离架构以及Vue3、uni-app、ThinkPHP6.x、PHP8.0技术栈开发，包含 PC端、H5端、小程序端、APP端、对接国内外知名主流大语言模型接口及中转平台
   actions:
-    - text: 查看演示
-      link: /markdown-examples
     - text: 商业授权
-      link: /api-examples
+      link: /markdown-examples
+
     - text: 部署文档
       link: /api-examples
-    - text: 在线体验
+
+    - theme: alt
+      text: 在线体验
       link: /api-examples
-    - text: 联系客服
+
+
+    - theme: alt
+      text: 联系我们
       link: /api-examples
+
   image:
     src: \images\home\logo.svg
     alt: ''

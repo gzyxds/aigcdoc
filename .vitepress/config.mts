@@ -221,10 +221,6 @@ import { defineConfig } from "vitepress";
               "link": "/work/develop/database"
             }
           ]
-        },
-        {
-          "text": "index",
-          "link": "/work/index"
         }
       ],
       "/chat/": [
@@ -353,10 +349,6 @@ import { defineConfig } from "vitepress";
               "link": "/chat/develop/database"
             }
           ]
-        },
-        {
-          "text": "index",
-          "link": "/chat/index"
         }
       ],
       "/docs/": [],
@@ -449,10 +441,6 @@ import { defineConfig } from "vitepress";
               "link": "/Paper/develop/web"
             }
           ]
-        },
-        {
-          "text": "index",
-          "link": "/Paper/index"
         }
       ],
       "/Project/": [
