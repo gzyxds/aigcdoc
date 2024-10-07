@@ -643,47 +643,47 @@ import { defineConfig } from "vitepress";
       ],
       "/product/": [
         {
-          "text": "产品中心",
+          "text": "🖥产品中心",
           "items": [
             {
-              "text": "Markdown",
-              "link": "/product/Project/Markdown"
-            },
-            {
-              "text": "Product",
+              "text": "项目介绍",
               "link": "/product/Project/Product"
             },
             {
-              "text": "agent",
+              "text": "代理加盟",
               "link": "/product/Project/agent"
             },
             {
-              "text": "auth",
+              "text": "商业授权",
               "link": "/product/Project/auth"
             },
             {
-              "text": "contact",
+              "text": "联系我们",
               "link": "/product/Project/contact"
             },
             {
-              "text": "shop",
+              "text": "授权购买",
               "link": "/product/Project/shop"
+            },
+            {
+              "text": "Markdown",
+              "link": "/product/Project/Markdown"
             }
           ]
         },
         {
-          "text": "AIGC系统",
+          "text": "🎉AIGC系统",
           "items": [
             {
-              "text": "Work",
+              "text": "🖥️企业知识库",
               "link": "/product/aigc/Work"
             },
             {
-              "text": "chat",
+              "text": "🎨聊天绘画",
               "link": "/product/aigc/chat"
             },
             {
-              "text": "paper",
+              "text": "📖论文写作",
               "link": "/product/aigc/paper"
             }
           ]
