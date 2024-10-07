@@ -9,6 +9,7 @@
     "docs:preview": "vitepress preview"
   },
   "dependencies": {
-    "@theojs/lumen": "^3.3.2"
+    "@theojs/lumen": "^3.3.2",
+    "vitepress-plugin-comment-with-giscus": "^1.1.15"
   }
 }

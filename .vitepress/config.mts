@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import giscusTalk from 'vitepress-plugin-comment-with-giscus';
 	export default defineConfig({
   "title": "AIGC创作系统",
   "description": "专注提供AI系统源代码解决方案的技术团队「超级全能AI变现系统」「AI聊天绘画系统」「AI论文写作系统」拥有PHP和Java两种语言版本，技术实力强，系统体验好支持私有部署，专业团队、售后无忧",
@@ -51,7 +52,7 @@ import { defineConfig } from "vitepress";
         "link": "https://www.urlnet.cn"
       },
       {
-        "text": "🏅AIGC助手",
+        "text": "🏅AI助手",
         "items": [
           {
             "text": "全能知识库",
@@ -69,22 +70,6 @@ import { defineConfig } from "vitepress";
           {
             "text": "API接口",
             "link": "https://api.cnai.art"
-          },
-          {
-            "text": "AI对话",
-            "link": "https://api.cnai.art"
-          },
-          {
-            "text": "AI创作",
-            "link": "https://api.cnai.art"
-          },
-          {
-            "text": "AI机器人",
-            "link": "https://api.cnai.art"
-          },
-          {
-            "text": "AI知识库",
-            "link": "https://api.cnai.art"
           }
         ]
       },
@@ -92,11 +77,11 @@ import { defineConfig } from "vitepress";
         "text": "💬联系我们",
         "items": [
           {
-            "text": "联系方式",
+            "text": "🍵联系方式",
             "link": "/doc/contact"
           },
           {
-            "text": "技术支持",
+            "text": "🍵技术支持",
             "link": "/doc/contact"
           },
           {
@@ -705,14 +690,14 @@ import { defineConfig } from "vitepress";
       }
     ],
     "externalLinkIcon": true,
-    "i18nRouting": true,
+    "i18nRouting": false,
     "logo": "\\images\\logo.png",
     "outline": {
       "level": 2,
       "label": "页面导航"
     },
     "search": {
-      "provider": "local",
+      "provider": "algolia",
       "options": {
         "appId": "",
         "apiKey": "",
@@ -839,5 +824,28 @@ import { defineConfig } from "vitepress";
   "rewrites": {
     "packages/pkg-a/src/pkg-a-docs.md": "pkg-a/index.md",
     "packages/pkg-b/src/pkg-b-docs.md": "pkg-b/index.md"
-  }
+  },
+    setup() {// 引入giscus
+      const { frontmatter } = useData(); // 获取当前页面路由信息
+      const route = useRoute();
+          
+      // giscus配置
+      giscusTalk({
+        repo: 'gzyxds/chataigc-doc', //仓库
+        repoId: 'R_kgDOM6985A', //仓库ID
+        category: 'Announcements', // 讨论分类
+        categoryId: 'DIC_kwDOM6985M4CjJMu', //讨论分类ID
+        mapping: 'pathname',
+        inputPosition: 'bottom',
+        lang: 'zh-CN',
+        }, 
+        {
+          frontmatter, route  // 获取当前页面路由信息
+        },
+        true
+        //默认值为true，表示已启用，此参数可以忽略；
+        //如果为false，则表示未启用
+        //您可以使用“comment:true”序言在页面上单独启用它
+      );
+   },
 });
