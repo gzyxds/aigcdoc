@@ -8,13 +8,13 @@ hero:
   actions:
     - text: 🐳部署文檔
       link: /work/deployment/demo.html
-
+      
     - text: ✨商业授权
       link: /product/Project/auth.html
 
     - theme: alt
       text: 🎉在线体验
-      link: /work/deployment/demo.html
+      link: /api-examples
 
     - theme: alt
       text: 📞联系我们
@@ -23,7 +23,7 @@ hero:
    
       
   image:
-    src: \images\home\logo.svg
+    src: /public/images/Work.png
     alt: ''
     width: ''
     height: ''
