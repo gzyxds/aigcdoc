@@ -593,7 +593,7 @@ import { defineConfig } from "vitepress";
         }
       ]
     },
-    "socialLinks": [
+    "socialLinks": [  // 社交链接
       {
         "icon": "github",
         "link": "https://github.com/vuejs/vitepress"
@@ -606,16 +606,64 @@ import { defineConfig } from "vitepress";
         "icon": "facebook",
         "link": "https://github.com/vuejs/vitepress"
       }
+      ,
+      {
+        "icon": "twitter",
+        "link": "https://github.com/vuejs/vitepress"
+      }
+      ,
+      {
+        "icon": "youtube",
+        "link": "https://github.com/vuejs/vitepress"
+      }
+      ,
+      {
+        "icon": "linkedin",
+        "link": "https://github.com/vuejs/vitepress"
+      }
     ],
-    "externalLinkIcon": true,
-    "i18nRouting": false,
-    "logo": "\\images\\logo.png",
-    "outline": {
-      "level": 2,
-      "label": "页面导航"
+    // "externalLinkIcon": true,   // 是否显示外部链接的图标
+    "i18nRouting": false,      // 是否启用多语言路由
+    "logo": "\\images\\logo.png",   // logo的地址
+    "level": 2,                // 显示的层级
+    "label": "页面导航"                   // 导航的标题
+    ,
+    "lastUpdated": {  // 最后更新时间的配置 
+      "text": "最后更新时间"
     },
-    "search": {
-      "provider": "algolia",
+    "carbonAds": { // 广告的配置
+      "carbon": "CEBDT27Y",
+      "custom": "CEBDT27Y",
+      "placement": "vuejsorg"
+    },
+    "carbon": {     // Carbon广告的配置
+      "key": "CEBDT27Y",
+  
+      "component": "EditLink"  // 组件的名称
+      ,
+      "componentProps": {    // 组件的属性
+        "repo": "vuejs/vitepress",    // 仓库的名称
+        "branch": "main",             // 分支的名称
+        "dir": "docs"                 // 文档的目录
+      }
+      ,
+      "customComponent": "EditLink"         // 自定义组件的名称
+      ,
+      "customComponentProps": {
+        "repo": "vuejs/vitepress",
+        "branch": "main",
+        "dir": "docs"
+      }
+      ,
+      "customComponentProps2": {         // 自定义组件的名称
+        "repo": "vuejs/vitepress",
+        "branch": "main",
+        "dir": "docs"
+      }
+    
+    },
+    "search": {                     // 搜索的配置
+      "provider": "local",         // 搜索的提供者
       "options": {
         "appId": "",
         "apiKey": "",
@@ -662,8 +710,8 @@ import { defineConfig } from "vitepress";
               }
             }
           },
-          "en": {
-            "placeholder": "Search docs",
+          "en": {     // 英文 搜索的配置
+            "placeholder": "Search docs",        // 搜索的提示文本
             "translations": {
               "button": {
                 "buttonText": "Search docs",
@@ -707,8 +755,18 @@ import { defineConfig } from "vitepress";
       }
     },
     "langMenuLabel": "多语言",
-    "returnToTopLabel": "回到顶部",
-    "sidebarMenuLabel": "菜单",
+    "langs": [
+      {
+      }
+    ], 
+    
+    "returnToTopLabel": "回到顶部", // 返回顶部的文本
+    "lastUpdatedText": "最近更新于", // 最近更新的文本
+    "externalLinkIcon": true, // 是否显示外部链接的图标
+    "outline": {   // 侧边栏的配置
+    },
+   
+    
     "darkModeSwitchLabel": "主题",
     "lightModeSwitchTitle": "切换到浅色模式",
     "darkModeSwitchTitle": "切换到深色模式",
@@ -716,17 +774,20 @@ import { defineConfig } from "vitepress";
       "text": "编辑文档",
       "pattern": "https://github.com/zhangdi168/VitePressSimple/edit/main/docs/:path"
     },
-    "docFooter": {
+    "docFooter": {  // 页脚的配置
       "prev": "上一页",
       "next": "下一页"
     },
-    "footer": {
-      "message": "Released the ChatGPT-AIGC under the MIT License. Copyright © 2024 AIGC创作系统",
+    "footer": {  // 页脚的配置
+      // "message": "Released the ChatGPT-AIGC under the MIT License. Copyright © 2024 AIGC创作系统",
       "copyright": "上海枭格网络科技有限公司 copyright@ 2024 Albert AIGC系统源码 ICP备2022147728号"
     },
-    "siteTitle": false
+    "siteTitle": false  
   },
-  "srcDir": "./",
+  "markdown": {
+    "lineNumbers": true
+  },
+  "srcDir": "./", // 源码的目录
   "assetsDir": "static",
   "sitemap": {
     "hostname": "https://example.com",
