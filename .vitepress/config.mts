@@ -642,23 +642,14 @@ import { defineConfig } from "vitepress";
         "icon": "discord",
         "link": "https://xgphp.cn"
       },
-      {
-        "icon": "facebook",
-        "link": "https://xgphp.cn"
-      },
+      
       {
         "icon": "twitter",
         "link": "https://xgphp.cn"
       },
-      {
-        "icon": "youtube",
-        "link": "https://xgphp.cn"
-      },
-      {
-        "icon": "linkedin",
-        "link": "https://xgphp.cn"
-      }
+
     ],
+
     "i18nRouting": false,
     "logo": "\\images\\logo.png",
     "level": 2,
@@ -666,42 +657,40 @@ import { defineConfig } from "vitepress";
     "lastUpdated": {
       "text": "最后更新时间"
     },
-    "carbonAds": {
-      "carbon": "CEBDT27Y",
-      "custom": "CEBDT27Y",
-      "placement": "vuejsorg"
-    },
-    "carbon": {
-      "key": "CEBDT27Y",
-      "component": "EditLink",
-      "componentProps": {
-        "repo": "vuejs/vitepress",
-        "branch": "main",
-        "dir": "docs"
-      },
-      "customComponent": "EditLink",
-      "customComponentProps": {
-        "repo": "vuejs/vitepress",
-        "branch": "main",
-        "dir": "docs"
-      },
-      "customComponentProps2": {
-        "repo": "vuejs/vitepress",
-        "branch": "main",
-        "dir": "docs"
-      }
-    },
-    "search": {
-      "provider": "local",
-      "options": {
-        "appId": "",
+    // "carbonAds": {          
+    //   "carbon": "CEBDT27Y"
+    // },
+    // "carbon": {  // 自定义组件
+    //   "key": "CEBDT27Y",
+    //   "component": "EditLink",
+    //   "componentProps": {
+    //     "repo": "vuejs/vitepress",
+    //     "branch": "main",
+    //     "dir": "docs"
+    //   },
+    //   "customComponent": "EditLink",  // 自定义组件名称
+    //   "customComponentProps": {
+    //     "repo": "vuejs/vitepress",
+    //     "branch": "main",
+    //     "dir": "docs"
+    //   },
+    //   "customComponentProps2": {  // 自定义组件名称2
+    //     "repo": "vuejs/vitepress",
+    //     "branch": "main",
+    //     "dir": "docs"
+      // }
+
+    "search": {   // 搜索
+      "provider": "local",  // 本地搜索
+      "options": {   // 配置项
+        "appId": "", 
         "apiKey": "",
-        "indexName": "搜索",
-        "locales": {
+        "indexName": "搜索", // 索引名称
+        "locales": {   // 配置多语言
           "zh": {
             "placeholder": "搜索文档",
-            "translations": {
-              "button": {
+            "translations": {  // 搜索框提示语
+              "button": {  // 搜索按钮
                 "buttonText": "搜索文档",
                 "buttonAriaLabel": "搜索文档"
               },
@@ -775,7 +764,7 @@ import { defineConfig } from "vitepress";
                   "noResultsText": "No results for",
                   "suggestedQueryText": "You can try searching for",
                   "reportMissingResultsText": "You think it should have results?",
-                  "reportMissingResultsLinkText": "Click here to report it"
+                  "reportMissingResultsLinkText": "Click here to report it"  
                 }
               }
             }
@@ -808,12 +797,12 @@ import { defineConfig } from "vitepress";
     "siteTitle": false,
     "sidebarMenuLabel": "菜单"
   },
-  "markdown": {
-    "lineNumbers": true
+  "markdown": {  
+    "lineNumbers": true 
   },
   "srcDir": "./",
   "assetsDir": "static",
-  "sitemap": {
+  "sitemap": {  
     "hostname": "https://example.com",
     "lastmodDateOnly": false
   },
