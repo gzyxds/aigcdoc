@@ -14,8 +14,8 @@ hero:
       link: /api-examples
 
     - theme: alt
-      text: 聯係我們
-      link: /api-examples
+      text: 联系我们
+      link: /product/Project/contact.html
       
    
       

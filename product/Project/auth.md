@@ -1,6 +1,6 @@
 # ChatGPT+AIGC系统授权价格
 
-## 产品简介
+## 我们的产品
 
 > [!NOTE] 1.全能知识库系统
 > 【ChatGPT-AIGC全能知识库系统】
