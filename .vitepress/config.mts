@@ -109,141 +109,148 @@ import { defineConfig } from "vitepress";
     "sidebar": {
       "/work/": [
         {
-          "text": "🐳知识库部署",
+          "text": "🐳 知识库部署",
           "items": [
             {
-              "text": "宝塔面板Docker部署",
-              "link": "/work/🐳知识库部署/宝塔面板Docker部署"
+              "text": "宝塔Docker部署",
+              "link": "/work/deployment/btdocke"
+            },
+            {
+              "text": "产品授权",
+              "link": "/work/deployment/产品授权"
+            },
+            {
+              "text": "授权购买",
+              "link": "/work/deployment/授权购买"
             },
             {
               "text": "Markdown扩展示例",
-              "link": "/work/🐳知识库部署/Markdown扩展示例"
+              "link": "/work/deployment/Markdown扩展示例"
+            },
+            {
+              "text": "联系我们",
+              "link": "/work/deployment/联系我们"
+            },
+            {
+              "text": "更新日志",
+              "link": "/work/deployment/update"
             },
             {
               "text": "API示例",
-              "link": "/work/🐳知识库部署/API示例"
-            },
-            {
-              "text": "update",
-              "link": "/work/🐳知识库部署/update"
-            },
-            {
-              "text": "work",
-              "link": "/work/🐳知识库部署/work"
+              "link": "/work/deployment/API示例"
             }
           ]
         },
         {
-          "text": "🐹前端部署",
-          "items": [
-            {
-              "text": "后台上传微信小程序",
-              "link": "/work/🐹前端部署/后台上传微信小程序"
-            },
-            {
-              "text": "微信公众号",
-              "link": "/work/🐹前端部署/微信公众号"
-            },
-            {
-              "text": "编译上传微信小程序",
-              "link": "/work/🐹前端部署/编译上传微信小程序"
-            }
-          ]
-        },
-        {
-          "text": "3️⃣第三方部署",
+          "text": "3️⃣ 第三方部署",
           "items": [
             {
               "text": "ChatGLM本地模型部署",
-              "link": "/work/3️⃣第三方部署/ChatGLM本地模型部署"
-            },
-            {
-              "text": "LMstudio（本地大模型）",
-              "link": "/work/3️⃣第三方部署/LMstudio（本地大模型）"
+              "link": "/work/third/chatglm"
             },
             {
               "text": "M3E向量模型部署",
-              "link": "/work/3️⃣第三方部署/M3E向量模型部署"
+              "link": "/work/third/m3e"
+            },
+            {
+              "text": "接入个人/企业微信",
+              "link": "/work/third/wechat"
             },
             {
               "text": "SD绘图部署",
-              "link": "/work/3️⃣第三方部署/SD绘图部署"
+              "link": "/work/third/sd"
             },
             {
-              "text": "接入个人企业微信",
-              "link": "/work/3️⃣第三方部署/接入个人企业微信"
+              "text": "LMstudio（本地大模型）",
+              "link": "/work/third/LMstudio"
             }
           ]
         },
         {
-          "text": "🐰其他配置",
-          collapsed: true, // 可选，默认值：false
+          "text": "🐹 前端部署",
           "items": [
             {
-              "text": "Dalle绘画配置",
-              "link": "/work/🐰其他配置/Dalle绘画配置"
+              "text": "微信公众号",
+              "link": "/work/front/oa"
             },
             {
-              "text": "对象存储",
-              "link": "/work/🐰其他配置/对象存储"
+              "text": "编译上传微信小程序 ①",
+              "link": "/work/front/mnp"
             },
             {
-              "text": "微信开放平台",
-              "link": "/work/🐰其他配置/微信开放平台"
+              "text": "后台上传微信小程序 ②",
+              "link": "/work/front/fastmnp"
+            }
+          ]
+        },
+        {
+          "text": "🐰 其他配置",
+          "items": [
+            {
+              "text": "微信开放平台（微信帐号统一）",
+              "link": "/work/other/open"
             },
             {
               "text": "微信支付",
-              "link": "/work/🐰其他配置/微信支付"
+              "link": "/work/other/wechatpay"
             },
             {
               "text": "支付宝支付",
-              "link": "/work/🐰其他配置/支付宝支付"
+              "link": "/work/other/alipay"
             },
             {
               "text": "短信配置",
-              "link": "/work/🐰其他配置/短信配置"
+              "link": "/work/other/sms"
+            },
+            {
+              "text": "对象存储",
+              "link": "/work/other/oss"
             },
             {
               "text": "自定义API域名代理",
-              "link": "/work/🐰其他配置/自定义API域名代理"
+              "link": "/work/other/proxy"
+            },
+            {
+              "text": "Dalle绘画配置",
+              "link": "/work/other/dalle"
             }
           ]
         },
         {
-          "text": "🐞常见问题",
+          "text": "🐞 常见问题",
           "items": [
             {
-              "text": "500错误",
-              "link": "/work/🐞常见问题/500错误"
-            },
-            {
-              "text": "GPT使用指南",
-              "link": "/work/🐞常见问题/GPT使用指南"
+              "text": "升级更新",
+              "link": "/work/fqa/version"
             },
             {
               "text": "报错排查",
-              "link": "/work/🐞常见问题/报错排查"
+              "link": "/work/fqa/error"
+            },
+            {
+              "text": "500错误",
+              "link": "/work/fqa/debug"
+            },
+            {
+              "text": " GPT使用指南",
+              "link": "/work/fqa/gpt"
             }
           ]
         },
         {
-          "text": "🦧二次开发",
+          "text": "🦧 二次开发",
           "items": [
             {
-              "text": "前端开发",
-              "link": "/work/🦧二次开发/前端开发"
+              "text": "基本介绍",
+              "link": "/work/develop/base"
             },
             {
-              "text": "基本介绍",
-              "link": "/work/🦧二次开发/基本介绍"
+              "text": "前端开发",
+              "link": "/work/develop/web"
             },
             {
               "text": "数据库结构",
-              "link": "/work/🦧二次开发/数据库结构"
-            },
-            {
-              "text": "数据接口",
-              "link": "/work/🦧二次开发/数据接口"
+              "link": "/work/develop/database"
             }
           ]
         },
@@ -254,140 +261,128 @@ import { defineConfig } from "vitepress";
       ],
       "/chat/": [
         {
-          "text": "聊天绘画部署",
+          "text": "🐳 聊天绘画部署",
           "items": [
             {
-              "text": "后台上传微信小程序",
-              "link": "/chat/聊天绘画部署/后台上传微信小程序"
+              "text": "宝塔面板部署 ①",
+              "link": "/chat/deployment/bt"
             },
+            {
+              "text": "本地Docker部署 ②",
+              "link": "/chat/deployment/docker"
+            },
+            {
+              "text": "通用部署 ③",
+              "link": "/chat/deployment/general"
+            },
+            {
+              "text": "版本演示",
+              "link": "/chat/deployment/demo"
+            }
+          ]
+        },
+        {
+          "text": "🐹 前端部署",
+          "items": [
             {
               "text": "微信公众号",
-              "link": "/chat/聊天绘画部署/微信公众号"
+              "link": "/chat/front/oa"
             },
             {
-              "text": "编译上传微信小程序",
-              "link": "/chat/聊天绘画部署/编译上传微信小程序"
+              "text": "后台上传微信小程序 ②",
+              "link": "/chat/front/fastmnp"
+            },
+            {
+              "text": "编译上传微信小程序 ①",
+              "link": "/chat/front/mnp"
+            },
+            {
+              "text": "安卓APP",
+              "link": "/chat/front/android"
+            },
+            {
+              "text": "苹果APP",
+              "link": "/chat/front/ios"
             }
           ]
         },
         {
-          "text": "二次开发",
+          "text": "3️⃣ 第三方部署",
           "items": [
             {
-              "text": "前端开发",
-              "link": "/chat/二次开发/前端开发"
-            },
-            {
-              "text": "基本介绍",
-              "link": "/chat/二次开发/基本介绍"
-            },
-            {
-              "text": "数据库结构",
-              "link": "/chat/二次开发/数据库结构"
-            },
-            {
-              "text": "数据接口",
-              "link": "/chat/二次开发/数据接口"
+              "text": "SD绘图部署",
+              "link": "/chat/third/sd"
             }
           ]
         },
         {
-          "text": "其他配置",
+          "text": "🐰 其他配置",
           "items": [
-            {
-              "text": "Dalle绘画配置",
-              "link": "/chat/其他配置/Dalle绘画配置"
-            },
-            {
-              "text": "对象存储",
-              "link": "/chat/其他配置/对象存储"
-            },
             {
               "text": "微信开放平台",
-              "link": "/chat/其他配置/微信开放平台"
+              "link": "/chat/config/open"
             },
             {
               "text": "微信支付",
-              "link": "/chat/其他配置/微信支付"
+              "link": "/chat/config/wechatpay"
             },
             {
               "text": "支付宝支付",
-              "link": "/chat/其他配置/支付宝支付"
+              "link": "/chat/config/alipay"
             },
             {
               "text": "短信配置",
-              "link": "/chat/其他配置/短信配置"
+              "link": "/chat/config/sms"
+            },
+            {
+              "text": "对象存储",
+              "link": "/chat/config/oss"
+            },
+            {
+              "text": "MJ配置",
+              "link": "/chat/config/MJ"
             },
             {
               "text": "自定义API域名代理",
-              "link": "/chat/其他配置/自定义API域名代理"
+              "link": "/chat/config/proxy"
             }
           ]
         },
         {
-          "text": "常见问题",
+          "text": "🐞 常见问题",
           "items": [
             {
-              "text": "500错误",
-              "link": "/chat/常见问题/500错误"
-            },
-            {
-              "text": "GPT使用指南",
-              "link": "/chat/常见问题/GPT使用指南"
-            },
-            {
               "text": "升级更新",
-              "link": "/chat/常见问题/升级更新"
+              "link": "/chat/fqa/version"
             },
             {
               "text": "报错排查",
-              "link": "/chat/常见问题/报错排查"
+              "link": "/chat/fqa/error"
+            },
+            {
+              "text": "500错误",
+              "link": "/chat/fqa/debug"
+            },
+            {
+              "text": "GPT使用指南",
+              "link": "/chat/fqa/gpt"
             }
           ]
         },
         {
-          "text": "服务端部署",
+          "text": "🦧 二次开发",
           "items": [
             {
-              "text": "api-examples",
-              "link": "/chat/服务端部署/api-examples"
+              "text": "基本介绍",
+              "link": "/chat/develop/base"
             },
             {
-              "text": "markdown-examples",
-              "link": "/chat/服务端部署/markdown-examples"
+              "text": " 前端开发",
+              "link": "/chat/develop/web"
             },
             {
-              "text": "work",
-              "link": "/chat/服务端部署/work"
-            },
-            {
-              "text": "宝塔面板Docker部署",
-              "link": "/chat/服务端部署/宝塔面板Docker部署"
-            }
-          ]
-        },
-        {
-          "text": "第三方部署",
-          "items": [
-            {
-              "text": "ChatGLM本地模型部署",
-              "link": "/chat/第三方部署/ChatGLM本地模型部署"
-            },
-            {
-              "text": "LMstudio（本地大模型）",
-              "link": "/chat/第三方部署/LMstudio（本地大模型）"
-            },
-            {
-              "text": "M3E向量模型部署",
-              "link": "/chat/第三方部署/M3E向量模型部署"
-            },
-            {
-              "text": "SD绘图部署",
-              "link": "/chat/第三方部署/SD绘图部署"
-            },
-            {
-              "text": "企业微信",
-              "link": "/chat/第三方部署/企业微信"
+              "text": "数据库结构",
+              "link": "/chat/develop/database"
             }
           ]
         },
@@ -594,7 +589,7 @@ import { defineConfig } from "vitepress";
             },
             {
               "text": "聊天绘画",
-              "link": "/项目介绍/AIGC系统/chat"
+              "link": "/聊天绘画/AIGC系统/chat"
             },
             {
               "text": "论文写做",
@@ -735,8 +730,7 @@ import { defineConfig } from "vitepress";
       "message": "Released the ChatGPT-AIGC under the MIT License. Copyright © 2024 AIGC创作系统",
       "copyright": "上海枭格网络科技有限公司 copyright@ 2024 Albert AIGC系统源码 ICP备2022147728号"
     },
-    siteTitle: false
-    // siteTitle: false  // 不显示标题
+    "siteTitle": false
   },
   "srcDir": "./",
   "assetsDir": "static",
