@@ -33,23 +33,25 @@ features:
   - icon: 💬
     title: AIGC企业知识库
     details: 👉PHP && Java持续更新中  <br>适用于企业智能客服、企业智能文档、专家顾问助理等多种企业级商用场景，具有较大的商业使用价值
-    
-    link: /guide/start
+    link:  /Work
     linkText: 了解更多
+
   - icon: 🎨
     title: AIGC绘画聊天
     details: 👉PHP && Java 持续更新中 <br>打造属于自己的GPT，实现人人都能拥有自己的 ChatAI聊天对话系统
-    link: /guide/start
+    link: /chat
     linkText: 了解更多
+
   - icon: ✍
     title: Paper论文写作
     details: 👉PHP && Java 持续更新中<br> AI智能生成写作大纲，10分钟生成3万字论文的系统，AI即可快速为您生成论文大纲，操作高效快捷
-    link: /guide/start
+    link: /paper
     linkText: 了解更多
+
   - icon: ✔️
     title: OpenAI接口
     details: 👉高性能的AI模型接口管理与分发系统 <br>汇集全球顶级品牌的AI超市
-    link: /guide/start
+    link: https://api.cnai.art
     linkText: 了解更多
 
   - icon: 📚
