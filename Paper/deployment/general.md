@@ -1,8 +1,4 @@
-# 通用部署②/③
-
-提示
-
-推荐服务器最低配置：CPU双核、内存4GB、硬盘20GB、带宽5兆
+# 通用部署
 
 如果你非常熟悉PHP项目的部署安装，可以参考一下信息部署项目。不熟悉可参考其他部署方式。
 
@@ -26,7 +22,7 @@ swoole_loader80_zts_x64.dll //windows系统、PHP线程安全
 
 nginx全配置
 
-nginx
+**nginx**
 
 ```
 server {
@@ -71,7 +67,7 @@ server {
 
 nginx伪静态
 
-nginx
+**nginx**
 
 ```
 if (!-e $request_filename)
@@ -85,7 +81,7 @@ if (!-e $request_filename)
 
 apache伪静态
 
-apache
+**apache**
 
 ```
 <IfModule mod_rewrite.c>
@@ -105,23 +101,35 @@ RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
 1.授权文件与产品一一对应，如果不是同一产品，将无法使用。
 2.授权文件与项目域名也是一一对应，不然无法使用。
 
-* **步骤1**:
-  购买后源码，登录官网，下载授权文件。![](https://doc.chatmoney.cn/docs/images/chat/deployment/server/license-1.png)
-* **步骤2**:
+* ​**步骤1**​:
+  购买后源码，聯係客服獲取授权文件。
+* ​**步骤2**​:
   添加授权文件到server/license目录，并命名为：my.license ，如果仍无法使用，请联系客服。![](https://doc.chatmoney.cn/docs/images/chat/deployment/server/license-2.png)
 
 ## 定时任务
 
 使用crontab命令设置以下命令为定时任务，1分钟运行1次，注意，运行用户要和PHP运行用户一致。
 
-shell
+**shell**
 
 ```
 php /www/wwwroot/项目/server/think crontab
 ```
 
+## 任务队列
+
+1.5.2版本开始，写作内容生成从定时任务生成方式调整为任务队列的方式生成，并且新增了文章降重功能，所以需配置两个队列任务，建议使用supervisor进行管理。
+
+```
+写作任务处理
+php think queue:listen --queue maJob --timeout 0
+降重任务处理
+php think queue:listen --queue reJob --timeout 0
+```
+
 ## 访问地址
 
-管理后台地址：[http://域名/admin](https://chat-demo.likeshop.cn/admin)
-PC端地址：[http://域名/pc](https://chat.likeshop.cn/pc)
-手机端地址：[http://域名/mobile](https://chat.likeshop.cn/mobile)
+- 管理后台地址：http://域名/admin
+- PC端地址：http://域名/pc
+- 手机端地址：http://域名/mobile
+
