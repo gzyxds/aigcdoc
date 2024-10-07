@@ -12,10 +12,12 @@ hero:
     - text: 在线体验
       link: /api-examples
 
-    - text: 部署文档
+    - theme: alt
+      text: 部署文档
       link: /api-examples
     
-    - text: 联系客服
+    - theme: alt
+      text: 联系客服
       link: /api-examples
       
   image:
