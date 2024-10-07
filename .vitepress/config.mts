@@ -1,5 +1,4 @@
 import { defineConfig } from "vitepress";
-import giscusTalk from 'vitepress-plugin-comment-with-giscus';
 	export default defineConfig({
   "title": "AIGC创作系统",
   "description": "专注提供AI系统源代码解决方案的技术团队「超级全能AI变现系统」「AI聊天绘画系统」「AI论文写作系统」拥有PHP和Java两种语言版本，技术实力强，系统体验好支持私有部署，专业团队、售后无忧",
@@ -35,7 +34,7 @@ import giscusTalk from 'vitepress-plugin-comment-with-giscus';
         "items": [
           {
             "text": "🤖企知识库",
-            "link": "/work/index"
+            "link": "/work/deployment/demo"
           },
           {
             "text": "🎉聊天绘画",
@@ -43,7 +42,7 @@ import giscusTalk from 'vitepress-plugin-comment-with-giscus';
           },
           {
             "text": "📝论文写作",
-            "link": "/paper/index"
+            "link": "/Paper/deployment/bt"
           }
         ]
       },
@@ -97,37 +96,21 @@ import giscusTalk from 'vitepress-plugin-comment-with-giscus';
           "text": "🐳 知识库部署",
           "items": [
             {
-              "text": "宝塔Docker部署",
+              "text": "部署文档",
               "link": "/work/deployment/btdocke"
             },
             {
-              "text": "产品授权",
-              "link": "/work/deployment/产品授权"
-            },
-            {
-              "text": "授权购买",
-              "link": "/work/deployment/授权购买"
-            },
-            {
-              "text": "Markdown扩展示例",
-              "link": "/work/deployment/Markdown扩展示例"
-            },
-            {
-              "text": "联系我们",
-              "link": "/work/deployment/联系我们"
+              "text": "版本演示",
+              "link": "work/deployment/demo.md"
             },
             {
               "text": "更新日志",
               "link": "/work/deployment/update"
-            },
-            {
-              "text": "API示例",
-              "link": "/work/deployment/API示例"
             }
           ]
         },
         {
-          "text": "3️⃣ 第三方部署",
+          "text": "🎉 第三方部署",
           "items": [
             {
               "text": "ChatGLM本地模型部署",
@@ -292,7 +275,7 @@ import giscusTalk from 'vitepress-plugin-comment-with-giscus';
           ]
         },
         {
-          "text": "3️⃣ 第三方部署",
+          "text": "🎉 第三方部署",
           "items": [
             {
               "text": "SD绘图部署",
@@ -379,140 +362,91 @@ import giscusTalk from 'vitepress-plugin-comment-with-giscus';
       "/docs/": [],
       "/Paper/": [
         {
-          "text": "二次开发",
+          "text": "🐳论文写作部署",
           "items": [
             {
-              "text": "前端开发",
-              "link": "/Paper/二次开发/前端开发"
+              "text": "宝塔部署 ",
+              "link": "/Paper/deployment/bt"
             },
             {
-              "text": "基本介绍",
-              "link": "/Paper/二次开发/基本介绍"
+              "text": "通用部署 ",
+              "link": "/Paper/deployment/general"
             },
             {
-              "text": "数据库结构",
-              "link": "/Paper/二次开发/数据库结构"
-            },
-            {
-              "text": "数据接口",
-              "link": "/Paper/二次开发/数据接口"
+              "text": "版本演示",
+              "link": "/Paper/deployment/demo"
             }
           ]
         },
         {
-          "text": "其他配置",
+          "text": "🐹前端部署",
           "items": [
             {
-              "text": "Dalle绘画配置",
-              "link": "/Paper/其他配置/Dalle绘画配置"
-            },
-            {
-              "text": "对象存储",
-              "link": "/Paper/其他配置/对象存储"
-            },
+              "text": "微信公众号",
+              "link": "/Paper/front/oa"
+            }
+          ]
+        },
+        {
+          "text": "🐰其他配置",
+          "items": [
             {
               "text": "微信开放平台",
-              "link": "/Paper/其他配置/微信开放平台"
+              "link": "/Paper/config/open"
             },
             {
               "text": "微信支付",
-              "link": "/Paper/其他配置/微信支付"
+              "link": "/Paper/config/wechatpay"
             },
             {
               "text": "支付宝支付",
-              "link": "/Paper/其他配置/支付宝支付"
+              "link": "/Paper/config/alipay"
             },
             {
               "text": "短信配置",
-              "link": "/Paper/其他配置/短信配置"
+              "link": "/Paper/config/sms"
             },
             {
-              "text": "自定义API域名代理",
-              "link": "/Paper/其他配置/自定义API域名代理"
+              "text": "对象存储",
+              "link": "/Paper/config/oss"
+            },
+            {
+              "text": "API域名代理",
+              "link": "/Paper/config/proxy"
             }
           ]
         },
         {
-          "text": "常见问题",
+          "text": "🐞常见问题",
           "items": [
             {
-              "text": "500错误",
-              "link": "/Paper/常见问题/500错误"
-            },
-            {
-              "text": "GPT使用指南",
-              "link": "/Paper/常见问题/GPT使用指南"
-            },
-            {
               "text": "升级更新",
-              "link": "/Paper/常见问题/升级更新"
+              "link": "/Paper/fqa/version"
             },
             {
               "text": "报错排查",
-              "link": "/Paper/常见问题/报错排查"
+              "link": "/Paper/fqa/error"
+            },
+            {
+              "text": "500错误",
+              "link": "/Paper/fqa/debug"
+            },
+            {
+              "text": "GPT使用指南",
+              "link": "/Paper/fqa/gpt"
             }
           ]
         },
         {
-          "text": "服务端部署",
+          "text": "🦧二次开发",
           "items": [
             {
-              "text": "api-examples",
-              "link": "/Paper/服务端部署/api-examples"
+              "text": "基本介绍",
+              "link": "/Paper/develop/base"
             },
             {
-              "text": "markdown-examples",
-              "link": "/Paper/服务端部署/markdown-examples"
-            },
-            {
-              "text": "work",
-              "link": "/Paper/服务端部署/work"
-            },
-            {
-              "text": "宝塔面板Docker部署",
-              "link": "/Paper/服务端部署/宝塔面板Docker部署"
-            }
-          ]
-        },
-        {
-          "text": "第三方部署",
-          "items": [
-            {
-              "text": "ChatGLM本地模型部署",
-              "link": "/Paper/第三方部署/ChatGLM本地模型部署"
-            },
-            {
-              "text": "LMstudio（本地大模型）",
-              "link": "/Paper/第三方部署/LMstudio（本地大模型）"
-            },
-            {
-              "text": "M3E向量模型部署",
-              "link": "/Paper/第三方部署/M3E向量模型部署"
-            },
-            {
-              "text": "SD绘图部署",
-              "link": "/Paper/第三方部署/SD绘图部署"
-            },
-            {
-              "text": "企业微信",
-              "link": "/Paper/第三方部署/企业微信"
-            }
-          ]
-        },
-        {
-          "text": "论文部署",
-          "items": [
-            {
-              "text": "后台上传微信小程序",
-              "link": "/Paper/论文部署/后台上传微信小程序"
-            },
-            {
-              "text": "微信公众号",
-              "link": "/Paper/论文部署/微信公众号"
-            },
-            {
-              "text": "编译上传微信小程序",
-              "link": "/Paper/论文部署/编译上传微信小程序"
+              "text": "前端开发",
+              "link": "/Paper/develop/web"
             }
           ]
         },
@@ -649,10 +583,6 @@ import giscusTalk from 'vitepress-plugin-comment-with-giscus';
             {
               "text": "授权购买",
               "link": "/product/Project/shop"
-            },
-            {
-              "text": "Markdown",
-              "link": "/product/Project/Markdown"
             }
           ]
         },
@@ -675,7 +605,7 @@ import giscusTalk from 'vitepress-plugin-comment-with-giscus';
         }
       ]
     },
-    "socialLinks": [   // 社交链接
+    "socialLinks": [
       {
         "icon": "github",
         "link": "https://github.com/vuejs/vitepress"
@@ -689,14 +619,14 @@ import giscusTalk from 'vitepress-plugin-comment-with-giscus';
         "link": "https://github.com/vuejs/vitepress"
       }
     ],
-    "externalLinkIcon": true,  // 是否在链接后显示图标
-    "i18nRouting": false,    // 是否启用多语言路由
+    "externalLinkIcon": true,
+    "i18nRouting": false,
     "logo": "\\images\\logo.png",
-    "outline": {  // 侧边栏导航
+    "outline": {
       "level": 2,
       "label": "页面导航"
     },
-    "search": {   // 搜索配置
+    "search": {
       "provider": "algolia",
       "options": {
         "appId": "",
@@ -776,7 +706,7 @@ import giscusTalk from 'vitepress-plugin-comment-with-giscus';
                   "closeText": "close",
                   "searchByText": "Search by"
                 },
-                "noResultsScreen": {  // 搜索无结果
+                "noResultsScreen": {
                   "noResultsText": "No results for",
                   "suggestedQueryText": "You can try searching for",
                   "reportMissingResultsText": "You think it should have results?",
@@ -824,28 +754,5 @@ import giscusTalk from 'vitepress-plugin-comment-with-giscus';
   "rewrites": {
     "packages/pkg-a/src/pkg-a-docs.md": "pkg-a/index.md",
     "packages/pkg-b/src/pkg-b-docs.md": "pkg-b/index.md"
-  },
-    setup() {// 引入giscus
-      const { frontmatter } = useData(); // 获取当前页面路由信息
-      const route = useRoute();
-          
-      // giscus配置
-      giscusTalk({
-        repo: 'gzyxds/chataigc-doc', //仓库
-        repoId: 'R_kgDOM6985A', //仓库ID
-        category: 'Announcements', // 讨论分类
-        categoryId: 'DIC_kwDOM6985M4CjJMu', //讨论分类ID
-        mapping: 'pathname',
-        inputPosition: 'bottom',
-        lang: 'zh-CN',
-        }, 
-        {
-          frontmatter, route  // 获取当前页面路由信息
-        },
-        true
-        //默认值为true，表示已启用，此参数可以忽略；
-        //如果为false，则表示未启用
-        //您可以使用“comment:true”序言在页面上单独启用它
-      );
-   },
+  }
 });

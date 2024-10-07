@@ -1,19 +1,19 @@
 # 宝塔面板Docker部署
 
-提示
-
+::: info ⚠️提示
 推荐服务器最低配置：CPU双核、内存4GB、硬盘20GB、带宽5兆
+:::
 
-提示
-
-v3.3.0之前版本升级上来，请看[旧版本文档](https://doc.chatmoney.cn/pro/deployment/bt-docker-old.html)，此文档只适合v3.3.0后版本全新部署的。
+::: tip 提示
+v3.3.0之前版本升级上来，请看`旧版本文档`此文档只适合v3.3.0后版本全新部署的。
 知识库系统涉及的运行环境比较复杂，建议使用Docker部署，Docker的使用在宝塔面板上操作非常方便。
+:::
 
 ## 运行环境
 
-注意
-
+::: warning 注意
 在不影响其他站点的情况下，建议将宝塔升级到最新版本。
+:::
 
 * **步骤1**:
   登录宝塔面板后，单击左侧菜单最底部的【自定义菜单】，开启【Docker】菜单。单击左侧菜单【Docker】，出现提示安装Docker，单击【安装】。
@@ -49,24 +49,21 @@ Docker知识科普
 * **修改第①项**:
   浏览器打开新的窗口访问宝塔面板，单击【终端】，登录系统管理员账号，在终端输入`id www`并按回车键，可以看到终端返回的信息，信息为 www用户的用户id和用户组id，分别将uid的id和gid的id复制到【docker-compose.yml】文件中"user:"后面，要去掉前面”#“，格式如"uid的id:gid的id"，修改后【保存】文件，这样PHP容器就可以以www的权限进行运行。![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/www.png)
 
-yml
 
 ```
-    user: "1000:1000" ①【挂载主机ID】
+user: "1000:1000" ①【挂载主机ID】
 ```
 
 * **修改第②项**:
   修改MySQL的root密码，记住密码，安装程序需要填写。
-
-yml
+  
 
 ```
- MYSQL_ROOT_PASSWORD: 123456Abcd #②【123456Abcd】为MySQL容器root账号的密码，建议修改成复杂密码。
+MYSQL_ROOT_PASSWORD: 123456Abcd #②【123456Abcd】为MySQL容器root账号的密码，建议修改成复杂密码。
 ```
 
 * **修改第③④⑤项**: 分别修改postgres容器的帐号、密码、数据库名。记住这些信息，安装程序需要填写。
 
-yml
 
 ```
 - POSTGRES_USER=postgres #③【postgres】为postgres容器的默认账号。
@@ -105,7 +102,6 @@ yml
 
 单击【URL代理】-\> 【设置】-\>【自定义配置】，复制下面配置内容填写，然后【保存】。
 
-nginx
 
 ```
 proxy_set_header X-Forwarded-Proto $scheme;
@@ -137,42 +133,46 @@ postgreSQL项的数据库用户，数据库密码，数据名称，分别填写d
 
 ## 授权
 
-注意
+::: danger 注意
 
-1.授权文件与产品一一对应，如果不是同一产品，将无法使用。
-2.授权文件与项目域名也是一一对应，不然无法使用。
+- 1.授权文件与产品一一对应，如果不是同一产品，将无法使用。
+- 2.授权文件与项目域名也是一一对应，不然无法使用。
+  :::
 
 * **步骤1**:
-  购买源码后，登录官网，下载授权文件。![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/license-1.png)
+  - 购买源码后，联系客服授权文件!
 * **步骤2**:
-  添加授权文件到server/license目录，并命名为：my.license ，如果仍无法使用，请联系客服。![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/license-2.png)
+  - 添加授权文件到server/license目录
+  - 并命名为：`my.license`如果仍无法使用，请联系客服。![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/license-2.png)
 
 ## 访问地址
 
-安装成功后，打开以下链接可以访问相应页面。
-管理后台地址：[http://域名/admin](http://xn--eqrt2g/admin)
-用户PC前台地址：[http://域名](http://xn--eqrt2g/)
-用户PC前台地址：[http://域名/mobile](http://xn--eqrt2g/mobile)
+`安装成功后，打开以下链接可以访问相应页面`
+
+* 管理后台地址：http://域名/admin
+* 用户PC前台地址：http://域名
+* 用户PC前台地址：http://域名/mobile
 
 ## 验证自动任务
 
-提示
-
+::: danger ⚠️提示
 新版本在文件权限挂载正确情况下，会自动定时任务和守护进程。
-配置在docker/config/supervisor/supervisor.ini，一般情况下不要修改。
+配置在docker/config/supervisor/supervisor.ini，一般情况下不要修改
+:::
 
-⚠️ 警告
-
+:::  info ⚠️ 警告
 如果登录后台发现定时任务没有执行，说明守护进程也没有执行，这时需要将docker/log/supervisor目录设置为777权限，然后重启PHP容器。
+:::
 
 登录后台，打开菜单【系统维护】-\>【定时任务】，如果有出现今天的执行时间，说明定时任务和守护进程配置正常。![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/supervisor.png)
 
 ## 特别注意（使用必看）
 
-⚠️ 警告
-
+::: info ⚠️ 警告
 docker/data目录及其下文件不能修改权限，修改权限会导致异常，甚至无法恢复数据！！！
+:::
 
-提示
+::: tip 提示
+docker/data为MySQL数据库，postgres数据库数据存在目录，备份数据和数据，备份server目录和docker目录即可
+:::
 
-docker/data为MySQL数据库，postgres数据库数据存在目录，备份数据和数据，备份server目录和docker目录即可。
