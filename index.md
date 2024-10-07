@@ -8,15 +8,19 @@ hero:
     - theme: alt
       text: 🤖企业知识库
       link: /Work
+
     - theme: alt
       text: 🎨聊天绘画
       link: /chat
+
     - theme: alt
       text: ✍论文写作
       link: /paper
-    - theme: brand
+
+    - theme: alt    
       text: 🎉联系客服
       link: /comnew.cn
+
   image:
     src: \images\home\logo.svg
     alt: ''
