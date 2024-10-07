@@ -13,19 +13,19 @@ import { defineConfig } from "vitepress";
         "items": [
           {
             "text": "📗项目介绍",
-            "link": "/project/Product"
+            "link": "/product/Project/Product"
           },
           {
             "text": "🤖产品授权",
-            "link": "/项目介绍/产品授权"
+            "link": "/product/Project/auth"
           },
           {
             "text": "🛒授权购买",
-            "link": "/项目介绍/授权购买"
+            "link": "/product/Project/shop"
           },
           {
             "text": "☎️联系我们",
-            "link": "/项目介绍/联系我们"
+            "link": "/product/Project/contact"
           }
         ]
       },
@@ -639,6 +639,54 @@ import { defineConfig } from "vitepress";
         {
           "text": "Markdown",
           "link": "/project/Markdown"
+        }
+      ],
+      "/product/": [
+        {
+          "text": "产品中心",
+          "items": [
+            {
+              "text": "Markdown",
+              "link": "/product/Project/Markdown"
+            },
+            {
+              "text": "Product",
+              "link": "/product/Project/Product"
+            },
+            {
+              "text": "agent",
+              "link": "/product/Project/agent"
+            },
+            {
+              "text": "auth",
+              "link": "/product/Project/auth"
+            },
+            {
+              "text": "contact",
+              "link": "/product/Project/contact"
+            },
+            {
+              "text": "shop",
+              "link": "/product/Project/shop"
+            }
+          ]
+        },
+        {
+          "text": "AIGC系统",
+          "items": [
+            {
+              "text": "Work",
+              "link": "/product/aigc/Work"
+            },
+            {
+              "text": "chat",
+              "link": "/product/aigc/chat"
+            },
+            {
+              "text": "paper",
+              "link": "/product/aigc/paper"
+            }
+          ]
         }
       ]
     },
