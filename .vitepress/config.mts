@@ -803,7 +803,7 @@ import { defineConfig } from "vitepress";
   "srcDir": "./",
   "assetsDir": "static",
   "sitemap": {  
-    "hostname": "https://example.com",
+    "hostname": "https://xgphp.cn",
     "lastmodDateOnly": false
   },
   "locales": {},

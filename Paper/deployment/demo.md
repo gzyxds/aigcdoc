@@ -9,15 +9,7 @@
 
 ## 论文写作系统「PHP源码版」
 
-[![Banner Ad](https://doc.2021it.com/assets/20231226155057e6f5f5996.BfYvYQaj.png)]()ChatPaper-AI智能论文写作系统，基于前后端分离架构以及Vue3、uni-app、ThinkPHP6.x、PHP8.0技术栈开发，包含PC端、H5自适应。这是一款AI智能生成写作大纲，10分钟生成3万字论文的系统。你只需要输入论文关键词，AI即可快速为您生成论文大纲，可线上编辑和删除，操作高效快捷！只需要几分钟，AI可为您生成万字长文，AI助手生成全篇论文比自己写作更快，因为它是基于预训练模型的模式生成，不需要深入的思考和研究。可为您节约时间成本、避免写作困难。适用于期刊论文、科普文章、学生作业、商业报告、新闻报道等多种场景。
-
-### 演示站点[​](https://doc.2021it.com/docs/chatpaper/aiversion.html#%E6%BC%94%E7%A4%BA%E7%AB%99%E7%82%B9)
-
-| 演示平台     | 演示地址                                                                            | 账号         | 密码         |
-| -------------- | ------------------------------------------------------------------------------------- | -------------- | -------------- |
-| PC演示前台   | [https://cp.demo.yixiangonline.com/](https://cp.demo.yixiangonline.com/)               | 自行后台添加 | 自行后台添加 |
-| 移动端H5演示 | [https://cp.demo.yixiangonline.com/mobile/](https://cp.demo.yixiangonline.com/mobile/) | 自行后台添加 | 自行后台添加 |
-| 体验后台     | [https://cp.demo.yixiangonline.com/admin/](https://cp.demo.yixiangonline.com/admin/)   | admin        | admin110     |
+    |
 
 > 注：因是演示站未做授权版本比较旧，功能不是很全，购买是给到最新的版本和功能
 
