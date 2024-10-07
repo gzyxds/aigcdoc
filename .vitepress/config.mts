@@ -13,7 +13,7 @@ import { defineConfig } from "vitepress";
         "items": [
           {
             "text": "📗项目介绍",
-            "link": "/项目介绍/项目介绍"
+            "link": "/project/Product"
           },
           {
             "text": "🤖产品授权",
@@ -596,6 +596,49 @@ import { defineConfig } from "vitepress";
               "link": "/项目介绍/AIGC系统/paper"
             }
           ]
+        }
+      ],
+      "/project/": [
+        {
+          "text": "🐳AIGC系统",
+          "items": [
+            {
+              "text": "🐳企业知识库",
+              "link": "/project/aigc/Work"
+            },
+            {
+              "text": "🎨聊天绘画",
+              "link": "/project/aigc/chat"
+            },
+            {
+              "text": "📖论文写作",
+              "link": "/project/aigc/paper"
+            }
+          ]
+        },
+        {
+          "text": "🗂项目介绍",
+          "link": "/project/Product"
+        },
+        {
+          "text": "💰代理分销",
+          "link": "/project/agent"
+        },
+        {
+          "text": "🏅商业授权",
+          "link": "/project/auth"
+        },
+        {
+          "text": "📞联系我们",
+          "link": "/project/contact"
+        },
+        {
+          "text": "📢授权购买",
+          "link": "/project/shop"
+        },
+        {
+          "text": "Markdown",
+          "link": "/project/Markdown"
         }
       ]
     },
