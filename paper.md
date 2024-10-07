@@ -152,7 +152,7 @@ features:
       通过数据训练，用户在前台通过聊天对话模式快速查阅和各种内部资料和文档。使用机器学习技术，让系统自动学习并优化知识库中的知识，提高知识库的准确性和智能性
     link: /guide/start
     linkText: 了解更多
-title: AIGC创作系统
+title: AI论文写作系统
 description: ''
 navbar: true
 sideBar: true
