@@ -675,7 +675,7 @@ import giscusTalk from 'vitepress-plugin-comment-with-giscus';
         }
       ]
     },
-    "socialLinks": [
+    "socialLinks": [   // 社交链接
       {
         "icon": "github",
         "link": "https://github.com/vuejs/vitepress"
@@ -689,14 +689,14 @@ import giscusTalk from 'vitepress-plugin-comment-with-giscus';
         "link": "https://github.com/vuejs/vitepress"
       }
     ],
-    "externalLinkIcon": true,
-    "i18nRouting": false,
+    "externalLinkIcon": true,  // 是否在链接后显示图标
+    "i18nRouting": false,    // 是否启用多语言路由
     "logo": "\\images\\logo.png",
-    "outline": {
+    "outline": {  // 侧边栏导航
       "level": 2,
       "label": "页面导航"
     },
-    "search": {
+    "search": {   // 搜索配置
       "provider": "algolia",
       "options": {
         "appId": "",
@@ -776,7 +776,7 @@ import giscusTalk from 'vitepress-plugin-comment-with-giscus';
                   "closeText": "close",
                   "searchByText": "Search by"
                 },
-                "noResultsScreen": {
+                "noResultsScreen": {  // 搜索无结果
                   "noResultsText": "No results for",
                   "suggestedQueryText": "You can try searching for",
                   "reportMissingResultsText": "You think it should have results?",
