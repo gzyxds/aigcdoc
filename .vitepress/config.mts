@@ -24,7 +24,7 @@ import { defineConfig } from "vitepress";
             "link": "/product/Project/shop"
           },
           {
-            "text": "☎️联系我们",
+            "text": "📢联系我们",
             "link": "/product/Project/contact"
           }
         ]
@@ -94,6 +94,8 @@ import { defineConfig } from "vitepress";
       "/work/": [
         {
           "text": "🐳 知识库部署",
+          "collapsed": false,
+          "collapsible": true,
           "items": [
             {
               "text": "部署文档",
@@ -111,6 +113,8 @@ import { defineConfig } from "vitepress";
         },
         {
           "text": "🎉 第三方部署",
+          "collapsed": false,
+          "collapsible": true,
           "items": [
             {
               "text": "ChatGLM本地模型部署",
@@ -136,6 +140,8 @@ import { defineConfig } from "vitepress";
         },
         {
           "text": "🐹 前端部署",
+          "collapsed": false,
+          "collapsible": true,
           "items": [
             {
               "text": "微信公众号",
@@ -153,6 +159,8 @@ import { defineConfig } from "vitepress";
         },
         {
           "text": "🐰 其他配置",
+          "collapsed": false,
+          "collapsible": true,
           "items": [
             {
               "text": "微信开放平台（微信帐号统一）",
@@ -186,6 +194,8 @@ import { defineConfig } from "vitepress";
         },
         {
           "text": "🐞 常见问题",
+          "collapsed": false,
+          "collapsible": true,
           "items": [
             {
               "text": "升级更新",
@@ -207,6 +217,8 @@ import { defineConfig } from "vitepress";
         },
         {
           "text": "🦧 二次开发",
+          "collapsed": false,
+          "collapsible": true,
           "items": [
             {
               "text": "基本介绍",
@@ -226,6 +238,8 @@ import { defineConfig } from "vitepress";
       "/chat/": [
         {
           "text": "🐳 聊天绘画部署",
+          "collapsed": false,
+          "collapsible": true,
           "items": [
             {
               "text": "宝塔面板部署 ①",
@@ -247,6 +261,8 @@ import { defineConfig } from "vitepress";
         },
         {
           "text": "🐹 前端部署",
+          "collapsed": false,
+          "collapsible": true,
           "items": [
             {
               "text": "微信公众号",
@@ -272,6 +288,8 @@ import { defineConfig } from "vitepress";
         },
         {
           "text": "🎉 第三方部署",
+          "collapsed": false,
+          "collapsible": true,
           "items": [
             {
               "text": "SD绘图部署",
@@ -281,6 +299,8 @@ import { defineConfig } from "vitepress";
         },
         {
           "text": "🐰 其他配置",
+          "collapsed": false,
+          "collapsible": true,
           "items": [
             {
               "text": "微信开放平台",
@@ -314,6 +334,8 @@ import { defineConfig } from "vitepress";
         },
         {
           "text": "🐞 常见问题",
+          "collapsed": false,
+          "collapsible": true,
           "items": [
             {
               "text": "升级更新",
@@ -335,6 +357,8 @@ import { defineConfig } from "vitepress";
         },
         {
           "text": "🦧 二次开发",
+          "collapsed": false,
+          "collapsible": true,
           "items": [
             {
               "text": "基本介绍",
@@ -355,6 +379,8 @@ import { defineConfig } from "vitepress";
       "/Paper/": [
         {
           "text": "🐳论文写作部署",
+          "collapsed": false,
+          "collapsible": true,
           "items": [
             {
               "text": "宝塔部署 ",
@@ -372,6 +398,8 @@ import { defineConfig } from "vitepress";
         },
         {
           "text": "🐹前端部署",
+          "collapsed": false,
+          "collapsible": true,
           "items": [
             {
               "text": "微信公众号",
@@ -381,6 +409,8 @@ import { defineConfig } from "vitepress";
         },
         {
           "text": "🐰其他配置",
+          "collapsed": false,
+          "collapsible": true,
           "items": [
             {
               "text": "微信开放平台",
@@ -410,6 +440,8 @@ import { defineConfig } from "vitepress";
         },
         {
           "text": "🐞常见问题",
+          "collapsed": false,
+          "collapsible": true,
           "items": [
             {
               "text": "升级更新",
@@ -431,6 +463,8 @@ import { defineConfig } from "vitepress";
         },
         {
           "text": "🦧二次开发",
+          "collapsed": false,
+          "collapsible": true,
           "items": [
             {
               "text": "基本介绍",
@@ -446,6 +480,8 @@ import { defineConfig } from "vitepress";
       "/Project/": [
         {
           "text": "Contact",
+          "collapsed": false,
+          "collapsible": true,
           "link": "/Project/Contact"
         },
         {
@@ -551,6 +587,8 @@ import { defineConfig } from "vitepress";
       "/product/": [
         {
           "text": "🖥产品中心",
+          "collapsed": false,
+          "collapsible": true,
           "items": [
             {
               "text": "项目介绍",
@@ -576,6 +614,8 @@ import { defineConfig } from "vitepress";
         },
         {
           "text": "🎉AIGC系统",
+          "collapsed": false,
+          "collapsible": true,
           "items": [
             {
               "text": "🖥️企业知识库",
@@ -593,81 +633,70 @@ import { defineConfig } from "vitepress";
         }
       ]
     },
-    "socialLinks": [  // 社交链接
+    "socialLinks": [
       {
         "icon": "github",
-        "link": "https://github.com/vuejs/vitepress"
+        "link": "https://xgphp.cn"
       },
       {
         "icon": "discord",
-        "link": "https://github.com/vuejs/vitepress"
+        "link": "https://xgphp.cn"
       },
       {
         "icon": "facebook",
-        "link": "https://github.com/vuejs/vitepress"
-      }
-      ,
+        "link": "https://xgphp.cn"
+      },
       {
         "icon": "twitter",
-        "link": "https://github.com/vuejs/vitepress"
-      }
-      ,
+        "link": "https://xgphp.cn"
+      },
       {
         "icon": "youtube",
-        "link": "https://github.com/vuejs/vitepress"
-      }
-      ,
+        "link": "https://xgphp.cn"
+      },
       {
         "icon": "linkedin",
-        "link": "https://github.com/vuejs/vitepress"
+        "link": "https://xgphp.cn"
       }
     ],
-    // "externalLinkIcon": true,   // 是否显示外部链接的图标
-    "i18nRouting": false,      // 是否启用多语言路由
-    "logo": "\\images\\logo.png",   // logo的地址
-    "level": 2,                // 显示的层级
-    "label": "页面导航"                   // 导航的标题
-    ,
-    "lastUpdated": {  // 最后更新时间的配置 
+    "i18nRouting": false,
+    "logo": "\\images\\logo.png",
+    "level": 2,
+    "label": "页面导航",
+    "lastUpdated": {
       "text": "最后更新时间"
     },
-    "carbonAds": { // 广告的配置
+    "carbonAds": {
       "carbon": "CEBDT27Y",
       "custom": "CEBDT27Y",
       "placement": "vuejsorg"
     },
-    "carbon": {     // Carbon广告的配置
+    "carbon": {
       "key": "CEBDT27Y",
-  
-      "component": "EditLink"  // 组件的名称
-      ,
-      "componentProps": {    // 组件的属性
-        "repo": "vuejs/vitepress",    // 仓库的名称
-        "branch": "main",             // 分支的名称
-        "dir": "docs"                 // 文档的目录
-      }
-      ,
-      "customComponent": "EditLink"         // 自定义组件的名称
-      ,
+      "component": "EditLink",
+      "componentProps": {
+        "repo": "vuejs/vitepress",
+        "branch": "main",
+        "dir": "docs"
+      },
+      "customComponent": "EditLink",
       "customComponentProps": {
         "repo": "vuejs/vitepress",
         "branch": "main",
         "dir": "docs"
-      }
-      ,
-      "customComponentProps2": {         // 自定义组件的名称
+      },
+      "customComponentProps2": {
         "repo": "vuejs/vitepress",
         "branch": "main",
         "dir": "docs"
       }
-    
     },
-    "search": {                     // 搜索的配置
-      "provider": "local",         // 搜索的提供者
+    "search": {
+      "provider": "local",
       "options": {
         "appId": "",
         "apiKey": "",
-        "indexName": "",
+        "indexName": "搜索",
         "locales": {
           "zh": {
             "placeholder": "搜索文档",
@@ -710,12 +739,12 @@ import { defineConfig } from "vitepress";
               }
             }
           },
-          "en": {     // 英文 搜索的配置
-            "placeholder": "Search docs",        // 搜索的提示文本
+          "en": {
+            "placeholder": "搜索",
             "translations": {
               "button": {
-                "buttonText": "Search docs",
-                "buttonAriaLabel": "Search docs"
+                "buttonText": "搜索",
+                "buttonAriaLabel": "搜索"
               },
               "modal": {
                 "searchBox": {
@@ -756,38 +785,33 @@ import { defineConfig } from "vitepress";
     },
     "langMenuLabel": "多语言",
     "langs": [
-      {
-      }
-    ], 
-    
-    "returnToTopLabel": "回到顶部", // 返回顶部的文本
-    "lastUpdatedText": "最近更新于", // 最近更新的文本
-    "externalLinkIcon": true, // 是否显示外部链接的图标
-    "outline": {   // 侧边栏的配置
-    },
-   
-    
+      {}
+    ],
+    "returnToTopLabel": "返回顶部",
+    "lastUpdatedText": "最近更新于",
+    "externalLinkIcon": true,
+    "outline": {},
     "darkModeSwitchLabel": "主题",
     "lightModeSwitchTitle": "切换到浅色模式",
     "darkModeSwitchTitle": "切换到深色模式",
     "editLink": {
       "text": "编辑文档",
-      "pattern": "https://github.com/zhangdi168/VitePressSimple/edit/main/docs/:path"
+      "pattern": "https://github.com/gzyxds/chataigc-doc"
     },
-    "docFooter": {  // 页脚的配置
+    "docFooter": {
       "prev": "上一页",
       "next": "下一页"
     },
-    "footer": {  // 页脚的配置
-      // "message": "Released the ChatGPT-AIGC under the MIT License. Copyright © 2024 AIGC创作系统",
+    "footer": {
       "copyright": "上海枭格网络科技有限公司 copyright@ 2024 Albert AIGC系统源码 ICP备2022147728号"
     },
-    "siteTitle": false  
+    "siteTitle": false,
+    "sidebarMenuLabel": "菜单"
   },
   "markdown": {
     "lineNumbers": true
   },
-  "srcDir": "./", // 源码的目录
+  "srcDir": "./",
   "assetsDir": "static",
   "sitemap": {
     "hostname": "https://example.com",
