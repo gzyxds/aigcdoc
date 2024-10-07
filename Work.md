@@ -23,7 +23,7 @@ hero:
    
       
   image:
-    src: /public/images/Work.png
+    src: /public/images/openai.svg
     alt: ''
     width: ''
     height: ''

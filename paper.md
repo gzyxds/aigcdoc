@@ -17,7 +17,7 @@ hero:
     - text: 联系客服
       link: /api-examples
   image:
-    src: \images\home\logo.svg
+    src: /public/images/paper.svg
     alt: ''
     width: ''
     height: ''
