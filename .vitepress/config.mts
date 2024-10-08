@@ -107,7 +107,7 @@ import { defineConfig } from "vitepress";
             },
             {
               "text": "知识库PDF",
-              "link": "/work/deployment/pdf"
+              "link": "https://rwm01l8tn3x.feishu.cn/file/BkclbxFSUohtf8xWYRuc5XB7n1g?from=from_copylink"
             },
             {
               "text": "运营文档",
@@ -263,7 +263,7 @@ import { defineConfig } from "vitepress";
             },
             {
               "text": "聊天绘画PDF",
-              "link": "/chat/deployment/pdf"
+              "link": "https://rwm01l8tn3x.feishu.cn/slides/DJrEs6r3KlzjpCdo53UcXu8mnYb?from=from_copylink"
             },
             // {
             //   "text": "运营文档",
