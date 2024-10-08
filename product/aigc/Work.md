@@ -1,26 +1,29 @@
 ---
 layout: home
 hero:
-  name: AIGC
+  name: ChatGPT-AIGC 
   text: 全能AIGC知识库系统
   tagline: >-
-    基于前后端分离架构以及Vue3、uni-app、ThinkPHP6.x、PostgreSQL、pgvector技术栈开发，包含PC端、H5端。支持问答式和文档式知识库，能够导入txt、doc、docx、pdf、md等多种格式文档。导入数据完成向量化训练后，用户提问即可进行向量化搜索，并且结合大语言模型进行AI回答，可以提升AI回答的专业性和实用性。知识库应用支持对外发布聊天网页窗口，iframe代码，js代码以及API接口，拥有强大的第三方对接能力。适用于企业智能客服、企业智能文档、专家顾问助理等多种企业级商用场景
+    基于前后端分离架构以及Vue3、uni-app、ThinkPHP6.x、PostgreSQL、pgvector技术栈开发，包含PC端、H5端。
   actions:
-    - text: 查看演示
-      link: /markdown-examples
-    - text: 商业授权
-      link: /api-examples
-    - text: 部署文档
-      link: /api-examples
-    - text: 在线体验
-      link: /api-examples
+    - text: 🐳部署文檔
+      link: /work/deployment/demo.html
       
+    - text: ✨商业授权
+      link: /product/Project/auth.html
+
     - theme: alt
-      text: 联系客服
+      text: 🎉在线体验
       link: /api-examples
+
+    - theme: alt
+      text: 📞联系我们
+      link: /product/Project/contact.html
+      
+   
       
   image:
-    src: \images\home\logo.svg
+    src: /public/images/openai.svg
     alt: ''
     width: ''
     height: ''

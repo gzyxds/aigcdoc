@@ -1,23 +1,27 @@
 ---
 layout: home
 hero:
-  name: AIGC
+  name: ChatGPT-AIGC
   text: 论文写作系统
   tagline: >-
     基于前后端分离架构以及Vue3、uni-app、ThinkPHP6.x、PHP8.0技术栈开发，包含PC端、H5自适应。这是一款AI智能生成写作大纲，10分钟生成3万字论文的系统。你只需要输入论文关键词，AI即可快速为您生成论文大纲，可线上编辑和删除，操作高效快捷！只需要几分钟，AI可为您生成万字长文，AI助手生成全篇论文比自己写作更快，因为它是基于预训练模型的模式生成，不需要深入的思考和研究。可为您节约时间成本、避免写作困难。适用于期刊论文、科普文章、学生作业、商业报告、新闻报道等多种场景
   actions:
-    - text: 查看演示
-      link: /markdown-examples
     - text: 商业授权
-      link: /api-examples
-    - text: 部署文档
-      link: /api-examples
+      link: /markdown-examples
+
     - text: 在线体验
       link: /api-examples
-    - text: 联系客服
+
+    - theme: alt
+      text: 部署文档
       link: /api-examples
+    
+    - theme: alt
+      text: 联系客服
+      link: /api-examples
+      
   image:
-    src: \images\home\logo.svg
+    src: /public/images/paper.svg
     alt: ''
     width: ''
     height: ''
@@ -152,7 +156,7 @@ features:
       通过数据训练，用户在前台通过聊天对话模式快速查阅和各种内部资料和文档。使用机器学习技术，让系统自动学习并优化知识库中的知识，提高知识库的准确性和智能性
     link: /guide/start
     linkText: 了解更多
-title: AIGC创作系统
+title: AI论文写作系统
 description: ''
 navbar: true
 sideBar: true

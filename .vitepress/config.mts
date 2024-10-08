@@ -76,12 +76,12 @@ import { defineConfig } from "vitepress";
         "text": "💬联系我们",
         "items": [
           {
-            "text": "🍵联系方式",
-            "link": "/doc/contact"
+            "text": "📢联系方式",
+            "link": "/product/Project/contact"
           },
           {
-            "text": "🍵技术支持",
-            "link": "/doc/contact"
+            "text": "🎉技术支持",
+            "link": "/product/Project/contact"
           },
           {
             "text": "🍵赞助",
@@ -591,24 +591,24 @@ import { defineConfig } from "vitepress";
           "collapsible": true,
           "items": [
             {
-              "text": "项目介绍",
+              "text": "🖥️项目介绍",
               "link": "/product/Project/Product"
             },
             {
-              "text": "代理加盟",
-              "link": "/product/Project/agent"
-            },
-            {
-              "text": "商业授权",
+              "text": "🏅商业授权",
               "link": "/product/Project/auth"
             },
             {
-              "text": "联系我们",
-              "link": "/product/Project/contact"
+              "text": "✨代理加盟",
+              "link": "/product/Project/agent"
             },
             {
-              "text": "授权购买",
+              "text": "💰授权购买",
               "link": "/product/Project/shop"
+            },
+            {
+              "text": "📢联系我们",
+              "link": "/product/Project/contact"
             }
           ]
         },
@@ -627,7 +627,11 @@ import { defineConfig } from "vitepress";
             },
             {
               "text": "📖论文写作",
-              "link": "/product/aigc/paper"
+              "link": "/product/aigc/chat"
+            },
+            {
+              "text": "🎉系统演示",
+              "link": "/product/aigc/demo.md"
             }
           ]
         }
