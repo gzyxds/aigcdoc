@@ -106,6 +106,14 @@ import { defineConfig } from "vitepress";
               "link": "work/deployment/demo.md"
             },
             {
+              "text": "知识库PDF",
+              "link": "/work/deployment/pdf"
+            },
+            {
+              "text": "运营文档",
+              "link": "/work/deployment/Operations"
+            },
+            {
               "text": "更新日志",
               "link": "/work/deployment/update"
             }
@@ -253,6 +261,14 @@ import { defineConfig } from "vitepress";
               "text": "通用部署 ③",
               "link": "/chat/deployment/general"
             },
+            {
+              "text": "聊天绘画PDF",
+              "link": "/chat/deployment/pdf"
+            },
+            // {
+            //   "text": "运营文档",
+            //   "link": "/chat/deployment/Operations"
+            // },
             {
               "text": "版本演示",
               "link": "/chat/deployment/demo"
