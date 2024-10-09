@@ -60,7 +60,7 @@
 
 ## ChatGPT-AIGC-智能AI知识库系统「PHP源码版」
 
-![Banner Ad](https://doc.2021it.com/assets/202406031603424696b8454.Be90W_C2.png)
+
 ::: info ChatGPT-AIGC-智能AI知识库系统「PHP源码版」
 基于前后端分离架构以及Vue3、uni-app、ThinkPHP6.x、PostgreSQL、pgvector技术栈开发，包含PC端、H5端。ChatWork支持问答式和文档式知识库，能够导入txt、doc、docx、pdf、md等多种格式文档。导入数据完成向量化训练后，用户提问即可进行向量化搜索，并且结合大语言模型进行AI回答，可以提升AI回答的专业性和实用性。知识库应用支持对外发布聊天网页窗口，iframe代码，js代码以及API接口，拥有强大的第三方对接能力。适用于企业智能客服、企业智能文档、专家顾问助理等多种企业级商用场景，具有较大的商业使用价值。
 :::
@@ -69,8 +69,8 @@
 
 | 演示平台     | 演示地址                                                    | 账号     | 密码     |
 | -------------- | ------------------------------------------------------------- | ---------- | ---------- |
-| PC演示前台   | [https://zai.2021it.com](https://zai.2021it.com/)              | 自行注册 | 自行注册 |
-| 移动端H5演示 | [https://zai.2021it.com/mobile](https://zai.2021it.com/mobile) | 自行注册 | 自行注册 |
+| PC演示前台   | [https://aigc.cnai.art](https://aigc.cnai.art]/)              | 自行注册 | 自行注册 |
+| 移动端H5演示 | [https://aigc.cnai.art/mobile](https://aigc.cnai.art]/mobile) | 自行注册 | 自行注册 |
 | 体验后台     | 暂时不开放                                                  | 无       | 无       |
 
 ## 产品功能介绍
