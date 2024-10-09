@@ -704,7 +704,7 @@ import { defineConfig } from "vitepress";
     //     "branch": "main",
     //     "dir": "docs"
       // }
-
+    "chunkSizeWarningLimit": 1500,
     "search": {   // 搜索
       "provider": "local",  // 本地搜索
       "options": {   // 配置项
