@@ -77,9 +77,10 @@
 
 ## 访问地址
 
-管理后台地址：[http://域名/admin](https://chat-demo.likeshop.cn/admin)
-PC端地址：[http://域名/pc](https://chat.likeshop.cn/pc)
-手机端地址：[http://域名/mobile](https://chat.likeshop.cn/mobile)
+
+- 管理后台地址：http://域名/admin
+- PC端地址：http://域名/pc
+- 手机端地址：http://域名/mobile
 
 ## 定时任务
 
@@ -201,5 +202,3 @@ php80 think queue:listen --queue AiSdJob --timeout 300
 点击【软件商店】，找到项目使用的PHP-8.0，点击【设置】-\>【配置修改】，找到default\_socket\_timeout，超时间时间设置为300，点击【保存】。![](https://doc.chatmoney.cn/docs/images/chat/deployment/bt/php-timeout-1.png)![](https://doc.chatmoney.cn/docs/images/chat/deployment/bt/php-timeout-2.png)
 
 点击【软件商店】，Nginx，点击【设置】-\>【性能调整】，找到keepaliv\_timeout项，超时间时间设置为300，点击【保存】。![](https://doc.chatmoney.cn/docs/images/chat/deployment/bt/nginx-timeout.png)
-
-Pager

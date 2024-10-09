@@ -37,7 +37,7 @@ import { defineConfig } from "vitepress";
         "text": "⏬部署文档",
         "items": [
           {
-            "text": "🤖企知识库",
+            "text": "🤖全能知识库",
             "link": "/work/deployment/demo"
           },
           {
@@ -59,7 +59,7 @@ import { defineConfig } from "vitepress";
         "items": [
           {
             "text": "全能知识库",
-            "link": "http://chat.royunw.cn"
+            "link": "http://comnew.cn"
           },
           {
             "text": "聊天绘画",
@@ -255,16 +255,20 @@ import { defineConfig } from "vitepress";
           "collapsible": true,
           "items": [
             {
-              "text": "宝塔面板部署 ①",
+              "text": "宝塔部署",
               "link": "/chat/deployment/bt"
             },
             {
-              "text": "本地Docker部署 ②",
+              "text": "Docker部署",
               "link": "/chat/deployment/docker"
             },
             {
-              "text": "通用部署 ③",
+              "text": "通用部署",
               "link": "/chat/deployment/general"
+            },
+            {
+              "text": "更新日志",
+              "link": "/chat/deployment/update"
             },
             {
               "text": "聊天绘画PDF",
@@ -275,7 +279,7 @@ import { defineConfig } from "vitepress";
             //   "link": "/chat/deployment/Operations"
             // },
             {
-              "text": "版本演示",
+              "text": "系统演示",
               "link": "/chat/deployment/demo"
             }
           ]
@@ -633,6 +637,7 @@ import { defineConfig } from "vitepress";
             }
           ]
         },
+        
         {
           "text": "🎉AIGC系统",
           "collapsed": false,
@@ -654,11 +659,39 @@ import { defineConfig } from "vitepress";
               "text": "🎉系统演示",
               "link": "/product/aigc/demo.md"
             }
+            
+          ]
+        },
+
+        {
+          "text": "🍵友情连接",
+          "collapsed": false,
+          "collapsible": true,
+          "items": [
+            {
+              "text": "📫枭格科技",
+              "link": "http://www.xgphp.cn/"
+            },
+            {
+              "text": "☁优刻云",
+              "link": "https://www.cloudcvm.com/"
+            },
+            {
+              "text": "🎉Payphp",
+              "link": "http://www.payphp.cn/"
+            },
+            {
+              "text": "👀CodePu",
+              "link": "http://www.codepu.cn/"
+            }
+          
           ]
         }
       ]
-    },
-    "socialLinks": [
+    },  //  侧边栏页面导航结束
+
+
+    "socialLinks": [    //    社交链接
       {
         "icon": "github",
         "link": "https://xgphp.cn"
