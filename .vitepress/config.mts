@@ -24,6 +24,10 @@ import { defineConfig } from "vitepress";
             "link": "/product/Project/shop"
           },
           {
+            "text": "🎉系统演示",
+            "link": "/product/aigc/demo.html"
+          },
+          {
             "text": "📢联系我们",
             "link": "/product/Project/contact"
           }
@@ -55,11 +59,11 @@ import { defineConfig } from "vitepress";
         "items": [
           {
             "text": "全能知识库",
-            "link": "https://www.urlnet.cn"
+            "link": "http://chat.royunw.cn"
           },
           {
             "text": "聊天绘画",
-            "link": "https://www.urlnet.cn"
+            "link": "https://comnew.cn"
           }
         ]
       },
@@ -67,9 +71,13 @@ import { defineConfig } from "vitepress";
         "text": "🔎生态体系",
         "items": [
           {
-            "text": "API接口",
+            "text": "OpenApi",
             "link": "https://api.cnai.art"
-          }
+          },
+          {
+            "text": "优刻云计算",
+            "link": "https://www.cloudcvm.com/"
+          },
         ]
       },
       {
@@ -83,10 +91,7 @@ import { defineConfig } from "vitepress";
             "text": "🎉技术支持",
             "link": "/product/Project/contact"
           },
-          {
-            "text": "🍵赞助",
-            "link": "/sponsor/index"
-          }
+          
         ]
       }
     ],
