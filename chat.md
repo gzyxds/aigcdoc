@@ -6,20 +6,19 @@ hero:
   tagline: >-
     基于前后端分离架构以及Vue3、uni-app、ThinkPHP6.x、PHP8.0技术栈开发，包含 PC端、H5端、小程序端、APP端、对接国内外知名主流大语言模型接口及中转平台
   actions:
-    - text: 商业授权
-      link: /markdown-examples
+    - text: 🏅商业授权
+      link: http://localhost:5173/product/Project/auth.html
 
-    - text: 部署文档
+    - text: 📖部署文档
       link: /chat
 
     - theme: alt
-      text: 在线体验
-      link: /chat/deployment/demo.html
-
+      text: 🎉在线体验
+      link: https://comnew.cn/
 
     - theme: alt
-      text: 联系我们
-      link: /product/Project/contact.html
+      text: 📢联系我们
+      link: /product/Project/contact
 
   image:
     src: \images\home\logo.svg
@@ -33,130 +32,112 @@ features:
   - icon: 💬
     title: AI聊天系统
     details: 👉PHP && Java 持续更新中
-    link: /guide/start
-    linkText: 了解更多
+
   - icon: 💬
     title: AIGC知识库
     details: 👉PHP && Java 持续更新中
-    link: /guide/start
-    linkText: 了解更多
+
   - icon: 💬
     title: AI写作系统
     details: 👉PHP && Java 持续更新中
-    link: /guide/start
-    linkText: 了解更多
+
   - icon: 💬
     title: 接入AI接口
     details: 👉全新的高颜值/高性能的AI模型接口管理与分发系统
-    link: /guide/start
-    linkText: 了解更多
+
+
   - icon: 📚
     title: 全模型支持
     details: >-
       支持多种模型的AI对话功能、体验各种模型、在各个模型之中切换自如。支持OpenAI官方API + One API
       等中转对接使用（即支持OpenAI全模型、三方大模型、国内大模型）...
-    link: /guide/start
-    linkText: 了解更多
+
+
   - icon: 🛠️
     title: 高并发性能
     details: >-
-      使用 Nodejs + NestJs 服务端渲染技术, 支持高并发（万级甚至千万级用户同时请求使用）；提供更高的可用性和稳定性。支持任何
-      OpenAI 格式中转API, 自研渠道均衡负载和分配算法, 支持多渠道高并发调用管理， 支持多 API Key 轮询！
-      (优先级/权重/状态管理)...
-    link: /guide/start
-    linkText: 了解更多
+      Vue3、uni-app、ThinkPHP6.x、PHP8.0技术栈开发，包含 PC端、H5端、小程序端、APP端
+
   - icon: 🤖️
-    title: AI绘画
+    title: 应用市场
     details: >-
-      支持
-      Dall-E-2/3、支持Midjourney的AI绘画等主流前沿AI绘画。文生图、图生图、垫图混图、角色一致参考图、风格一致参考图生成等、AI换脸、图片混合、局部重绘
-      (Vary Region)等等...
-    link: /guide/start
-    linkText: 了解更多
-  - icon: 🎉
-    title: 自定义APP应用
+      可自定义添加各种各样的开箱即用的AI应用，例如一键生成工作日报等等
+
+
+
+  - icon: 🎨 
+    title: 绘画画廊
     details: >-
-      支持GPTs应用+Prompt自定义预设应用；GPTS：支持GPTS后台自定义添加、也可以全站搜索 =
-      官方搜索、支持全网搜索海量GPTs一键接入系统..
-    link: /guide/start
-    linkText: 了解更多
+      用户绘图可自定义公开展示，活跃AIGC社区氛围，同时也可以私有化绘图
+
+
   - icon: ✨
-    title: 多模态模型 & 联网
+    title:  安全过滤
     details: >-
-      识图、文档分析支持。支持自定义对话模型开启多模态支持。支持联网模式、可对模型进行扩展搜索当前网络实时内容总结；强大 Markdown 语法支持
-      (支持 代码高亮 / LaTeX 公式 / Mermaid 思维导图 / 图表绘制), 支持集成对话绘图模型 (DALL-E / Stable
-      Diffusion / Midjourney 等)...
-    link: /guide/start
-    linkText: 了解更多
+      多重安全词汇过滤机制：内置词库 -> 自定义词库 -> 第三方（百度内容审核）安全检测，可同时启用
+
+
+
   - icon: 🎨
-    title: 完整商用管理系统
+    title: 账号池支持
     details: >-
-      业站点管理系统, 支持自定义配置网站 LOGO / 站点名称 / 页脚 / 百度统计/ AI名称 / 版权信息/ 联系方式 / 站点公告 /
-      提示欢迎语等多种内容等多种内容;支持设置用户初始点数, 单独用户群配置 ；代理分销：支持 A + B
-      分销模式、后台可自定义分销提成额度、可对单独用户单独设置。支持设置提现门槛选项，支持用户多种提现方式选择（支付宝、微信、银行卡等）...
-    link: /guide/start
-    linkText: 了解更多
+      同时支持对话、绘画的账号池，包含实时的账号可用性检测以及在线服务开关重启
+
   - icon: 🚥
-    title: 完善的用户系统
+    title: AI智能对话
     details: >-
-      登录系统：支持 邮箱 | 手机短信 | 微信扫码 等不同登录注册方式供选择；访客系统：
-      支持不登录使用部分内容、可游客模式体验站内功能；商城系统：自定义商品套餐、可自定义生成永久套餐、限时套餐；签到系统：
-      支持配置每日签到赠送不同额度的奖励...
-    link: /guide/start
-    linkText: 了解更多
+      对接ChatAI接口，可以对自然语言进行深度理解，识别出用户的意图和需求，从而提供更加精准的回答和服务。
+
   - icon: 🖥️
-    title: 商业支付 & 会员系统
+    title: AI模型创作
     details: >-
-      支持官方微信支持、易支付、码支付、虎皮椒支付等支付方式, 支持同步检查订单状态, 支持订单搜索和管理； 会员系统：
-      提供普通模型积分、高级普通模型积分、绘画积分三种货币类型、支持各类商品自定义扣费模式与额度。支持自定义模型扣除费用类型、多种计费方式：按时间限制、无时间限制、自定义组合套餐设置
-      (免费 / 积分（次数）扣费 计费)...
-    link: /guide/start
-    linkText: 了解更多
+      根据不同模型进行提问，AI会针对输入的问题进行深度创作，提高创作能力；可定义不同的技能模型，用户根据不同技能进行提问，技能分类得越细，AI回答得越准确
+
+
   - icon: 📝
-    title: 多端支持
+    title: 丰富的营销功能
     details: >-
-      多端支持，自适应布局、适配PC、移动端、平板等设备。支持 Web / PWA / App / 小程序（后续开发）, UI 移动端适配,
-      支持明暗主题切换, 支持 Windows / MacOS / Linux / Android / iOS App...
-    link: /guide/start
-    linkText: 了解更多
+      会员期间不消耗次数，可无限使用、系统赠送优惠券挽留用户，每个套餐赠送的优惠券金额不同，给用户更大的优惠或更多的权益，以吸引其继续购买
+
+
   - icon: 🏅
-    title: 语音识别 & TTS
-    details: 支持 OpenAI / Azure 等语音识别 & TTS 模型，支持 Whisper & TTS 格式中转；支持TTS对话输入回复模式...
-    link: /guide/start
-    linkText: 了解更多
-  - icon: 💸
-    title: 接入AI接口
-    details: 为企业办公工具接入AI接口,包含：企业微信，钉钉，飞书
-    link: /guide/start
-    linkText: 了解更多
-  - icon: 🖥
-    title: 训练大语言模型
-    details: 打造专属企业知识库的AI模型,包含：客服，数字人直播，AI女友
-    link: /guide/start
-    linkText: 了解更多
-  - icon: 👂
-    title: 企业智能客服
-    details: 企业可以上传产品资料、FAQ手册等信息，完成训练后，对外发布智能客服聊天窗口。通过AI客服可以提供24小时在线客服支持，节省人力物力
-    link: /guide/start
-    linkText: 了解更多
+    title: 主题色切换
+    details: 可自定义系统主题风格，打造属于自己的GPT，实现人人都能拥有自己的 ChatAI聊天对话系统
+
+
+  - icon: 💻
+    title: 多终端适配
+    details: 系统支持微信小程序、微信公众号、H5网页、PC等终端，数据互通，完美解决广大用户需求
+
+
+  - icon: 🤖️
+    title: AI对话
+    details: 对接GPT接口，AI 秒回复，让您在工作中得心应手，提供更加精准的回答和服务
+
+
+  - icon: 📄
+    title: AI智能创作
+    details: 根据不同模型进行提问，AI会针对输入的问题进行深度创作，提高创作能力
+
+
   - icon: 🚀
-    title: 企业智能文档
+    title: AI技能
     details: >-
-      企业可以上传产品文档，合同内容等信息，完成训练后，仅限内部员工登录访问。通过AI助手，可以快速、准确的查询企业内部有关的信息文档，增强企业内部信息流动性
-    link: /guide/start
-    linkText: 了解更多
-  - icon: 📝
-    title: 专家顾问助理
+      可定义不同的技能模型，用户根据不同技能进行提问，技能分类得越细，AI回答得越准确
+
+
+  - icon: ✨
+    title: 任务奖励
     details: >-
-      专家学者，大V博主，可以上传自己的语录资料，出版书籍等文本信息，打造24小时虚拟数字分身。例如健身顾问、心理咨询师通过导入专业资料后，可以24小时对外提供在线服务，带来额外的服务收入
-    link: /guide/start
-    linkText: 了解更多
-  - icon: 📝
-    title: 知识库数据训练
+      注册奖励、分享奖励、邀请奖励，完成任务后会获得对话次数奖励
+
+
+  - icon: 🧭
+    title: 卡密兑换
     details: >-
-      通过数据训练，用户在前台通过聊天对话模式快速查阅和各种内部资料和文档。使用机器学习技术，让系统自动学习并优化知识库中的知识，提高知识库的准确性和智能性
-    link: /guide/start
-    linkText: 了解更多
+      支持兑换对话次数、绘画次数，支持兑换各种会员。渠道分销好帮手
+
+
 title: ChatGPTAIGC聊天绘画系统
 description: ''
 navbar: true
