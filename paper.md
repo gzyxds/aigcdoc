@@ -10,8 +10,7 @@ hero:
       link: /product/Project/auth
 
     - text: 🎉系统演示
-      link: https://cp.demo.yixiangonline.com/
-
+      link: https://cp.demo.yixiangonline.com/generate/
     - theme: alt
       text: 📖部署文档
       link: /Paper/deployment/bt

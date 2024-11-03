@@ -1,3 +1,11 @@
+<!--
+ * @Author: 枭格科技 348310633@qq.com
+ * @Date: 2024-10-08 13:22:10
+ * @LastEditors: 枭格科技 348310633@qq.com
+ * @LastEditTime: 2024-11-03 15:33:38
+ * @FilePath: \chataigc-doc\product\aigc\demo.md
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 # ChatGPT-AIGC·产品演示中心
 
 :::  tip 全能AI知识库系统 演示站点
@@ -11,8 +19,6 @@ ChatGPT-AIGC-全能AI知识库系统「PHP源码版」
 | 体验后台     | 暂时不开放                                                  | 无       | 无       |
 
 ::: info 客户案列
-
-- [chat.royunw.cn](http://chat.royunw.cn)
 - [app.72nh.com](http://app.72nh.com)
 
 :::

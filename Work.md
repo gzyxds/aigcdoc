@@ -14,7 +14,7 @@ hero:
 
     - theme: alt
       text: 🎉系统演示
-      link: http://chat.royunw.cn/
+      link: https://app.72nh.com/
 
     - theme: alt
       text: 📞联系我们
