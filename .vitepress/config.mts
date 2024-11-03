@@ -709,7 +709,8 @@ import { defineConfig } from "vitepress";
     ],
 
     "i18nRouting": false,
-    "logo": "\\images\\logo.png",
+    "logo": "/images/logo.svg",
+    "siteTitle": "AIGC创作系统",
     "level": 2,
     "label": "页面导航",
     "lastUpdated": {

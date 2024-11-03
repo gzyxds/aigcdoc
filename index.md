@@ -23,7 +23,7 @@ hero:
 
   image:
     src: \images\home\logo.svg
-    alt: ''
+    alt: 'CHATAIGC'
     width: ''
     height: ''
   description: ''
