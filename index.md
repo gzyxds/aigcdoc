@@ -19,7 +19,7 @@ hero:
 
     - theme: alt    
       text: 🎉联系客服
-      link: /comnew.cn
+      link: /product/Project/contact
 
   image:
     src: \images\home\logo.svg
