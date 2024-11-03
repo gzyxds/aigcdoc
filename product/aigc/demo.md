@@ -2,7 +2,7 @@
  * @Author: 枭格科技 348310633@qq.com
  * @Date: 2024-10-08 13:22:10
  * @LastEditors: 枭格科技 348310633@qq.com
- * @LastEditTime: 2024-11-03 15:33:38
+ * @LastEditTime: 2024-11-03 16:38:20
  * @FilePath: \chataigc-doc\product\aigc\demo.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -40,6 +40,7 @@ ChatGPT-AIGC-聊天绘画系统「PHP源码版」
 ::: info 客户案列
 
 - [comnew.cn](http://comnew.cn)
+- [aicz0101.top](https://aicz0101.top)
   :::
 
 > 注：因是演示站未做授权版本比较旧，功能不是很全，购买是给到最新的版本和功能
