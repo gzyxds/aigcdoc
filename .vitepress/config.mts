@@ -851,7 +851,7 @@ import { defineConfig } from "vitepress";
       "next": "下一页"
     },
     "footer": {
-      "copyright": "上海枭格网络科技有限公司 copyright@ 2024 Albert AIGC创作系统 ICP备2022147728号"
+      "copyright": "版权所有@ 2024 Albert AIGC创作系统 ICP备2022147728号"
     },
     "siteTitle": false,
     "sidebarMenuLabel": "菜单"
@@ -862,7 +862,7 @@ import { defineConfig } from "vitepress";
   "srcDir": "./",
   "assetsDir": "static",
   "sitemap": {  
-    "hostname": "https://xgphp.cn",
+    "hostname": "https://cnai.art",
     "lastmodDateOnly": false
   },
   "locales": {},
