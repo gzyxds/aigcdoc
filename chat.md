@@ -14,7 +14,7 @@ hero:
 
     - theme: alt
       text: 🎉在线体验
-      link: https://comnew.cn/
+      link: https://cnai.art/
 
     - theme: alt
       text: 📢联系我们
