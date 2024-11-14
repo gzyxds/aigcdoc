@@ -648,16 +648,20 @@ import { defineConfig } from "vitepress";
               "link": "/product/aigc/Work"
             },
             {
+              "text": "🎭AIGC数字人",
+              "link": "/hd"
+            },
+            {
               "text": "🎨聊天绘画",
               "link": "/product/aigc/chat"
             },
             {
               "text": "📖论文写作",
-              "link": "/product/aigc/chat"
+              "link": "/product/aigc/paper"
             },
             {
               "text": "🎉系统演示",
-              "link": "/product/aigc/demo.md"
+              "link": "/product/aigc/demo"
             }
             
           ]
@@ -669,19 +673,23 @@ import { defineConfig } from "vitepress";
           "collapsible": true,
           "items": [
             {
-              "text": "📫枭格科技",
-              "link": "http://www.xgphp.cn/"
-            },
-            {
               "text": "☁优刻云",
               "link": "https://www.cloudcvm.com/"
             },
             {
-              "text": "🎉Payphp",
+              "text": "📫枭格科技",
+              "link": "http://www.xgphp.cn/"
+            },
+            {
+              "text": "🔍172号卡",
+              "link": "http://www.urlka.cn/"
+            },
+            {
+              "text": "🎉支付系统",
               "link": "http://www.payphp.cn/"
             },
             {
-              "text": "👀CodePu",
+              "text": "👀代码库",
               "link": "http://www.codepu.cn/"
             }
           

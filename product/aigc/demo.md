@@ -8,7 +8,29 @@
 -->
 # ChatGPT-AIGC·产品演示中心
 
-:::  tip 全能AI知识库系统 演示站点
+:::  tip 🗣️ AIGC数字人 演示站点
+ChatGPT-AIGC数字人「PHP源码版」
+:::
+
+| 演示平台     | 演示地址                                                    | 账号     | 密码     |
+| -------------- | ------------------------------------------------------------- | ---------- | ---------- |
+| PC演示前台   | [ (hd.cnai.art)](http://hd.cnai.art/)             | 自行注册 | 自行注册 |
+| 移动端H5演示 | [(hd.art/mobile)](http://hd.cnai.art/mobile) | 自行注册 | 自行注册 |
+| 体验后台     | 暂时不开放                                                  | 无       | 无       |
+
+::: info 客户案列
+- [hd.cnai.art](http://hd.cnai.art)
+
+:::
+
+> 注：因是演示站未做授权版本比较旧，功能不是很全，购买是给到最新的版本和功能
+
+<br><br>
+
+
+
+
+:::  tip 🔍 全能AI知识库系统 演示站点
 ChatGPT-AIGC-全能AI知识库系统「PHP源码版」
 :::
 
@@ -27,7 +49,7 @@ ChatGPT-AIGC-全能AI知识库系统「PHP源码版」
 
 <br><br>
 
-::: danger 聊天绘画系统演示站点
+::: danger 🎨 聊天绘画系统演示站点
 ChatGPT-AIGC-聊天绘画系统「PHP源码版」
 :::
 
@@ -47,7 +69,7 @@ ChatGPT-AIGC-聊天绘画系统「PHP源码版」
 
 <br><br>
 
-:::  tip ChatPaper-论文写作系统演示站
+:::  tip 📖 ChatPaper-论文写作系统演示站
 ChatPaper-论文写作系统「PHP源码版」
 :::
 

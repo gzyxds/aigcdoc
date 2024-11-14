@@ -5,21 +5,26 @@ hero:
   text: 新一代AIGC赋能企业
   tagline:  🚀专注提供ChatGPT+AIGC系统源代码解决方案的技术团队「超级全能AI变现系统」「AI聊天绘画系统」「AI论文写作系统」拥有PHP和Java两种语言版本，技术实力强，系统体验好支持私有部署，专业团队、售后无忧
   actions:
-    - theme: alt
-      text: 🤖企业知识库
+    - theme: brand
+      text: 🚀 企业知识库
       link: /Work
+      class: 'primary-btn col-2'
 
+    - theme: brand
+      text: 🤖 AI数字人
+      link: /hd
+      class: 'demo-btn col-2'
     - theme: alt
-      text: 🎨聊天绘画
+      text: 🎨 绘画聊天
       link: /chat
+      class: 'demo-btn col-2'
 
     - theme: alt
-      text: ✍论文写作
+      text: ✍️ 论文写作
       link: /paper
+      class: 'code-btn col-2'
 
-    - theme: alt    
-      text: 🎉联系客服
-      link: /product/Project/contact
+   
 
   image:
     src: \images\home\logo.svg
