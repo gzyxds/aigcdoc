@@ -63,6 +63,7 @@ ChatGPT-AIGC-聊天绘画系统「PHP源码版」
 
 - [cnai.art](http://cnai.art)
 - [aicz0101.top](https://aicz0101.top)
+- [APP演示](https://www.123865.com/s/AIVRVv-eEIJA)
   :::
 
 > 注：因是演示站未做授权版本比较旧，功能不是很全，购买是给到最新的版本和功能
