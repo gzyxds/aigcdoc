@@ -150,6 +150,44 @@ custom: {}
 
 ---
 
+<div style="display: flex; flex-wrap: wrap; gap: 30px; margin: 40px auto; max-width: 1200px; justify-content: center;">
+  <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); width: calc(50% - 30px); min-width: 250px; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center;">
+    <img src="/public/images/qrcode.png" alt="客服二维码" style="width: 100%; max-width: 220px; border-radius: 10px; margin-bottom: 15px;">
+    <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">客服二维码</p>
+    <p style="margin: 5px 0 0; font-size: 14px; color: #666;">扫码添加客服咨询</p>
+  </div>
+  
+  <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); width: calc(50% - 30px); min-width: 250px; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center;">
+    <img src="/public/images/qrcode.png" alt="技术支持" style="width: 100%; max-width: 220px; border-radius: 10px; margin-bottom: 15px;">
+    <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">技术支持</p>
+    <p style="margin: 5px 0 0; font-size: 14px; color: #666;">专业技术团队为您服务</p>
+  </div>
+
+  <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); width: calc(50% - 30px); min-width: 250px; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center;">
+    <img src="/public/images/qq.png" alt="商务QQ" style="width: 100%; max-width: 220px; border-radius: 10px; margin-bottom: 15px;">
+    <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">商务QQ</p>
+    <p style="margin: 5px 0 0; font-size: 14px; color: #666;">商务合作请联系</p>
+  </div>
+
+  <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); width: calc(50% - 30px); min-width: 250px; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center;">
+    <img src="/public/images/cloud.png" alt="交流群" style="width: 100%; max-width: 220px; border-radius: 10px; margin-bottom: 15px;">
+    <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">交流群</p>
+    <p style="margin: 5px 0 0; font-size: 14px; color: #666;">加入群聊一起交流</p>
+  </div>
+</div>
+
+<style>
+@media screen and (max-width: 768px) {
+  div[style*="flex-wrap: wrap"] > div {
+    width: calc(100% - 30px) !important;
+  }
+}
+
+div[style*="flex-wrap: wrap"] > div:hover {
+  transform: translateY(-5px);
+}
+</style>
+
 ### 🚀AI智能聊天系统、AI绘画、大模型知识库训练开发
 
 ::: danger 全套开源代码
