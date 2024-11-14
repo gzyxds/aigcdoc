@@ -58,12 +58,16 @@ import { defineConfig } from "vitepress";
         "text": "🏅AI助手",
         "items": [
           {
-            "text": "全能知识库",
-            "link": "http://comnew.cn"
+            "text": "聊天绘画",
+            "link": "http://cnai.art"
           },
           {
-            "text": "聊天绘画",
+            "text": "企业知识库",
             "link": "https://comnew.cn"
+          },
+          {
+            "text": "AIGC数字人",
+            "link": "http://hd.cnai.art"
           }
         ]
       },
