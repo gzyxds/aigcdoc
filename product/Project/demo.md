@@ -29,7 +29,7 @@ ChatGPT-AIGC-聊天绘画系统「PHP源码版」
 | -------------- | --------------------------------------------------------------------------------------- | -------------- | -------------- |
 | PC演示前台   | [https://ai1.demo.yixiangonline.com/](https://ai1.demo.yixiangonline.com/)               | 自行后台添加 | 自行后台添加 |
 | 移动端H5演示 | [https://ai1.demo.yixiangonline.com/mobile/](https://ai1.demo.yixiangonline.com/mobile/) | 自行后台添加 | 自行后台添加 |
-| 体验后台     | [https://ai1.demo.yixiangonline.com/admin/](https://ai1.demo.yixiangonline.com/admin/)   | aiadmin      | admin110     |
+| 体验后台     | [https://ai1.demo.yixiangonline.com/admin/](https://ai1.demo.yixiangonline.com/admin/)   | admin      | admin110     |
 
 ::: info 客户案列
 
