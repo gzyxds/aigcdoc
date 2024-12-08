@@ -14,7 +14,7 @@ hero:
 
     - theme: brand
       text: 🎨 在线体验
-      link: /chat
+      link: /product/aigc/demo
       class: 'demo-btn'
 
     - theme: alt

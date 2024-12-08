@@ -41,6 +41,10 @@ import { defineConfig } from "vitepress";
             "link": "/work/deployment/demo"
           },
           {
+            "text": "🎭AI数字人",
+            "link": "/human/deployment/demo"
+          },
+          {
             "text": "🎉聊天绘画",
             "link": "/chat/index"
           },
