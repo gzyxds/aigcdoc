@@ -19,7 +19,7 @@ import { defineConfig } from "vitepress";
             "text": "🤖产品授权",
             "link": "/product/Project/auth"
           },
-          {
+          {   
             "text": "🛒授权购买",
             "link": "/product/Project/shop"
           },
@@ -41,9 +41,10 @@ import { defineConfig } from "vitepress";
             "link": "/work/deployment/demo"
           },
           {
-            "text": "🎭AI数字人",
-            "link": "/human/deployment/demo"
+            "text": "🤖AI数字人",
+            "link": "/human"
           },
+
           {
             "text": "🎉聊天绘画",
             "link": "/chat/index"
@@ -106,7 +107,7 @@ import { defineConfig } from "vitepress";
           
         ]
       }
-    ],
+    ],     
     "sidebar": {
       "/work/": [
         {
@@ -260,6 +261,65 @@ import { defineConfig } from "vitepress";
           ]
         }
       ],
+      "/human/": [
+        {
+          "text": "🐳 AI数字人部署",
+          "collapsed": false,
+          "collapsible": true,
+          "items": [
+            {
+              "text": "宝塔面板部署 ①",
+              "link": "/human/deployment/bt"
+            },
+            {
+              "text": "通用部署 ②",
+              "link": "/human/deployment/general"
+            }
+          ]
+        },
+        {
+          "text": "🐹 前端部署",
+          "collapsed": false,
+          "collapsible": true,
+          "items": [
+            {
+              "text": "微信公众号",
+              "link": "/human/front/oa"
+            }
+          ]
+        },
+        {
+          "text": "🐰 其他配置",
+          "collapsed": false,
+          "collapsible": true,
+          "items": [
+            {
+              "text": "微信开放平台（微信帐号统一）",
+              "link": "/human/other/open"
+            },
+            {
+              "text": "微信支付",
+              "link": "/human/other/wechatpay"
+            },
+            {
+              "text": "支付宝支付",
+              "link": "/human/other/alipay"
+            }
+          ]
+        },
+        {
+          "text": "🦧 二次开发",
+          "collapsed": false,
+          "collapsible": true,
+          "items": [
+            {
+              "text": "数据接口",
+              "link": "/human/develop/api"
+            }
+          ]
+        }
+      ],
+
       "/chat/": [
         {
           "text": "🐳 聊天绘画部署",

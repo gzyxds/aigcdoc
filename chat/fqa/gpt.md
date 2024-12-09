@@ -1,186 +1,43 @@
-# ChatGLM本地模型部署
+GPT 使用指南[​](https://doc.chatmoney.cn/chat/qa/gpt.html#gpt-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97)
+===============================================================================================
 
-## ChatGLM2-6B
-
-### ChatGLM2-6B 简介
-
-ChatGLM2-6B 是开源中英双语对话模型 ChatGLM-6B 的第二代版本，具体介绍可参阅 [ChatGLM2-6B 项目主页](https://github.com/THUDM/ChatGLM2-6B)
+内容来自互联网，如有错误请指出。
 
 注意
 
-ChatGLM2-6B 权重对学术研究完全开放，在获得官方的书面许可后，亦允许商业使用。本教程只是介绍了一种用法，无权给予任何授权！
+请注意：对于普通用户，我们建议使用 GPT-3.5 而不是 GPT-4。因为 GPT-3.5 的响应速度是 GPT-4 的四倍，同时 GPT-4 的价格比 GPT-3.5 高出157.5 倍-315 倍。
 
-### 推荐配置
+为什么推荐 gpt-3.5-turbo？[​](https://doc.chatmoney.cn/chat/qa/gpt.html#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%8E%A8%E8%8D%90-gpt-3-5-turbo)
+------------------------------------------------------------------------------------------------------------------------------
 
-依据官方数据，同样是生成 8192 长度，量化等级为 FP16 要占用 12.8GB 显存、int8 为 8.1GB 显存、int4 为 5.1GB 显存，量化后会稍微影响性能，但不多。
+根据我们的用户在处理数十亿 tokens 过程中的经验教训，我们得出了以下关于 GPT-4 和 GPT-3.5 的使用建议：  
+1.我们不推荐普通用户使用 GPT-4，因为 GPT-3.5 的响应速度比 GPT-4 快四倍，而且 GPT-4 的价格比 GPT-3.5 高出157.5 倍-315 倍。  
+2.如果您还是想尝试 GPT-4，请务必注意：在对话过程中避免添加过量无关上下文。这样做不会提高语境理解，反而会消耗更多 tokens。
 
-| 类型 | 内存           | 显存           | 硬盘空间       |
-| ------ | ---------------- | ---------------- | ---------------- |
-| fp16 | \>\=16GB | \>\=16GB | \>\=25GB |
-| int8 | \>\=16GB | \>\=9GB  | \>\=25GB |
-| int4 | \>\=16GB | \>\=6GB  | \>\=25GB |
+为什么 GPT-4 或 GPT-3.5 无法辨认自身的版本？[​](https://doc.chatmoney.cn/chat/qa/gpt.html#%E4%B8%BA%E4%BB%80%E4%B9%88-gpt-4-%E6%88%96-gpt-3-5-%E6%97%A0%E6%B3%95%E8%BE%A8%E8%AE%A4%E8%87%AA%E8%BA%AB%E7%9A%84%E7%89%88%E6%9C%AC)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-### 源码部署
+首先，如果你询问 GPT-4：你是 GPT-4 吗？它很有可能会回答：我是 OpenAI 的 GPT-3 模型，目前尚未推出 GPT-4。  
 
-提示
+这种现象背后的原因是，OpenAI 提供的 GPT-4 API 使用的训练数据截止到 2021 年 9 月。当模型训练完成后，若不再次进行训练，它所包含的知识并不会自动更新。就像你在 2021 年无法回答 2023 年你享用的第一顿饭是什么一样，你给出的答案必然是错误的。
 
-根据上面的环境配置配置好环境，具体教程自行百度；
-可参考的部署文章: [https://blog.csdn.net/lovelylord/article/details/132349967](https://blog.csdn.net/lovelylord/article/details/132349967)
+如何区分 GPT-3.5 和 GPT-4？[​](https://doc.chatmoney.cn/chat/qa/gpt.html#%E5%A6%82%E4%BD%95%E5%8C%BA%E5%88%86-gpt-3-5-%E5%92%8C-gpt-4)
+--------------------------------------------------------------------------------------------------------------------------------
 
-* **1、从GitHub仓库中拉取代码**
+你可以尝试提问：“树上有 9 只鸟，猎人开枪打死一只，树上还剩下多少只鸟？”  
 
-```
-# 1.从GitHub仓库中拉取代码
-git clone https://github.com/THUDM/ChatGLM2-6B
+在 90%的情况下，GPT-3.5 都会回答剩下 8 只鸟；  
+而 GPT-4 则大概率会回答剩下 0 只鸟，因为其他的都被吓跑了。  
+如果这个问题测试不出来，你可以新建上下文或者多试几次，请不要在一个上下文内连续询问。
 
-# 2.进入下载源码的目录
-cd ChatGLM2-6B
-```
+Tokens 是什么？[​](https://doc.chatmoney.cn/chat/qa/gpt.html#tokens-%E6%98%AF%E4%BB%80%E4%B9%88)
+--------------------------------------------------------------------------------------------
 
-* **2、下载python文件：**  [点击Python文件](https://doc.chatmoney.cn/docs/download/glm.zip)
+Token 是 GPT 处理文本的基本单位。简而言之，Token 可以是一个字、一个词或特定语言中的一个字符。它们负责将输入的文本数据转换为 GPT 可以处理的数据格式。
 
-    * 得到两个文件: openai\_ai.py 和 requirements.txt
-    * 把这两个文件替换到 ChatGLM2-6B 目录里面
-* **3、在命令行输入命令(安装依赖)：**  **​`pip install -r requirments.txt`​**
+作用：Tokens 的数量影响模型的能力，例如理解复杂语义、表达丰富内容以及高效处理长篇文本等。 限制：然而，较多的 Tokens 数量意味着更大的计算资源需求，可能导致处理速度减慢和内存需求增加。 每个 GPT 模型都有一个预设的最大 Tokens 数量。例如，GPT-3 允许处理的最大 Tokens 数量约为 4096。需要注意的是，这个数量包括输入和输出的所有 Tokens。
 
-    * 建议使用python的虚拟环境,以免产生一些不必要的麻烦。
-* **4、运行项目：**  **​`python openai_api.py --model 16`​** **这里的数字根据上面的配置进行选择。**
+什么是上下文？[​](https://doc.chatmoney.cn/chat/qa/gpt.html#%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%8A%E4%B8%8B%E6%96%87)
+------------------------------------------------------------------------------------------------------------
 
-    * 然后等待模型下载，直到模型加载完毕为止。如果出现报错先问百度。
-    * 这里可能需要科学上网
-* **5、启动成功后应该会显示如下地址：**
-
-提示
-
-这里的 [http://0.0.0.0:8000](http://0.0.0.0:8000/) 就是连接地址。
-
-![](https://doc.chatmoney.cn/docs/images/general/third-deployment/chat-glm/chatglm-start.png)
-
-### 关于 openai\_api.py 启动的一些参数
-
-| 参数名   | 可选值                                                             | 默认值 |
-| ---------- | -------------------------------------------------------------------- | -------- |
-| --device | cuda\=显卡运行, cpu\=cpu运行                                 | cuda   |
-| --path   | local\=本地下载的模型运行, thudm\=线上自动下载               | thudm  |
-| --model  | 4\=chatglm2-6b-int4, 8\=chatglm2-6b-int8, 16\=chatglm2-6b | 16     |
-
-* 说明:
-
-    * 如果你 `--path` 参数设置为 local, 那需要你先把模型下载下来, 放到 ChatGLM2-6B/models 目录下
-    * 比如: ChatGLM2-6B/models/chatglm2-6b-int4
-    * 然后再去运行: `python openai_api.py --model 4 --path local`
-
-### 接口测试
-
-![](https://doc.chatmoney.cn/docs/images/general/third-deployment/chat-glm/chatglm-post.png)
-
-### 接入到系统
-
-![](https://doc.chatmoney.cn/docs/images/general/third-deployment/chat-glm/chatglm-set.png)
-
-## ChatGLM3-6B
-
-注意
-
-部署方案和ChatGLM2-6B的方式基本上是一样的。
-
-* **1、从GitHub仓库中拉取代码**
-
-```
-# 1.从GitHub仓库中拉取代码
-https://github.com/THUDM/ChatGLM3
-
-# 2.进入下载源码的目录
-cd ChatGLM3-6B
-```
-
-* **2、在命令行输入命令(安装依赖)**
-
-shell
-
-```
-# PS: 建议使用python的虚拟环境,以免产生一些不必要的麻烦。
-pip install -r requirments.txt
-```
-
-* **3、安装cuda依赖 (如果你是用显卡运行,否则忽略该步骤)**
-
-shell
-
-```
-3.1、我这边是使用windows系统,首先需要运行一下命令看一下CUDA的版本
-    在cmd终端运行: nvidia-smi
-    我这边得到的版本是: CUDA Version: 12.2
-
-3.2、然后去torch官网中查看CUDA适配的torch版本
-   官网: https://pytorch.org/get-started/locally/
-
-3.3、进入网站后按版本选择安装命令 (根据你电脑实际情况选择)
-    PyTorch Build    :  Stable(2.1.0)
-    Your OS          : Windows
-    Package          : Pip
-    Language         : Python
-    Compute Platform : CUDA 12.1
-    Run this Command : pip3 install torch trchvision ......
-
-3.4、你只需要复制后面 Run this Command 选项的这串 pip3的安装命令, 然后回到你电脑的终端运行即可
-```
-
-* **4、下载python文件：**  [点击Python文件](https://doc.chatmoney.cn/docs/download/glm3.zip)
-
-    * 得到1个文件: openai\_ai.py (此文件就是启动文件)
-    * 把这个文件放到到 ChatGLM3-6B 目录里面
-* **5、下载模型文件到本地：**
-
-    * 下载地址: [https://modelscope.cn/models/ZhipuAI/chatglm3-6b/files](https://modelscope.cn/models/ZhipuAI/chatglm3-6b/files)
-    * 把里面列表所有文件都下载回来, 并统一用一个名为 chatglm3-6b 的文件夹存放
-    * 然后把该文件夹的(含所有内容) 一并移动到 ChatGLM3-6B/models 目录下面
-* **6、运行项目：**  **​`python openai_api.py`​** **这里的数字根据上面的配置进行选择。**
-
-    * 然后等待模型下载，直到模型加载完毕为止。如果出现报错先问百度。
-    * 这里可能需要科学上网 (默认是需要从 www.huggingface.org 上面下载模型文件回来的, 时间会比较长)
-    * 以上什么参数都没有的实际运行命令是 `python openai_api.py --device cuda --path local --model 4`
-
-        * 该命令的意思是 启动脚本 使用 【显卡驱动、使用本地下载的模型文件(即上面第5步) 、 使用量化版本】
-        * 为什么默认使用量化版本? 因为如果你的显卡显存不够13GB是没办法运行正常的版本的。
-        * 如果运行正常版本? 把参数 --model 4 改成 --model 16 即可。
-        * 问: 我要运行32k的模型呢? 答: 那你就去下载32k的模型 当然放到源码的models目录下面, 修改一些运行命令运行就行了
-* **7、运行后的效果**
-
-shell
-
-```
-(venv) PS E:\AI\GLM3> python .\openai_api.py
-
-===========================
-本次加载模型的设备为GPU:  NVIDIA CMP 40HX
-===========================
-
-正在启动的是量化版本...
-
-Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████| 7/7 [00:23<00:00,  3.41s/it]
-INFO:     Started server process [11136]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-INFO:     Uvicorn running on http://0.0.0.0:8100 (Press CTRL+C to quit)
-
-## 注意
-## 注意
-## 这个就是你的运行接口,配置到知识库系统里那个
-接口: http://0.0.0.0:8100
-```
-
-* **8、关于 openai_api.py 启动的一些参数**
-
-| 参数名   | 可选值                                                                              | 默认值 |
-| ---------- | ------------------------------------------------------------------------------------- | -------- |
-| --device | cuda\=显卡运行, cpu\=cpu运行                                                  | cuda   |
-| --path   | local\=本地下载的模型运行, thudm\=线上自动下载                                | thudm  |
-| --model  | 4\=量化模型, 16\=chatglm3-6b, 32\=chatglm2-6b-32k, 128\=chatglm2-6b-32k | 4      |
-
-* 说明:
-
-    * 如果你 `--path` 参数设置为 local, 那需要你先把模型下载下来, 放到 ChatGLM2-6B/models 目录下
-    * 比如: ChatGLM3-6B/models/chatglm3-6b
-    * 然后再去运行: `python openai_api.py --model 4 --path local`
-    * PS: 温馨小提示,GLM3不再像之前GLM2那样单独提供量化版本模型下载, 现在是量化模型直接继承在 chatglm3-6b模型上,使用运行命令作为区分。
+在 GPT 用于文本生成时，它需要考虑之前输入的所有文本上下文，以生成连贯、有意义的句子。随着输入上下文的增加，GPT 生成的文本变得越来越连贯和精准。例如，如果将一篇完整的文章或段落作为输入，GPT 将能生成符合上下文连贯性的自然语言文本。因此，GPT 上下文累积得越多，生成文本的准确度和连贯性呈逐步提升趋势。

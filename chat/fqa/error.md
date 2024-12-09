@@ -1,186 +1,83 @@
-# ChatGLM本地模型部署
+常见错误问题处理[​](https://doc.chatmoney.cn/chat/qa/error.html#%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E9%97%AE%E9%A2%98%E5%A4%84%E7%90%86)
+=================================================================================================================================
 
-## ChatGLM2-6B
+授权错误提示[​](https://doc.chatmoney.cn/chat/qa/error.html#%E6%8E%88%E6%9D%83%E9%94%99%E8%AF%AF%E6%8F%90%E7%A4%BA)
+-------------------------------------------------------------------------------------------------------------
 
-### ChatGLM2-6B 简介
+### ①站点设置多域名[​](https://doc.chatmoney.cn/chat/qa/error.html#_1%E7%AB%99%E7%82%B9%E8%AE%BE%E7%BD%AE%E5%A4%9A%E5%9F%9F%E5%90%8D)
 
-ChatGLM2-6B 是开源中英双语对话模型 ChatGLM-6B 的第二代版本，具体介绍可参阅 [ChatGLM2-6B 项目主页](https://github.com/THUDM/ChatGLM2-6B)
+站点配置了两个域名，授权文件只支持单域名，无论访问哪个域名，都会提醒授权错误。删除没有授权的域名即可。
 
-注意
+### ②反向代理和docker运行[​](https://doc.chatmoney.cn/chat/qa/error.html#_2%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E5%92%8Cdocker%E8%BF%90%E8%A1%8C)
 
-ChatGLM2-6B 权重对学术研究完全开放，在获得官方的书面许可后，亦允许商业使用。本教程只是介绍了一种用法，无权给予任何授权！
+使用了反向代理，导致授权文件识别不出来，发送域名选项需要填写$host，如果反向代理的是docker，需要将docker域名设置为和授权域名一致。 改完nginx以后记得重启nginx，改完nginx容器以后，记得重启容器。![](https://doc.chatmoney.cn/docs/images/general/qa/error/license-3-1.png)![](https://doc.chatmoney.cn/docs/images/general/qa/error/license-3-2.png)
 
-### 推荐配置
+PC端无法扫码登录[​](https://doc.chatmoney.cn/chat/qa/error.html#pc%E7%AB%AF%E6%97%A0%E6%B3%95%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95)
+---------------------------------------------------------------------------------------------------------------------------
 
-依据官方数据，同样是生成 8192 长度，量化等级为 FP16 要占用 12.8GB 显存、int8 为 8.1GB 显存、int4 为 5.1GB 显存，量化后会稍微影响性能，但不多。
+### ①缺少配置[​](https://doc.chatmoney.cn/chat/qa/error.html#_1%E7%BC%BA%E5%B0%91%E9%85%8D%E7%BD%AE)
 
-| 类型 | 内存           | 显存           | 硬盘空间       |
-| ------ | ---------------- | ---------------- | ---------------- |
-| fp16 | \>\=16GB | \>\=16GB | \>\=25GB |
-| int8 | \>\=16GB | \>\=9GB  | \>\=25GB |
-| int4 | \>\=16GB | \>\=6GB  | \>\=25GB |
+登录管理后台->【渠道设置】->【微信公众号设置】->【公众号配置】。 登录微信公众平台[https://mp.weixin.qq.com/，【设置与开发】-](https://mp.weixin.qq.com/%EF%BC%8C%E3%80%90%E8%AE%BE%E7%BD%AE%E4%B8%8E%E5%BC%80%E5%8F%91%E3%80%91-)\>【基本设置】。 按一下步骤，将信息填写即可。![](https://doc.chatmoney.cn/docs/images/general/qa/error/pc-wechat-login.png)
 
-### 源码部署
+### ①域名被微信封了[​](https://doc.chatmoney.cn/chat/qa/error.html#_1%E5%9F%9F%E5%90%8D%E8%A2%AB%E5%BE%AE%E4%BF%A1%E5%B0%81%E4%BA%86)
 
-提示
+在后台设置了公众号，设置的时候参数都正确，但是报错了，或者设置好了，无法扫码登录。很可能是域名被微信封了。可以用微信发条链接，自己打开试试，可以申诉解决。
 
-根据上面的环境配置配置好环境，具体教程自行百度；
-可参考的部署文章: [https://blog.csdn.net/lovelylord/article/details/132349967](https://blog.csdn.net/lovelylord/article/details/132349967)
+微信支付问题[​](https://doc.chatmoney.cn/chat/qa/error.html#%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E9%97%AE%E9%A2%98)
+-------------------------------------------------------------------------------------------------------------
 
-* **1、从GitHub仓库中拉取代码**
+### ①没有填写API3密钥[​](https://doc.chatmoney.cn/chat/qa/error.html#_1%E6%B2%A1%E6%9C%89%E5%A1%AB%E5%86%99api3%E5%AF%86%E9%92%A5)
 
-```
-# 1.从GitHub仓库中拉取代码
-git clone https://github.com/THUDM/ChatGLM2-6B
+本系统要求填写的是微信API3的密钥，并非API2密钥，虽然填写API2密钥完可以支付，但是微信支付回调会异常，导致会员没开通或者次数无增加。
 
-# 2.进入下载源码的目录
-cd ChatGLM2-6B
-```
+### ②API2密钥与API3密钥设置一样[​](https://doc.chatmoney.cn/chat/qa/error.html#_2api2%E5%AF%86%E9%92%A5%E4%B8%8Eapi3%E5%AF%86%E9%92%A5%E8%AE%BE%E7%BD%AE%E4%B8%80%E6%A0%B7)
 
-* **2、下载python文件：**  [点击Python文件](https://doc.chatmoney.cn/docs/download/glm.zip)
+如果将微信的API2和API3密钥设置一样，虽然填写完可以支付，但是微信支付回调会异常，导致会员没开通或者次数无增加。
 
-    * 得到两个文件: openai\_ai.py 和 requirements.txt
-    * 把这两个文件替换到 ChatGLM2-6B 目录里面
-* **3、在命令行输入命令(安装依赖)：**  **​`pip install -r requirments.txt`​**
+### ③设置支付的时候，微信支付证书和微信支付证书密钥搞反[​](https://doc.chatmoney.cn/chat/qa/error.html#_3%E8%AE%BE%E7%BD%AE%E6%94%AF%E4%BB%98%E7%9A%84%E6%97%B6%E5%80%99-%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E8%AF%81%E4%B9%A6%E5%92%8C%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E8%AF%81%E4%B9%A6%E5%AF%86%E9%92%A5%E6%90%9E%E5%8F%8D)
 
-    * 建议使用python的虚拟环境,以免产生一些不必要的麻烦。
-* **4、运行项目：**  **​`python openai_api.py --model 16`​** **这里的数字根据上面的配置进行选择。**
+微信支付证书和微信支付证书密钥搞反会导致无法支付或者支付完会员没开通或者次数无增加。
 
-    * 然后等待模型下载，直到模型加载完毕为止。如果出现报错先问百度。
-    * 这里可能需要科学上网
-* **5、启动成功后应该会显示如下地址：**
+海报无法生成[​](https://doc.chatmoney.cn/chat/qa/error.html#%E6%B5%B7%E6%8A%A5%E6%97%A0%E6%B3%95%E7%94%9F%E6%88%90)
+-------------------------------------------------------------------------------------------------------------
 
-提示
+之前部分环境无法使用海报，更新系统以后，重新选图片设置海报背景即可。
 
-这里的 [http://0.0.0.0:8000](http://0.0.0.0:8000/) 就是连接地址。
+小程序编译错误[​](https://doc.chatmoney.cn/chat/qa/error.html#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%BC%96%E8%AF%91%E9%94%99%E8%AF%AF)
+-----------------------------------------------------------------------------------------------------------------------
 
-![](https://doc.chatmoney.cn/docs/images/general/third-deployment/chat-glm/chatglm-start.png)
+在上传小程序的时候，出现HbuilderX编译错误，请重新下载最新的源码，按教程重新操作。如果已是使用最新源码，删除依赖，然后重新编译。![](https://doc.chatmoney.cn/docs/images/general/qa/error/mnp-build.png)
 
-### 关于 openai\_api.py 启动的一些参数
+小程序无法下载绘图生成的图片[​](https://doc.chatmoney.cn/chat/qa/error.html#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%97%A0%E6%B3%95%E4%B8%8B%E8%BD%BD%E7%BB%98%E5%9B%BE%E7%94%9F%E6%88%90%E7%9A%84%E5%9B%BE%E7%89%87)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-| 参数名   | 可选值                                                             | 默认值 |
-| ---------- | -------------------------------------------------------------------- | -------- |
-| --device | cuda\=显卡运行, cpu\=cpu运行                                 | cuda   |
-| --path   | local\=本地下载的模型运行, thudm\=线上自动下载               | thudm  |
-| --model  | 4\=chatglm2-6b-int4, 8\=chatglm2-6b-int8, 16\=chatglm2-6b | 16     |
+提示"downloadFile:fail ur not in domain list"，因为绘图的链接与小程序接口不是同一域名，可能是第三方或者反向代理的域名。![](https://doc.chatmoney.cn/docs/images/general/qa/error/mnp-download-error.png)需要在小程序后台设置该图片域名。获取改域名的方法是打开后台菜单【绘画记录】，然后右键生成的图片，或者链接，内容前面的域名为图片域名。![](https://doc.chatmoney.cn/docs/images/general/qa/error/mnp-download-url.png)
 
-* 说明:
+MJ直链绘图失败[​](https://doc.chatmoney.cn/chat/qa/error.html#mj%E7%9B%B4%E9%93%BE%E7%BB%98%E5%9B%BE%E5%A4%B1%E8%B4%A5)
+-----------------------------------------------------------------------------------------------------------------
 
-    * 如果你 `--path` 参数设置为 local, 那需要你先把模型下载下来, 放到 ChatGLM2-6B/models 目录下
-    * 比如: ChatGLM2-6B/models/chatglm2-6b-int4
-    * 然后再去运行: `python openai_api.py --model 4 --path local`
+### ①MJ官网绘图失败[​](https://doc.chatmoney.cn/chat/qa/error.html#_1mj%E5%AE%98%E7%BD%91%E7%BB%98%E5%9B%BE%E5%A4%B1%E8%B4%A5)
 
-### 接口测试
+首先登录MJ账号，看看账号里绘图是否成功，如果没成功话，可能是词的问题或者其他原因，JM官方绘图失败。  
 
-![](https://doc.chatmoney.cn/docs/images/general/third-deployment/chat-glm/chatglm-post.png)
+### ②图片代理域名错误[​](https://doc.chatmoney.cn/chat/qa/error.html#_2%E5%9B%BE%E7%89%87%E4%BB%A3%E7%90%86%E5%9F%9F%E5%90%8D%E9%94%99%E8%AF%AF)
 
-### 接入到系统
+如果登录MJ账号绘图成功了，系统却看不到图或者没成功，检查一下图片代理域名是否有问题，检查一下是否防火墙阻挡了绘图回调。代理域名不要使用http，需要 https。
 
-![](https://doc.chatmoney.cn/docs/images/general/third-deployment/chat-glm/chatglm-set.png)
+### ③完全没看MJ直连文档或者跳着看就操作[​](https://doc.chatmoney.cn/chat/qa/error.html#_3%E5%AE%8C%E5%85%A8%E6%B2%A1%E7%9C%8Bmj%E7%9B%B4%E8%BF%9E%E6%96%87%E6%A1%A3%E6%88%96%E8%80%85%E8%B7%B3%E7%9D%80%E7%9C%8B%E5%B0%B1%E6%93%8D%E4%BD%9C)
 
-## ChatGLM3-6B
+所有文档都是没多余的字，需要全部阅读理解。
 
-注意
+频繁出现502[​](https://doc.chatmoney.cn/chat/qa/error.html#%E9%A2%91%E7%B9%81%E5%87%BA%E7%8E%B0502)
+-----------------------------------------------------------------------------------------------
 
-部署方案和ChatGLM2-6B的方式基本上是一样的。
+部署好，访问网站频繁出现502，要考虑为PHP扩展冲突，检测所有的PHP版本是否安装opcache，建议删除。该扩展删除一般对系统没有任何影响。![](https://doc.chatmoney.cn/docs/images/general/php/error/502-1.png)
 
-* **1、从GitHub仓库中拉取代码**
+忘记超级管理密码怎么办？[​](https://doc.chatmoney.cn/chat/qa/error.html#%E5%BF%98%E8%AE%B0%E8%B6%85%E7%BA%A7%E7%AE%A1%E7%90%86%E5%AF%86%E7%A0%81%E6%80%8E%E4%B9%88%E5%8A%9E)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-```
-# 1.从GitHub仓库中拉取代码
-https://github.com/THUDM/ChatGLM3
+登录宝塔以后，单击【网站】->【PHP项目】,在站点列表找到网站的站点，根目录里面点击进入站点根目录。![](https://doc.chatmoney.cn/docs/images/general/php/error/password-1.png)点击【终端】。![](https://doc.chatmoney.cn/docs/images/general/php/error/password-2.png)输入root账号密码并登录，在终端输入 `php think passwor (你想设置的密码,不含括号)`，回车即可重新设置管理密码。![](https://doc.chatmoney.cn/docs/images/general/php/error/password-3.png)
 
-# 2.进入下载源码的目录
-cd ChatGLM3-6B
-```
+### 500错误[​](https://doc.chatmoney.cn/chat/qa/error.html#_500%E9%94%99%E8%AF%AF)
 
-* **2、在命令行输入命令(安装依赖)**
-
-shell
-
-```
-# PS: 建议使用python的虚拟环境,以免产生一些不必要的麻烦。
-pip install -r requirments.txt
-```
-
-* **3、安装cuda依赖 (如果你是用显卡运行,否则忽略该步骤)**
-
-shell
-
-```
-3.1、我这边是使用windows系统,首先需要运行一下命令看一下CUDA的版本
-    在cmd终端运行: nvidia-smi
-    我这边得到的版本是: CUDA Version: 12.2
-
-3.2、然后去torch官网中查看CUDA适配的torch版本
-   官网: https://pytorch.org/get-started/locally/
-
-3.3、进入网站后按版本选择安装命令 (根据你电脑实际情况选择)
-    PyTorch Build    :  Stable(2.1.0)
-    Your OS          : Windows
-    Package          : Pip
-    Language         : Python
-    Compute Platform : CUDA 12.1
-    Run this Command : pip3 install torch trchvision ......
-
-3.4、你只需要复制后面 Run this Command 选项的这串 pip3的安装命令, 然后回到你电脑的终端运行即可
-```
-
-* **4、下载python文件：**  [点击Python文件](https://doc.chatmoney.cn/docs/download/glm3.zip)
-
-    * 得到1个文件: openai\_ai.py (此文件就是启动文件)
-    * 把这个文件放到到 ChatGLM3-6B 目录里面
-* **5、下载模型文件到本地：**
-
-    * 下载地址: [https://modelscope.cn/models/ZhipuAI/chatglm3-6b/files](https://modelscope.cn/models/ZhipuAI/chatglm3-6b/files)
-    * 把里面列表所有文件都下载回来, 并统一用一个名为 chatglm3-6b 的文件夹存放
-    * 然后把该文件夹的(含所有内容) 一并移动到 ChatGLM3-6B/models 目录下面
-* **6、运行项目：**  **​`python openai_api.py`​** **这里的数字根据上面的配置进行选择。**
-
-    * 然后等待模型下载，直到模型加载完毕为止。如果出现报错先问百度。
-    * 这里可能需要科学上网 (默认是需要从 www.huggingface.org 上面下载模型文件回来的, 时间会比较长)
-    * 以上什么参数都没有的实际运行命令是 `python openai_api.py --device cuda --path local --model 4`
-
-        * 该命令的意思是 启动脚本 使用 【显卡驱动、使用本地下载的模型文件(即上面第5步) 、 使用量化版本】
-        * 为什么默认使用量化版本? 因为如果你的显卡显存不够13GB是没办法运行正常的版本的。
-        * 如果运行正常版本? 把参数 --model 4 改成 --model 16 即可。
-        * 问: 我要运行32k的模型呢? 答: 那你就去下载32k的模型 当然放到源码的models目录下面, 修改一些运行命令运行就行了
-* **7、运行后的效果**
-
-shell
-
-```
-(venv) PS E:\AI\GLM3> python .\openai_api.py
-
-===========================
-本次加载模型的设备为GPU:  NVIDIA CMP 40HX
-===========================
-
-正在启动的是量化版本...
-
-Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████| 7/7 [00:23<00:00,  3.41s/it]
-INFO:     Started server process [11136]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-INFO:     Uvicorn running on http://0.0.0.0:8100 (Press CTRL+C to quit)
-
-## 注意
-## 注意
-## 这个就是你的运行接口,配置到知识库系统里那个
-接口: http://0.0.0.0:8100
-```
-
-* **8、关于 openai_api.py 启动的一些参数**
-
-| 参数名   | 可选值                                                                              | 默认值 |
-| ---------- | ------------------------------------------------------------------------------------- | -------- |
-| --device | cuda\=显卡运行, cpu\=cpu运行                                                  | cuda   |
-| --path   | local\=本地下载的模型运行, thudm\=线上自动下载                                | thudm  |
-| --model  | 4\=量化模型, 16\=chatglm3-6b, 32\=chatglm2-6b-32k, 128\=chatglm2-6b-32k | 4      |
-
-* 说明:
-
-    * 如果你 `--path` 参数设置为 local, 那需要你先把模型下载下来, 放到 ChatGLM2-6B/models 目录下
-    * 比如: ChatGLM3-6B/models/chatglm3-6b
-    * 然后再去运行: `python openai_api.py --model 4 --path local`
-    * PS: 温馨小提示,GLM3不再像之前GLM2那样单独提供量化版本模型下载, 现在是量化模型直接继承在 chatglm3-6b模型上,使用运行命令作为区分。
+具体请参考500错误文档

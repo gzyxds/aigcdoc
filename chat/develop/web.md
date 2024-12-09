@@ -1,384 +1,315 @@
-提示
+前端[​](https://doc.chatmoney.cn/chat/develop/web.html#%E5%89%8D%E7%AB%AF)
+========================================================================
 
-推荐服务器最低配置：CPU双核、内存4GB、硬盘20GB、带宽5兆
+环境准备[​](https://doc.chatmoney.cn/chat/develop/web.html#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87)
+--------------------------------------------------------------------------------------------
 
-提示
+* * *
 
-v3.3.0之前版本升级上来，请看[旧版本文档](https://doc.chatmoney.cn/pro/deployment/bt-docker-old.html)，此文档只适合v3.3.0后版本全新部署的。
-知识库系统涉及的运行环境比较复杂，建议使用Docker部署，Docker的使用在宝塔面板上操作非常方便。
+⚠️ 警告
 
-## 运行环境
+首先需要在本地安装node，推荐node的版本16+  
+推荐使用的包管理工具是 yarn  
+首次使用yarn可以先安装=>`npm install yarn -g`
+
+通过命令自动初始化项目[​](https://doc.chatmoney.cn/chat/develop/web.html#%E9%80%9A%E8%BF%87%E5%91%BD%E4%BB%A4%E8%87%AA%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* * *
+
+在官网下载安装包以后想为前端进行二开， 进入`uniapp/`或者`pc/`或者`admin/`时，可以通过一条命令自动帮你初始化你的项目
+
+**下面以uniapp文件夹为例子使用**  
+在终端命令行中输入
+
+shell
+
+    npm run init
+
+1.  运行npm run init 回车 选择是否安装依赖（如果已经安装过可以选择n）
+
+![](https://doc.chatmoney.cn/docs/images/general/develop/web/uniapp_01.png)  
+2\. 自动安装成功后会让你输入你的服务器域名地址，例如: [https://xxx.com](https://xxx.com/)
+
+![](https://doc.chatmoney.cn/docs/images/general/develop/web/uniapp_02.png)  
+3\. 选择你需要运行的客户端
+
+![](https://doc.chatmoney.cn/docs/images/general/develop/web/uniapp_03.png)  
+4\. 运行成功（则表示当前项目的初始化已经完成，可以开始二开本项目了
+
+![](https://doc.chatmoney.cn/docs/images/general/develop/web/uniapp_04.png)  
+
+⚠️ 警告
+
+如果通过自动初始化项目的则不需要对下面的教程文档看了，只需看打包生产那部分就好
+
+PC端(pc)[​](https://doc.chatmoney.cn/chat/develop/web.html#pc%E7%AB%AF-pc)
+-------------------------------------------------------------------------
+
+* * *
+
+**首次使用先安装`yarn install`安装前请确保node版本为推荐的16+**
+
+*   复制env文件
+    
+    1.  复制`.env.example`，将复制的文件名修改为`.env`
+    2.  复制`.env.development.example`，将复制的文件名修改为`.env.developme`
+    3.  复制`.env.production.example`，将复制的文件名修改为`.env.production`
+*   复制以后示例  
+    ![](https://doc.chatmoney.cn/docs/images/general/develop/web/pc_dev01.png)  
+    
+*   .env 应用全局配置（通常将他复制出来以后无需修改里面的内容
+    
+
+版本号[​](https://doc.chatmoney.cn/chat/develop/web.html#%E7%89%88%E6%9C%AC%E5%8F%B7)
+==================================================================================
+
+NUXT\_VERSION=1.0.0
+
+接口默认前缀[​](https://doc.chatmoney.cn/chat/develop/web.html#%E6%8E%A5%E5%8F%A3%E9%BB%98%E8%AE%A4%E5%89%8D%E7%BC%80)
+================================================================================================================
+
+NUXT\_API\_PREFIX=/api
+
+客户端类型[​](https://doc.chatmoney.cn/chat/develop/web.html#%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%B1%BB%E5%9E%8B)
+======================================================================================================
+
+NUXT\_CLIENT=4
+
+基础路径[​](https://doc.chatmoney.cn/chat/develop/web.html#%E5%9F%BA%E7%A1%80%E8%B7%AF%E5%BE%84)
+============================================================================================
+
+NUXT\_BASE\_URL=/pc/
+
+是否开启ssr，填些任意值开启[​](https://doc.chatmoney.cn/chat/develop/web.html#%E6%98%AF%E5%90%A6%E5%BC%80%E5%90%AFssr-%E5%A1%AB%E4%BA%9B%E4%BB%BB%E6%84%8F%E5%80%BC%E5%BC%80%E5%90%AF)
+==========================================================================================================================================================================
+
+NUXT\_SSR=
+
+端口号[​](https://doc.chatmoney.cn/chat/develop/web.html#%E7%AB%AF%E5%8F%A3%E5%8F%B7)
+==================================================================================
+
+NITRO\_PORT=3000
+
+    
+    点击打开
+    * .env.development
+      开发环境
+
+请求域名[​](https://doc.chatmoney.cn/chat/develop/web.html#%E8%AF%B7%E6%B1%82%E5%9F%9F%E5%90%8D)
+============================================================================================
+
+NUXT\_API\_URL='输入你的域名'
+
+    * .env.production
+      生产环境
+
+请求域名[​](https://doc.chatmoney.cn/chat/develop/web.html#%E8%AF%B7%E6%B1%82%E5%9F%9F%E5%90%8D-1)
+==============================================================================================
+
+NUXT\_API\_URL='输入你的请求域名' //填空则跟着网站的域名来请求
+
+    **以上配置完成后可运行下面命令**
+    
+    ### PC端开发模式
+    * 运行开发环境  
+    终端中运行命令
+    ```shell
+    yarn dev
+
+### PC端生产模式（打包）[​](https://doc.chatmoney.cn/chat/develop/web.html#pc%E7%AB%AF%E7%94%9F%E4%BA%A7%E6%A8%A1%E5%BC%8F-%E6%89%93%E5%8C%85)
+
+打包前修改接口请求域名，打开`.env.production`，修改`NUXT_API_URL`变量的值为项目安装部署的服务端地址
+
+*   运行生产环境（非seo）  
+    终端中运行命令
+
+shell
+
+    yarn build
 
 注意
 
-在不影响其他站点的情况下，建议将宝塔升级到最新版本。
+如果是非seo模式则不需要修改，将`NUXT_API_URL`留空即可，这样请求接口时会自动读取当前的域名做为接口请求的域名
 
-* **步骤1**:
-  登录宝塔面板后，单击左侧菜单最底部的【自定义菜单】，开启【Docker】菜单。单击左侧菜单【Docker】，出现提示安装Docker，单击【安装】。
+*   运行生产环境（seo）  
+    打包支持`seo模式`和非`seo模式`（类似于vue的单页面应用），默认为`非seo`模式，修改`.env`文件可以修改模式
 
-![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/env-docker-1.png)
+.env 文件中
 
-![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/env-docker-2.png)
+     # 是否开启ssr，填些任意值开启，为空则关闭
+     NUXT_SSR=1
 
-* **步骤2**:
-  单击【软件商店】，安装好【Nginx】和【进程守护管理器】。![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/env-other.png)
+终端中运行命令
 
-## 部署源码
+shell
 
-* **步骤1**:
-  点击【文件】，进入【/www/wwwroot】目录，在目录下新建目录，后续步骤，我们都称该目录为【站点目录】。![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/code-1.png)
-* **步骤2**:
-  进入【站点目录】，并上传从chatmoney官网下载的源码包，上传完成后，右键点击【解压】源码包。![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/code-2.png)![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/code-3.png)
-
-## Docker部署
-
-### 修改Docker编排文件
-
-Docker知识科普
-
-一般情况下，docker端口挂载的格式都是"端口1:端口2"，"端口1"为挂载主机端口，"端口2"为容器内部端口。所以我们在主机访问端口时，要访问"127.0.0.1:端口1"。如果进入容器内部或者容器之间进行通信时，访问"端口2"。容器之间的访问，使用“容器名:端口"。本项目除了使用主机Nginx代理nginx容器，其他都是容器与容器他们之间通讯。
+    yarn build:ssr
 
 注意
 
-修改的参数按自己实际情况填写，请勿直接复制文档。
+1.  首先拉取依赖包（拉取之前node版本必须为指定16+版本以上） =>`yarn install`
+2.  拉取成功无错误时开始执行打包或者运行模式
+3.  如果 运行 或者 拉取 时有错误，请先尝试删除yarn.lock文件以及node\_modules文件夹以后重复1和2步骤
 
-进入【站点目录】下的docker目录，右键单击【docker-compose.example.yml】文件，单击【重命名】，将新文件命名为【docker-compose.yml】。打开【docker-compose.yml】文件，修改①\~⑤的选项。
+### 移动端（uniapp）[​](https://doc.chatmoney.cn/chat/develop/web.html#%E7%A7%BB%E5%8A%A8%E7%AB%AF-uniapp)
 
-* **修改第①项**:
-  浏览器打开新的窗口访问宝塔面板，单击【终端】，登录系统管理员账号，在终端输入`id www`并按回车键，可以看到终端返回的信息，信息为 www用户的用户id和用户组id，分别将uid的id和gid的id复制到【docker-compose.yml】文件中"user:"后面，要去掉前面”#“，格式如"uid的id:gid的id"，修改后【保存】文件，这样PHP容器就可以以www的权限进行运行。![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/www.png)
+* * *
 
-yml
+**首次使用先安装`yarn install`安装前请确保node版本为推荐的16+**
 
-```
-    user: "1000:1000" ①【挂载主机ID】
-```
+*   复制env文件
+    
+    1.  复制`.env.development.example`，将复制的文件名修改为`.env.developme`
+    2.  复制`.env.production.example`，将复制的文件名修改为`.env.production`
+*   复制以后示例  
+    ![](https://doc.chatmoney.cn/docs/images/general/develop/web/admin_dev01.png)  
+    
 
-* **修改第②项**:
-  修改MySQL的root密码，记住密码，安装程序需要填写。
+点击打开
 
-yml
+*   .env.development 开发环境
 
-```
- MYSQL_ROOT_PASSWORD: 123456Abcd #②【123456Abcd】为MySQL容器root账号的密码，建议修改成复杂密码。
-```
+    NODE_ENV = 'development'
+    
+    # 请求域名
+    VITE_APP_BASE_URL='输入你的请求域名'
 
-* **修改第③④⑤项**: 分别修改postgres容器的帐号、密码、数据库名。记住这些信息，安装程序需要填写。
+*   .env.production 生产环境
 
-yml
+    NODE_ENV = 'production'
+    
+    # 请求域名
+    VITE_APP_BASE_URL='输入你的请求域名'  //填空则跟着网站的域名来请求
 
-```
-- POSTGRES_USER=postgres #③【postgres】为postgres容器的默认账号。
-- POSTGRES_PASSWORD=123456Abcd #④【123456Abcd】为postgres容器默认账号的密码。
-- POSTGRES_DB=postgres #④【postgres】为postgres容器的默认数据库名。
-```
+### uniapp在VSCode开发[​](https://doc.chatmoney.cn/chat/develop/web.html#uniapp%E5%9C%A8vscode%E5%BC%80%E5%8F%91)
 
-### 添加Docker编排模板
+* * *
 
-⚠️ 警告
+#### 开发模式[​](https://doc.chatmoney.cn/chat/develop/web.html#%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F)
 
-1.如果添加失败，很可能是编辑编排模板的时候没有操作正确，yml文件用缩进来表示层次结构，每一行需要有规则的对齐。
-2.如果提示模板已存在，可以修改文件名，保持yml（结尾）格式。
+*   运行h5  
+    终端中运行命令
 
-单击【Docker】-\>【编排模板】-\>【搜索本地模块】-\>【📂(文件夹小图标)】，选择【站点目录下】的docker目录，单击【搜索】，模板名选择编辑的docker-compose.yml文件，单击【添加】。![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/docker-compose-temp.png)
+shell
 
-### 添加容器编排
+    yarn dev:h5
 
-⚠️ 警告
+*   运行小程序  
+    终端中运行命令
 
-如果添加失败，很可能是编排模板问题，请重新编排编辑模板。注意挂载主机的端口号，不要与主机已有的其他软件冲突。
+shell
 
-单击【容器编排】-\>【项目】-\>【添加Composer项目】，在【Composer模块】选择【docker】，填写名称，单击【添加】。添加成功以后，如图所示。然后在点击【容器】，可以看到项目运行的![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/docker-compose-1.png)![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/docker-compose-2.png)
+    yarn dev:mp-weixin
 
-## 反向代理容器
+运行完毕，打开[微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html)，点击左上角菜单`项目`\>`导入项目`，导入地址选择`uniapp/dist/dev/mp-weixin`，点击确定成功导入项目
 
-提示
+#### 生产模式[​](https://doc.chatmoney.cn/chat/develop/web.html#%E7%94%9F%E4%BA%A7%E6%A8%A1%E5%BC%8F)
 
-该反向代理为主机Nginx代理到Ngxin容器，代理的端口为Nginx容器挂载主机的端口。
+*   发行h5
+    
+    1.  终端中运行命令
+    
+    shell
+    
+        yarn build:h5
+    
+    2.  上传打包好的代码到服务器或仓库
+*   运行小程序  
+    终端中运行命令
 
-### 添加站点
+shell
 
-单击【网站】-\>【反向代理】-\>【添加反代】,填写站点域名，【目标】选择URL地址，填写`http://127.0.0.1:180`，其中180为Docker的Nginx容器挂载主机的端口，按实际挂载的端口填写。传递域名时按默认填写\$http\_host，然后【确定】。![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/add-site.png)
+    yarn build:mp-weixin
 
-### 设置代理参数
+运行完毕，打开[微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html)，点击左上角菜单`项目`\>`导入项目`，导入地址选择`uniapp/dist/dev/mp-weixin`，点击确定成功导入项目
 
-单击【URL代理】-\> 【设置】-\>【自定义配置】，复制下面配置内容填写，然后【保存】。
+### uniapp在HbuilderX开发[​](https://doc.chatmoney.cn/chat/develop/web.html#uniapp%E5%9C%A8hbuilderx%E5%BC%80%E5%8F%91)
 
-nginx
+* * *
 
-```
-proxy_set_header X-Forwarded-Proto $scheme;
-```
+插件推荐安装：在运行过程中会自动安装需要插件
 
-![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/proxy.png)
-
-### 申请SSL证书
-
-点击【SSL】-\> 【Let's Encrypt】,选择【DNS验证】，选中域名，点击【申请】。
-出现了弹出窗，需要手动在域名服务商（阿里云腾讯云等）后台给域名添加TXT解析，按要求添加TXT解析，主机信息填写①的值，记录值填写②的值，点击选择可以复制到整值。TXT解析添加好完成以后，点击【验证】。![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/ssl-1.png)![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/ssl-2.png)![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/ssl-3.png)
-
-## 程序安装
-
-⚠️ 警告
-
-如果访问页面出现"No input file specified"，是因为站点目录设置为server/pulibc，宝塔面板生成.user.ini文件影响到容器运行。请将目录设置为项目根目录，并删除掉server/public/.user.ini文件，单击【Docker】-\>【容器】，选择所有容器，单击【批量操作】-\>【重启容器】。重新访问即可。
-
-⚠️ 警告
-
-如果安装的时候，出现了提示数据库密码错误，很大可能是创建容器后才修改docker-compose.yml的配置导致，这时密码是容器创建前docker-compose.yml的密码，不是后来修改的密码。确认数据不要保留的情况下，可以删除docker/data目录，然后删除所有容器和容器编排，重新创建容器编排。
-
-在浏览器访问站点，进入程序安装界面，单击【我已阅读并同意】-\>【继续】。
-然后将编排模板docker-compose.yml文件的信息填写到安装界面。
-其他所有数据库主机，都是填写容器名称，默认不需要修改。
-MySQL数据库密码填写docker-compose.yml设置的密码。
-postgreSQL项的数据库用户，数据库密码，数据名称，分别填写docker-compose.yml设置的值。
-设置好后台管理员账号密码后，点击【继续】。![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/install-1.png)![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/install-2.png)![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/install-3.png)![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/install-4.png)
-
-## 授权
+#### 运行uniapp[​](https://doc.chatmoney.cn/chat/develop/web.html#%E8%BF%90%E8%A1%8Cuniapp)
 
 注意
 
-1.授权文件与产品一一对应，如果不是同一产品，将无法使用。
-2.授权文件与项目域名也是一一对应，不然无法使用。
+apple M系列芯片在uniapp下编译的报错处理：在`node_modules`下复制粘贴`esbuild-darwin-arm64`一份，重命名为`esbuild-darwin-64`
 
-* **步骤1**:
-  购买源码后，登录官网，下载授权文件。![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/license-1.png)
-* **步骤2**:
-  添加授权文件到server/license目录，并命名为：my.license ，如果仍无法使用，请联系客服。![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/license-2.png)
+*   导入项目，点击HbuilderX左上角菜单`文件`\>`导入`\>`从本地目录导入`，目录选择`uniapp`
+*   安装依赖，选中当前项目，点击HbuilderX左上角菜单`工具`\>`外部命令`\>`npm install`安装依赖
+*   运行到h5，点击HbuilderX左上角菜单`运行`\>`运行到浏览器`\>`Chrome`
+*   运行到微信小程序，点击HbuilderX左上角菜单`运行`\>`运行到小程序模拟器`\>`微信开发者工具 - (uniapp)`
 
-## 访问地址
+注意
 
-安装成功后，打开以下链接可以访问相应页面。
-管理后台地址：[http://域名/admin](http://xn--eqrt2g/admin)
-用户PC前台地址：[http://域名](http://xn--eqrt2g/)
-用户PC前台地址：[http://域名/mobile](http://xn--eqrt2g/mobile)
+*   运行到微信小程序前，先配置好小程序的appid，点击`uniapp/src/manifest.json`，选择`微信小程序配置`\>`微信小程序AppID`，输入appid即可
+*   一般运行到微信小程序，会自动打开微信开发者工具，如果打开失败，可能是工具的服务端口没有打开，手动打开工具 -> 设置 -> 安全设置，将服务端口开启，也有可能是你配置的小程序appid中，你登录的账号不是这个小程序的开发者，只需要去微信小程序后台将该账号添加到开发者，重新运行即可
 
-## 验证自动任务
+#### 发行uniapp[​](https://doc.chatmoney.cn/chat/develop/web.html#%E5%8F%91%E8%A1%8Cuniapp)
 
-提示
+*   发行到h5
+    1.  点击HbuilderX左上角菜单`发行`\>`网站-PC Web或手机H5(仅适用于uni-app)`，输入网站标题，点击发行按钮，编译完成后可在`uniapp/dist/build/h5`下
+    2.  将h5下面的代码复制到发布目录，然后上传代码到服务器或仓库即可
+*   发行到小程序
+    1.  点击HbuilderX左上角菜单`发行`\>`小程序-微信(仅适用于uni-app)`，输入`小程序名称`和`小程序appid`，点击发行，编译完成后会自动打开微信开发者工具
+    2.  点击微信开发者工具的`上传`按钮，将代码上传到微信小程序后台
 
-新版本在文件权限挂载正确情况下，会自动定时任务和守护进程。
-配置在docker/config/supervisor/supervisor.ini，一般情况下不要修改。
+### 后台管理（admin）[​](https://doc.chatmoney.cn/chat/develop/web.html#%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86-admin)
 
-⚠️ 警告
+* * *
 
-如果登录后台发现定时任务没有执行，说明守护进程也没有执行，这时需要将docker/log/supervisor目录设置为777权限，然后重启PHP容器。
+**首次使用先安装`yarn install`安装前请确保node版本为推荐的16+**
 
-登录后台，打开菜单【系统维护】-\>【定时任务】，如果有出现今天的执行时间，说明定时任务和守护进程配置正常。![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/supervisor.png)
+*   复制env文件
+    
+    1.  复制`.env.development.example`，将复制的文件名修改为`.env.developme`
+    2.  复制`.env.production.example`，将复制的文件名修改为`.env.production`
+*   复制以后示例  
+    ![](https://doc.chatmoney.cn/docs/images/general/develop/web/admin_dev01.png)  
+    
 
-## 特别注意（使用必看）
+点击打开
 
-⚠️ 警告
+*   .env.development 开发环境
 
-docker/data目录及其下文件不能修改权限，修改权限会导致异常，甚至无法恢复数据！！！
+    NODE_ENV = 'development'
+    
+    # 请求域名
+    VITE_APP_BASE_URL='输入你的请求域名'
 
-提示
+*   .env.production 生产环境
 
-docker/data为MySQL数据库，postgres数据库数据存在目录，备份数据和数据，备份server目录和docker目录即可。
+    NODE_ENV = 'production'
+    
+    # 请求域名
+    VITE_APP_BASE_URL='输入你的请求域名'  //填空则跟着网站的域名来请求
 
-## 宝塔面板Docker部署推荐部署方式
+**以上配置完成后可运行下面命令**
 
-部署提示:
+### 后台管理开发模式（运行 admin[​](https://doc.chatmoney.cn/chat/develop/web.html#%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-%E8%BF%90%E8%A1%8C-admin)
 
-💡 1. 推荐服务器最低配置：CPU双核、内存4GB、硬盘20GB、带宽5兆，
-💡 2. 系统推荐安装`dabian12` 系统
-💡 3. 知识库系统涉及的运行环境比较复杂，建议使用Docker部署，Docker的使用在宝塔面板上操作非常方便。
+*   运行开发环境  
+    终端中运行命令
 
-## 运行环境
+shell
 
-宝塔提示:
+    yarn dev
 
-💡 在不影响其他站点的情况下，建议将宝塔升级到最新版本。
+### 后台管理生产模式（打包 admin[​](https://doc.chatmoney.cn/chat/develop/web.html#%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%94%9F%E4%BA%A7%E6%A8%A1%E5%BC%8F-%E6%89%93%E5%8C%85-admin)
 
-### 1. 开启docker
+*   运行生产环境  
+    终端中运行命令
 
-登录宝塔面板后，单击左侧菜单最底部的【自定义菜单】，开启【Docker】菜单。单击左侧菜单【Docker】，出现提示安装Docker，单击【安装】。
+shell
 
-![开启Docker](https://doc.2021it.com/assets/bt1.Yui1sChv.png "开启Docker")
+    yarn build
 
-![安装Docker](https://doc.2021it.com/assets/bt2.DWNmARsJ.png "安装Docker")
+注意
 
-### 2. 安装必要软件
+1.  首先拉取依赖包（拉取之前node版本必须为指定16+版本以上） =>`yarn install`
+2.  拉取成功无错误时开始执行打包或者运行模式（yarn build / yarn dev）
+3.  如果 运行 或者 拉取 时有错误，请先尝试删除yarn.lock文件以及node\_modules文件夹以后重复1和2步骤
 
-单击【软件商店】，安装好【Nginx】和【进程守护管理器】。
-
-![安装](https://doc.2021it.com/assets/bt3.CxwJomqC.png "安装")
-
-## 部署源码
-
-### 1. 新建目录
-
-点击【文件】，进入【/www/wwwroot】目录，在目录下新建目录，后续步骤，我们都称该目录为【站点目录】。
-
-![新建目录](https://doc.2021it.com/assets/552cc539-83ba-4cf7-ba13-1dac040888ab.C-xxEoAa.png "新建目录")
-
-### 2. 上传源码
-
-进入【站点目录】，并上传从管理员那获得的源码包，上传完成后，右键点击【解压】源码包。
-
-![上传1](https://doc.2021it.com/assets/20605aa1-2e0d-4832-904b-87f1044d8f29.B3Qdng_D.png "上传1")
-
-![上传2](https://doc.2021it.com/assets/4cc21b84-96c2-4c99-b1db-5767a7b22134.CMbLdzAK.png "上传2")
-
-## Docker部署
-
-### 修改Docker编排文件
-
-💡 Docker知识科普:
-
-一般情况下，docker端口挂载的格式都是"端口1:端口2"，"端口1"为挂载主机端口，"端口2"为容器内部端口。
-所以我们在主机访问端口时，要访问"127.0.0.1:端口1"。
-如果进入容器内部或者容器之间进行通信时，访问"端口2"。容器之间的访问，使用“容器名:端口"。
-本项目除了使用主机Nginx代理nginx容器，其他都是容器与容器他们之间通讯。
-
-💡 注意:
-
-修改的参数按自己实际情况填写，请勿直接复制文档。
-
-进入【站点目录】下的docker目录，右键单击【docker-compose.example.yml】文件，单击【重命名】，将新文件命名为【docker-compose.yml】。打开【docker-compose.yml】文件，修改①\~⑤的选项。
-
-* 修改第①项: 浏览器打开新的窗口访问宝塔面板，单击【终端】，登录系统管理员账号，在终端输入id www并按回车键，可以看到终端返回的信息，信息为 www用户的用户id和用户组id，分别将uid的id和gid的id复制到【docker-compose.yml】文件中"user:"后面，要去掉前面”#“，格式如"uid的id:gid的id"，修改后【保存】文件，这样PHP容器就可以以www的权限进行运行。
-
-![修改1](https://doc.2021it.com/assets/5d13d3dd-73bf-4f56-be35-e05a00aa0c9b.CtpsxjEz.png "修改1")
-
-```
-user: "1000:1000" ①【挂载主机ID】
-```
-
-1
-
-* 修改第②项:
-
-修改MySQL的root密码，记住密码，安装程序需要填写。
-
-```
- MYSQL_ROOT_PASSWORD: 123456Abcd #②【123456Abcd】为MySQL容器root账号的密码，建议修改成复杂密码。
-```
-
-1
-
-* 修改第③④⑤项: 分别修改postgres容器的帐号、密码、数据库名。记住这些信息，安装程序需要填写。
-
-💡 建议:
-
-建议直接默认就好，否则容易出现各种各样问题
-
-```
-- POSTGRES_USER=postgres #③【postgres】为postgres容器的默认账号。
-- POSTGRES_PASSWORD=123456Abcd #④【123456Abcd】为postgres容器默认账号的密码。
-- POSTGRES_DB=postgres #⑤【postgres】为postgres容器的默认数据库名。
-```
-
-1
-2
-3
-
-### 添加Docker编排模板
-
-🚫 注意:
-
-1.如果添加失败，很可能是编辑编排模板的时候没有操作正确，yml文件用缩进来表示层次结构，每一行需要有规则的对齐。
-2.如果提示模板已存在，可以修改文件名，保持yml（结尾）格式。
-
-单击【Docker】-\>【编排模板】-\>【搜索本地模块】-\>【📂(文件夹小图标)】，选择【站点目录下】的docker目录，单击【搜索】，模板名选择编辑的docker-compose.yml文件，单击【添加】。
-
-![编排](https://doc.2021it.com/assets/aa2904e8-775e-4c6f-8686-6720727339b0.BPmMZPSq.png "编排")
-
-### 添加容器编排
-
-🚫 警告:
-
-如果添加失败，很可能是编排模板问题，请重新编排编辑模板。注意挂载主机的端口号，不要与主机已有的其他软件冲突。
-
-单击【容器编排】-\>【项目】-\>【添加Composer项目】，在【Composer模块】选择【docker】，填写自定义名称，单击【添加】。添加成功以后，如图所示。然后在点击【容器】，可以看到项目运行的
-
-![编排2](https://doc.2021it.com/assets/8eb1a2e9-62ec-4da7-9080-5b9a52d89e53.CjApvvYM.png "编排2")
-
-![编排3](https://doc.2021it.com/assets/be75cb52-314b-4f6e-b49f-72d95c2d26d5.YcriAPpX.png "编排3")
-
-### 反向代理容器
-
-💡 提示:
-
-该反向代理为主机Nginx代理到Ngxin容器，代理的端口为Nginx容器挂载主机的端口。
-
-#### 1. 添加站点
-
-单击【网站】-\>【反向代理】-\>【添加反代】,填写站点域名，【目标】选择URL地址，填写 [`http://127.0.0.1:180`](http://127.0.0.1:180/) ，其中180为Docker的Nginx容器挂载主机的端口，按实际挂载的端口填写。传递域名时按默认填写\$http\_host，然后【确定】。
-
-![添加站点](https://doc.2021it.com/assets/e046134a-c026-47d8-8cac-745e5c4efba1.CrZm9Knv.png "添加站点")
-
-#### 2. 设置代理参数
-
-单击【URL代理】-\> 【设置】-\>【自定义配置】，复制下面配置内容填写，然后【保存】。
-
-```
-proxy_set_header X-Forwarded-Proto $scheme;
-```
-
-1
-
-![设置代理参数](https://doc.2021it.com/assets/e7e97065-77c2-440c-9dfe-62e2ba5d9318.CHL3Afrk.png "设置代理参数")
-
-#### 3. 申请SSL证书
-
-点击【SSL】-\> 【Let's Encrypt】,选择【DNS验证】，选中域名，点击【申请】。 出现了弹出窗，需要手动在域名服务商（阿里云腾讯云等）后台给域名添加TXT解析，按要求添加TXT解析，主机信息填写①的值，记录值填写②的值，点击选择可以复制到整值。TXT解析添加好完成以后，点击【验证】。
-
-![](https://doc.2021it.com/assets/b11f1e58-e07e-4d66-a41b-4cd8a49f20f5.CsDrpsbm.png)
-
-![](https://doc.2021it.com/assets/95bbe32d-d5c9-48dd-a356-021e982dcc36.BuSEgIeW.png)
-
-![](https://doc.2021it.com/assets/8bf3d702-5448-4939-958f-ac0b4539830d.C_yP7xL7.png)
-
-### 程序安装
-
-🚫 警告:
-
-如果访问页面出现"No input file specified"，是因为站点目录设置为server/pulibc，宝塔面板生成.user.ini文件影响到容器运行。请将目录设置为项目根目录，并删除掉server/public/.user.ini文件，单击【Docker】-\>【容器】，选择所有容器，单击【批量操作】-\>【重启容器】。重新访问即可。
-
-如果安装的时候，出现了提示数据库密码错误，很大可能是创建容器后才修改docker-compose.yml的配置导致，这时密码是容器创建前docker-compose.yml的密码，不是后来修改的密码。确认数据不要保留的情况下，可以删除docker/data目录，然后删除所有容器和容器编排，重新创建容器编排。
-
-* 1. 在浏览器访问站点，进入程序安装界面，单击【我已阅读并同意】-\>【继续】。
-* 2. 然后将编排模板 `docker-compose.yml` 文件的信息填写到安装界面。
-* 3. 其他所有数据库主机，都是填写容器名称，默认不需要修改。
-* 4. MySQL数据库密码填写 `docker-compose.yml` 设置的密码。
-* 5. postgreSQL项的数据库用户，数据库密码，数据名称，分别填写docker-compose.yml设置的值。
-* 6. 设置好后台管理员账号密码后，点击【继续】。
-
-![](https://doc.2021it.com/assets/96b276e4-a5e4-4c88-8706-7bb02446a521.CH8AhBqs.png)
-
-## 授权
-
-📍 注意:
-
-1.授权文件与AI系统要对应，如果不是同一AI系统，将无法使用。
-2.授权文件与项目域名要对应，不然无法使用。
-
-**步骤1**
-
-付款后联系管理员发送需要绑定的域名，管理员会返回一个授权文件。
-
-**步骤2**
-
-添加授权文件到 `server/license` 目录，并命名为：`my.license` ，如果仍无法使用，请联系管理员。
-
-![](https://doc.2021it.com/assets/5ce85c6c-e38a-41b3-9737-aaf5723945ab.DBZa4kJH.png)
-
-## 访问地址
-
-安装成功后，打开以下链接可以访问相应页面。
-管理后台地址：[http://域名/admin](http://xn--eqrt2g/admin)
-用户PC前台地址：[http://域名](http://xn--eqrt2g/)
-用户PC前台地址：[http://域名/mobile](http://xn--eqrt2g/mobile)
-
-## 验证自动任务
-
-💡 提示:
-
-新版本在文件权限挂载正确情况下，会自动定时任务和守护进程。
-配置在docker/config/supervisor/supervisor.ini，一般情况下不要修改。
-
-💡 警告:
-
-如果登录后台发现定时任务没有执行，说明守护进程也没有执行，这时需要将docker/log/supervisor目录设置为777权限，然后重启PHP容器。
-
-登录系统后台，打开菜单【系统维护】-\>【定时任务】，如果有出现今天的执行时间，说明定时任务和守护进程配置正常。
+持续更新
+----

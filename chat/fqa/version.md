@@ -1,186 +1,123 @@
-# ChatGLM本地模型部署
+更新升级[​](https://doc.chatmoney.cn/chat/qa/version.html#%E6%9B%B4%E6%96%B0%E5%8D%87%E7%BA%A7)
+===========================================================================================
 
-## ChatGLM2-6B
+更新操作[​](https://doc.chatmoney.cn/chat/qa/version.html#%E6%9B%B4%E6%96%B0%E6%93%8D%E4%BD%9C)
+-------------------------------------------------------------------------------------------
 
-### ChatGLM2-6B 简介
+⚠️ 警告
 
-ChatGLM2-6B 是开源中英双语对话模型 ChatGLM-6B 的第二代版本，具体介绍可参阅 [ChatGLM2-6B 项目主页](https://github.com/THUDM/ChatGLM2-6B)
+⚠️ 重要的事情说三遍！！！更新前请备份好数据库和源码目录，防止更新失败！！！  
+⚠️ 重要的事情说三遍！！！更新前请备份好数据库和源码目录，防止更新失败！！！  
+⚠️ 重要的事情说三遍！！！更新前请备份好数据库和源码目录，防止更新失败！！！  
 
-注意
+### 方式1-在线升级[​](https://doc.chatmoney.cn/chat/qa/version.html#%E6%96%B9%E5%BC%8F1-%E5%9C%A8%E7%BA%BF%E5%8D%87%E7%BA%A7)
 
-ChatGLM2-6B 权重对学术研究完全开放，在获得官方的书面许可后，亦允许商业使用。本教程只是介绍了一种用法，无权给予任何授权！
+⚠️ 二开或者改变目录结构，没使用整个项目源码，无法使用在线更新。  
+⚠️ 在线升级必须逐个版本升级。  
+![](https://doc.chatmoney.cn/docs/images/general/php/update/update-error.jpg)
 
-### 推荐配置
+*   **步骤1**: 单击宝塔【网站列表】，选择项目网站【设置】->【网站目录】- 临时去掉【防跨站攻击(open\_basedir)】。 !\[\](/docs/images/cha t/update-1-1.png)
+*   **步骤2**: 单击宝塔【软件商店】，找到 nignx，选择【设置】->【重启】。  
+    ![](https://doc.chatmoney.cn/docs/images/general/php/update/update-1-2.png)
+*   **步骤3**: 单击宝塔【软件商店】，找到 PHP-8.0，选择服务】->【重启】。  
+    ![](https://doc.chatmoney.cn/docs/images/general/php/update/update-1-3.png)
+*   **步骤4**: 登录后台，点击【系统设置】->【系统维护】->【系统更新】，点击【一键更新】。  
+    
+*   **步骤5**: 选择项目网站【设置】->【网站目录】- 选上【防跨站攻击(open\_basedir)】。  
+    
+*   **步骤6**: 登录后台，点击【系统设置】->【系统维护】->【系统缓存】->【清理缓存】。  
+    
+*   **步骤7**: 小程序需要重新发布。
 
-依据官方数据，同样是生成 8192 长度，量化等级为 FP16 要占用 12.8GB 显存、int8 为 8.1GB 显存、int4 为 5.1GB 显存，量化后会稍微影响性能，但不多。
+### 方式2-最新源码包手动升级到最新版本[​](https://doc.chatmoney.cn/chat/qa/version.html#%E6%96%B9%E5%BC%8F2-%E6%9C%80%E6%96%B0%E6%BA%90%E7%A0%81%E5%8C%85%E6%89%8B%E5%8A%A8%E5%8D%87%E7%BA%A7%E5%88%B0%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC)
 
-| 类型 | 内存           | 显存           | 硬盘空间       |
-| ------ | ---------------- | ---------------- | ---------------- |
-| fp16 | \>\=16GB | \>\=16GB | \>\=25GB |
-| int8 | \>\=16GB | \>\=9GB  | \>\=25GB |
-| int4 | \>\=16GB | \>\=6GB  | \>\=25GB |
+1.把原项目的server/.env、server/config/install.lock、server/pubulic/uploads、server/license/my.license备份起来。  
+2.下载最新的源码包，把现在项目里面的server目录删掉，直接替换成源码包最新的server目录，再用步骤1备份的好的server/.env、server/config/install.lock、server/pubulic/uploads、server/license/my.license替换掉server目录一一对应的文件和目录。  
+3.最新源码包有server/public/install/db/like.sql文件，如果正式上线的项目数据表不是ai\_开头，记得把like.sql的前缀替换成和在正式上线的项目一样。然后把在本地或者线上新建一个数据库，把like.sql导入进去。 然后使用软件把新的数据库的数据结构同步上去线上的项目，推荐同步的软件用navicat，记得是同步数据结构，不是同步数 据。
 
-### 源码部署
+更新常见到问题[​](https://doc.chatmoney.cn/chat/qa/version.html#%E6%9B%B4%E6%96%B0%E5%B8%B8%E8%A7%81%E5%88%B0%E9%97%AE%E9%A2%98)
+-------------------------------------------------------------------------------------------------------------------------
 
-提示
+### 1\. 在先升级提示未授权[​](https://doc.chatmoney.cn/chat/qa/version.html#_1-%E5%9C%A8%E5%85%88%E5%8D%87%E7%BA%A7%E6%8F%90%E7%A4%BA%E6%9C%AA%E6%8E%88%E6%9D%83)
 
-根据上面的环境配置配置好环境，具体教程自行百度；
-可参考的部署文章: [https://blog.csdn.net/lovelylord/article/details/132349967](https://blog.csdn.net/lovelylord/article/details/132349967)
+#### ①提示IP未授权[​](https://doc.chatmoney.cn/chat/qa/version.html#_1%E6%8F%90%E7%A4%BAip%E6%9C%AA%E6%8E%88%E6%9D%83)
 
-* **1、从GitHub仓库中拉取代码**
+打开[https://www.mddai.cn](https://www.mddai.cn/)，登录账号，在个人中心对IP地址和域名进行授权，其中ip为项目所在服务器的外网地址。![](https://doc.chatmoney.cn/docs/images/general/php/update/license.png)
 
-```
-# 1.从GitHub仓库中拉取代码
-git clone https://github.com/THUDM/ChatGLM2-6B
+#### ②官网授权了域名仍然提示域名未授权[​](https://doc.chatmoney.cn/chat/qa/version.html#_2%E5%AE%98%E7%BD%91%E6%8E%88%E6%9D%83%E4%BA%86%E5%9F%9F%E5%90%8D%E4%BB%8D%E7%84%B6%E6%8F%90%E7%A4%BA%E5%9F%9F%E5%90%8D%E6%9C%AA%E6%8E%88%E6%9D%83)
 
-# 2.进入下载源码的目录
-cd ChatGLM2-6B
-```
+站点配置了两个域名，授权文件只支持单域名，无论访问哪个域名，都会提醒授权错误。删除没有授权的域名即可。![](https://doc.chatmoney.cn/docs/images/general/php/update/multiple-domain.png)
 
-* **2、下载python文件：**  [点击Python文件](https://doc.chatmoney.cn/docs/download/glm.zip)
+### 2\. 在线升级其他失败原因[​](https://doc.chatmoney.cn/chat/qa/version.html#_2-%E5%9C%A8%E7%BA%BF%E5%8D%87%E7%BA%A7%E5%85%B6%E4%BB%96%E5%A4%B1%E8%B4%A5%E5%8E%9F%E5%9B%A0)
 
-    * 得到两个文件: openai\_ai.py 和 requirements.txt
-    * 把这两个文件替换到 ChatGLM2-6B 目录里面
-* **3、在命令行输入命令(安装依赖)：**  **​`pip install -r requirments.txt`​**
+#### ①提示关闭跨域攻击等[​](https://doc.chatmoney.cn/chat/qa/version.html#_1%E6%8F%90%E7%A4%BA%E5%85%B3%E9%97%AD%E8%B7%A8%E5%9F%9F%E6%94%BB%E5%87%BB%E7%AD%89)
 
-    * 建议使用python的虚拟环境,以免产生一些不必要的麻烦。
-* **4、运行项目：**  **​`python openai_api.py --model 16`​** **这里的数字根据上面的配置进行选择。**
+![](https://doc.chatmoney.cn/docs/images/general/php/update/update-error.jpg)
 
-    * 然后等待模型下载，直到模型加载完毕为止。如果出现报错先问百度。
-    * 这里可能需要科学上网
-* **5、启动成功后应该会显示如下地址：**
+#### ②出现500错误[​](https://doc.chatmoney.cn/chat/qa/version.html#_2%E5%87%BA%E7%8E%B0500%E9%94%99%E8%AF%AF)
 
-提示
+##### 自行改变目录结构[​](https://doc.chatmoney.cn/chat/qa/version.html#%E8%87%AA%E8%A1%8C%E6%94%B9%E5%8F%98%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84)
 
-这里的 [http://0.0.0.0:8000](http://0.0.0.0:8000/) 就是连接地址。
+二开或者目录结构被改变，会导致无法升级。有些用户只上传server目录，也是改变目录结构的一种。会导致无法使用在线升级。
 
-![](https://doc.chatmoney.cn/docs/images/general/third-deployment/chat-glm/chatglm-start.png)
+##### 目录权限不足[​](https://doc.chatmoney.cn/chat/qa/version.html#%E7%9B%AE%E5%BD%95%E6%9D%83%E9%99%90%E4%B8%8D%E8%B6%B3)
 
-### 关于 openai\_api.py 启动的一些参数
+在线升级需要覆盖一些文件，如果项目目录或者子目录文件设置的权限PHP无法操作，也会导致无法升级。如果使用宝塔面板，可以设置一次项目目录，设置目录为www用户。
 
-| 参数名   | 可选值                                                             | 默认值 |
-| ---------- | -------------------------------------------------------------------- | -------- |
-| --device | cuda\=显卡运行, cpu\=cpu运行                                 | cuda   |
-| --path   | local\=本地下载的模型运行, thudm\=线上自动下载               | thudm  |
-| --model  | 4\=chatglm2-6b-int4, 8\=chatglm2-6b-int8, 16\=chatglm2-6b | 16     |
+##### 站点使用的PHP版本缺少ZipArchive[​](https://doc.chatmoney.cn/chat/qa/version.html#%E7%AB%99%E7%82%B9%E4%BD%BF%E7%94%A8%E7%9A%84php%E7%89%88%E6%9C%AC%E7%BC%BA%E5%B0%91ziparchive)
 
-* 说明:
+![](https://doc.chatmoney.cn/docs/images/general/php/update/ZipArchive.png)
 
-    * 如果你 `--path` 参数设置为 local, 那需要你先把模型下载下来, 放到 ChatGLM2-6B/models 目录下
-    * 比如: ChatGLM2-6B/models/chatglm2-6b-int4
-    * 然后再去运行: `python openai_api.py --model 4 --path local`
+老版本必做[​](https://doc.chatmoney.cn/chat/qa/version.html#%E8%80%81%E7%89%88%E6%9C%AC%E5%BF%85%E5%81%9A)
+-----------------------------------------------------------------------------------------------------
 
-### 接口测试
+### 安装配置Redis[​](https://doc.chatmoney.cn/chat/qa/version.html#%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEredis)
 
-![](https://doc.chatmoney.cn/docs/images/general/third-deployment/chat-glm/chatglm-post.png)
+⚠️ 警告
 
-### 接入到系统
+宝塔会重置swoole扩展，需要按部署文档手动添加swoole扩展信息。
 
-![](https://doc.chatmoney.cn/docs/images/general/third-deployment/chat-glm/chatglm-set.png)
+1.点击【软件商店】，安装好redis。 2.在【软件商店】找到PHP-80，点击设置，安装好Redis的PHP扩展。 3.打开项目下 server/.env文件，增加以下配置，该配置为Redis的配置，有密码设置密码，没有留空即可。
 
-## ChatGLM3-6B
+    [QUEUE]
+    NAME = chatai
+    HOST = 127.0.0.1
+    PORT = 6379
+    PASSWORD =
 
-注意
+3.3.0版本更新注意事项[​](https://doc.chatmoney.cn/chat/qa/version.html#_3-3-0%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9)
+----------------------------------------------------------------------------------------------------------------------------------------------
 
-部署方案和ChatGLM2-6B的方式基本上是一样的。
+⚠️ 警告
 
-* **1、从GitHub仓库中拉取代码**
+如果由较老的版本升级上来，检测一下有没配置Redis，没有请按上面文档配置。  
 
-```
-# 1.从GitHub仓库中拉取代码
-https://github.com/THUDM/ChatGLM3
+### 安装守护进程管理器[​](https://doc.chatmoney.cn/chat/qa/version.html#%E5%AE%89%E8%A3%85%E5%AE%88%E6%8A%A4%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%E5%99%A8)
 
-# 2.进入下载源码的目录
-cd ChatGLM3-6B
-```
+参考部署文档设置守护进程。
 
-* **2、在命令行输入命令(安装依赖)**
+3.4.0版本更新注意事项[​](https://doc.chatmoney.cn/chat/qa/version.html#_3-4-0%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9)
+----------------------------------------------------------------------------------------------------------------------------------------------
 
-shell
+### 小程序一键上传[​](https://doc.chatmoney.cn/chat/qa/version.html#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%80%E9%94%AE%E4%B8%8A%E4%BC%A0)
 
-```
-# PS: 建议使用python的虚拟环境,以免产生一些不必要的麻烦。
-pip install -r requirments.txt
-```
-
-* **3、安装cuda依赖 (如果你是用显卡运行,否则忽略该步骤)**
+首次使用小程序一键上传，先安装好node环境，然后在终端下使用cd命令进到项目下的server/extend/miniprogram-ci目录，运行命令 npm install miniprogram-ci --save; 建议使用node最新版本。
 
 shell
 
-```
-3.1、我这边是使用windows系统,首先需要运行一下命令看一下CUDA的版本
-    在cmd终端运行: nvidia-smi
-    我这边得到的版本是: CUDA Version: 12.2
+    npm install miniprogram-ci --save;
 
-3.2、然后去torch官网中查看CUDA适配的torch版本
-   官网: https://pytorch.org/get-started/locally/
+3.5.0版本更新注意事项[​](https://doc.chatmoney.cn/chat/qa/version.html#_3-5-0%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9)
+----------------------------------------------------------------------------------------------------------------------------------------------
 
-3.3、进入网站后按版本选择安装命令 (根据你电脑实际情况选择)
-    PyTorch Build    :  Stable(2.1.0)
-    Your OS          : Windows
-    Package          : Pip
-    Language         : Python
-    Compute Platform : CUDA 12.1
-    Run this Command : pip3 install torch trchvision ......
+1.新版本优化了对话模型配置，更新后需要执行迁移数据脚本：请在浏览器访问https://(你的域名)/migration,注意执行脚本前务必备份好数据!!!!!!!!!  
+2.智谱AI即将下架Std、Lite、Pro模型，新版也会移除这三个模型。  
+4.本次更新需要重新编译，和提交小程序。  
+5.Azure OpenAI申请注意的事项。 6.联网功能代理地址配置，使用新的域名按openai代理文档操作，然后把反向代理地址更改成[https://lite.duckduckgo.com](https://lite.duckduckgo.com/)，后台配置需要 [https://代理地址/lite/](https://xn--mnq35rnbw45p/lite/) 。
 
-3.4、你只需要复制后面 Run this Command 选项的这串 pip3的安装命令, 然后回到你电脑的终端运行即可
-```
+3.6.0版本更新注意事项[​](https://doc.chatmoney.cn/chat/qa/version.html#_3-6-0%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9)
+----------------------------------------------------------------------------------------------------------------------------------------------
 
-* **4、下载python文件：**  [点击Python文件](https://doc.chatmoney.cn/docs/download/glm3.zip)
-
-    * 得到1个文件: openai\_ai.py (此文件就是启动文件)
-    * 把这个文件放到到 ChatGLM3-6B 目录里面
-* **5、下载模型文件到本地：**
-
-    * 下载地址: [https://modelscope.cn/models/ZhipuAI/chatglm3-6b/files](https://modelscope.cn/models/ZhipuAI/chatglm3-6b/files)
-    * 把里面列表所有文件都下载回来, 并统一用一个名为 chatglm3-6b 的文件夹存放
-    * 然后把该文件夹的(含所有内容) 一并移动到 ChatGLM3-6B/models 目录下面
-* **6、运行项目：**  **​`python openai_api.py`​** **这里的数字根据上面的配置进行选择。**
-
-    * 然后等待模型下载，直到模型加载完毕为止。如果出现报错先问百度。
-    * 这里可能需要科学上网 (默认是需要从 www.huggingface.org 上面下载模型文件回来的, 时间会比较长)
-    * 以上什么参数都没有的实际运行命令是 `python openai_api.py --device cuda --path local --model 4`
-
-        * 该命令的意思是 启动脚本 使用 【显卡驱动、使用本地下载的模型文件(即上面第5步) 、 使用量化版本】
-        * 为什么默认使用量化版本? 因为如果你的显卡显存不够13GB是没办法运行正常的版本的。
-        * 如果运行正常版本? 把参数 --model 4 改成 --model 16 即可。
-        * 问: 我要运行32k的模型呢? 答: 那你就去下载32k的模型 当然放到源码的models目录下面, 修改一些运行命令运行就行了
-* **7、运行后的效果**
-
-shell
-
-```
-(venv) PS E:\AI\GLM3> python .\openai_api.py
-
-===========================
-本次加载模型的设备为GPU:  NVIDIA CMP 40HX
-===========================
-
-正在启动的是量化版本...
-
-Loading checkpoint shards: 100%|█████████████████████████████████████████████████████████| 7/7 [00:23<00:00,  3.41s/it]
-INFO:     Started server process [11136]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-INFO:     Uvicorn running on http://0.0.0.0:8100 (Press CTRL+C to quit)
-
-## 注意
-## 注意
-## 这个就是你的运行接口,配置到知识库系统里那个
-接口: http://0.0.0.0:8100
-```
-
-* **8、关于 openai_api.py 启动的一些参数**
-
-| 参数名   | 可选值                                                                              | 默认值 |
-| ---------- | ------------------------------------------------------------------------------------- | -------- |
-| --device | cuda\=显卡运行, cpu\=cpu运行                                                  | cuda   |
-| --path   | local\=本地下载的模型运行, thudm\=线上自动下载                                | thudm  |
-| --model  | 4\=量化模型, 16\=chatglm3-6b, 32\=chatglm2-6b-32k, 128\=chatglm2-6b-32k | 4      |
-
-* 说明:
-
-    * 如果你 `--path` 参数设置为 local, 那需要你先把模型下载下来, 放到 ChatGLM2-6B/models 目录下
-    * 比如: ChatGLM3-6B/models/chatglm3-6b
-    * 然后再去运行: `python openai_api.py --model 4 --path local`
-    * PS: 温馨小提示,GLM3不再像之前GLM2那样单独提供量化版本模型下载, 现在是量化模型直接继承在 chatglm3-6b模型上,使用运行命令作为区分。
+1.gemini模型需要设置反向代理，参考文档[反向代理](https://www.mddai.cn/docs/mddai/deployment/proxy.html)。  
+2.SD绘图需要本地部署SD项目，并让填写部署服务器的接口地址，参考文档[SD本地部署](https://www.mddai.cn/docs/mddai/deployment/sd.html)。  
+3.本地SD绘图需要添加守护进程，参考文档[守护进程添加](https://www.mddai.cn/docs/chat/deployment/bt.html#%E5%AE%88%E6%8A%A4%E8%BF%9B%E7%A8%8B)。
