@@ -263,58 +263,62 @@ import { defineConfig } from "vitepress";
       ],
       "/human/": [
         {
-          "text": "🐳 AI数字人部署",
+          "text": "🐳 AI数字人Saas系统",
           "collapsed": false,
           "collapsible": true,
           "items": [
+            {
+              "text": "系统介绍",
+              "link": "/human/index"
+            },
             {
               "text": "宝塔面板部署 ①",
               "link": "/human/deployment/bt"
             },
             {
-              "text": "通用部署 ②",
+              "text": "通用部署 ②", 
               "link": "/human/deployment/general"
-            }
-          ]
-        },
-        {
-          "text": "🐹 前端部署",
-          "collapsed": false,
-          "collapsible": true,
-          "items": [
-            {
-              "text": "微信公众号",
-              "link": "/human/front/oa"
-            }
-          ]
-        },
-        {
-          "text": "🐰 其他配置",
-          "collapsed": false,
-          "collapsible": true,
-          "items": [
-            {
-              "text": "微信开放平台（微信帐号统一）",
-              "link": "/human/other/open"
             },
             {
-              "text": "微信支付",
-              "link": "/human/other/wechatpay"
+              "text": "🐹 前端部署",
+              "collapsed": false,
+              "collapsible": true,
+              "items": [
+                {
+                  "text": "微信公众号",
+                  "link": "/human/front/oa"
+                }
+              ]
             },
             {
-              "text": "支付宝支付",
-              "link": "/human/other/alipay"
-            }
-          ]
-        },
-        {
-          "text": "🦧 二次开发",
-          "collapsed": false,
-          "collapsible": true,
-          "items": [
+              "text": "🐰 其他配置",
+              "collapsed": false,
+              "collapsible": true,
+              "items": [
+                {
+                  "text": "微信开放平台（微信帐号统一）",
+                  "link": "/human/other/open"
+                },
+                {
+                  "text": "微信支付",
+                  "link": "/human/other/wechatpay"
+                },
+                {
+                  "text": "支付宝支付",
+                  "link": "/human/other/alipay"
+                }
+              ]
+            },
             {
-              "text": "数据接口",
-              "link": "/human/develop/api"
+              "text": "🦧 二次开发",
+              "collapsed": false,
+              "collapsible": true,
+              "items": [
+                {
+                  "text": "数据接口",
+                  "link": "/human/develop/api"
+                }
+              ]
             }
           ]
         }

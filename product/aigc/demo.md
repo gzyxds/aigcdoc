@@ -20,6 +20,7 @@ AIGC数字人「PHP源码版」
 
 ::: info 客户案列
 - [urlnet.cn](http://urlnet.cn)
+- https://1.jiweiyun.com/ 
 
 :::
 

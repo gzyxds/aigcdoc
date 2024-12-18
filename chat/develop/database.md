@@ -42,7 +42,7 @@ cw\_admin\_jobs(岗位关联表)
 |   
  |  |  |
 
-cw\_admin\_role(角色关联表)[​](https://doc.chatmoney.cn/chat/develop/database.html#cw-admin-role-%E8%A7%92%E8%89%B2%E5%85%B3%E8%81%94%E8%A1%A8)
+cw\_admin\_role(角色关联表) 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 | 字段名 | 数据类型 | 注释 |
@@ -52,7 +52,7 @@ cw\_admin\_role(角色关联表)[​](https://doc.chatmoney.cn/chat/develop/data
 |   
  |  |  |
 
-cw\_admin\_session(管理会话表)[​](https://doc.chatmoney.cn/chat/develop/database.html#cw-admin-session-%E7%AE%A1%E7%90%86%E4%BC%9A%E8%AF%9D%E8%A1%A8)
+cw\_admin\_session(管理会话表) 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
 | 字段名 | 数据类型 | 注释 |
@@ -66,7 +66,7 @@ cw\_admin\_session(管理会话表)[​](https://doc.chatmoney.cn/chat/develop/d
 |   
  |  |  |
 
-cw\_article(文章内容表)[​](https://doc.chatmoney.cn/chat/develop/database.html#cw-article-%E6%96%87%E7%AB%A0%E5%86%85%E5%AE%B9%E8%A1%A8)
+cw\_article(文章内容表) 
 -----------------------------------------------------------------------------------------------------------------------------------
 
 | 字段名 | 数据类型 | 注释 |
@@ -89,7 +89,7 @@ cw\_article(文章内容表)[​](https://doc.chatmoney.cn/chat/develop/database
 |   
  |  |  |
 
-cw\_article\_cate(文章分类表)[​](https://doc.chatmoney.cn/chat/develop/database.html#cw-article-cate-%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB%E8%A1%A8)
+cw\_article\_cate(文章分类表) 
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
 | 字段名 | 数据类型 | 注释 |
@@ -104,7 +104,7 @@ cw\_article\_cate(文章分类表)[​](https://doc.chatmoney.cn/chat/develop/da
 |   
  |  |  |
 
-cw\_article\_collect(文章收藏表)[​](https://doc.chatmoney.cn/chat/develop/database.html#cw-article-collect-%E6%96%87%E7%AB%A0%E6%94%B6%E8%97%8F%E8%A1%A8)
+cw\_article\_collect(文章收藏表) 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
 | 字段名 | 数据类型 | 注释 |
@@ -119,7 +119,7 @@ cw\_article\_collect(文章收藏表)[​](https://doc.chatmoney.cn/chat/develop
 |   
  |  |  |
 
-cw\_background(背景图)[​](https://doc.chatmoney.cn/chat/develop/database.html#cw-background-%E8%83%8C%E6%99%AF%E5%9B%BE)
+cw\_background(背景图)
 ---------------------------------------------------------------------------------------------------------------------
 
 | 字段名 | 数据类型 | 注释 |
@@ -137,7 +137,7 @@ cw\_background(背景图)[​](https://doc.chatmoney.cn/chat/develop/database.ht
 |   
  |  |  |
 
-cw\_background\_category(背景图分类)[​](https://doc.chatmoney.cn/chat/develop/database.html#cw-background-category-%E8%83%8C%E6%99%AF%E5%9B%BE%E5%88%86%E7%B1%BB)
+cw\_background\_category(背景图分类)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 | 字段名 | 数据类型 | 注释 |
@@ -152,7 +152,7 @@ cw\_background\_category(背景图分类)[​](https://doc.chatmoney.cn/chat/dev
 |   
  |  |  |
 
-cw\_chat\_category(示例分类表)[​](https://doc.chatmoney.cn/chat/develop/database.html#cw-chat-category-%E7%A4%BA%E4%BE%8B%E5%88%86%E7%B1%BB%E8%A1%A8)
+cw\_chat\_category(示例分类表)
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
 | 字段名 | 数据类型 | 注释 |
@@ -168,7 +168,7 @@ cw\_chat\_category(示例分类表)[​](https://doc.chatmoney.cn/chat/develop/d
 |   
  |  |  |
 
-cw\_chat\_record(对话记录表)[​](https://doc.chatmoney.cn/chat/develop/database.html#cw-chat-record-%E5%AF%B9%E8%AF%9D%E8%AE%B0%E5%BD%95%E8%A1%A8)
+cw\_chat\_record(对话记录表)
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 | 字段名 | 数据类型 | 注释 |
@@ -196,7 +196,7 @@ cw\_chat\_record(对话记录表)[​](https://doc.chatmoney.cn/chat/develop/dat
 |   
  |  |  |
 
-cw\_chat\_record\_category(对话分类表)[​](https://doc.chatmoney.cn/chat/develop/database.html#cw-chat-record-category-%E5%AF%B9%E8%AF%9D%E5%88%86%E7%B1%BB%E8%A1%A8)
+cw\_chat\_record\_category(对话分类表)
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 | 字段名 | 数据类型 | 注释 |
@@ -210,7 +210,7 @@ cw\_chat\_record\_category(对话分类表)[​](https://doc.chatmoney.cn/chat/d
 |   
  |  |  |
 
-cw\_chat\_record\_collect(对话收藏表)[​](https://doc.chatmoney.cn/chat/develop/database.html#cw-chat-record-collect-%E5%AF%B9%E8%AF%9D%E6%94%B6%E8%97%8F%E8%A1%A8)
+cw\_chat\_record\_collect(对话收藏表)
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 | 字段名 | 数据类型 | 注释 |
@@ -222,7 +222,7 @@ cw\_chat\_record\_collect(对话收藏表)[​](https://doc.chatmoney.cn/chat/de
 |   
  |  |  |
 
-cw\_chat\_sample(对话示例表)[​](https://doc.chatmoney.cn/chat/develop/database.html#cw-chat-sample-%E5%AF%B9%E8%AF%9D%E7%A4%BA%E4%BE%8B%E8%A1%A8)
+cw\_chat\_sample(对话示例表)
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 | 字段名 | 数据类型 | 注释 |
@@ -238,7 +238,7 @@ cw\_chat\_sample(对话示例表)[​](https://doc.chatmoney.cn/chat/develop/dat
 |   
  |  |  |
 
-cw\_config(全局配置表)[​](https://doc.chatmoney.cn/chat/develop/database.html#cw-config-%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE%E8%A1%A8)
+cw\_config(全局配置表)
 ---------------------------------------------------------------------------------------------------------------------------------
 
 | 字段名 | 数据类型 | 注释 |
@@ -252,7 +252,7 @@ cw\_config(全局配置表)[​](https://doc.chatmoney.cn/chat/develop/database.
 |   
  |  |  |
 
-cw\_creation\_category(创作类别表)[​](https://doc.chatmoney.cn/chat/develop/database.html#cw-creation-category-%E5%88%9B%E4%BD%9C%E7%B1%BB%E5%88%AB%E8%A1%A8)
+cw\_creation\_category(创作类别表)
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 
 | 字段名 | 数据类型 | 注释 |
@@ -268,7 +268,7 @@ cw\_creation\_category(创作类别表)[​](https://doc.chatmoney.cn/chat/devel
 |   
  |  |  |
 
-cw\_creation\_model(创作模型表)[​](https://doc.chatmoney.cn/chat/develop/database.html#cw-creation-model-%E5%88%9B%E4%BD%9C%E6%A8%A1%E5%9E%8B%E8%A1%A8)
+cw\_creation\_model(创作模型表)
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 | 字段名 | 数据类型 | 注释 |
