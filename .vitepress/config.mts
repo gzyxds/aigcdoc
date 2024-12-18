@@ -272,6 +272,10 @@ import { defineConfig } from "vitepress";
               "link": "/human/index"
             },
             {
+              "text": "PPT介绍",
+              "link": "https://rwm01l8tn3x.feishu.cn/file/OSQ3bgCa8oeVARx0L5mc3haCnpe?from=from_copylink"
+            },
+            {
               "text": "宝塔面板部署 ①",
               "link": "/human/deployment/bt"
             },
