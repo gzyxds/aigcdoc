@@ -37,12 +37,12 @@ import { defineConfig } from "vitepress";
         "text": "⏬部署文档",
         "items": [
           {
-            "text": "🤖全能知识库",
-            "link": "/work/deployment/demo"
+            "text": "🤖SaaS数字人",
+            "link": "/human"
           },
           {
-            "text": "🤖AI数字人",
-            "link": "/human"
+            "text": "🤖全能知识库",
+            "link": "/work/deployment/demo"
           },
 
           {
