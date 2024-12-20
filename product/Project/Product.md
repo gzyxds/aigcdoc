@@ -117,7 +117,9 @@
 ---
 
 
-# ChatGPT-AIGC·产品演示中心
+:::  danger 🖥️官网 https://www.urlnet.cn/
+:::
+
 :::  tip 🗣️ AIGC数字人 SaaS系统演示站点
 AIGC数字人「PHP源码版」
 :::
@@ -130,11 +132,17 @@ AIGC数字人「PHP源码版」
 
 ::: info 客户案列
 - [urlnet.cn](http://urlnet.cn)
+- https://1.jiweiyun.com/ 
+- 系统演示版本：
+- 前端演示：https://1.jiweiyun.com/
+- 后端演示：https://yanshi.jiweiyun.com/admin/
+- 账号：13800000000
+- 密码：13800000000
 
 :::
 
-
 > 注：因是演示站未做授权版本比较旧，功能不是很全，购买是给到最新的版本和功能
+
 
 <br><br>
 
@@ -190,10 +198,16 @@ ChatPaper-论文写作系统「PHP源码版」
 
 > 注：因是演示站未做授权版本比较旧，功能不是很全，购买是给到最新的版本和功能
 
+🍵 友情连接：
+- 🔍 AIGC官网：[https://www.urlnet.cn](https://www.urlnet.cn)
+- ☁ 优刻云计算：[https://www.clouudcvm.com](https://www.clouudcvm.com)
+- 📫 枭格科技：[https://www.xgphp.cn](https://www.xgphp.n) 
+- 🔍 172号卡：[https://urlka.cn](https://urlka.cn)
+- 🎉 支付系统：[https://payphp.cn](https://payphp.cn)
 
 ## 这里是 AIGC创作系统 文档，采用 VitePress 搭建
 
-在线地址：http://comnew.cn
+在线地址：http://urlnet.cn
 
 启动代码：npm run dev
 
@@ -212,10 +226,9 @@ AIGC创作系统 是一个低代码数据可视化开发平台，将图表或页
 - Vue3 + TypeScript4 + Vite2 + NaiveUI + ECharts5  + Axios + Pinia2 + PlopJS
   :::
 
-在线 Demo 地址：[https://comnew.cn](https://comnew.cn)
 
-Gitee 源码地址：[https://comnew.cn](https://comnew.cn)
 
+ 
 ## 浏览器支持
 
 开发和测试平台均在 Google 和最新版 EDGE 上完成，暂未测试 IE11 等其它浏览器，如有需求请自行测试。
@@ -266,6 +279,3 @@ yarn run build
 #Makefile
 make dist
 ```
-
-## 交流
-
