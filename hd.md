@@ -23,8 +23,8 @@ hero:
       class: 'code-btn'
 
     - theme: alt    
-      text: 💬 联系客服
-      link: /product/Project/contact
+      text: 🖥️ 官网
+      link: https://www.urlnet.cn/
       class: 'contact-btn'
 
   image:

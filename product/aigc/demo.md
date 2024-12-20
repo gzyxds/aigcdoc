@@ -8,6 +8,9 @@
 -->
 # AIGC·产品演示中心
 
+:::  danger 🖥️官网 https://www.urlnet.cn/
+:::
+
 :::  tip 🗣️ AIGC数字人 SaaS系统演示站点
 AIGC数字人「PHP源码版」
 :::
@@ -21,6 +24,11 @@ AIGC数字人「PHP源码版」
 ::: info 客户案列
 - [urlnet.cn](http://urlnet.cn)
 - https://1.jiweiyun.com/ 
+- 系统演示版本：
+- 前端演示：https://1.jiweiyun.com/
+- 后端演示：https://yanshi.jiweiyun.com/admin/
+- 账号：13800000000
+- 密码：13800000000
 
 :::
 
@@ -41,6 +49,7 @@ ChatGPT-AIGC-全能AI知识库系统「PHP源码版」
 
 ::: info 客户案列
 - [app.72nh.com](http://app.72nh.com)
+- [www.aichines.com](https://www.aichines.com/)
 
 :::
 
