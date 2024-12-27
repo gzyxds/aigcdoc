@@ -11,7 +11,7 @@ hero:
       class: 'primary-btn col-2'
 
     - theme: brand
-      text: 🤖 AI数字人
+      text: 🤖 SaaS数字人
       link: /hd
       class: 'demo-btn col-2'
     - theme: alt
