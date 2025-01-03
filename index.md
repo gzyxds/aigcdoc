@@ -35,34 +35,45 @@ hero:
   features: []
   head: []
 features:
-  - icon: 💬
-    title: AIGC企业知识库
-    details: 👉PHP && Java持续更新中  <br>适用于企业智能客服、企业智能文档、专家顾问助理等多种企业级商用场景，具有较大的商业使用价值
-    link:  /Work
+  - icon: 💻
+    title: SaaS数字人
+    details: 👉持续更新中<br>适声音克隆 数字人合成SASA无限多开代码开源多终端适配 自定义装修首页
+    link:  /HD
+    linkText: 了解更多
+
+  - icon: 📝
+    title: 企业知识库
+    details: 👉PHP && Java持续更新中<br>适用于企业智能客服、企业智能文档、专家顾问助理等多种企业级商用场景，具有较大的商业使用价值
+    link: /Work
     linkText: 了解更多
 
   - icon: 🎨
-    title: AIGC绘画聊天
-    details: 👉PHP && Java 持续更新中 <br>打造属于自己的GPT，实现人人都能拥有自己的 ChatAI聊天对话系统
+    title: AI绘画聊天
+    details: 👉PHP && Java 持续更新中<br>打造属于自己的GPT，实现人人都能拥有自己的 ChatAI聊天对话系统
     link: /chat
     linkText: 了解更多
 
   - icon: ✍
-    title: Paper论文写作
-    details: 👉PHP && Java 持续更新中<br> AI智能生成写作大纲，10分钟生成3万字论文的系统，AI即可快速为您生成论文大纲，操作高效快捷
-    link: /paper
-    linkText: 了解更多
-
-  - icon: ✔️
-    title: OpenAI接口
-    details: 👉高性能的AI模型接口管理与分发系统 <br>汇集全球顶级品牌的AI超市
-    link: https://api.cnai.art
+    title: AI论文写作
+    details: 👉PHP && Java 持续更新中<br>AI智能生成写作大纲，10分钟生成3万字论文的系统，AI即可快速为您生成论文大纲，操作高效快捷
+    link: /paper.html
     linkText: 了解更多
 
   - icon: 📚
     title: 全模型支持
     details: 支持多种模型的AI对话功能、体验各种模型、在各个模型之中切换自如。支持OpenAI官方API + One API
       等中转对接使用（即支持OpenAI全模型、三方大模型、国内大模型）
+  - icon: 💻
+    title: 技术栈
+    details: 基于前后端分离架构以及Vue3、uni-app、ThinkPHP6.x、PostgreSQL、pgvector技术栈开发
+
+  - icon: 📂
+    title: 开源代码
+    details: 所有源代码开源无加密，方便用户二次开发
+
+  - icon: 📱
+    title: OpenAI接口
+    details: 👉高性能的AI模型接口管理与分发系统 
 
 
   - icon: 🛠️
@@ -133,6 +144,11 @@ features:
     title: 知识库数据训练
     details: >-
       通过数据训练，用户在前台通过聊天对话模式快速查阅和各种内部资料和文档。使用机器学习技术，让系统自动学习并优化知识库中的知识，提高知识库的准确性和智能性
+      
+  - icon: 💻
+    title: 私有部署
+    details: >-
+      使用您自己的域名和品牌Logo，独立运营AI平台、打造自己的AI品牌
 
 title: false 
 description: ''
