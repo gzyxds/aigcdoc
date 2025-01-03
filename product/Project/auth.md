@@ -3,15 +3,15 @@
 ## 我们的产品
 
 
-> [!NOTE] 1.AIGC数字人SaaS系统
+> [!NOTE] 1.AI数字人SaaS系统
 
 
-> [!NOTE] 2.全能知识库系统
+> [!NOTE] 2.全能企业知识库系统
 
 
-> [!TIP] 3.AI聊天绘画系
+> [!TIP] 3.AI聊天绘画系统
 
-> [!IMPORTANT] 4.论文系统
+> [!IMPORTANT] 4.Paper论文系统
 
 
 ## 交付及授权内容
