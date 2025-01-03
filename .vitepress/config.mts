@@ -782,16 +782,16 @@ import { defineConfig } from "vitepress";
     "socialLinks": [    //    社交链接
       {
         "icon": "github",
-        "link": "https://xgphp.cn"
+        "link": "https://urlnet.cn"
       },
       {
         "icon": "discord",
-        "link": "https://xgphp.cn"
+        "link": "https://urlnet.cn"
       },
       
       {
         "icon": "twitter",
-        "link": "https://xgphp.cn"
+        "link": "https://urlnet.cn"
       },
 
     ],

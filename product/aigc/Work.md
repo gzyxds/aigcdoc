@@ -1,7 +1,7 @@
 ---
 layout: home
 hero:
-  name: ChatGPT-AIGC 
+  name: CHATGTPAIGC 
   text: 全能AIGC知识库系统
   tagline: >-
     基于前后端分离架构以及Vue3、uni-app、ThinkPHP6.x、PostgreSQL、pgvector技术栈开发，包含PC端、H5端。

@@ -1,7 +1,7 @@
 ---
 layout: home
 hero:
-  name: ChatGPT-AIGC
+  name: CHATGTPAIGC
   text: 聊天绘画系统源码
   tagline: >-
     基于前后端分离架构以及Vue3、uni-app、ThinkPHP6.x、PHP8.0技术栈开发，包含 PC端、H5端、小程序端、APP端、对接国内外知名主流大语言模型接口及中转平台
