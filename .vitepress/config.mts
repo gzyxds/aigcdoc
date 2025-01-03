@@ -34,10 +34,10 @@ import { defineConfig } from "vitepress";
         ]
       },
       {
-        "text": "⏬部署文档",
+        "text": "📑部署文档",
         "items": [
           {
-            "text": "🤖SaaS数字人",
+            "text": "🚀SaaS数字人",
             "link": "/human"
           },
           {
@@ -56,11 +56,11 @@ import { defineConfig } from "vitepress";
         ]
       },
       {
-        "text": "💻官网",
+        "text": "🌍官网",
         "link": "https://www.urlnet.cn"
       },
       {
-        "text": "🏅AI助手",
+        "text": "🧠AI助手",
         "items": [
           {
             "text": "艺界AI",

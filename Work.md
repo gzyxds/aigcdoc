@@ -14,7 +14,7 @@ hero:
 
     - theme: alt
       text: 🎉系统演示
-      link: https://app.72nh.com/
+      link: /product/aigc/demo.html
 
     - theme: alt
       text: 📞联系我们
