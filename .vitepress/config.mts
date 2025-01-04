@@ -268,6 +268,14 @@ import { defineConfig } from "vitepress";
           "collapsible": true,
           "items": [
             {
+              "text": "项目首页",
+              "link": "/hd/"
+            },
+            {
+              "text": "系统官网",
+              "link": "https://www.urlnet.cn/human"
+            },
+            {
               "text": "系统介绍",
               "link": "/human/index"
             },

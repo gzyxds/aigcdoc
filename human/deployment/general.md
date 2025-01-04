@@ -17,12 +17,12 @@ nginx配置[​](https://doc.chatmoney.cn/dm/deployment/general.html#nginx%E9%85
 
 ### nginx全配置[​](https://doc.chatmoney.cn/dm/deployment/general.html#nginx%E5%85%A8%E9%85%8D%E7%BD%AE)
 
-⚠️ 警告
-
+::: danger ⚠️ 警告
 使用过泛域名和泛域名证书，租户如果使用自定义域名，请使用自抑域名添加相当的nginx配置。
+:::
 
-nginx
 
+```
     server {
         listen 80;
         listen 443 ssl;
@@ -61,28 +61,26 @@ nginx
                 access_log off;
             }
     }
+```
+### nginx伪静态部分 
 
-### nginx伪静态部分[​](https://doc.chatmoney.cn/dm/deployment/general.html#nginx%E4%BC%AA%E9%9D%99%E6%80%81%E9%83%A8%E5%88%86)
-
-nginx
+```
 
     if (!-e $request_filename)
             {
                 rewrite ^/(.*)$ /index.php?s=$1 last;
                 break;
             }
-
-apache配置[​](https://doc.chatmoney.cn/dm/deployment/general.html#apache%E9%85%8D%E7%BD%AE)
+```
+apache配置 
 -----------------------------------------------------------------------------------------
 
-### apache权配置[​](https://doc.chatmoney.cn/dm/deployment/general.html#apache%E6%9D%83%E9%85%8D%E7%BD%AE)
+### apache权配置 
 
-⚠️ 警告
-
+::: info ⚠️ 警告
 使用过泛域名和泛域名证书，租户如果使用自定义域名，请使用自抑域名添加相当的apache配置。
-
-apache
-
+:::
+````
     <VirtualHost *:80>
         ServerName *.likeadmin.localhost
         DocumentRoot /path/to/likeadmin/server/public
@@ -157,10 +155,10 @@ apache
             CustomLog /dev/null common
         </Files>
     </VirtualHost>
+````
+### apache伪静态 
 
-### apache伪静态[​](https://doc.chatmoney.cn/dm/deployment/general.html#apache%E4%BC%AA%E9%9D%99%E6%80%81)
-
-apache
+```
 
     <IfModule mod_rewrite.c>
       Options +FollowSymlinks -Multiviews
@@ -170,25 +168,22 @@ apache
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
     </IfModule>
+```
 
-安装[​](https://doc.chatmoney.cn/dm/deployment/general.html#%E5%AE%89%E8%A3%85)
------------------------------------------------------------------------------
-
+### 安装
 部署成功后，访问域名即可安装`likeadmin`，安装后生成配置文件`server/.env`。`server/.env`包含`Mysql`、`Redis`等配置信息。
 
-访问地址[​](https://doc.chatmoney.cn/dm/deployment/general.html#%E8%AE%BF%E9%97%AE%E5%9C%B0%E5%9D%80)
--------------------------------------------------------------------------------------------------
+访问地址 
 
-提示
-
+::: tip 提示
 首次安装的域名就是平台域名，租户域名在平台
+::: 
 
-平台后台访问地址：[http://平台域名/platform](https://php-saas.likeadmin.cn/platform)  
-租户后台访问地址：[http://租户域名/admin](https://php.likeadmin.cn/platform)  
-租户PC端前台访问地址：[http://租户域名/pc](https://php.likeadmin.cn/pc)  
-租户移动端前台访问地址：[http://域名/mobile](https://php.likeadmin.cn/mobile)
+- 平台后台访问地址：http://平台域名/platform
+- 租户后台访问地址：http://租户域名/admin
+- 租户PC端前台访问地址：http://租户域名/pc
+- 租户移动端前台访问地址：http://域名/mobile
 
-添加租户自定义域名[​](https://doc.chatmoney.cn/dm/deployment/general.html#%E6%B7%BB%E5%8A%A0%E7%A7%9F%E6%88%B7%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D)
----------------------------------------------------------------------------------------------------------------------------------------------------
+### 添加租户自定义域名 
 
 将自定义租户域名做`CNAME`解析到系统生成的租户默认域名，在SaaS平台后台设置租户自定义域名，然后`Nginx`或`Apache`添加配置，配置出了域名以外，其它与上述的配置一致。

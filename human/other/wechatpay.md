@@ -51,8 +51,7 @@
 微信小程序[​](https://doc.chatmoney.cn/dm/config/wechatpay.html#%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F)
 ---------------------------------------------------------------------------------------------------------
 
-⚠️ 警告
-
+::: danger ⚠️ 警告
 配置完微信支付以后，微信支付需要关联微信小程序并设置支付目录，步骤如下。
-
+::: 
 **步骤1**: 单击【产品中心】->【AppID账号管理】->【关联AppID】。![](https://doc.chatmoney.cn/docs/images/general/config/wechatpay/mnp-pay-1.png)**步骤2**: 填写微信公众号的AppID，单击【我已阅读并同意】->【提交】。![](https://doc.chatmoney.cn/docs/images/general/config/wechatpay/mnp-pay-2.png)**步骤3**: 打开[https://mp.weixin.qq.com/](https://mp.weixin.qq.com/)，登录微信小程序后台，单击【微信支付】，单击【确定】，这样微信支付就关联微信小程序。![](https://doc.chatmoney.cn/docs/images/general/config/wechatpay/mnp-pay-3.png)
