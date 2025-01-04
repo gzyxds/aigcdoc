@@ -732,7 +732,7 @@ import { defineConfig } from "vitepress";
               "link": "/product/aigc/Work"
             },
             {
-              "text": "🎭AIGC数字人",
+              "text": "🎭SaaS数字人",
               "link": "/hd"
             },
             {
@@ -744,8 +744,8 @@ import { defineConfig } from "vitepress";
               "link": "/product/aigc/paper"
             },
             {
-              "text": "🎉系统演示",
-              "link": "/product/aigc/demo"
+              "text": "🖥️系统官网",
+              "link": "https://www.urlnet.cn/"
             }
             
           ]
@@ -773,7 +773,7 @@ import { defineConfig } from "vitepress";
               "link": "http://www.payphp.cn/"
             },
             {
-              "text": "👀代码库",
+              "text": "👀源码市场",
               "link": "http://www.codepu.cn/"
             }
           
