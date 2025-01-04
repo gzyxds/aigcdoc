@@ -716,7 +716,7 @@ import { defineConfig } from "vitepress";
               "link": "/product/Project/contact"
             },
             {
-              "text": "🎉系统演示",
+              "text": "🎉产品演示",
               "link": "/product/Project/demo"
             }
           ]
