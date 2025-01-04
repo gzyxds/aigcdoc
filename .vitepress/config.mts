@@ -714,6 +714,10 @@ import { defineConfig } from "vitepress";
             {
               "text": "📢联系我们",
               "link": "/product/Project/contact"
+            },
+            {
+              "text": "🎉系统演示",
+              "link": "/product/Project/demo"
             }
           ]
         },

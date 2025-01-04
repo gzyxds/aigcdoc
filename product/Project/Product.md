@@ -264,6 +264,8 @@ yarn install
 #pnpm
 pnpm dev
 
+npm run docs:dev
+
 # npm
 npm run dev
 
