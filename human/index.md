@@ -67,26 +67,29 @@ AIGC数字人「PHP源码版」
 
 | 演示平台     | 演示地址                                                    | 账号     | 密码     |
 | -------------- | ------------------------------------------------------------- | ---------- | ---------- |
-| PC演示前台   | [https://0k3yq4u4.chatmoney.cn](https://0k3yq4u4.chatmoney.cn) | 自行注册 | 自行注册 |
-| 站点管理端   | [https://iqujtpeg.chatmoney.cn/admin/](https://iqujtpeg.chatmoney.cn/admin/) | admin | mddaiSaas |
-| SaaS平台端   | [https://dm-saas-demo.chatmoney.cn/platform/](https://dm-saas-demo.chatmoney.cn/platform/) | admin | mddaiSaas |
+| PC演示前台   | [PC系统演示](https://0k3yq4u4.chatmoney.cn) | 自行注册 | 自行注册 |
+| 站点管理端   | [管理端系统演示](https://iqujtpeg.chatmoney.cn/admin/) | admin | mddaiSaas |
+| SaaS平台端   | [SaaS端系统演示](https://dm-saas-demo.chatmoney.cn/platform/) | admin | mddaiSaas |
 
 ::: info 客户案列
-- [urlnet.cn](http://urlnet.cn)
-- https://1.jiweiyun.com/ 
+- [系统官网](http://urlnet.cn)
+- [客户案列](https://1.jiweiyun.com/)
 - 系统演示版本：
-- 前端演示：https://1.jiweiyun.com/
-- 后端演示：https://yanshi.jiweiyun.com/admin/
+- 前端演示：[前端客户案列](https://1.jiweiyun.com/)
+- 后端演示：[后端系统后台](https://1.jiweiyun.com/admin)
 - 账号：13800000000
 - 密码：13800000000
-
+:::
+::: info OEM站点管理端
+- 客户OEM后台：[OEM演示站点](https://aisaas.11949.cn/admin/)
+- 账号：yanjie
+- 密码：123456789
 :::
 
 > 注：因是演示站未做授权版本比较旧，功能不是很全，购买是给到最新的版本和功能
 
-
 ::: danger 应用场景与解决方案 🎯
-### 主要解决问题
+#### 主要解决问题
 AI数字人的诞生是为了解决以下问题：
 - 不愿意出镜
 - 不敢出镜
@@ -97,25 +100,16 @@ AI数字人的诞生是为了解决以下问题：
 
  
 ::: info 应用场景 🎬
-
-1. **口播类IP**
-   - 基于数字人创建的口播视频和真人无异
-   - 能够无缝衔接真人出镜的视频
-
-2. **场景广泛**
-   - 情感博主
-   - 知识博主
-   - 国学博主
-   - 商业IP
-
-3. **简单复刻**
-   - 上传场景克隆
-   - 克隆声音或选用公共声音
-   - 一次复刻终身使用
-
-4. **批量生产**
-   - 克隆好的数字人可批量生产视频
-   - 只需输入文案即可生产视频
+- 企业:打造数字代言人、创始人IP，用于品宣、获客。
+- 个人:自媒体:帮助不想或害怕出镜的人打造个人IP。
+- 医生:替代真人出镜，制作健康医学科普视频。
+- 律师:用于日常普法、案例分析，引流获客。
+- 媒体:克隆记者/主播形象用于日常播报，推动传统媒体数字化转型。
+- 教育:批量化打造数字课堂，支持多种语言和不同类型课堂制作，可快速纠错重生成。
+- 金融:进行金融财经知识科普，打造个人IP 和机构品牌推广
+- 文旅:用于行业知识科普、景区介绍与推广留咨。
+- MCN机构:打造专业主播IP，填充主播空余时间，高效打造IP 或矩阵
+- 带货:通过口播视频与批量混剪，促销团购或低客单价产品。
 :::
 
  ::: tip 常见痛点解决 🤔
@@ -313,3 +307,168 @@ AI数字人的诞生是为了解决以下问题：
 - 官网公众号更新
 :::
  
+### 数字人分身素材拍摄规范
+::: danger 场景选择
+- 1.建议实景拍摄，选择干净整洁的场景，尽量减少干扰因素。
+- 2.光线:避免复杂光线，尽量保证出镜人物面部光照均匀、
+- 3.环境:避免复杂环境，尤其避免多人面部出现在同一画面。
+- 4.声音:避免复杂声音，避免敲击声、嘈杂环境等。
+:::
+
+::: info 模特准备
+- 1.模特保持常态即可，着装适配日常视频。
+- 2.出镜着装:符合人物特点的着装即可，服装上避免出现人物图像，女生不要画过多阴影，可选色号相对鲜艳的口红。
+:::
+
+::: tip 肢体动作
+- 1.强烈建议半身站姿或半身坐姿正面拍摄。
+- 2.面部不能占超过屏幕的三分之一，建议露肩半身拍摄。
+- 3.松弛自然，全程不遮挡面部。
+- 4.坐立均可，严禁走动。
+- 5.可以适当增加一些缓慢的手部动作，避免快速、频繁
+- 6.避免出现明确意图手势，如数字、握拳、快速挥动等
+:::
+
+::: warning 口型与语言
+- 1.可以选择一段 150 字左右的美文进行阅读，正常语速。
+- 2.也可以全程静默仅做手势，不张口阅读。
+:::
+
+ 
+
+ #### 数字人素材要求表
+<table class="table">
+  <thead>
+    <tr>
+      <th class="table-header">要求分类</th>
+      <th class="table-header">项目</th>
+      <th class="table-header">标准</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="table-cell">视频时长</td>
+      <td class="table-cell">30秒以上</td>
+      <td class="table-cell">体积100M以内</td>
+    </tr>
+    <tr>
+      <td class="table-cell">视频格式</td>
+      <td class="table-cell">MP4</td>
+      <td class="table-cell">MOV</td>
+    </tr>
+    <tr>
+      <td class="table-cell">视频分辨率</td>
+      <td class="table-cell">720P</td>
+      <td class="table-cell">1080P</td>
+    </tr>
+    <tr>
+      <td class="table-cell">视频剪辑</td>
+      <td class="table-cell">一境到底</td>
+      <td class="table-cell">避免剪辑</td>
+    </tr>
+    <tr>
+      <td class="table-cell">音画同步</td>
+      <td class="table-cell">不强制要求</td>
+      <td class="table-cell">也可以全程静默，仅做动作</td>
+    </tr>
+    <tr>
+      <td class="table-cell">面部遮挡</td>
+      <td class="table-cell">肩部以上区域均禁止遮挡</td>
+      <td class="table-cell"> </td>
+    </tr>
+    <tr>
+      <td class="table-cell">耳饰</td>
+      <td class="table-cell">不佩戴或配戴固定耳饰</td>
+      <td class="table-cell"> </td>
+    </tr>
+    <tr>
+      <td class="table-cell">拍摄距离</td>
+      <td class="table-cell">镜头内全半身</td>
+      <td class="table-cell">保证面部清晰</td>
+    </tr>
+    <tr>
+      <td class="table-cell">姿势</td>
+      <td class="table-cell">坐姿半身</td>
+      <td class="table-cell">或立姿半身</td>
+    </tr>
+    <tr>
+      <td class="table-cell">表情</td>
+      <td class="table-cell">正面面向镜头</td>
+      <td class="table-cell">眼神注视，不漂移</td>
+    </tr>
+  </tbody>
+</table>
+
+
+#### 声音克隆要求
+<table>
+  <thead>
+    <tr>
+      <th width="15%">要求分类</th>
+      <th width="50%">项目</th>
+      <th width="35%">标准</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>语种</td>
+      <td>中文或英文，普通话发音，不建议方言</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>音频格式</td>
+      <td>MP3</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>录音时长</td>
+      <td>建议录音在3-10秒，文件大小20M以内</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>语速</td>
+      <td>不宜过快，适中即可；每分钟200-300字左右</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>语音语调</td>
+      <td>建议普通话发音，不刻意升高或降低语音语调</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>风格</td>
+      <td>建议尝试克隆轻松聊天、播音腔阅读等多种风格</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>连贯性</td>
+      <td>做到录音熟练连贯，不磕磕绊绊</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>环境</td>
+      <td>场地与视频素材保持一致，封闭、安静，无噪音/回音</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>小技巧</td>
+      <td>距离</td>
+      <td>建议录音时距离录音麦10厘米左右，录制清晰还没有气流声</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>姿势</td>
+      <td>录音时保持姿态稳定，不做多于的肢体动作，避免出现不必要的噪音</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>吐字</td>
+      <td>吐字清晰，断句干脆，发音平和稳定不出现大起伏，克隆的质量会更好</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>设备</td>
+      <td>可用有线耳麦、手机、笔记本电脑等多种方式录制</td>
+    </tr>
+  </tbody>
+</table>
