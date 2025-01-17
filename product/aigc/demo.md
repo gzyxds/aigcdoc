@@ -26,7 +26,7 @@ AIGC数字人「PHP源码版」
 - [客户案列](https://1.jiweiyun.com/)
 - 系统演示版本：
 - 前端演示：[前端客户案列](https://1.jiweiyun.com/)
-- 后端演示：[后端系统后台](https://1.jiweiyun.com/admin)
+- 后端演示：[后端系统后台](https://yanshi1.jiweiyun.com/admin/)
 - 账号：13800000000
 - 密码：13800000000
 :::
