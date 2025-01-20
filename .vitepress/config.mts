@@ -128,7 +128,7 @@ import { defineConfig } from "vitepress";
             },
             {
               "text": "运营文档",
-              "link": "/work/deployment/Operations"
+              "link": "https://rwm01l8tn3x.feishu.cn/docx/BUVsd7WULoDOv1xjb08cpMHrnAf?from=from_copylink"
             },
             {
               "text": "更新日志",
