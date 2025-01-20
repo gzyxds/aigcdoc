@@ -4,14 +4,14 @@
 推荐服务器最低配置：CPU双核、内存4GB、硬盘20GB、带宽5兆
 :::
 
-::: tip 提示
+::: tip ⚠️提示
 v3.3.0之前版本升级上来，请看`旧版本文档`此文档只适合v3.3.0后版本全新部署的。
 知识库系统涉及的运行环境比较复杂，建议使用Docker部署，Docker的使用在宝塔面板上操作非常方便。
 :::
 
 ## 运行环境
 
-::: warning 注意
+::: warning ⚠️注意
 在不影响其他站点的情况下，建议将宝塔升级到最新版本。
 :::
 
@@ -30,20 +30,20 @@ v3.3.0之前版本升级上来，请看`旧版本文档`此文档只适合v3.3.0
 * **步骤1**:
   点击【文件】，进入【/www/wwwroot】目录，在目录下新建目录，后续步骤，我们都称该目录为【站点目录】。![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/code-1.png)
 * **步骤2**:
-  进入【站点目录】，并上传从chatmoney官网下载的源码包，上传完成后，右键点击【解压】源码包。![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/code-2.png)![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/code-3.png)
+  进入【站点目录】，并上传源码包，上传完成后，右键点击【解压】源码包。![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/code-2.png)![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/code-3.png)
 
 ## Docker部署
 
 ### 修改Docker编排文件
 
-Docker知识科普
+::: tip Docker知识科普
 
 一般情况下，docker端口挂载的格式都是"端口1:端口2"，"端口1"为挂载主机端口，"端口2"为容器内部端口。所以我们在主机访问端口时，要访问"127.0.0.1:端口1"。如果进入容器内部或者容器之间进行通信时，访问"端口2"。容器之间的访问，使用“容器名:端口"。本项目除了使用主机Nginx代理nginx容器，其他都是容器与容器他们之间通讯。
+:::
 
-注意
-
+::: warning 注意
 修改的参数按自己实际情况填写，请勿直接复制文档。
-
+:::
 进入【站点目录】下的docker目录，右键单击【docker-compose.example.yml】文件，单击【重命名】，将新文件命名为【docker-compose.yml】。打开【docker-compose.yml】文件，修改①\~⑤的选项。
 
 * **修改第①项**:
@@ -73,27 +73,27 @@ MYSQL_ROOT_PASSWORD: 123456Abcd #②【123456Abcd】为MySQL容器root账号的�
 
 ### 添加Docker编排模板
 
-⚠️ 警告
 
+::: danger ⚠️ 警告
 1.如果添加失败，很可能是编辑编排模板的时候没有操作正确，yml文件用缩进来表示层次结构，每一行需要有规则的对齐。
 2.如果提示模板已存在，可以修改文件名，保持yml（结尾）格式。
+:::
+
 
 单击【Docker】-\>【编排模板】-\>【搜索本地模块】-\>【📂(文件夹小图标)】，选择【站点目录下】的docker目录，单击【搜索】，模板名选择编辑的docker-compose.yml文件，单击【添加】。![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/docker-compose-temp.png)
 
 ### 添加容器编排
-
-⚠️ 警告
-
+::: danger ⚠️ 警告
 如果添加失败，很可能是编排模板问题，请重新编排编辑模板。注意挂载主机的端口号，不要与主机已有的其他软件冲突。
+:::
 
 单击【容器编排】-\>【项目】-\>【添加Composer项目】，在【Composer模块】选择【docker】，填写名称，单击【添加】。添加成功以后，如图所示。然后在点击【容器】，可以看到项目运行的![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/docker-compose-1.png)![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/docker-compose-2.png)
 
 ## 反向代理容器
 
-提示
-
+::: danger 提示
 该反向代理为主机Nginx代理到Ngxin容器，代理的端口为Nginx容器挂载主机的端口。
-
+:::
 ### 添加站点
 
 单击【网站】-\>【反向代理】-\>【添加反代】,填写站点域名，【目标】选择URL地址，填写`http://127.0.0.1:180`，其中180为Docker的Nginx容器挂载主机的端口，按实际挂载的端口填写。传递域名时按默认填写\$http\_host，然后【确定】。![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/add-site.png)
@@ -115,14 +115,13 @@ proxy_set_header X-Forwarded-Proto $scheme;
 出现了弹出窗，需要手动在域名服务商（阿里云腾讯云等）后台给域名添加TXT解析，按要求添加TXT解析，主机信息填写①的值，记录值填写②的值，点击选择可以复制到整值。TXT解析添加好完成以后，点击【验证】。![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/ssl-1.png)![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/ssl-2.png)![](https://doc.chatmoney.cn/docs/images/pro/deployment/bt-docker/ssl-3.png)
 
 ## 程序安装
-
-⚠️ 警告
-
+::: danger ⚠️ 警告
 如果访问页面出现"No input file specified"，是因为站点目录设置为server/pulibc，宝塔面板生成.user.ini文件影响到容器运行。请将目录设置为项目根目录，并删除掉server/public/.user.ini文件，单击【Docker】-\>【容器】，选择所有容器，单击【批量操作】-\>【重启容器】。重新访问即可。
+:::
 
-⚠️ 警告
-
+::: danger ⚠️ 警告
 如果安装的时候，出现了提示数据库密码错误，很大可能是创建容器后才修改docker-compose.yml的配置导致，这时密码是容器创建前docker-compose.yml的密码，不是后来修改的密码。确认数据不要保留的情况下，可以删除docker/data目录，然后删除所有容器和容器编排，重新创建容器编排。
+:::
 
 在浏览器访问站点，进入程序安装界面，单击【我已阅读并同意】-\>【继续】。
 然后将编排模板docker-compose.yml文件的信息填写到安装界面。
@@ -172,7 +171,7 @@ postgreSQL项的数据库用户，数据库密码，数据名称，分别填写d
 docker/data目录及其下文件不能修改权限，修改权限会导致异常，甚至无法恢复数据！！！
 :::
 
-::: tip 提示
+::: tip ⚠️提示
 docker/data为MySQL数据库，postgres数据库数据存在目录，备份数据和数据，备份server目录和docker目录即可
 :::
 

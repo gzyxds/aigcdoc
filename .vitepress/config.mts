@@ -44,7 +44,6 @@ import { defineConfig } from "vitepress";
             "text": "🤖全能知识库",
             "link": "/work/deployment/demo"
           },
-
           {
             "text": "🎉聊天绘画",
             "link": "/chat/index"
