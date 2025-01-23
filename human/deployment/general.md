@@ -1,21 +1,21 @@
 通用部署②/③ 开发人员使用[​](https://doc.chatmoney.cn/dm/deployment/general.html#%E9%80%9A%E7%94%A8%E9%83%A8%E7%BD%B22-3)
 ==============================================================================================================
 
-项目入口[​](https://doc.chatmoney.cn/dm/deployment/general.html#%E9%A1%B9%E7%9B%AE%E5%85%A5%E5%8F%A3)
--------------------------------------------------------------------------------------------------
+项目入口
+----------------------------------------------------------------------------------------------
 
 项目静态资源入口目录：`server/public` 　  
 项目PHP入口文件：`server/public/index.php`
 
-PHP扩展[​](https://doc.chatmoney.cn/dm/deployment/general.html#php%E6%89%A9%E5%B1%95)
+PHP扩展 
 -----------------------------------------------------------------------------------
 
 `fileinfo`、`PDO_MYSQL`、`allow_url_fopen`、`GD2`、`DOM`、`redis`
 
-nginx配置[​](https://doc.chatmoney.cn/dm/deployment/general.html#nginx%E9%85%8D%E7%BD%AE)
+nginx配置 
 ---------------------------------------------------------------------------------------
 
-### nginx全配置[​](https://doc.chatmoney.cn/dm/deployment/general.html#nginx%E5%85%A8%E9%85%8D%E7%BD%AE)
+### nginx全配置 
 
 ::: danger ⚠️ 警告
 使用过泛域名和泛域名证书，租户如果使用自定义域名，请使用自抑域名添加相当的nginx配置。

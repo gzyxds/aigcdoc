@@ -2,11 +2,11 @@
 
 ## 接入说明
 
-提示
-
+::: danger 提示
 我们使用 **chatgpt-on-wechat** 这个项目来接入；
 无论是个人微信还是企业微信都使用这个项目。
 具体如何安装这边不过多阐述，请自行阅读官方文档安装。
+:::
 **官方项目地址:**  **[https://github.com/zhayujie/chatgpt-on-wechat](https://github.com/zhayujie/chatgpt-on-wechat)**
 
 ## 需要设备
@@ -24,10 +24,9 @@
 
 `根据自己的系统版本获取到apiKey`
 
-[【1.7.* 版本 获取密钥的方法, 点击跳转查看】](https://doc.chatmoney.cn/pro/third-deployment/on-wechat.html#v1%E7%89%88%E6%9C%AC%E7%9A%84%E5%88%86%E4%BA%AB%E5%AF%86%E9%92%A5)
+ 【1.7.* 版本 获取密钥的方法, 点击跳转查看】 
 
-[【&gt;=2.0.0版本 获取密钥的方法, 点击跳转查看】](https://doc.chatmoney.cn/pro/third-deployment/on-wechat.html#v2%E7%89%88%E6%9C%AC%E7%9A%84%E5%88%86%E4%BA%AB%E5%AF%86%E9%92%A5)
-
+ 【&gt;=2.0.0版本 获取密钥的方法, 点击跳转查看】 
 **步骤二:**
 
 * 1、下载 `chatgpt-on-wechat` 第三方开源项目
@@ -60,7 +59,7 @@ pip install ntwork
 
 **步骤四 (安装依赖):**
 
-shell
+
 
 ```
 # 1、终端打开项目

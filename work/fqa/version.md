@@ -1,35 +1,109 @@
-# 500错误处理
+# 更新升级指南
 
-提示
+## 更新操作说明
 
-500错误为服务器内部错误，所有服务端错误都会报500。如果只是反馈500错误，我们无法帮您解决问题，以下教程教大家如何获取具体错误信息。
+### ⚠️ 重要提示
+更新前请务必做好以下备份工作：
+- 数据库完整备份
+- 源码目录完整备份
+- 重要配置文件备份
 
-## 如何获取具体的500错误并反馈
+建议使用以下备份方式：
+1. 数据库导出SQL文件
+2. 源码目录打包压缩
+3. 关键配置文件单独备份
 
-* **步骤1**: 登录宝塔，点击【文件】，找到网站所有目录，打开项目一下的server/.env文件，把"APP\_DEBUG"项的值改成true。
+## 升级方式
 
-json
+### 方式一：在线升级
 
-```
-APP_DEBUG = true
-```
+#### 适用条件
+- 使用完整项目源码
+- 未进行目录结构调整
+- 未进行二次开发
 
-![](https://doc.chatmoney.cn/docs/images/general/php/debug/debug-1.png)
+#### 升级步骤
 
-* **步骤2**: 右键单击浏览器，单击【检查】-\>【Network(网络)】-\>【Fetch/XHR】,在左下角请求列表找到红色的请求，单击其中一行，单击【Preview(预览)】。蓝色框显示的信息，就是具体的错误信息，可将信息反馈给客服人员。![](https://doc.chatmoney.cn/docs/images/general/php/debug/debug-2.png)
+1. **关闭防跨站攻击**
+   - 进入宝塔面板
+   - 选择【网站列表】->【设置】->【网站目录】
+   - 临时关闭【防跨站攻击(open_basedir)】
+   ![关闭防跨站](https://doc.chatmoney.cn/docs/images/general/php/update/update-1-1.png)
 
-## 通过错误信息自行解决问题
+2. **重启Nginx服务**
+   - 进入【软件商店】
+   - 找到Nginx，选择【设置】->【重启】
+   ![重启Nginx](https://doc.chatmoney.cn/docs/images/general/php/update/update-1-2.png)
 
-### 1.系统用户权限问题
+3. **重启PHP服务**
+   - 进入【软件商店】
+   - 找到PHP-8.0，选择【服务】->【重启】
+   ![重启PHP](https://doc.chatmoney.cn/docs/images/general/php/update/update-1-3.png)
 
-#### 错误信息
+4. **执行系统更新**
+   - 登录后台
+   - 进入【系统设置】->【系统维护】->【系统更新】
+   - 点击【一键更新】
 
-"file\_put\_contents(/www/wwwroot/xxxxxx/server/runtime): Failed to open stream: Permission denied"![](https://doc.chatmoney.cn/docs/images/general/php/debug/permission-1.png)
+5. **恢复安全设置**
+   - 重新开启【防跨站攻击(open_basedir)】
 
-#### 原因
+6. **清理系统缓存**
+   - 进入【系统设置】->【系统维护】->【系统缓存】
+   - 点击【清理缓存】
 
-此错误是由于系统文件权限引起报错，遇到类似的问题。
+7. **小程序更新**
+   - 重新发布小程序版本
 
-#### 解决方式
+### 方式二：手动升级
 
-打开项目【文件】，找到项目所在目录，鼠标上浮到server，这个时候出现了【权限】，单击【权限】，所有者设置为【www】，设置为勾上【应用到子目录】，单击【确定】。处理好以后，就不会有报错了。![](https://doc.chatmoney.cn/docs/images/general/php/debug/permission-2.png)![](https://doc.chatmoney.cn/docs/images/general/php/debug/permission-3.png)
+#### 升级步骤
+
+1. **备份关键文件**
+   - server/.env
+   - server/config/install.lock
+   - server/public/uploads
+   - server/license/my.license
+
+2. **替换源码**
+   - 下载最新源码包
+   - 删除现有server目录
+   - 替换为最新server目录
+   - 恢复备份的关键文件
+
+3. **数据库处理**
+   - 修改like.sql表前缀（如需要）
+   - 新建测试数据库并导入like.sql
+   - 使用Navicat同步数据结构
+
+## 常见问题处理
+
+### 1. 授权相关问题
+
+#### 1.1 IP未授权
+- 登录官网授权中心
+- 添加服务器外网IP
+- 添加项目域名
+
+#### 1.2 域名授权异常
+- 检查站点域名配置
+- 确保仅保留一个授权域名
+- 删除未授权域名
+
+### 2. 升级失败处理
+
+#### 2.1 跨域攻击提示
+- 确认已关闭防跨站攻击
+- 检查目录权限设置
+
+#### 2.2 500错误排查
+
+**可能原因：**
+- 目录结构被修改
+- 文件权限不足
+- PHP缺少ZipArchive扩展
+
+**解决方案：**
+- 恢复标准目录结构
+- 设置目录权限为www用户
+- 安装PHP Zip扩展

@@ -1,38 +1,67 @@
-对象存储设置[​](https://doc.chatmoney.cn/pro/config/oss.html#%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E8%AE%BE%E7%BD%AE)
-==============================================================================================================
+# 对象存储设置
 
-七牛云存储、阿里云 OSS、腾讯云COS
+## 支持平台
+- 七牛云存储
+- 阿里云 OSS  
+- 腾讯云 COS
 
-腾讯云COS[​](https://doc.chatmoney.cn/pro/config/oss.html#%E8%85%BE%E8%AE%AF%E4%BA%91cos)
---------------------------------------------------------------------------------------
+## 腾讯云 COS 配置指南
 
-### 说明[​](https://doc.chatmoney.cn/pro/config/oss.html#%E8%AF%B4%E6%98%8E)
+### 配置说明
+腾讯云 COS 的配置为可选配置，请根据实际业务需求进行配置。
 
-腾讯云COS的配置不是必须的，按实际需要配置。
+### 详细配置步骤
 
-### 配置[​](https://doc.chatmoney.cn/pro/config/oss.html#%E9%85%8D%E7%BD%AE)
+1. **登录腾讯云控制台**
+   - 访问 [腾讯云官网](https://cloud.tencent.com/)
+   - 使用腾讯云账号登录
+   - 点击右上角头像 -> 【访问管理】
+   ![](https://doc.chatmoney.cn/docs/images/general/config/oss/cos-1.png)
 
-*   **步骤1**: 打开腾讯云官网网站[https://cloud.tencent.com/](https://cloud.tencent.com/),使用腾讯云账号登录。单击右上角头像，单击【访问管理】。![](https://doc.chatmoney.cn/docs/images/general/config/oss/cos-1.png)
-*   **步骤2**: 在腾讯云后台单击【访问密钥】->【API密钥管理】，如果没有密钥，则新建密钥。同时登录系统管理后台，单击【系统设置】->【存储设置】，找到腾讯云COS，单击【设置】。 从腾讯云后台复制SecretId和SecretKey到系统管理后台相对应选项。![](https://doc.chatmoney.cn/docs/images/general/config/oss/cos-2.png)
-*   **步骤3**: 单击【云产品】->【对象存储】，进入对象存储设置页面。![](https://doc.chatmoney.cn/docs/images/general/config/oss/cos-3.png)
-*   **步骤4**: 单击【创建存储桶】，根据需要选择【所属地址】，填写【名称】，选择【公有读私有写】，单击【下一步】。![](https://doc.chatmoney.cn/docs/images/general/config/oss/cos-4.png)
-*   **步骤5**: 单击【下一步】。![](https://doc.chatmoney.cn/docs/images/general/config/oss/cos-5.png)
-*   **步骤6**: 单击【创建】。![](https://doc.chatmoney.cn/docs/images/general/config/oss/cos-6.png)
-*   **步骤7**: 单击【概况】，复制【存储桶名称】【访问域名】、【所属地区】、到后台相当【存储空间名称】、【空间域名】、【REGION】的输入框，选择【状态】为开启，单击【保存】。 保存以后，即可使用。![](https://doc.chatmoney.cn/docs/images/general/config/oss/cos-7.png)
+2. **获取 API 密钥**
+   - 进入【访问密钥】->【API 密钥管理】
+   - 如无密钥，请新建密钥
+   - 登录系统管理后台 -> 【系统设置】->【存储设置】-> 腾讯云 COS -> 【设置】
+   - 将腾讯云的 SecretId 和 SecretKey 复制到系统后台对应位置
+   ![](https://doc.chatmoney.cn/docs/images/general/config/oss/cos-2.png)
 
-注意事项[​](https://doc.chatmoney.cn/pro/config/oss.html#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9)
-------------------------------------------------------------------------------------------
+3. **创建存储桶**
+   - 进入【云产品】->【对象存储】
+   ![](https://doc.chatmoney.cn/docs/images/general/config/oss/cos-3.png)
+   - 点击【创建存储桶】
+   - 选择【所属地址】
+   - 填写【存储桶名称】
+   - 选择【公有读私有写】
+   - 点击【下一步】
+   ![](https://doc.chatmoney.cn/docs/images/general/config/oss/cos-4.png)
+   - 确认配置后点击【创建】
+   ![](https://doc.chatmoney.cn/docs/images/general/config/oss/cos-5.png)
+   ![](https://doc.chatmoney.cn/docs/images/general/config/oss/cos-6.png)
 
-### 迁移数据[​](https://doc.chatmoney.cn/pro/config/oss.html#%E8%BF%81%E7%A7%BB%E6%95%B0%E6%8D%AE)
+4. **完成配置**
+   - 进入存储桶【概况】页面
+   - 复制以下信息到系统后台：
+     - 存储桶名称 -> 存储空间名称
+     - 访问域名 -> 空间域名  
+     - 所属地区 -> REGION
+   - 开启【状态】
+   - 点击【保存】
+   ![](https://doc.chatmoney.cn/docs/images/general/config/oss/cos-7.png)
 
-1.PHP版需要将server/public下面resource目录和uploads目录复制到OSS空间的根目录，原来的资源图片才可以正常显示 2.Java版需要将/public/uploads目录复制到OSS空间的根目录，原来的资源图片才可以正常显示。新建名称为api目录，需要将server/like-common/src/main/resources/static目录复制api中，上传完成后，图片例：/api/static/xxxxp.png。
+## 注意事项
 
-### 跨域设置[​](https://doc.chatmoney.cn/pro/config/oss.html#%E8%B7%A8%E5%9F%9F%E8%AE%BE%E7%BD%AE)
+### 数据迁移指南
 
-使用了对象存储以后，需要设置资源允许跨域。 打开跨域相关设置，设置如下。
+- **PHP 版本**
+  1. 将 `server/public` 目录下的 `resource` 和 `uploads` 目录复制到 OSS 根目录
+  2. 确保原有资源图片可正常显示
 
-    *
-    access-control-allow-credentials: true
-    access-control-allow-origin: *
+- **Java 版本**
+  1. 将 `/public/uploads` 目录复制到 OSS 根目录
+  2. 新建 `api` 目录
+  3. 将 `server/like-common/src/main/resources/static` 目录复制到 `api` 中
+  4. 上传完成后，图片路径示例：`/api/static/xxxxp.png`
 
-![](https://doc.chatmoney.cn/docs/images/general/config/oss/demo.png)
+### 跨域设置
+
+使用对象存储后，需配置跨域访问权限：

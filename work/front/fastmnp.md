@@ -1,9 +1,8 @@
 # 后台上传微信小程序 一键上传
 
-提示
-
+::: tip ⚠ 提示
 本教程为微信小程序一键上传，如果上传失败，推荐使用方式手动编译上传。
-
+::: 
 ## 微信小程序类目资质
 
 [https://developers.weixin.qq.com/community/develop/article/doc/000a6c1c700c78bce2204942066813](https://developers.weixin.qq.com/community/develop/article/doc/000a6c1c700c78bce2204942066813)
@@ -14,27 +13,29 @@
 
 ## 服务器域名设置
 
-⚠️ 警告
+::: tip  ⚠️ 警告
 
 这里设置的域名，都为本系统的域名，如果有使用对象存储、或者其他地方设置了图片代理域名等，请将使用的域名也增加进去，不然和域名相关的功能可以存在异常。
-
+::: 
 在微信小程序官方管理后台，单击【开发管理】，找到【服务器域名】项，单击【开始配置】。
 在系统管理后台，点击【渠道设置】-【微信小程序】，找到【服务器域名】项，将服务器域名复制到微信小程序管理后台对应输入框，单击【保存并提交】。![](https://doc.chatmoney.cn/docs/images/general/front/mnp/mnp-config-2.png)![](https://doc.chatmoney.cn/docs/images/general/front/mnp/mnp-config-3.png)
 
 ## 业务域名设置
 
-注意
+::: tip ⚠ 注意
 
 如果增加导航链接或者其他非本系统链接需要在小程序webview打开，除了本系统的域名外，还需要再增加该链接的域名。
+:::
 
 * **步骤1**: 在微信小程序官方管理后台，单击【开发管理】，找到【业务域名】项，单击【开始配置】。
   ![](https://doc.chatmoney.cn/docs/images/general/front/mnp/mnp-config-4.png)
 * **步骤2**:
 
-⚠️ 警告
+::: tip ⚠  警告
+1.如果多次下载，文件可能会被电脑修改名称，请上传时保留原来的文件名称
 
-1.如果多次下载，文件可能会被电脑修改名称，请上传时保留原来的文件名称。
 2.注意不要弄错项目目录。
+:::
 
 单击【下载校验文件】，将文件上传到该域名对应的项目目录的"server/public"路径。![](https://doc.chatmoney.cn/docs/images/general/front/mnp/mnp-config-5.png)![](https://doc.chatmoney.cn/docs/images/general/front/mnp/mnp-config-6.png)
 
