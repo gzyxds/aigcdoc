@@ -1,209 +1,78 @@
-Super-智能AI知识库部署文档
+# 微信小程序编译上传指南 🚀
 
-## 宝塔面板Docker部署推荐部署方式
+## ⚠️ 重要提示
+- 必须使用**企业认证**的微信小程序
+- 本教程为小程序发布流程,版本更新时请下载最新源码重新操作
 
-```
-部署提示:
-💡 1. 推荐服务器最低配置：CPU双核、内存4GB、硬盘20GB、带宽5兆，
-💡 2. 系统推荐安装`dabian12` 系统
-💡 3. 知识库系统涉及的运行环境比较复杂，建议使用Docker部署，Docker的使用在宝塔面板上操作非常方便。
-```
+## 小程序类目资质 📋
+[查看类目资质要求](https://developers.weixin.qq.com/community/develop/article/doc/000a6c1c700c78bce2204942066813)
 
-## 运行环境
-```
-宝塔提示:
-💡 在不影响其他站点的情况下，建议将宝塔升级到最新版本。
-```
-### 1. 开启docker
+## 基础配置 ⚙️
 
-登录宝塔面板后，单击左侧菜单最底部的【自定义菜单】，开启【Docker】菜单。单击左侧菜单【Docker】，出现提示安装Docker，单击【安装】。
+### 1. AppID与AppSecret配置
+1. 登录系统管理后台,进入【渠道设置】->【微信小程序】
+2. 打开[微信公众平台](https://mp.weixin.qq.com)登录小程序
+3. 点击【开发】->【开发管理】
+4. 复制AppID、AppSecret到管理后台并保存
 
-![开启Docker](https://doc.2021it.com/assets/bt1.Yui1sChv.png "开启Docker")
+![AppID配置](https://doc.chatmoney.cn/docs/images/general/front/mnp/mnp-config-1.png)
 
-![安装Docker](https://doc.2021it.com/assets/bt2.DWNmARsJ.png "安装Docker")
+### 2. 服务器域名配置
 
-### 2. 安装必要软件
+> ⚠️ **注意**: 所有使用到的域名(包括对象存储、图片代理等)都需要配置,否则相关功能可能异常
 
-单击【软件商店】，安装好【Nginx】和【进程守护管理器】。
+1. 小程序后台进入【开发管理】->【服务器域名】
+2. 系统后台复制服务器域名配置
+3. 粘贴到小程序后台对应位置并保存
 
-![安装](https://doc.2021it.com/assets/bt3.CxwJomqC.png "安装")
+![域名配置](https://doc.chatmoney.cn/docs/images/general/front/mnp/mnp-config-2.png)
+![域名配置](https://doc.chatmoney.cn/docs/images/general/front/mnp/mnp-config-3.png)
 
-## 部署源码
+### 3. 业务域名配置
 
-### 1. 新建目录
+> 💡 **提示**: 如需在webview中打开外部链接,需额外配置对应域名
 
-点击【文件】，进入【/www/wwwroot】目录，在目录下新建目录，后续步骤，我们都称该目录为【站点目录】。
+#### 配置步骤:
 
-![新建目录](https://doc.2021it.com/assets/552cc539-83ba-4cf7-ba13-1dac040888ab.C-xxEoAa.png "新建目录")
+1. 小程序后台进入【开发管理】->【业务域名】
+2. 下载校验文件并上传至 server/public 目录
+   > ⚠️ 注意保持文件名不变
+3. 系统后台复制业务域名并配置到小程序后台
 
-### 2. 上传源码
+![业务域名配置](https://doc.chatmoney.cn/docs/images/general/front/mnp/mnp-config-4.png)
+![业务域名配置](https://doc.chatmoney.cn/docs/images/general/front/mnp/mnp-config-8.png)
 
-进入【站点目录】，并上传从管理员那获得的源码包，上传完成后，右键点击【解压】源码包。
+## 开发环境搭建 🛠️
 
-![上传1](https://doc.2021it.com/assets/20605aa1-2e0d-4832-904b-87f1044d8f29.B3Qdng_D.png "上传1")
+### 1. 安装开发工具
+- 下载并安装[微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
+- 下载并安装[HBuilder X](https://www.dcloud.io/hbuilderx.html)
 
-![上传2](https://doc.2021it.com/assets/4cc21b84-96c2-4c99-b1db-5767a7b22134.CMbLdzAK.png "上传2")
+### 2. 微信开发者工具配置
+1. 使用小程序管理员/开发者微信扫码登录
+2. 开启【设置】->【安全】->【服务端口】
 
-## Docker部署
+### 3. 项目配置
+1. 解压源码,使用HBuilder X打开uniapp目录
+2. 配置uni-app应用标识
+3. 复制 .env.production.example 为 .env.production
+4. 配置 VITE_APP_BASE_URL 为 HTTPS 域名
+5. 执行 npm install 安装依赖
 
-### 修改Docker编排文件
+### 4. 编译发布
+1. 点击【发行】->【小程序-微信】
+2. 填写小程序信息并发行
+3. 在微信开发者工具中预览并上传
 
-💡 Docker知识科普:
+## 隐私保护配置 🔒
 
-一般情况下，docker端口挂载的格式都是"端口1:端口2"，"端口1"为挂载主机端口，"端口2"为容器内部端口。
-所以我们在主机访问端口时，要访问"127.0.0.1:端口1"。
-如果进入容器内部或者容器之间进行通信时，访问"端口2"。容器之间的访问，使用“容器名:端口"。
-本项目除了使用主机Nginx代理nginx容器，其他都是容器与容器他们之间通讯。
+1. 小程序后台进入【设置】->【更新】
+2. 确认用户信息处理说明
+3. 配置信息使用清单
+4. 设置隐私保护指引
 
-💡 注意:
+## 提交审核 ✅
 
-修改的参数按自己实际情况填写，请勿直接复制文档。
-
-进入【站点目录】下的docker目录，右键单击【docker-compose.example.yml】文件，单击【重命名】，将新文件命名为【docker-compose.yml】。打开【docker-compose.yml】文件，修改①\~⑤的选项。
-
-* 修改第①项: 浏览器打开新的窗口访问宝塔面板，单击【终端】，登录系统管理员账号，在终端输入id www并按回车键，可以看到终端返回的信息，信息为 www用户的用户id和用户组id，分别将uid的id和gid的id复制到【docker-compose.yml】文件中"user:"后面，要去掉前面”#“，格式如"uid的id:gid的id"，修改后【保存】文件，这样PHP容器就可以以www的权限进行运行。
-
-![修改1](https://doc.2021it.com/assets/5d13d3dd-73bf-4f56-be35-e05a00aa0c9b.CtpsxjEz.png "修改1")
-
-```
-user: "1000:1000" ①【挂载主机ID】
-```
-
-1
-
-* 修改第②项:
-
-修改MySQL的root密码，记住密码，安装程序需要填写。
-
-```
- MYSQL_ROOT_PASSWORD: 123456Abcd #②【123456Abcd】为MySQL容器root账号的密码，建议修改成复杂密码。
-```
-
-1
-
-* 修改第③④⑤项: 分别修改postgres容器的帐号、密码、数据库名。记住这些信息，安装程序需要填写。
-
-💡 建议:
-
-建议直接默认就好，否则容易出现各种各样问题
-
-```
-- POSTGRES_USER=postgres #③【postgres】为postgres容器的默认账号。
-- POSTGRES_PASSWORD=123456Abcd #④【123456Abcd】为postgres容器默认账号的密码。
-- POSTGRES_DB=postgres #⑤【postgres】为postgres容器的默认数据库名。
-```
-
-1
-2
-3
-
-### 添加Docker编排模板
-
-🚫 注意:
-
-1.如果添加失败，很可能是编辑编排模板的时候没有操作正确，yml文件用缩进来表示层次结构，每一行需要有规则的对齐。
-2.如果提示模板已存在，可以修改文件名，保持yml（结尾）格式。
-
-单击【Docker】-\>【编排模板】-\>【搜索本地模块】-\>【📂(文件夹小图标)】，选择【站点目录下】的docker目录，单击【搜索】，模板名选择编辑的docker-compose.yml文件，单击【添加】。
-
-![编排](https://doc.2021it.com/assets/aa2904e8-775e-4c6f-8686-6720727339b0.BPmMZPSq.png "编排")
-
-### 添加容器编排
-
-🚫 警告:
-
-如果添加失败，很可能是编排模板问题，请重新编排编辑模板。注意挂载主机的端口号，不要与主机已有的其他软件冲突。
-
-单击【容器编排】-\>【项目】-\>【添加Composer项目】，在【Composer模块】选择【docker】，填写自定义名称，单击【添加】。添加成功以后，如图所示。然后在点击【容器】，可以看到项目运行的
-
-![编排2](https://doc.2021it.com/assets/8eb1a2e9-62ec-4da7-9080-5b9a52d89e53.CjApvvYM.png "编排2")
-
-![编排3](https://doc.2021it.com/assets/be75cb52-314b-4f6e-b49f-72d95c2d26d5.YcriAPpX.png "编排3")
-
-### 反向代理容器
-
-💡 提示:
-
-该反向代理为主机Nginx代理到Ngxin容器，代理的端口为Nginx容器挂载主机的端口。
-
-#### 1. 添加站点
-
-单击【网站】-\>【反向代理】-\>【添加反代】,填写站点域名，【目标】选择URL地址，填写 [`http://127.0.0.1:180`](http://127.0.0.1:180/) ，其中180为Docker的Nginx容器挂载主机的端口，按实际挂载的端口填写。传递域名时按默认填写\$http\_host，然后【确定】。
-
-![添加站点](https://doc.2021it.com/assets/e046134a-c026-47d8-8cac-745e5c4efba1.CrZm9Knv.png "添加站点")
-
-#### 2. 设置代理参数
-
-单击【URL代理】-\> 【设置】-\>【自定义配置】，复制下面配置内容填写，然后【保存】。
-
-```
-proxy_set_header X-Forwarded-Proto $scheme;
-```
-
-1
-
-![设置代理参数](https://doc.2021it.com/assets/e7e97065-77c2-440c-9dfe-62e2ba5d9318.CHL3Afrk.png "设置代理参数")
-
-#### 3. 申请SSL证书
-
-点击【SSL】-\> 【Let's Encrypt】,选择【DNS验证】，选中域名，点击【申请】。 出现了弹出窗，需要手动在域名服务商（阿里云腾讯云等）后台给域名添加TXT解析，按要求添加TXT解析，主机信息填写①的值，记录值填写②的值，点击选择可以复制到整值。TXT解析添加好完成以后，点击【验证】。
-
-![](https://doc.2021it.com/assets/b11f1e58-e07e-4d66-a41b-4cd8a49f20f5.CsDrpsbm.png)
-
-![](https://doc.2021it.com/assets/95bbe32d-d5c9-48dd-a356-021e982dcc36.BuSEgIeW.png)
-
-![](https://doc.2021it.com/assets/8bf3d702-5448-4939-958f-ac0b4539830d.C_yP7xL7.png)
-
-### 程序安装
-
-🚫 警告:
-
-如果访问页面出现"No input file specified"，是因为站点目录设置为server/pulibc，宝塔面板生成.user.ini文件影响到容器运行。请将目录设置为项目根目录，并删除掉server/public/.user.ini文件，单击【Docker】-\>【容器】，选择所有容器，单击【批量操作】-\>【重启容器】。重新访问即可。
-
-如果安装的时候，出现了提示数据库密码错误，很大可能是创建容器后才修改docker-compose.yml的配置导致，这时密码是容器创建前docker-compose.yml的密码，不是后来修改的密码。确认数据不要保留的情况下，可以删除docker/data目录，然后删除所有容器和容器编排，重新创建容器编排。
-
-* 1. 在浏览器访问站点，进入程序安装界面，单击【我已阅读并同意】-\>【继续】。
-* 2. 然后将编排模板 `docker-compose.yml` 文件的信息填写到安装界面。
-* 3. 其他所有数据库主机，都是填写容器名称，默认不需要修改。
-* 4. MySQL数据库密码填写 `docker-compose.yml` 设置的密码。
-* 5. postgreSQL项的数据库用户，数据库密码，数据名称，分别填写docker-compose.yml设置的值。
-* 6. 设置好后台管理员账号密码后，点击【继续】。
-
-![](https://doc.2021it.com/assets/96b276e4-a5e4-4c88-8706-7bb02446a521.CH8AhBqs.png)
-
-## 授权
-
-📍 注意:
-
-1.授权文件与AI系统要对应，如果不是同一AI系统，将无法使用。
-2.授权文件与项目域名要对应，不然无法使用。
-
-**步骤1**
-
-付款后联系管理员发送需要绑定的域名，管理员会返回一个授权文件。
-
-**步骤2**
-
-添加授权文件到 `server/license` 目录，并命名为：`my.license` ，如果仍无法使用，请联系管理员。
-
-![](https://doc.2021it.com/assets/5ce85c6c-e38a-41b3-9737-aaf5723945ab.DBZa4kJH.png)
-
-## 访问地址
-
-安装成功后，打开以下链接可以访问相应页面。
-管理后台地址：[http://域名/admin](http://xn--eqrt2g/admin)
-用户PC前台地址：[http://域名](http://xn--eqrt2g/)
-用户PC前台地址：[http://域名/mobile](http://xn--eqrt2g/mobile)
-
-## 验证自动任务
-
-💡 提示:
-
-新版本在文件权限挂载正确情况下，会自动定时任务和守护进程。
-配置在docker/config/supervisor/supervisor.ini，一般情况下不要修改。
-
-💡 警告:
-
-如果登录后台发现定时任务没有执行，说明守护进程也没有执行，这时需要将docker/log/supervisor目录设置为777权限，然后重启PHP容器。
-
-登录系统后台，打开菜单【系统维护】-\>【定时任务】，如果有出现今天的执行时间，说明定时任务和守护进程配置正常。
+1. 登录小程序后台查看开发版本
+2. 提交审核
+3. 审核通过后发布上线

@@ -1,315 +1,247 @@
-前端[​](https://doc.chatmoney.cn/chat/develop/web.html#%E5%89%8D%E7%AB%AF)
-========================================================================
+# 前端开发指南
 
-环境准备[​](https://doc.chatmoney.cn/chat/develop/web.html#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87)
---------------------------------------------------------------------------------------------
+本指南将帮助您完成前端项目的环境准备、初始化、开发模式和生产模式的配置与运行。
 
-* * *
+---
 
-⚠️ 警告
+## 环境准备
 
-首先需要在本地安装node，推荐node的版本16+  
-推荐使用的包管理工具是 yarn  
-首次使用yarn可以先安装=>`npm install yarn -g`
+:::  danger ⚠️ 警告
 
-通过命令自动初始化项目[​](https://doc.chatmoney.cn/chat/develop/web.html#%E9%80%9A%E8%BF%87%E5%91%BD%E4%BB%A4%E8%87%AA%E5%8A%A8%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE)
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- **Node 版本**：推荐使用 Node 16+ 版本。
+- **包管理工具**：推荐使用 `yarn`。
+- **首次使用**：如果未安装 `yarn`，可以通过以下命令安装：
+:::
+  ```shell
+  npm install yarn -g
+  ```
 
-* * *
+---
 
-在官网下载安装包以后想为前端进行二开， 进入`uniapp/`或者`pc/`或者`admin/`时，可以通过一条命令自动帮你初始化你的项目
+## 通过命令自动初始化项目
 
-**下面以uniapp文件夹为例子使用**  
-在终端命令行中输入
+### 操作步骤
 
-shell
+1. **进入项目目录**：
+   - 下载安装包后，进入 `uniapp/`、`pc/` 或 `admin/` 目录。
 
-    npm run init
+2. **运行初始化命令**：
+   - 在终端中运行以下命令：
+     ```shell
+     npm run init
+     ```
+   - 选择是否安装依赖（如果已安装过依赖，可以选择 `n`）。
 
-1.  运行npm run init 回车 选择是否安装依赖（如果已经安装过可以选择n）
+3. **输入服务器域名**：
+   - 输入您的服务器域名地址，例如：`https://xxx.com`。
 
-![](https://doc.chatmoney.cn/docs/images/general/develop/web/uniapp_01.png)  
-2\. 自动安装成功后会让你输入你的服务器域名地址，例如: [https://xxx.com](https://xxx.com/)
+4. **选择客户端**：
+   - 选择需要运行的客户端。
 
-![](https://doc.chatmoney.cn/docs/images/general/develop/web/uniapp_02.png)  
-3\. 选择你需要运行的客户端
+5. **完成初始化**：
+   - 运行成功后，项目初始化完成，可以开始二次开发。
 
-![](https://doc.chatmoney.cn/docs/images/general/develop/web/uniapp_03.png)  
-4\. 运行成功（则表示当前项目的初始化已经完成，可以开始二开本项目了
+---
 
-![](https://doc.chatmoney.cn/docs/images/general/develop/web/uniapp_04.png)  
+## PC 端 (pc)
 
-⚠️ 警告
+### 首次使用
 
-如果通过自动初始化项目的则不需要对下面的教程文档看了，只需看打包生产那部分就好
+1. **安装依赖**：
+   - 确保 Node 版本为 16+，运行以下命令安装依赖：
+     ```shell
+     yarn install
+     ```
 
-PC端(pc)[​](https://doc.chatmoney.cn/chat/develop/web.html#pc%E7%AB%AF-pc)
--------------------------------------------------------------------------
+2. **复制环境文件**：
+   - 复制以下文件并重命名：
+     - 复制 `.env.example` 为 `.env`。
+     - 复制 `.env.development.example` 为 `.env.development`。
+     - 复制 `.env.production.example` 为 `.env.production`。
 
-* * *
+3. **配置环境变量**：
+   - **`.env`**：应用全局配置（通常无需修改）。
+     ```plaintext
+     NUXT_VERSION=1.0.0
+     NUXT_API_PREFIX=/api
+     NUXT_CLIENT=4
+     NUXT_BASE_URL=/pc/
+     NUXT_SSR=
+     NITRO_PORT=3000
+     ```
+   - **`.env.development`**：开发环境。
+     ```plaintext
+     NUXT_API_URL='输入你的域名'
+     ```
+   - **`.env.production`**：生产环境。
+     ```plaintext
+     NUXT_API_URL='输入你的请求域名'  // 填空则跟随网站域名
+     ```
 
-**首次使用先安装`yarn install`安装前请确保node版本为推荐的16+**
+---
 
-*   复制env文件
-    
-    1.  复制`.env.example`，将复制的文件名修改为`.env`
-    2.  复制`.env.development.example`，将复制的文件名修改为`.env.developme`
-    3.  复制`.env.production.example`，将复制的文件名修改为`.env.production`
-*   复制以后示例  
-    ![](https://doc.chatmoney.cn/docs/images/general/develop/web/pc_dev01.png)  
-    
-*   .env 应用全局配置（通常将他复制出来以后无需修改里面的内容
-    
+### 开发模式
 
-版本号[​](https://doc.chatmoney.cn/chat/develop/web.html#%E7%89%88%E6%9C%AC%E5%8F%B7)
-==================================================================================
+- **运行开发环境**：
+  ```shell
+  yarn dev
+  ```
 
-NUXT\_VERSION=1.0.0
+---
 
-接口默认前缀[​](https://doc.chatmoney.cn/chat/develop/web.html#%E6%8E%A5%E5%8F%A3%E9%BB%98%E8%AE%A4%E5%89%8D%E7%BC%80)
-================================================================================================================
+### 生产模式
 
-NUXT\_API\_PREFIX=/api
+1. **非 SEO 模式**：
+   - 修改 `.env.production` 文件中的 `NUXT_API_URL` 为项目部署的服务端地址。
+   - 运行以下命令打包：
+     ```shell
+     yarn build
+     ```
 
-客户端类型[​](https://doc.chatmoney.cn/chat/develop/web.html#%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%B1%BB%E5%9E%8B)
-======================================================================================================
-
-NUXT\_CLIENT=4
-
-基础路径[​](https://doc.chatmoney.cn/chat/develop/web.html#%E5%9F%BA%E7%A1%80%E8%B7%AF%E5%BE%84)
-============================================================================================
-
-NUXT\_BASE\_URL=/pc/
-
-是否开启ssr，填些任意值开启[​](https://doc.chatmoney.cn/chat/develop/web.html#%E6%98%AF%E5%90%A6%E5%BC%80%E5%90%AFssr-%E5%A1%AB%E4%BA%9B%E4%BB%BB%E6%84%8F%E5%80%BC%E5%BC%80%E5%90%AF)
-==========================================================================================================================================================================
-
-NUXT\_SSR=
-
-端口号[​](https://doc.chatmoney.cn/chat/develop/web.html#%E7%AB%AF%E5%8F%A3%E5%8F%B7)
-==================================================================================
-
-NITRO\_PORT=3000
-
-    
-    点击打开
-    * .env.development
-      开发环境
-
-请求域名[​](https://doc.chatmoney.cn/chat/develop/web.html#%E8%AF%B7%E6%B1%82%E5%9F%9F%E5%90%8D)
-============================================================================================
-
-NUXT\_API\_URL='输入你的域名'
-
-    * .env.production
-      生产环境
-
-请求域名[​](https://doc.chatmoney.cn/chat/develop/web.html#%E8%AF%B7%E6%B1%82%E5%9F%9F%E5%90%8D-1)
-==============================================================================================
-
-NUXT\_API\_URL='输入你的请求域名' //填空则跟着网站的域名来请求
-
-    **以上配置完成后可运行下面命令**
-    
-    ### PC端开发模式
-    * 运行开发环境  
-    终端中运行命令
-    ```shell
-    yarn dev
-
-### PC端生产模式（打包）[​](https://doc.chatmoney.cn/chat/develop/web.html#pc%E7%AB%AF%E7%94%9F%E4%BA%A7%E6%A8%A1%E5%BC%8F-%E6%89%93%E5%8C%85)
-
-打包前修改接口请求域名，打开`.env.production`，修改`NUXT_API_URL`变量的值为项目安装部署的服务端地址
-
-*   运行生产环境（非seo）  
-    终端中运行命令
-
-shell
-
-    yarn build
-
-注意
-
-如果是非seo模式则不需要修改，将`NUXT_API_URL`留空即可，这样请求接口时会自动读取当前的域名做为接口请求的域名
-
-*   运行生产环境（seo）  
-    打包支持`seo模式`和非`seo模式`（类似于vue的单页面应用），默认为`非seo`模式，修改`.env`文件可以修改模式
-
-.env 文件中
-
-     # 是否开启ssr，填些任意值开启，为空则关闭
+2. **SEO 模式**：
+   - 修改 `.env` 文件，开启 SSR：
+     ```plaintext
      NUXT_SSR=1
+     ```
+   - 运行以下命令打包：
+     ```shell
+     yarn build:ssr
+     ```
 
-终端中运行命令
+---
 
-shell
+## 移动端 (uniapp)
 
-    yarn build:ssr
+### 首次使用
 
-注意
+1. **安装依赖**：
+   - 确保 Node 版本为 16+，运行以下命令安装依赖：
+     ```shell
+     yarn install
+     ```
 
-1.  首先拉取依赖包（拉取之前node版本必须为指定16+版本以上） =>`yarn install`
-2.  拉取成功无错误时开始执行打包或者运行模式
-3.  如果 运行 或者 拉取 时有错误，请先尝试删除yarn.lock文件以及node\_modules文件夹以后重复1和2步骤
+2. **复制环境文件**：
+   - 复制以下文件并重命名：
+     - 复制 `.env.development.example` 为 `.env.development`。
+     - 复制 `.env.production.example` 为 `.env.production`。
 
-### 移动端（uniapp）[​](https://doc.chatmoney.cn/chat/develop/web.html#%E7%A7%BB%E5%8A%A8%E7%AB%AF-uniapp)
+3. **配置环境变量**：
+   - **`.env.development`**：开发环境。
+     ```plaintext
+     NODE_ENV = 'development'
+     VITE_APP_BASE_URL='输入你的请求域名'
+     ```
+   - **`.env.production`**：生产环境。
+     ```plaintext
+     NODE_ENV = 'production'
+     VITE_APP_BASE_URL='输入你的请求域名'  // 填空则跟随网站域名
+     ```
 
-* * *
+---
 
-**首次使用先安装`yarn install`安装前请确保node版本为推荐的16+**
+### 在 VSCode 中开发
 
-*   复制env文件
-    
-    1.  复制`.env.development.example`，将复制的文件名修改为`.env.developme`
-    2.  复制`.env.production.example`，将复制的文件名修改为`.env.production`
-*   复制以后示例  
-    ![](https://doc.chatmoney.cn/docs/images/general/develop/web/admin_dev01.png)  
-    
+1. **开发模式**：
+   - **运行 H5**：
+     ```shell
+     yarn dev:h5
+     ```
+   - **运行小程序**：
+     ```shell
+     yarn dev:mp-weixin
+     ```
+     - 运行完成后，打开微信开发者工具，导入 `uniapp/dist/dev/mp-weixin` 目录。
 
-点击打开
+2. **生产模式**：
+   - **打包 H5**：
+     ```shell
+     yarn build:h5
+     ```
+     - 将打包后的代码上传到服务器或仓库。
+   - **打包小程序**：
+     ```shell
+     yarn build:mp-weixin
+     ```
+     - 运行完成后，打开微信开发者工具，导入 `uniapp/dist/dev/mp-weixin` 目录并上传代码。
 
-*   .env.development 开发环境
+---
 
-    NODE_ENV = 'development'
-    
-    # 请求域名
-    VITE_APP_BASE_URL='输入你的请求域名'
+### 在 HbuilderX 中开发
 
-*   .env.production 生产环境
+1. **运行 uniapp**：
+   - 导入项目：点击 `文件` -> `导入` -> `从本地目录导入`，选择 `uniapp` 目录。
+   - 安装依赖：点击 `工具` -> `外部命令` -> `npm install`。
+   - 运行 H5：点击 `运行` -> `运行到浏览器` -> `Chrome`。
+   - 运行小程序：点击 `运行` -> `运行到小程序模拟器` -> `微信开发者工具`。
 
-    NODE_ENV = 'production'
-    
-    # 请求域名
-    VITE_APP_BASE_URL='输入你的请求域名'  //填空则跟着网站的域名来请求
+2. **发行 uniapp**：
+   - **发行 H5**：
+     - 点击 `发行` -> `网站-PC Web 或手机 H5`，输入标题并打包。
+     - 将打包后的代码上传到服务器或仓库。
+   - **发行小程序**：
+     - 点击 `发行` -> `小程序-微信`，输入小程序名称和 AppID 并打包。
+     - 运行完成后，自动打开微信开发者工具并上传代码。
 
-### uniapp在VSCode开发[​](https://doc.chatmoney.cn/chat/develop/web.html#uniapp%E5%9C%A8vscode%E5%BC%80%E5%8F%91)
+---
 
-* * *
+## 后台管理 (admin)
 
-#### 开发模式[​](https://doc.chatmoney.cn/chat/develop/web.html#%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F)
+### 首次使用
 
-*   运行h5  
-    终端中运行命令
+1. **安装依赖**：
+   - 确保 Node 版本为 16+，运行以下命令安装依赖：
+     ```shell
+     yarn install
+     ```
 
-shell
+2. **复制环境文件**：
+   - 复制以下文件并重命名：
+     - 复制 `.env.development.example` 为 `.env.development`。
+     - 复制 `.env.production.example` 为 `.env.production`。
 
-    yarn dev:h5
+3. **配置环境变量**：
+   - **`.env.development`**：开发环境。
+     ```plaintext
+     NODE_ENV = 'development'
+     VITE_APP_BASE_URL='输入你的请求域名'
+     ```
+   - **`.env.production`**：生产环境。
+     ```plaintext
+     NODE_ENV = 'production'
+     VITE_APP_BASE_URL='输入你的请求域名'  // 填空则跟随网站域名
+     ```
 
-*   运行小程序  
-    终端中运行命令
+---
 
-shell
+### 开发模式
 
-    yarn dev:mp-weixin
+- **运行开发环境**：
+  ```shell
+  yarn dev
+  ```
 
-运行完毕，打开[微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html)，点击左上角菜单`项目`\>`导入项目`，导入地址选择`uniapp/dist/dev/mp-weixin`，点击确定成功导入项目
+---
 
-#### 生产模式[​](https://doc.chatmoney.cn/chat/develop/web.html#%E7%94%9F%E4%BA%A7%E6%A8%A1%E5%BC%8F)
+### 生产模式
 
-*   发行h5
-    
-    1.  终端中运行命令
-    
-    shell
-    
-        yarn build:h5
-    
-    2.  上传打包好的代码到服务器或仓库
-*   运行小程序  
-    终端中运行命令
+- **打包生产环境**：
+  ```shell
+  yarn build
+  ```
 
-shell
+---
 
-    yarn build:mp-weixin
+## 注意事项
 
-运行完毕，打开[微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html)，点击左上角菜单`项目`\>`导入项目`，导入地址选择`uniapp/dist/dev/mp-weixin`，点击确定成功导入项目
+1. **依赖安装**：
+   - 确保 Node 版本为 16+，运行 `yarn install` 安装依赖。
+   - 如果安装或运行出错，尝试删除 `yarn.lock` 和 `node_modules` 后重新安装。
 
-### uniapp在HbuilderX开发[​](https://doc.chatmoney.cn/chat/develop/web.html#uniapp%E5%9C%A8hbuilderx%E5%BC%80%E5%8F%91)
+2. **持续更新**：
+   - 本指南将持续更新，请关注最新版本。
 
-* * *
+---
 
-插件推荐安装：在运行过程中会自动安装需要插件
+## 至此前端开发指南完成
 
-#### 运行uniapp[​](https://doc.chatmoney.cn/chat/develop/web.html#%E8%BF%90%E8%A1%8Cuniapp)
-
-注意
-
-apple M系列芯片在uniapp下编译的报错处理：在`node_modules`下复制粘贴`esbuild-darwin-arm64`一份，重命名为`esbuild-darwin-64`
-
-*   导入项目，点击HbuilderX左上角菜单`文件`\>`导入`\>`从本地目录导入`，目录选择`uniapp`
-*   安装依赖，选中当前项目，点击HbuilderX左上角菜单`工具`\>`外部命令`\>`npm install`安装依赖
-*   运行到h5，点击HbuilderX左上角菜单`运行`\>`运行到浏览器`\>`Chrome`
-*   运行到微信小程序，点击HbuilderX左上角菜单`运行`\>`运行到小程序模拟器`\>`微信开发者工具 - (uniapp)`
-
-注意
-
-*   运行到微信小程序前，先配置好小程序的appid，点击`uniapp/src/manifest.json`，选择`微信小程序配置`\>`微信小程序AppID`，输入appid即可
-*   一般运行到微信小程序，会自动打开微信开发者工具，如果打开失败，可能是工具的服务端口没有打开，手动打开工具 -> 设置 -> 安全设置，将服务端口开启，也有可能是你配置的小程序appid中，你登录的账号不是这个小程序的开发者，只需要去微信小程序后台将该账号添加到开发者，重新运行即可
-
-#### 发行uniapp[​](https://doc.chatmoney.cn/chat/develop/web.html#%E5%8F%91%E8%A1%8Cuniapp)
-
-*   发行到h5
-    1.  点击HbuilderX左上角菜单`发行`\>`网站-PC Web或手机H5(仅适用于uni-app)`，输入网站标题，点击发行按钮，编译完成后可在`uniapp/dist/build/h5`下
-    2.  将h5下面的代码复制到发布目录，然后上传代码到服务器或仓库即可
-*   发行到小程序
-    1.  点击HbuilderX左上角菜单`发行`\>`小程序-微信(仅适用于uni-app)`，输入`小程序名称`和`小程序appid`，点击发行，编译完成后会自动打开微信开发者工具
-    2.  点击微信开发者工具的`上传`按钮，将代码上传到微信小程序后台
-
-### 后台管理（admin）[​](https://doc.chatmoney.cn/chat/develop/web.html#%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86-admin)
-
-* * *
-
-**首次使用先安装`yarn install`安装前请确保node版本为推荐的16+**
-
-*   复制env文件
-    
-    1.  复制`.env.development.example`，将复制的文件名修改为`.env.developme`
-    2.  复制`.env.production.example`，将复制的文件名修改为`.env.production`
-*   复制以后示例  
-    ![](https://doc.chatmoney.cn/docs/images/general/develop/web/admin_dev01.png)  
-    
-
-点击打开
-
-*   .env.development 开发环境
-
-    NODE_ENV = 'development'
-    
-    # 请求域名
-    VITE_APP_BASE_URL='输入你的请求域名'
-
-*   .env.production 生产环境
-
-    NODE_ENV = 'production'
-    
-    # 请求域名
-    VITE_APP_BASE_URL='输入你的请求域名'  //填空则跟着网站的域名来请求
-
-**以上配置完成后可运行下面命令**
-
-### 后台管理开发模式（运行 admin[​](https://doc.chatmoney.cn/chat/develop/web.html#%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F-%E8%BF%90%E8%A1%8C-admin)
-
-*   运行开发环境  
-    终端中运行命令
-
-shell
-
-    yarn dev
-
-### 后台管理生产模式（打包 admin[​](https://doc.chatmoney.cn/chat/develop/web.html#%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%94%9F%E4%BA%A7%E6%A8%A1%E5%BC%8F-%E6%89%93%E5%8C%85-admin)
-
-*   运行生产环境  
-    终端中运行命令
-
-shell
-
-    yarn build
-
-注意
-
-1.  首先拉取依赖包（拉取之前node版本必须为指定16+版本以上） =>`yarn install`
-2.  拉取成功无错误时开始执行打包或者运行模式（yarn build / yarn dev）
-3.  如果 运行 或者 拉取 时有错误，请先尝试删除yarn.lock文件以及node\_modules文件夹以后重复1和2步骤
-
-持续更新
-----
+通过以上步骤，您可以顺利完成前端项目的初始化、开发和打包操作。如有其他问题，请参考相关文档或联系技术支持。

@@ -1,179 +1,189 @@
-SD(stable-diffusion-webui)绘图部署[​](https://doc.chatmoney.cn/chat/third-deployment/sd.html#sd-stable-diffusion-webui-%E7%BB%98%E5%9B%BE%E9%83%A8%E7%BD%B2)
-========================================================================================================================================================
+# Stable Diffusion WebUI 绘图部署教程
 
-提示
+本教程将指导您如何部署 Stable Diffusion WebUI（SD WebUI）绘图服务，支持服务器连接本地主机部署的绘画模型。使用大模型只需要一台主机，无需其他费用。
 
-使用Docker部署，支持服务器连接本地主机部署的绘画模型。使用大模型只需要一台主机，不需要其他费用。
+---
 
-信息
+## 提示
 
-由于硬件等问题，部署存在一起难度，小白用户推荐购买已安装SD绘画和大模型的显卡AI主机：[https://www.goofish.com/item?id=836172376138](https://www.goofish.com/item?id=836172376138)
+- **使用 Docker 部署**：支持服务器连接本地主机部署的绘画模型。
+- **硬件要求**：由于硬件等问题，部署存在一定难度。小白用户推荐购买已安装 SD 绘画和大模型的显卡 AI 主机：[https://www.goofish.com/item?id=836172376138](https://www.goofish.com/item?id=836172376138)。
+- **网络要求**：如果涉及本地主机部署，需要本地主机可以连接境外站点（如 GitHub）。请自行解决此问题。
 
-注意
+---
 
-本教程如果涉及本地主机部署，需要本地主机可以连接境外站点，特别是安装依赖或者打开某些站点的时候。  
-请自行解决此问题。
+## 安装 Python 环境
 
-安装Python环境[​](https://doc.chatmoney.cn/chat/third-deployment/sd.html#%E5%AE%89%E8%A3%85python%E7%8E%AF%E5%A2%83)
-----------------------------------------------------------------------------------------------------------------
+1. 打开 [Python 官网](https://www.python.org/downloads)，找到适合自己系统环境的安装包，下载并安装 **Python 3.10.6**。
 
-打开[https://www.python.org/downloads](https://www.python.org/downloads)，找到适合自己系统环境的安装包，下载并安装Python3.10.6。![](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/download-python-1.png)![](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/download-python-2.png)![](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/install-python.png)
+![下载 Python](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/download-python-1.png)
+![安装 Python](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/install-python.png)
 
-安装Git[​](https://doc.chatmoney.cn/chat/third-deployment/sd.html#%E5%AE%89%E8%A3%85git)
---------------------------------------------------------------------------------------
+---
 
-打开[https://git-scm.com](https://git-scm.com/)，找到适合自己系统环境的安装包，下载并安装git。![](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/install-git-1.png)![](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/install-git-2.png)![](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/install-git-3.png)
+## 安装 Git
 
-使用Git下载stable-diffusion-webui[​](https://doc.chatmoney.cn/chat/third-deployment/sd.html#%E4%BD%BF%E7%94%A8git%E4%B8%8B%E8%BD%BDstable-diffusion-webui)
-------------------------------------------------------------------------------------------------------------------------------------------------------
+1. 打开 [Git 官网](https://git-scm.com/)，找到适合自己系统环境的安装包，下载并安装 Git。
 
-注意
+![安装 Git](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/install-git-1.png)
+![安装 Git 完成](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/install-git-3.png)
 
-由于github是境外网站，网络问题可能会导致命令执行失败，请弄好网络，多次重试。
+---
 
-右键点击桌面或者其他目录，选择【在终端中打开】，输入以下命令后，【回车键】执行命令，对项目git仓库进行克隆，项目会下载到对应目录。
+## 使用 Git 下载 Stable Diffusion WebUI
 
-    git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
+⚠️ **注意**：由于 GitHub 是境外网站，网络问题可能导致命令执行失败。请确保网络畅通，必要时多次重试。
 
-![](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/download-sd-webui-1.png)![](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/download-sd-webui-2.png)
+1. 右键点击桌面或其他目录，选择【在终端中打开】。
+2. 输入以下命令，按【回车键】执行，将项目克隆到当前目录：
 
-启动stable-diffusion-webui[​](https://doc.chatmoney.cn/chat/third-deployment/sd.html#%E5%90%AF%E5%8A%A8stable-diffusion-webui)
-----------------------------------------------------------------------------------------------------------------------------
+   ```bash
+   git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
+   ```
 
-提示
+![下载 SD WebUI](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/download-sd-webui-1.png)
+![下载完成](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/download-sd-webui-2.png)
 
-在启动之前，可以根据系统或者硬件，编辑webui-user修改参数，优化生成图像速度。  
-具体可参考官网文档:[https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki](https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki)
+---
 
-*   **步骤1**: 打开stable-diffusion-webui目录，找到webui-user.bat文件，右键编辑文件，添加`--api --listen --xformers --no-half`参数,然后保存文件。
+## 启动 Stable Diffusion WebUI
 
-bat
+### 优化启动参数
+1. 打开 `stable-diffusion-webui` 目录，找到 `webui-user.bat` 文件。
+2. 右键编辑文件，添加以下参数，然后保存：
 
-    @echo off
-    
-    set PYTHON=
-    set GIT=
-    set VENV_DIR=
-    set COMMANDLINE_ARGS=--api --listen --xformers --no-half
-    
-    call webui.bat
+   ```bat
+   @echo off
 
-![](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/edit-webui-user.bat.png)
+   set PYTHON=
+   set GIT=
+   set VENV_DIR=
+   set COMMANDLINE_ARGS=--api --listen --xformers --no-half
 
-  
+   call webui.bat
+   ```
 
-提示
+![编辑 webui-user.bat](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/edit-webui-user.bat.png)
 
-可以在本地主机打开[127.0.0.1:7860](https://doc.chatmoney.cn/chat/third-deployment/127.0.0.1:7860.html)，测试绘画是否可用。
+### 启动服务
+1. 双击 `webui-user.bat` 文件，启动服务。
+2. 启动成功后，浏览器会自动打开默认端口为 `7860` 的界面。
+3. 如果是云服务器，请在服务器运营商控制台开放 `7860` 端口，并在管理后台【AI应用】->【SD绘图】->【应用配置】->【AI域名】中配置为 `http://公网IP:7860`。
 
-*   **步骤2**: 双击webui-user.bat文件，双击启动服务，启动成后，会启动弹出浏览器界面，默认端口为7860。如果你是使用云服务器，请在服务器运营商控制台开放7860端口，然后管理后台【AI应用】->【SD绘图】->【应用配置】->【AI域名】配置上：[http://公网IP+端口访问](http://xn--ip+-tw1ew6iu74fkogqz0an4u/)，设置好关于SD绘图分类模型等。![](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/start-sd.png)
+![启动 SD WebUI](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/start-sd.png)
 
-添加绘画模型[​](https://doc.chatmoney.cn/chat/third-deployment/sd.html#%E6%B7%BB%E5%8A%A0%E7%BB%98%E7%94%BB%E6%A8%A1%E5%9E%8B)
-------------------------------------------------------------------------------------------------------------------------
+---
 
-提示
+## 添加绘画模型
 
-不添加也可用使用SD默认的模型。
+⚠️ **提示**：不添加模型也可使用 SD 默认的模型。
 
-绘画模型可以在[https://www.liblib.art](https://www.liblib.art/)或者其他站点下载，有的模型商用需要授权，请自行判断。下载的模型文件格式为safetensors。models/Stable-diffusion目录放大模型、models/Lora目录放微调模型、models/VAE目录放美化模型。模型放好，关闭重启程序。  
+1. 绘画模型可以在 [Liblib](https://www.liblib.art/) 或其他站点下载（部分模型商用需要授权，请自行判断）。
+2. 下载的模型文件格式为 `.safetensors`。
+3. 将模型文件放入以下目录：
+   - 大模型：`models/Stable-diffusion`
+   - 微调模型：`models/Lora`
+   - 美化模型：`models/VAE`
+4. 放置完成后，关闭并重启程序。
 
-![](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/models.png)
+![模型目录](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/models.png)
 
-服务器连接本地主机部署的服务[​](https://doc.chatmoney.cn/chat/third-deployment/sd.html#%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%9C%AC%E5%9C%B0%E4%B8%BB%E6%9C%BA%E9%83%A8%E7%BD%B2%E7%9A%84%E6%9C%8D%E5%8A%A1)
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
-提示
+## 服务器连接本地主机部署的服务
 
-全能AI知识库系统3.5以后的版本，支持使用frp连接本地部署的绘画服务器和模型，无需购买GPU服务器，即可使用开源模型。  
+### 服务器上的设置
 
-注意
+1. **配置 frps.toml**：
+   - 打开项目目录 `/docker/config/frps/frps.toml` 文件。
+   - 修改 `auth.token` 为任意非中文字符串，保存文件。
 
-如果你在服务器部署大语言模型，直接绕过本步骤。
+   ```ini
+   bindPort = 7314
+   auth.token = "自己设置的非中文字符串"
+   ```
 
-### 服务器上的设置[​](https://doc.chatmoney.cn/chat/third-deployment/sd.html#%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E8%AE%BE%E7%BD%AE)
+   ![编辑 frps.toml](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/frps.toml.png)
 
-*   **步骤1**: 打开项目下/docker/config/frps/frps.toml文件，将auth.token字符串的密钥重新定义，可以使用其他任意非中文字符串，然后保存。
+2. **配置 supervisor.ini**：
+   - 打开项目目录 `/docker/config/supervisor/supervisor.ini` 文件。
+   - 在文件底部添加以下内容，保存文件。
 
-ini
+   ```ini
+   [program:frps]
+   command=/usr/bin/frps -c /usr/local/etc/frps.toml
+   directory=/usr/local/etc
+   autostart=true
+   autorestart=true
+   stderr_logfile=/var/log/frps.err.log
+   stdout_logfile=/var/log/frps.out.log
+   ```
 
-    bindPort = 7314
-    auth.token = "自己设置的非中文字符串"
+   ![编辑 supervisor.ini](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/supervisor.ini.png)
 
-![](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/frps.toml.png)
+3. **重启 PHP 容器**：
+   - 在 Docker 中，找到项目的 PHP 容器，点击【重启】。
 
-*   **步骤2**: 打开项目下/docker/config/supervisor/supervisor.ini文件，在最底部增加frps的守护进程，然后保存。
+   ![重启 PHP 容器](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/php-container-restart.png)
 
-ini
+4. **开放端口**：
+   - 在宝塔面板【安全】->【添加端口规则】，开放 `7314` 端口。
+   - 在服务器运营商控制台（如阿里云、腾讯云）的安全组中开放 `7314` 端口。
 
-    [program:frps]
-    command=/usr/bin/frps -c /usr/local/etc/frps.toml
-    directory=/usr/local/etc
-    autostart=true
-    autorestart=true
-    stderr_logfile=/var/log/frps.err.log
-    stdout_logfile=/var/log/frps.out.log
+   ![开放端口](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/port.png)
 
-![](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/supervisor.ini.png)
+5. **测试端口连通性**：
+   - 打开 [端口扫描工具](https://tool.chinaz.com/port)，输入服务器 IP 和端口，点击【开启扫描】。状态为“开启”即表示端口连通。
 
-*   **步骤3**: 点击【Docker】->【容器】，找到项目的PHP容器，点击【重启】。![](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/php-container-restart.png)
-    
-*   **步骤4**: 点击在宝塔面板【安全】->【添加端口规则】，将7314端口放行。 然后在服务器服务商的（阿里云、腾讯云等）控制台的安全组开放7314端口，保障端口是连通的。![](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/port.png)
-    
+   ![测试端口](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/test-port.png)
 
-提示
+---
 
-如何测试端口是否放行，可以打开[https://tool.chinaz.com/port](https://tool.chinaz.com/port),输入服务器IP地址和端口，点击【开启扫描】，状态为开启，即端口是连通的。![](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/test-port.png)
+### 本地主机上的设置
 
-⚠️ 警告
+1. **下载 frp**：
+   - 打开 [frp 发布页](https://github.com/fatedier/frp/releases)，下载适合自己系统的 `frp 0.58.1` 版本，并解压。
 
-如果已经使用3.5以下老版本，步骤所有不同，步骤1的文件可能不存在，可以从新下载的源码复制进去，放在相同的位置，按步骤1的操作。步骤2照样操作。  
-然后打开项目下docker-compose.yml文件，找到PHP容器配置，将除了"user:xxxx"选项以外替换为新版本的内容，注意保持缩进（就是前面有多少空格不要更改）。  
-![](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/docker-compose-php.png)返回【Docker】->【容器】，然后删除属于本项目下的所有容器，一般情况下，删除容器不会数据，如果不放心可先备份。接着返回【容器编排】，删除之前添加的容器编排，重新添加即可。
+   ![下载 frp](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/download-frp.png)
 
-### 本地主机上的设置[​](https://doc.chatmoney.cn/chat/third-deployment/sd.html#%E6%9C%AC%E5%9C%B0%E4%B8%BB%E6%9C%BA%E4%B8%8A%E7%9A%84%E8%AE%BE%E7%BD%AE)
+2. **配置 frpc.toml**：
+   - 右键编辑 `frpc.toml` 文件，设置以下内容并保存：
 
-提示
+   ```ini
+   serverAddr = "你的服务器IP地址"
+   serverPort = 7314
+   auth.token = "你在服务器上设置的任意非中文字符串"
 
-frp是一款非常优秀的内网穿透软件。
+   [[proxies]]
+   name = "sd"
+   type = "tcp"
+   localIP = "127.0.0.1"
+   localPort = 7860
+   remotePort = 7860
+   ```
 
-*   **步骤1**: 在部署SD服务的主机上，打开[https://github.com/fatedier/frp/releases](https://github.com/fatedier/frp/releases)，下载自己系统相对应的frp0.58.1软件版本，“解压下载的压缩包。![](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/download-frp.png)
-*   **步骤2**: 右键点击【frpc.toml】文件，点击【在记事本中编辑】，打开文件，然后设置frpc信息，其中serverAddr为服务器ip地址，auth.token为服务器上frps.toml的auth.token的值一致，localPort和remotePort为SD服务器的端口，然后保存文件。
+   ![编辑 frpc.toml](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/frpc.toml.png)
 
-ini
+3. **启动 frpc**：
+   - 在 frp 目录空白处右键【在终端中打开】，运行以下命令启动 frpc：
 
-    serverAddr = "你的ip地址"
-    serverPort = 7314
-    auth.token = "你服务上设置的任意非中文字符串"
-    
-    [[proxies]]
-    name = "sd"
-    type = "tcp"
-    localIP = "127.0.0.1"
-    localPort = 7860
-    remotePort = 7860
+   ```bash
+   .\frpc.exe -c frpc.toml
+   ```
 
-![](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/frpc.toml.png)
+   ![启动 frpc](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/start-frpc.png)
 
-提示
+---
 
-frpc启动失败，可能是以下原因。  
-1.服务器公网IP地址、端口、auth.token设置不正确。  
-2.服务器端口没有对外开放，无法连通。  
-3.服务器上容器的frps没有正确运行。
+## 管理后台配置
 
-*   **步骤3**: 在frp目录空白处右键【在终端中打开】，在终端运行以下命令，运行frpc，启动成功好，可以看到以下界面。
+1. 登录管理后台，打开【AI应用】->【SD绘图】->【应用配置】。
+2. 如果使用了服务器连接本地主机部署的服务，将【AI域名】设置为 `http://127.0.0.1:7860`。
+3. 如果不使用，直接配置服务器的 IP 地址 + 端口。
+4. 设置好 SD 绘图分类模型等，即可在前台测试绘画。
 
-shell
+---
 
-    .\frpc.exe -c frpc.toml
+## 至此 Stable Diffusion WebUI 部署完成
 
-![](https://doc.chatmoney.cn/docs/images/general/third-deployment/frp/start-frpc.png)
-
-管理后台配置[​](https://doc.chatmoney.cn/chat/third-deployment/sd.html#%E7%AE%A1%E7%90%86%E5%90%8E%E5%8F%B0%E9%85%8D%E7%BD%AE)
-------------------------------------------------------------------------------------------------------------------------
-
-提示
-
-一般情况下，使用普通的独立显卡，绘制默认分辨率的画，在10秒内。
-
-登录管理后台，打开【AI应用】->【SD绘图】->【应用配置】，【AI域名】如果了使用【## 服务器连接本地主机部署的服务 】，设置为`http://127.0.0.1:7860`，如果不使用，直接配置服务器的IP地址+端口，最好设置好关于SD绘图分类模型等，这样完成了，可以在前台测试绘画。![](https://doc.chatmoney.cn/docs/images/general/third-deployment/sd/settings-sd-local-domain.png)
+通过以上步骤，您可以顺利完成 Stable Diffusion WebUI 的部署工作。如有任何问题，请参考相关文档或联系技术支持。
