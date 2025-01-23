@@ -37,7 +37,7 @@ import { defineConfig } from "vitepress";
         "text": "📑部署文档",
         "items": [
           {
-            "text": "🚀SaaS数字人",
+            "text": "🚀AI数字人",
             "link": "/human"
           },
           {
@@ -62,15 +62,15 @@ import { defineConfig } from "vitepress";
         "text": "🧠AI助手",
         "items": [
           {
-            "text": "艺界AI",
+            "text": "艺创AI",
             "link": "http://cnai.art"
           },
           {
-            "text": "企业知识库",
+            "text": "知识库",
             "link": "https://comnew.cn"
           },
           {
-            "text": "AIGC数字人",
+            "text": "AI数字人",
             "link": "http://hd.cnai.art"
           },
           {
