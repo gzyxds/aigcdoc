@@ -4,7 +4,27 @@
 
 📚 **产品定位介绍** 📚
 
-🌟 ChatMoney-AIGC：国内领先的超级AI平台，可私有化部署，可二次开发，致力于提供高度定制化个性化的AI机器人解决方案。赋能AI创业，为个人增效，为企业降本。AI时代"超级个体"概念不再遥远，全能AI知识库系统「PHP源码版」，基于前后端分离架构以及Vue3、uni-app、ThinkPHP6.x、PostgreSQL、pgvector技术栈开发，包含PC端、H5端。ChatWork支持问答式和文档式知识库，能够导入txt、doc、docx、pdf、md等多种格式文档。导入数据完成向量化训练后，用户提问即可进行向量化搜索，并且结合大语言模型进行AI回答，可以提升AI回答的专业性和实用性。知识库应用支持对外发布聊天网页窗口，iframe代码，js代码以及API接口，拥有强大的第三方对接能力。适用于企业智能客服、企业智能文档、专家顾问助理等多种企业级商用场景，具有较大的商业使用价值一人创办一家百万美金收入公司不再是梦想！🌟
+🌟 **ChatMoney-AIGC**：国内领先的超级AI平台 🚀
+
+- 🛠️ **私有化部署**：支持企业级私有化部署
+- 🔧 **二次开发**：提供高度定制化个性化AI机器人解决方案
+- 💡 **赋能创业**：为个人增效，为企业降本
+- 🤖 **超级个体**：AI时代"超级个体"概念触手可及
+
+📚 **全能AI知识库系统**（PHP源码版）
+- 🖥️ **技术栈**：基于前后端分离架构，采用Vue3、uni-app、ThinkPHP6.x、PostgreSQL、pgvector等技术
+- 📱 **多端支持**：包含PC端、H5端
+- 📄 **文档支持**：支持导入txt、doc、docx、pdf、md等多种格式文档
+- 🔍 **智能搜索**：数据向量化训练后，支持向量化搜索
+- 💬 **AI问答**：结合大语言模型，提升回答专业性和实用性
+- 🌐 **开放接口**：支持聊天网页窗口、iframe代码、js代码及API接口
+- 🤝 **第三方对接**：强大的第三方对接能力
+
+🏢 **应用场景**
+- 🏭 企业智能客服
+- 📂 企业智能文档
+- 👨‍💼 专家顾问助理
+- 💰 百万美金创业梦想触手可及！
 
 ::: warning 🔍 **产品功能亮点** 🔍
 
@@ -75,26 +95,27 @@
 
 ### 演示站点
 
-:::  danger 🖥️官网 https://www.urlnet.cn/
+::: danger 🌐 官方网站
+🖥️ [ChatMoneyAIGC 官网](https://www.urlnet.cn/)
 :::
 
-:::  tip 🔍 全能AI知识库系统 演示站点
-ChatGPT-AIGC-全能AI知识库系统「PHP源码版」
+::: tip 🔍 全能AI知识库系统 演示站点
+🚀 ChatGPT-AIGC-全能AI知识库系统「PHP源码版」
 :::
 
 | 演示平台     | 演示地址                                                    | 账号     | 密码     |
 | -------------- | ------------------------------------------------------------- | ---------- | ---------- |
-| PC演示前台   | [PC系统演示](https://ai.chatmoney.cn/)             | 自行注册 | 自行注册 |
-| 移动端H5演示 | [移动系统演示](https://ai.chatmoney.cn/mobile/) | 自行注册 | 自行注册 |
-| 体验后台     | [后台系统演示](https://ai-demo.chatmoney.cn/admin) | admin | 123456 |
+| 💻 PC演示前台   | [PC系统演示](https://ai.chatmoney.cn/)             | 自行注册 | 自行注册 |
+| 📱 移动端H5演示 | [移动系统演示](https://ai.chatmoney.cn/mobile/) | 自行注册 | 自行注册 |
+| 🔑 体验后台     | [后台系统演示](https://ai-demo.chatmoney.cn/admin) | admin | 123456 |
 
-::: info 客户案列
-- [app.72nh.com](http://app.72nh.com)
-- [www.aichines.com](https://www.aichines.com/)
-
+::: info 🏆 客户案例
+- 🌐 [www.cnai.art](http://www.cnai.art) - 艺创AI创作平台
+- 📱 [app.72nh.com](http://app.72nh.com) - 智能AI助手应用
+- 🤖 [www.aichines.com](https://www.aichines.com/) - 智中速创平台
 :::
 
-> 注：因是演示站未做授权版本比较旧，功能不是很全，购买是给到最新的版本和功能
+> ⚠️ 注：演示站为未授权版本，功能较旧且不完整，购买后将获得最新完整版本
 
 <br> 
 

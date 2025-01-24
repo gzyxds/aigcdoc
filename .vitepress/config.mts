@@ -267,27 +267,31 @@ import { defineConfig } from "vitepress";
           "collapsible": true,
           "items": [
             {
-              "text": "项目首页",
+              "text": "🏠 项目首页",
               "link": "/hd/"
             },
             {
-              "text": "系统官网",
+              "text": "🌐 系统官网",
               "link": "https://www.urlnet.cn/human"
             },
             {
-              "text": "系统介绍",
+              "text": "📜 更新日志",
+              "link": "/human/deployment/update"
+            },
+            {
+              "text": "📖 系统介绍",
               "link": "/human/index"
             },
             {
-              "text": "PPT介绍",
+              "text": "📊 PPT介绍",
               "link": "https://rwm01l8tn3x.feishu.cn/file/OSQ3bgCa8oeVARx0L5mc3haCnpe?from=from_copylink"
             },
             {
-              "text": "宝塔面板部署 ①",
+              "text": "🛠️ 宝塔面板部署 ①",
               "link": "/human/deployment/bt"
             },
             {
-              "text": "通用部署 ②", 
+              "text": "⚙️ 通用部署 ②", 
               "link": "/human/deployment/general"
             },
             {
@@ -296,7 +300,7 @@ import { defineConfig } from "vitepress";
               "collapsible": true,
               "items": [
                 {
-                  "text": "微信公众号",
+                  "text": "💬 微信公众号",
                   "link": "/human/front/oa"
                 }
               ]
@@ -307,15 +311,15 @@ import { defineConfig } from "vitepress";
               "collapsible": true,
               "items": [
                 {
-                  "text": "微信开放平台（微信帐号统一）",
+                  "text": "🔓 微信开放平台（微信帐号统一）",
                   "link": "/human/other/open"
                 },
                 {
-                  "text": "微信支付",
+                  "text": "💳 微信支付",
                   "link": "/human/other/wechatpay"
                 },
                 {
-                  "text": "支付宝支付",
+                  "text": "💰 支付宝支付",
                   "link": "/human/other/alipay"
                 }
               ]
@@ -326,7 +330,7 @@ import { defineConfig } from "vitepress";
               "collapsible": true,
               "items": [
                 {
-                  "text": "数据接口",
+                  "text": "🔌 数据接口",
                   "link": "/human/develop/api"
                 }
               ]
