@@ -115,23 +115,23 @@ import { defineConfig } from "vitepress";
           "collapsible": true,
           "items": [
             {
-              "text": "部署文档",
+              "text": "📄 部署文档",
               "link": "/work/deployment/btdocke"
             },
             {
-              "text": "版本演示",
+              "text": "🎥 版本演示",
               "link": "work/deployment/demo.md"
             },
             {
-              "text": "知识库PDF",
+              "text": "📚 知识库PDF",
               "link": "https://rwm01l8tn3x.feishu.cn/file/BkclbxFSUohtf8xWYRuc5XB7n1g?from=from_copylink"
             },
             {
-              "text": "运营文档",
-              "link": "https://rwm01l8tn3x.feishu.cn/docx/BUVsd7WULoDOv1xjb08cpMHrnAf?from=from_copylink"
+              "text": "📊 运营文档",
+              "link": "/work/fqa/operation"
             },
             {
-              "text": "更新日志",
+              "text": "📜 更新日志",
               "link": "/work/deployment/update"
             }
           ]
@@ -142,23 +142,23 @@ import { defineConfig } from "vitepress";
           "collapsible": true,
           "items": [
             {
-              "text": "ChatGLM本地模型部署",
+              "text": "🤖 ChatGLM本地模型部署",
               "link": "/work/third/chatglm"
             },
             {
-              "text": "M3E向量模型部署",
+              "text": "🧮 M3E向量模型部署",
               "link": "/work/third/m3e"
             },
             {
-              "text": "接入个人/企业微信",
+              "text": "💬 接入个人/企业微信",
               "link": "/work/third/wechat"
             },
             {
-              "text": "SD绘图部署",
+              "text": "🎨 SD绘图部署",
               "link": "/work/third/sd"
             },
             {
-              "text": "LMstudio（本地大模型）",
+              "text": "💻 LMstudio（本地大模型）",
               "link": "/work/third/LMstudio"
             }
           ]
@@ -169,15 +169,15 @@ import { defineConfig } from "vitepress";
           "collapsible": true,
           "items": [
             {
-              "text": "微信公众号",
+              "text": "📱 微信公众号",
               "link": "/work/front/oa"
             },
             {
-              "text": "编译上传微信小程序 ①",
+              "text": "📲 编译上传微信小程序 ①",
               "link": "/work/front/mnp"
             },
             {
-              "text": "后台上传微信小程序 ②",
+              "text": "⚡ 后台上传微信小程序 ②",
               "link": "/work/front/fastmnp"
             }
           ]
@@ -188,31 +188,31 @@ import { defineConfig } from "vitepress";
           "collapsible": true,
           "items": [
             {
-              "text": "微信开放平台（微信帐号统一）",
+              "text": "🔓 微信开放平台（微信帐号统一）",
               "link": "/work/other/open"
             },
             {
-              "text": "微信支付",
+              "text": "💳 微信支付",
               "link": "/work/other/wechatpay"
             },
             {
-              "text": "支付宝支付",
+              "text": "💰 支付宝支付",
               "link": "/work/other/alipay"
             },
             {
-              "text": "短信配置",
+              "text": "📨 短信配置",
               "link": "/work/other/sms"
             },
             {
-              "text": "对象存储",
+              "text": "📦 对象存储",
               "link": "/work/other/oss"
             },
             {
-              "text": "自定义API域名代理",
+              "text": "🌐 自定义API域名代理",
               "link": "/work/other/proxy"
             },
             {
-              "text": "Dalle绘画配置",
+              "text": "🎨 Dalle绘画配置",
               "link": "/work/other/dalle"
             }
           ]
@@ -223,19 +223,19 @@ import { defineConfig } from "vitepress";
           "collapsible": true,
           "items": [
             {
-              "text": "升级更新",
+              "text": "🆙 升级更新",
               "link": "/work/fqa/version"
             },
             {
-              "text": "报错排查",
+              "text": "❌ 报错排查",
               "link": "/work/fqa/error"
             },
             {
-              "text": "500错误",
+              "text": "500 错误",
               "link": "/work/fqa/debug"
             },
             {
-              "text": " GPT使用指南",
+              "text": "🤖 GPT使用指南",
               "link": "/work/fqa/gpt"
             }
           ]
@@ -246,15 +246,15 @@ import { defineConfig } from "vitepress";
           "collapsible": true,
           "items": [
             {
-              "text": "基本介绍",
+              "text": "📝 基本介绍",
               "link": "/work/develop/base"
             },
             {
-              "text": "前端开发",
+              "text": "💻 前端开发",
               "link": "/work/develop/web"
             },
             {
-              "text": "数据库结构",
+              "text": "🗃️ 数据库结构",
               "link": "/work/develop/database"
             }
           ]
