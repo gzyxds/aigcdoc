@@ -166,96 +166,84 @@ custom: {}
 
 ---
 
-<div style="display: flex; flex-wrap: wrap; gap: 30px; margin: 40px auto; max-width: 1200px; justify-content: center;">
-  <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); width: calc(50% - 30px); min-width: 250px; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center;">
-    <img src="/public/images/qrcode.png" alt="客服二维码" style="width: 100%; max-width: 220px; border-radius: 10px; margin-bottom: 15px;">
-    <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">客服二维码</p>
-    <p style="margin: 5px 0 0; font-size: 14px; color: #666;">扫码添加客服咨询</p>
-  </div>
-  
-  <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); width: calc(50% - 30px); min-width: 250px; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center;">
-    <img src="/public/images/qrcode.png" alt="技术支持" style="width: 100%; max-width: 220px; border-radius: 10px; margin-bottom: 15px;">
-    <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">技术支持</p>
-    <p style="margin: 5px 0 0; font-size: 14px; color: #666;">专业技术团队为您服务</p>
-  </div>
 
-  <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); width: calc(50% - 30px); min-width: 250px; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center;">
-    <img src="/public/images/qq.png" alt="商务QQ" style="width: 100%; max-width: 220px; border-radius: 10px; margin-bottom: 15px;">
-    <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">商务QQ</p>
-    <p style="margin: 5px 0 0; font-size: 14px; color: #666;">商务合作请联系</p>
-  </div>
 
-  <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); width: calc(50% - 30px); min-width: 250px; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center;">
-    <img src="/public/images/cloud.png" alt="交流群" style="width: 100%; max-width: 220px; border-radius: 10px; margin-bottom: 15px;">
-    <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">交流群</p>
-    <p style="margin: 5px 0 0; font-size: 14px; color: #666;">加入群聊一起交流</p>
-  </div>
-</div>
+### 🚀ChatMoneyAI 数字人、智能聊天系统、AI绘画、大模型知识库训练开发
 
-<style>
-@media screen and (max-width: 768px) {
-  div[style*="flex-wrap: wrap"] > div {
-    width: calc(100% - 30px) !important;
-  }
-}
-
-div[style*="flex-wrap: wrap"] > div:hover {
-  transform: translateY(-5px);
-}
-</style>
-
-### 🚀AI智能聊天系统、AI绘画、大模型知识库训练开发
-
-::: danger 全套开源代码
-- 全套完整的开源系统，前端应用和后台管理系统皆可开箱即用，集成支付系统，可以直接商用变现
+::: danger 📦 全套开源代码
+- 🎯 全套完整的开源系统，前端应用和后台管理系统皆可开箱即用
+- 💰 集成支付系统，可以直接商用变现
+- 🚀 快速部署，轻松上手
 :::
 
-::: info 兼容多种模型
-- 集成了 OpenAI, Azure, ChatGLM,讯飞星火，文心一言等多个平台的大语言模型。基于 Websocket 实现，完美的打字机体验
+::: info 🤖 兼容多种模型
+- 🌐 集成主流大语言模型：OpenAI, Azure, ChatGLM, 讯飞星火，文心一言
+- ⚡ 基于 Websocket 实现，完美的打字机体验
+- 🔄 支持多模型快速切换
 :::
 
-::: tip AI绘画和函数
-- 集成了 MidJourney，Stable Diffusion 以及DALLE AI绘画功能。支持函数调用，轻松实现各种函数插件，为 AI 赋能
+::: tip 🎨 AI绘画和函数
+- 🖼️ 集成 MidJourney，Stable Diffusion 以及 DALLE AI绘画功能
+- ⚙️ 支持函数调用，轻松实现各种函数插件
+- 🧠 为 AI 赋能，打造智能应用
 :::
 
-::: warning 官方正版授权
-- 商业授权可享受官方更多技术支持，拒绝盗版，尊重知识产权，从你我做起
+::: warning ⚖️ 官方正版授权
+- 🔒 商业授权可享受官方更多技术支持
+- 🚫 拒绝盗版，尊重知识产权
+- 🌱 从你我做起，共建健康生态
 :::
 
-::: danger 你们开发AI系统的周期是多久
-- 一般根据你的项目大小和难易程度决定，一般都在5个工作日内可以完成很多工作，当然这里不包含定制开发。
+::: danger ⏳ 开发周期
+- 📅 一般项目5个工作日内可完成核心功能
+- 🔧 定制开发时间根据需求评估
+- ⏱️ 快速响应，高效交付
 :::
 
-::: info 你们的AI系统可以接入哪些场景
-- 主流的软件我们基本都能接入，比如企业微信、钉钉、飞书、微信公众号等或者你自己的App也可以。
+::: info 🔌 系统接入场景
+- 📱 支持主流平台：企业微信、钉钉、飞书、微信公众号
+- 📲 支持自定义App接入
+- 🔗 无缝对接现有系统
 :::
 
-::: tip 你们AI接口对接的哪里的
-- 我们接入OpenAI官方最新接口，访问速度非常快，支持GPT4.0和GPT3.5。国内大语言模型例如ChatGLM我们也是支持的。
+::: tip 🌍 接口对接
+- 🔗 接入OpenAI官方最新接口
+- 🚄 访问速度极快，支持GPT4.0和GPT3.5
+- 🇨🇳 同时支持国内大语言模型如ChatGLM
 :::
 
-::: danger 你们训练AI模型的时间是多久
-- 这个需要根据您提供的训练资料决定，根据你提供的训练资料才可以知道他的训练时间和学习过程。
+::: danger ⏰ 模型训练时间
+- 📚 根据训练资料量决定
+- 🧑‍🏫 专业团队评估训练周期
+- 📈 持续优化训练效果
 :::
 
-::: warning 🔍 **商业授权常见问题** 🔍
+::: warning 🔍 **商业授权常见问题**
 * 🌟 什么是商业授权？
+* 💼 授权范围和使用权限
+* 📝 授权协议详解
 :::
 
-
-::: tip 🔥 **开源为什么需要购买商业授权？** 
-- 开源不等于完全免费！开源代码是为了方便用户二次开发，便于学习和交流，免费使用请务必保留官方版权标识和链接。
+::: tip 🔥 **开源与商业授权**
+- ⚖️ 开源 ≠ 完全免费
+- 🛠️ 方便二次开发与学习交流
+- ©️ 免费使用需保留官方版权标识
 :::
 
-
-::: info 👉 **怎样获取商业授权？** 
-- 联系官方客服购买，购买成功后客服人员会在后台给您开通授权。
+::: info 👉 **获取商业授权**
+- 💳 联系官方客服购买
+- ✅ 购买成功后即时开通
+- 📞 7×24小时技术支持
 :::
 
-::: danger 商业授权生成后可以更改吗？
-- 由于商品的特殊性，商业授权后可提供一次免费的域名更改服务，后续如需更改域名需要缴纳更改时对应付费产品费用的50%作为变更费用。
+::: danger 🔄 授权变更
+- 🆓 首次域名更改免费
+- 💸 后续更改需支付50%费用
+- 📋 变更流程透明规范
 :::
 
-::: warning 获得商业授权后可去除版权信息吗？
-- 取得商业授权后可以去除代码官方版权信息和链接，但不能用作二次发行销售
+::: warning ©️ 版权信息
+- 🚫 商业授权后可去除官方版权
+- ⛔ 禁止二次发行销售
+- 📜 遵守授权协议条款
 :::

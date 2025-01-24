@@ -6,7 +6,7 @@
  * @FilePath: \chataigc-doc\product\aigc\demo.md
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
-# 🎬 AIGC·产品演示中心
+# 🎬 ChatMoneyAI·产品演示中心
 
 ::: tip 🌐 官网直达
 🖥️ [ChatMoneyAI](https://www.urlnet.cn/)
@@ -17,10 +17,10 @@
 
 :::
 
-## 🤖 AIGC数字人 SaaS系统演示
+## 🤖 AI数字人SaaS系统演示
 
 ::: tip 🗣️ 系统介绍
-AIGC数字人「PHP源码版」
+AI数字人SaaS系统「PHP源码版」
 :::
 
 | 🖥️ 演示平台     | 🔗 演示地址                                                    | 🔑 账号     | 🔐 密码     |
@@ -52,7 +52,7 @@ AIGC数字人「PHP源码版」
 ## 🧠 全能AI知识库系统演示
 
 ::: tip 🔍 系统介绍
-ChatGPT-AIGC-全能AI知识库系统「PHP源码版」
+ChatMoney-AIGC-全能AI企业知识库系统「PHP源码版」
 :::
 
 | 🖥️ 演示平台     | 🔗 演示地址                                                    | 🔑 账号     | 🔐 密码     |
@@ -62,24 +62,25 @@ ChatGPT-AIGC-全能AI知识库系统「PHP源码版」
 | 🛠️ 管理后台   | [后台系统演示](https://ai-demo.chatmoney.cn/admin) | 👤 admin | 🔑 123456 |
 
 ::: info 📂 客户案例
+- 🌐 [www.cnai.art](http://www.cnai.art)
 - 🌐 [app.72nh.com](http://app.72nh.com)
 - 🌐 [www.aichines.com](https://www.aichines.com/)
 :::
 
 > ⚠️ 注：演示站为未授权版本，功能可能不全，购买后将获得最新完整版本
 
----
+
 
 ## 🎨 聊天绘画系统演示
 
 ::: danger 🎨 系统介绍
-ChatGPT-AIGC-聊天绘画系统「PHP源码版」
+ChatMoney-AIGC-聊天绘画系统「PHP源码版」
 :::
 
 | 🖥️ 演示平台     | 🔗 演示地址                                                                              | 🔑 账号         | 🔐 密码         |
 | -------------- | --------------------------------------------------------------------------------------- | -------------- | -------------- |
-| 💻 PC端前台   | [默认PC演示前台](https://ai1.demo.yixiangonline.com/)               | 📝 自行后台添加 | 🔐 自行后台添加 |
-| 📱 移动端H5   | [默认移动端H5演示](https://ai1.demo.yixiangonline.com/mobile/) | 📝 自行后台添加 | 🔐 自行后台添加 |
+| 💻 PC端前台   | [默认PC前台](https://ai1.demo.yixiangonline.com/) [默认PC演示 ](https://cnai.art/)                 | 📝 自行后台添加 | 🔐 自行后台添加 |
+| 📱 移动端H5   | [默认H5演示](https://ai1.demo.yixiangonline.com/mobile/) [默认移动端](https://cnai.art/mobile/) | 📝 自行后台添加 | 🔐 自行后台添加 |
 | 🛠️ 管理后台   | [默认体验后台](https://ai1.demo.yixiangonline.com/admin/)   | 👤 aiadmin      | 🔑 admin110     |
 
 ::: info 📂 客户案例
@@ -90,7 +91,7 @@ ChatGPT-AIGC-聊天绘画系统「PHP源码版」
 
 > ⚠️ 注：演示站为未授权版本，功能可能不全，购买后将获得最新完整版本
 
----
+ 
 
 ## 📚 ChatPaper-论文写作系统演示
 
