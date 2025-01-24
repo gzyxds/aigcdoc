@@ -21,9 +21,12 @@ APP_DEBUG = true
 
 ### 1.系统用户权限问题
 
-#### 错误信息
+ 
+::: danger 错误信息
 
-"file\_put\_contents(/www/wwwroot/xxxxxx/server/runtime): Failed to open stream: Permission denied"![](https://doc.chatmoney.cn/docs/images/general/php/debug/permission-1.png)
+"file\_put\_contents(/www/wwwroot/xxxxxx/server/runtime): Failed to open stream: Permission denied"
+:::
+![](https://doc.chatmoney.cn/docs/images/general/php/debug/permission-1.png)
 
 #### 原因
 
