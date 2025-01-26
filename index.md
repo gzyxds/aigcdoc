@@ -3,7 +3,7 @@ layout: home
 hero:
   name: ChatMoneyAIGC
   text: 新一代AIGC赋能企业
-  tagline:  🚀专注提供AIGC系统源代码解决方案的技术团队「AI数字人SaaS系统」「全能AI变现系统」「AI聊天绘画」「AI论文写作」拥有PHP和Java两种语言版本，技术实力强，系统体验好支持私有部署，专业团队、售后无忧
+  tagline:  🚀专注提供AIGC系统源代码解决方案的技术团队「AI数字人SaaS系统」「企业全能AI变现系统」「AI聊天绘画」「AI论文写作」拥有PHP和Java两种语言版本，技术实力强，系统体验好支持私有部署，专业团队、售后无忧
   actions:
     - theme: brand
       text: 🚀 企业知识库

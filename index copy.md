@@ -166,20 +166,53 @@ custom: {}
 
 ---
 
+<div style="display: flex; flex-wrap: wrap; gap: 30px; margin: 40px auto; max-width: 1200px; justify-content: center;">
+  <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); width: calc(50% - 30px); min-width: 250px; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center;">
+    <img src="/public/images/qrcode.png" alt="客服二维码" style="width: 100%; max-width: 220px; border-radius: 10px; margin-bottom: 15px;">
+    <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">客服二维码</p>
+    <p style="margin: 5px 0 0; font-size: 14px; color: #666;">扫码添加客服咨询</p>
+  </div>
+  
+  <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); width: calc(50% - 30px); min-width: 250px; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center;">
+    <img src="/public/images/qrcode.png" alt="技术支持" style="width: 100%; max-width: 220px; border-radius: 10px; margin-bottom: 15px;">
+    <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">技术支持</p>
+    <p style="margin: 5px 0 0; font-size: 14px; color: #666;">专业技术团队为您服务</p>
+  </div>
 
+  <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); width: calc(50% - 30px); min-width: 250px; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center;">
+    <img src="/public/images/qq.png" alt="商务QQ" style="width: 100%; max-width: 220px; border-radius: 10px; margin-bottom: 15px;">
+    <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">商务QQ</p>
+    <p style="margin: 5px 0 0; font-size: 14px; color: #666;">商务合作请联系</p>
+  </div>
 
-### 🚀ChatMoneyAI 数字人、智能聊天系统、AI绘画、大模型知识库训练开发
+  <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); width: calc(50% - 30px); min-width: 250px; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center;">
+    <img src="/public/images/cloud.png" alt="交流群" style="width: 100%; max-width: 220px; border-radius: 10px; margin-bottom: 15px;">
+    <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">交流群</p>
+    <p style="margin: 5px 0 0; font-size: 14px; color: #666;">加入群聊一起交流</p>
+  </div>
+</div>
 
+<style>
+@media screen and (max-width: 768px) {
+  div[style*="flex-wrap: wrap"] > div {
+    width: calc(100% - 30px) !important;
+  }
+}
+
+div[style*="flex-wrap: wrap"] > div:hover {
+  transform: translateY(-5px);
+}
+</style>
+
+### 🚀ChatMoneyAI企业知识库、AI数字人、智能聊天系统、AI绘画、大模型知识库训练开发
 ::: danger 📦 全套开源代码
 - 🎯 全套完整的开源系统，前端应用和后台管理系统皆可开箱即用
 - 💰 集成支付系统，可以直接商用变现
-- 🚀 快速部署，轻松上手
 :::
 
 ::: info 🤖 兼容多种模型
 - 🌐 集成主流大语言模型：OpenAI, Azure, ChatGLM, 讯飞星火，文心一言
 - ⚡ 基于 Websocket 实现，完美的打字机体验
-- 🔄 支持多模型快速切换
 :::
 
 ::: tip 🎨 AI绘画和函数
@@ -197,13 +230,11 @@ custom: {}
 ::: danger ⏳ 开发周期
 - 📅 一般项目5个工作日内可完成核心功能
 - 🔧 定制开发时间根据需求评估
-- ⏱️ 快速响应，高效交付
 :::
 
 ::: info 🔌 系统接入场景
 - 📱 支持主流平台：企业微信、钉钉、飞书、微信公众号
 - 📲 支持自定义App接入
-- 🔗 无缝对接现有系统
 :::
 
 ::: tip 🌍 接口对接
@@ -215,13 +246,10 @@ custom: {}
 ::: danger ⏰ 模型训练时间
 - 📚 根据训练资料量决定
 - 🧑‍🏫 专业团队评估训练周期
-- 📈 持续优化训练效果
 :::
 
 ::: warning 🔍 **商业授权常见问题**
 * 🌟 什么是商业授权？
-* 💼 授权范围和使用权限
-* 📝 授权协议详解
 :::
 
 ::: tip 🔥 **开源与商业授权**
@@ -233,17 +261,14 @@ custom: {}
 ::: info 👉 **获取商业授权**
 - 💳 联系官方客服购买
 - ✅ 购买成功后即时开通
-- 📞 7×24小时技术支持
 :::
 
 ::: danger 🔄 授权变更
 - 🆓 首次域名更改免费
 - 💸 后续更改需支付50%费用
-- 📋 变更流程透明规范
 :::
 
 ::: warning ©️ 版权信息
 - 🚫 商业授权后可去除官方版权
 - ⛔ 禁止二次发行销售
-- 📜 遵守授权协议条款
 :::
