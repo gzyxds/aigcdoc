@@ -2,6 +2,9 @@ import { defineConfig } from "vitepress";
 	export default defineConfig({
   "title": "AIGC创作系统",
   "description": "专注提供AI系统源代码解决方案的技术团队「超级全能AI变现系统」「AI聊天绘画系统」「AI论文写作系统」拥有PHP和Java两种语言版本，技术实力强，系统体验好支持私有部署，专业团队、售后无忧",
+  "head": [
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
+  ],
   "themeConfig": {
     "nav": [
       {
@@ -954,7 +957,7 @@ import { defineConfig } from "vitepress";
       "next": "下一页"
     },
     "footer": {
-      "copyright": "版权所有@ 2024 Albert AIGC创作系统 ICP备2022147728号"
+      "copyright": "版权所有@ 2025 Albert AIGC创作系统 ICP备2022147728号"
     },
     "siteTitle": false,
     "sidebarMenuLabel": "菜单"
@@ -965,12 +968,12 @@ import { defineConfig } from "vitepress";
   "srcDir": "./",
   "assetsDir": "static",
   "sitemap": {  
-    "hostname": "https://cnai.art",
+    "hostname": "https://www.cnai.art",
     "lastmodDateOnly": false
   },
   "locales": {},
   "cacheDir": "./.vitepress/cache",
-  "titleTemplate": "AI系统源码|ChatAigc聊天绘画系统|ai平台源码|ai创作系统源码|ai官网源码",
+  "titleTemplate": "AI系统源码|AI数字人系统|聊天绘画系统|ai平台源码|ai创作系统源码|ai官网源码",
   "lang": "en-US",
   "base": "/",
   "outDir": "./.vitepress/dist",
