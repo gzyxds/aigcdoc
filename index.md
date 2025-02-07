@@ -1,20 +1,21 @@
 ---
 layout: home
 hero:
-  name: ChatMoneyAIGC
+  name: 艺创AIGC
   text: 新一代AIGC赋能企业
   tagline:  🚀专注提供AIGC系统源代码解决方案的技术团队「AI数字人SaaS系统」「企业全能AI变现系统」「AI聊天绘画」「AI论文写作」拥有PHP和Java两种语言版本，技术实力强，系统体验好支持私有部署，专业团队、售后无忧
   actions:
-    - theme: brand
+    - theme: alt
       text: 🚀 企业知识库
       link: /Work
       class: 'primary-btn col-2'
 
-    - theme: brand
-      text: 🤖 SaaS数字人
+    - theme: alt
+      text: 🤖 AI数字人
       link: /hd
       class: 'demo-btn col-2'
-    - theme: alt
+
+    - theme: alt  
       text: 🎨 绘画聊天
       link: /chat
       class: 'demo-btn col-2'

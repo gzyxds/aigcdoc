@@ -1,10 +1,10 @@
 ---
 layout: home
 hero:
-  name: CHATGTPAIGC
+  name: 艺创AIGC
   text: 全能AIGC知识库系统
   tagline: >-
-    基于前后端分离架构以及Vue3、uni-app、ThinkPHP6.x、PostgreSQL、pgvector技术栈开发，包含PC端、H5端。
+    企业级全能AI知识库可以进行智能体角色设定、知识库训练、发布/分享智能体， AI智能对话，AI视频、AI绘画、AI搜索、AIPPT、AI音乐、可以设定多种AI行业场景等强大的功能，拥有强大的第三方对接能力。适用于企业智能客服、企业智能文档、专家顾问助理等多种企业级商业场景，具有较大的商业使用价值！
   actions:
     - text: 📖部署文檔
       link: /work/deployment/demo
@@ -23,7 +23,7 @@ hero:
    
       
   image:
-    src: https://payphp.oss-cn-shenzhen.aliyuncs.com/CNART/openai.svg
+    src: \images\home\logo.svg
     alt: ''
     width: ''
     height: ''

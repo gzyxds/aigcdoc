@@ -68,19 +68,19 @@ import { defineConfig } from "vitepress";
         "text": "🧠AI助手",
         "items": [
           {
-            "text": "艺创AI",
+            "text": "🤖艺创AI",
             "link": "http://cnai.art"
           },
           {
-            "text": "知识库",
+            "text": "📚知识库",
             "link": "https://comnew.cn"
           },
           {
-            "text": "AI数字人",
+            "text": "🤖AI数字人",
             "link": "http://hd.cnai.art"
           },
           {
-            "text": "APP下载",
+            "text": "📱APP下载", 
             "link": "https://www.123865.com/s/AIVRVv-eEIJA"
           }
         ]
