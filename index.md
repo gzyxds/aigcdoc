@@ -166,27 +166,27 @@ aside: true
 custom: {}
 
 ---
-<div style="display: flex; gap: 30px; margin: 40px auto; max-width: 1200px; justify-content: center; flex-wrap: nowrap; overflow-x: auto;">
-  <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); min-width: 250px; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center; flex: 1;">
-    <img src="/public/images/qrcode.png" alt="客服二维码" style="width: 100%; max-width: 220px; border-radius: 10px; margin-bottom: 15px;">
+<div style="display: flex; gap: 20px; margin: 40px auto; max-width: 1200px; justify-content: center; flex-wrap: wrap;">
+  <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); min-width: 250px; max-width: 280px; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; flex: 1 1 250px; margin-bottom: 20px;">
+    <img src="/public/images/qrcode.png" alt="客服二维码" style="width: 100%; max-width: 200px; border-radius: 10px; margin-bottom: 15px;">
     <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">客服二维码</p>
     <p style="margin: 5px 0 0; font-size: 14px; color: #666;">扫码添加客服咨询</p>
   </div>
   
-  <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); min-width: 250px; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center; flex: 1;">
-    <img src="/public/images/qrcode.png" alt="技术支持" style="width: 100%; max-width: 220px; border-radius: 10px; margin-bottom: 15px;">
+  <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); min-width: 250px; max-width: 280px; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; flex: 1 1 250px; margin-bottom: 20px;">
+    <img src="/public/images/qrcode.png" alt="技术支持" style="width: 100%; max-width: 200px; border-radius: 10px; margin-bottom: 15px;">
     <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">技术支持</p>
     <p style="margin: 5px 0 0; font-size: 14px; color: #666;">专业技术团队为您服务</p>
   </div>
 
-  <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); min-width: 250px; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center; flex: 1;">
-    <img src="/public/images/qq.png" alt="商务QQ" style="width: 100%; max-width: 220px; border-radius: 10px; margin-bottom: 15px;">
+  <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); min-width: 250px; max-width: 280px; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; flex: 1 1 250px; margin-bottom: 20px;">
+    <img src="/public/images/qq.png" alt="商务QQ" style="width: 100%; max-width: 200px; border-radius: 10px; margin-bottom: 15px;">
     <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">商务QQ</p>
     <p style="margin: 5px 0 0; font-size: 14px; color: #666;">商务合作请联系</p>
   </div>
 
-  <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); min-width: 250px; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center; flex: 1;">
-    <img src="/public/images/cloud.png" alt="交流群" style="width: 100%; max-width: 220px; border-radius: 10px; margin-bottom: 15px;">
+  <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); min-width: 250px; max-width: 280px; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; flex: 1 1 250px; margin-bottom: 20px;">
+    <img src="/public/images/cloud.png" alt="交流群" style="width: 100%; max-width: 200px; border-radius: 10px; margin-bottom: 15px;">
     <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">交流群</p>
     <p style="margin: 5px 0 0; font-size: 14px; color: #666;">加入群聊一起交流</p>
   </div>
@@ -194,23 +194,22 @@ custom: {}
 
 <style>
 @media screen and (max-width: 1200px) {
-  div[style*="flex-wrap: nowrap"] {
-    flex-wrap: wrap !important;
-  }
-  
-  div[style*="flex-wrap: nowrap"] > div {
-    flex: 0 0 calc(50% - 30px) !important;
+  div[style*="flex-wrap: wrap"] > div {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
   }
 }
 
 @media screen and (max-width: 768px) {
-  div[style*="flex-wrap: nowrap"] > div {
-    flex: 0 0 calc(100% - 30px) !important;
+  div[style*="flex-wrap: wrap"] > div {
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 }
 
-div[style*="flex-wrap: nowrap"] > div:hover {
+div[style*="flex-wrap: wrap"] > div:hover {
   transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.12);
 }
 </style>
 
