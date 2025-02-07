@@ -69,15 +69,15 @@ import { defineConfig } from "vitepress";
         "items": [
           {
             "text": "🤖艺创AI",
-            "link": "http://cnai.art"
+            "link": "http://www.cnai.art"
           },
           {
             "text": "📚知识库",
-            "link": "https://comnew.cn"
+            "link": "https://www.cnai.art/application/layout/kb"
           },
           {
             "text": "🤖AI数字人",
-            "link": "http://hd.cnai.art"
+            "link": "https://www.urlnet.cn/human"
           },
           {
             "text": "📱APP下载", 
@@ -966,7 +966,7 @@ import { defineConfig } from "vitepress";
       "next": "下一页"
     },
     "footer": {
-      "copyright": "版权所有@ 2025 Albert AIGC创作系统 ICP备2022147728号"
+      "copyright": "版权所有 © 2025 艺创AI · 让创作更简单 | 赣 ICP备2022147728号-1 | 🚀 专业AI解决方案提供商"
     },
     "siteTitle": false,
     "sidebarMenuLabel": "菜单"
