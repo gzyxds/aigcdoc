@@ -1,15 +1,16 @@
 ---
 layout: home
 hero:
-  name: CHATGTPAIGC
-  text: 论文写作系统
+  name: 🔥艺创AIGC
+  text: 📝论文写作系统
   tagline: >-
-    基于前后端分离架构以及Vue3、uni-app、ThinkPHP6.x、PHP8.0技术栈开发，包含PC端、H5自适应。这是一款AI智能生成写作大纲，10分钟生成3万字论文的系统。你只需要输入论文关键词，AI即可快速为您生成论文大纲，可线上编辑和删除，操作高效快捷！只需要几分钟，AI可为您生成万字长文，AI助手生成全篇论文比自己写作更快，因为它是基于预训练模型的模式生成，不需要深入的思考和研究。可为您节约时间成本、避免写作困难。适用于期刊论文、科普文章、学生作业、商业报告、新闻报道等多种场景
+    🚀基于前后端分离架构以及Vue3、uni-app、ThinkPHP6.x、PHP8.0技术栈开发，包含PC端、H5自适应。✨这是一款AI智能生成写作大纲，⚡10分钟生成3万字论文的系统。📖你只需要输入论文关键词，AI即可快速为您生成论文大纲，可线上编辑和删除，操作高效快捷！⏱️只需要几分钟，AI可为您生成万字长文，🤖AI助手生成全篇论文比自己写作更快，因为它是基于预训练模型的模式生成，不需要深入的思考和研究。💪可为您节约时间成本、避免写作困难。📚适用于期刊论文、科普文章、学生作业、商业报告、新闻报道等多种场景
   actions:
-    - text: 🐳商业授权
+    - text: 🐳获取源码
       link: /product/Project/auth
-
-    - text: 🎉系统演示
+      
+    - theme: alt
+      text: 🎉系统演示
       link: https://cp.demo.yixiangonline.com/generate/
     - theme: alt
       text: 📖部署文档
@@ -20,7 +21,7 @@ hero:
       link: /product/Project/contact
       
   image:
-    src: https://payphp.oss-cn-shenzhen.aliyuncs.com/CNART/paper.svg
+    src: \images\home\paper.svg
     alt: ''
     width: ''
     height: ''

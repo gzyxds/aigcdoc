@@ -1,16 +1,16 @@
 ---
 layout: home
 hero:
-  name: 艺创AIGC
-  text: 全能AIGC知识库系统
+  name: 🔥艺创AIGC
+  text: 🎉全能AI知识库系统
   tagline: >-
-    企业级全能AI知识库可以进行智能体角色设定、知识库训练、发布/分享智能体， AI智能对话，AI视频、AI绘画、AI搜索、AIPPT、AI音乐、可以设定多种AI行业场景等强大的功能，拥有强大的第三方对接能力。适用于企业智能客服、企业智能文档、专家顾问助理等多种企业级商业场景，具有较大的商业使用价值！
+    📖企业级全能AI知识库可以进行🤖智能体角色设定📚知识库训练🔄发布/分享智能体💬AI智能对话🎥AI视频🎨AI绘画🔍AI搜索📊AIPPT🎵AI音乐⚙️可以设定多种AI行业场景等强大的功能，拥有💪强大的第三方对接能力。适用于🎯企业智能客服📝企业智能文档👨‍💼专家顾问助理等多种企业级商业场景，具有较大的商业使用价值！
   actions:
-    - text: 📖部署文檔
-      link: /work/deployment/demo
+    - text: ✨获取源码
+      link: /product/Project/autho
       
-    - text: ✨商业授权
-      link: /product/Project/auth
+    - text: 📖部署文檔
+      link: /work/deployment/dem
 
     - theme: alt
       text: 🎉系统演示
@@ -23,7 +23,7 @@ hero:
    
       
   image:
-    src: \images\home\logo.svg
+    src: \images\home\logo.png
     alt: ''
     width: ''
     height: ''
@@ -173,6 +173,62 @@ features:
     title: 知识库数据训练
     details: >-
       通过数据训练，用户在前台通过聊天对话模式快速查阅和各种内部资料和文档。使用机器学习技术，让系统自动学习并优化知识库中的知识，提高知识库的准确性和智能性
+    # link: /guide/start
+    # linkText: 了解更多
+
+  - icon: 💰
+    title: 金融行业
+    details: >-
+      智能知识库可以帮助金融分析师快速查询市场数据、投资策略、风险评估等
+    # link: /guide/start
+    # linkText: 了解更多
+
+  - icon: 🏛️
+    title: 政府机构
+    details: >-
+      智能问答系统可以帮助政府工作人员快速查询政策文件、公共服务流程、法律法规等
+    # link: /guide/start
+    # linkText: 了解更多
+
+  - icon: ⚖️
+    title: 法律行业
+    details: >-
+      智能知识库可以帮助律师和法务人员快速查询法律法规、案例判决、合同模板等
+    # link: /guide/start
+    # linkText: 了解更多
+
+  - icon: 🏥
+    title: 医疗行业
+    details: >-
+      智能问答系统可以帮助医生和护士快速查询药物信息、疾病诊断标准、治疗方案等
+    # link: /guide/start
+    # linkText: 了解更多
+
+  - icon: 🏭
+    title: 制造行业
+    details: >-
+      智能知识库可以帮助工程师快速查询设备操作手册、维护指南、生产流程等
+    # link: /guide/start
+    # linkText: 了解更多
+
+  - icon: ⚡
+    title: 能源行业
+    details: >-
+      智能问答系统可以帮助能源工程师快速查询设备维护信息、管理策略、环境影响评估等
+    # link: /guide/start
+    # linkText: 了解更多
+
+  - icon: 🛍️
+    title: 零售行业
+    details: >-
+      智能知识库可以帮助销售人员可以查询产品信息、库存状态、促销活动等
+    # link: /guide/start
+    # linkText: 了解更多
+
+  - icon: 🏗️
+    title: 建筑行业
+    details: >-
+      智能问答系统可以帮助建筑师和工程师可以查询建筑规范、材料信息、施工技术等
     # link: /guide/start
     # linkText: 了解更多
 ---

@@ -1,10 +1,10 @@
 ---
 layout: home
 hero:
-  name: 艺创AIGC
-  text: 聊天绘画系统源码
+  name: 🔥艺创AIGC
+  text: 🎨聊天绘画系统源码
   tagline: >-
-    基于前后端分离架构以及Vue3、uni-app、ThinkPHP6.x、PHP8.0技术栈开发，包含PC端、H5端、小程序端、APP端。聚合对接国内外知名主流大语言模型接口及中转平台，如ChatGLM、讯飞星火、文心一言、GPT3.5、GPT4.0、API2D、知数云。并且聚合对接MJ绘画、SD绘画、意间AI等多种绘画通道，实现了AI对话+AI绘画的融合使用。
+    📖基于前后端分离架构以及Vue3、uni-app、ThinkPHP6.x、PHP8.0技术栈开发，包含PC端、H5端、小程序端、APP端。聚合对接国内外知名主流大语言模型接口及中转平台，如ChatGLM、讯飞星火、文心一言、GPT3.5、GPT4.0、API2D、知数云。并且聚合对接MJ绘画、SD绘画、意间AI等多种绘画通道，实现了AI对话+AI绘画的融合使用。
   actions:
     - text: 🏅商业授权
       link: http://localhost:5173/product/Project/auth.html
@@ -21,7 +21,7 @@ hero:
       link: /product/Project/contact
 
   image:
-    src: \images\home\logo.svg
+    src: \images\home\chat.svg
     alt: ''
     width: ''
     height: ''
