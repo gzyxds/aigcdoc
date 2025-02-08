@@ -29,7 +29,7 @@ hero:
 
   image:
     src: \images\home\logo.svg
-    alt: 'CHATAIGC'
+    alt: '艺创AI'
     width: ''
     height: ''
   description: ''
