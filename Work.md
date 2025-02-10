@@ -10,7 +10,7 @@ hero:
       link: /product/Project/autho
       
     - text: 📖部署文檔
-      link: /work/deployment/dem
+      link: /work/deployment/demo
 
     - theme: alt
       text: 🎉系统演示
