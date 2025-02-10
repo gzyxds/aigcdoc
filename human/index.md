@@ -56,37 +56,33 @@
 :::
  
 
-## 系统演示 🔗
+## 🤖 AI数字人SaaS系统演示
 
-:::  danger 🖥️官网 https://www.urlnet.cn/
+::: tip 🗣️ 系统介绍
+AI数字人SaaS系统「PHP源码版」
 :::
 
-:::  tip 🗣️ AIGC数字人 SaaS系统演示站点
-AIGC数字人「PHP源码版」
-:::
-
-| 演示平台     | 演示地址                                                    | 账号     | 密码     |
+| 🖥️ 演示平台     | 🔗 演示地址                                                    | 🔑 账号     | 🔐 密码     |
 | -------------- | ------------------------------------------------------------- | ---------- | ---------- |
-| PC演示前台   | [PC系统演示](https://0k3yq4u4.chatmoney.cn) | 自行注册 | 自行注册 |
-| 站点管理端   | [管理端系统演示](https://iqujtpeg.chatmoney.cn/admin/) | admin | mddaiSaas |
-| SaaS平台端   | [SaaS端系统演示](https://dm-saas-demo.chatmoney.cn/platform/) | admin | mddaiSaas |
+| 💻 PC端前台   | [PC系统演示](https://0k3yq4u4.chatmoney.cn) | 📝 自行注册 | 🔐 自行注册 |
+| 🛠️ 管理后台   | [管理端系统演示](https://iqujtpeg.chatmoney.cn/admin/) | 👤 admin | 🔑 mddaiSaas |
+| ☁️ SaaS平台   | [SaaS端系统演示](https://dm-saas-demo.chatmoney.cn/platform/) | 👤 admin | 🔑 mddaiSaas |
 
-::: info 客户案列
-- [系统官网](http://urlnet.cn)
-- [客户案列](https://1.jiweiyun.com/)
-- 系统演示版本：
-- 前端演示：[前端客户案列](https://1.jiweiyun.com/)
-- 后端演示：[后端系统后台](https://1.jiweiyun.com/admin)
-- 账号：13800000000
-- 密码：13800000000
-:::
-::: info OEM站点管理端
-- 客户OEM后台：[OEM演示站点](https://aisaas.11949.cn/admin/)
-- 账号：yanjie
-- 密码：123456789
+::: info 📂 客户案例
+- 🌐 [系统官网](http://urlnet.cn)
+- 🚀 系统演示版本：
+- 🛠️ 后端演示：[后端系统后台](https://1.jiweiyun.com/admin)
+- 👤 账号：13800000000
+- 🔐 密码：13800000000
 :::
 
-> 注：因是演示站未做授权版本比较旧，功能不是很全，购买是给到最新的版本和功能
+::: info 🏭 OEM管理端
+- 🖥️ 客户OEM后台：[OEM演示站点](https://aisaas.11949.cn/admin/)
+- 👤 账号：yanjie
+- 🔐 密码：123456789
+:::
+
+> ⚠️ 注：演示站为未授权版本，功能可能不全，购买后将获得最新完整版本
 
 ::: danger 应用场景与解决方案 🎯
 #### 主要解决问题
