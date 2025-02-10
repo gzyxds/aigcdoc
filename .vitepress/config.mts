@@ -352,31 +352,31 @@ import { defineConfig } from "vitepress";
           "collapsible": true,
           "items": [
             {
-              "text": "宝塔部署",
+              "text": "🚀 宝塔部署",
               "link": "/chat/deployment/bt"
             },
             {
-              "text": "Docker部署",
+              "text": "🚢 Docker部署",
               "link": "/chat/deployment/docker"
             },
             {
-              "text": "通用部署",
+              "text": "🌈 通用部署",
               "link": "/chat/deployment/general"
             },
             {
-              "text": "更新日志",
+              "text": "🔄 更新日志",
               "link": "/chat/deployment/update"
             },
             {
-              "text": "聊天绘画PDF",
+              "text": "📎 聊天绘画PDF",
               "link": "https://rwm01l8tn3x.feishu.cn/slides/DJrEs6r3KlzjpCdo53UcXu8mnYb?from=from_copylink"
             },
             // {
-            //   "text": "运营文档",
+            //   "text": "🚧 运营文档",
             //   "link": "/chat/deployment/Operations"
             // },
             {
-              "text": "系统演示",
+              "text": "🎥 系统演示",
               "link": "/chat/deployment/demo"
             }
           ]
@@ -387,23 +387,23 @@ import { defineConfig } from "vitepress";
           "collapsible": true,
           "items": [
             {
-              "text": "微信公众号",
+              "text": "🚀 微信公众号",
               "link": "/chat/front/oa"
             },
             {
-              "text": "后台上传微信小程序 ②",
+              "text": "🚧 后台上传微信小程序 ②",
               "link": "/chat/front/fastmnp"
             },
             {
-              "text": "编译上传微信小程序 ①",
+              "text": "🚧 编译上传微信小程序 ①",
               "link": "/chat/front/mnp"
             },
             {
-              "text": "安卓APP",
+              "text": "🚀 安卓APP",
               "link": "/chat/front/android"
             },
             {
-              "text": "苹果APP",
+              "text": "🚀 苹果APP",
               "link": "/chat/front/ios"
             }
           ]
@@ -414,7 +414,7 @@ import { defineConfig } from "vitepress";
           "collapsible": true,
           "items": [
             {
-              "text": "SD绘图部署",
+              "text": "🚀 SD绘图部署",
               "link": "/chat/third/sd"
             }
           ]
@@ -425,31 +425,31 @@ import { defineConfig } from "vitepress";
           "collapsible": true,
           "items": [
             {
-              "text": "微信开放平台",
+              "text": "🚀 微信开放平台",
               "link": "/chat/config/open"
             },
             {
-              "text": "微信支付",
+              "text": "💰 微信支付",
               "link": "/chat/config/wechatpay"
             },
             {
-              "text": "支付宝支付",
+              "text": "💰 支付宝支付",
               "link": "/chat/config/alipay"
             },
             {
-              "text": "短信配置",
+              "text": "📱 短信配置",
               "link": "/chat/config/sms"
             },
             {
-              "text": "对象存储",
+              "text": "🚀 对象存储",
               "link": "/chat/config/oss"
             },
             {
-              "text": "MJ配置",
+              "text": "🚀 MJ配置",
               "link": "/chat/config/MJ"
             },
             {
-              "text": "自定义API域名代理",
+              "text": "🚀 自定义API域名代理",
               "link": "/chat/config/proxy"
             }
           ]
@@ -460,19 +460,19 @@ import { defineConfig } from "vitepress";
           "collapsible": true,
           "items": [
             {
-              "text": "升级更新",
+              "text": "🔄 升级更新",
               "link": "/chat/fqa/version"
             },
             {
-              "text": "报错排查",
+              "text": "🚨 报错排查",
               "link": "/chat/fqa/error"
             },
             {
-              "text": "500错误",
+              "text": "🚧 500错误",
               "link": "/chat/fqa/debug"
             },
             {
-              "text": "GPT使用指南",
+              "text": "🚀 GPT使用指南",
               "link": "/chat/fqa/gpt"
             }
           ]
@@ -483,15 +483,15 @@ import { defineConfig } from "vitepress";
           "collapsible": true,
           "items": [
             {
-              "text": "基本介绍",
+              "text": "🚀 基本介绍",
               "link": "/chat/develop/base"
             },
             {
-              "text": " 前端开发",
+              "text": "🖥️ 前端开发",
               "link": "/chat/develop/web"
             },
             {
-              "text": "数据库结构",
+              "text": "🚧 数据库结构",
               "link": "/chat/develop/database"
             }
           ]
@@ -505,15 +505,15 @@ import { defineConfig } from "vitepress";
           "collapsible": true,
           "items": [
             {
-              "text": "宝塔部署 ",
+              "text": "🚀 宝塔部署 ",
               "link": "/Paper/deployment/bt"
             },
             {
-              "text": "通用部署 ",
+              "text": "🚧 通用部署 ",
               "link": "/Paper/deployment/general"
             },
             {
-              "text": "版本演示",
+              "text": "🔄 版本演示",
               "link": "/Paper/deployment/demo"
             }
           ]
@@ -524,7 +524,7 @@ import { defineConfig } from "vitepress";
           "collapsible": true,
           "items": [
             {
-              "text": "微信公众号",
+              "text": "📱 微信公众号",
               "link": "/Paper/front/oa"
             }
           ]
@@ -535,27 +535,27 @@ import { defineConfig } from "vitepress";
           "collapsible": true,
           "items": [
             {
-              "text": "微信开放平台",
+              "text": "🚀 微信开放平台",
               "link": "/Paper/config/open"
             },
             {
-              "text": "微信支付",
+              "text": "💰 微信支付",
               "link": "/Paper/config/wechatpay"
             },
             {
-              "text": "支付宝支付",
+              "text": "💰 支付宝支付",
               "link": "/Paper/config/alipay"
             },
             {
-              "text": "短信配置",
+              "text": "📱 短信配置",
               "link": "/Paper/config/sms"
             },
             {
-              "text": "对象存储",
+              "text": "🚧 对象存储",
               "link": "/Paper/config/oss"
             },
             {
-              "text": "API域名代理",
+              "text": "🔄 API域名代理",
               "link": "/Paper/config/proxy"
             }
           ]
@@ -566,19 +566,19 @@ import { defineConfig } from "vitepress";
           "collapsible": true,
           "items": [
             {
-              "text": "升级更新",
+              "text": "🔄 升级更新",
               "link": "/Paper/fqa/version"
             },
             {
-              "text": "报错排查",
+              "text": "🚨 报错排查",
               "link": "/Paper/fqa/error"
             },
             {
-              "text": "500错误",
+              "text": "🚧 500错误",
               "link": "/Paper/fqa/debug"
             },
             {
-              "text": "GPT使用指南",
+              "text": "🚀 GPT使用指南",
               "link": "/Paper/fqa/gpt"
             }
           ]
@@ -589,11 +589,11 @@ import { defineConfig } from "vitepress";
           "collapsible": true,
           "items": [
             {
-              "text": "基本介绍",
+              "text": "🚀 基本介绍",
               "link": "/Paper/develop/base"
             },
             {
-              "text": "前端开发",
+              "text": "🌐 前端开发",
               "link": "/Paper/develop/web"
             }
           ]
