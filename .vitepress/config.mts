@@ -984,7 +984,7 @@ import { defineConfig } from "vitepress";
   "cacheDir": "./.vitepress/cache",
   "titleTemplate": "AI系统源码|AI数字人系统|聊天绘画系统|ai平台源码|ai创作系统源码|ai官网源码",
   "lang": "en-US",
-  "base": "/doc", // 站点的基础路径，默认值是 /
+  "base": "/", // 站点的基础路径，默认值是 /
   "outDir": "./.vitepress/dist",
   "cleanUrls": false,
   "rewrites": {
