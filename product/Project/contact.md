@@ -9,7 +9,7 @@
 🖥️ 官网 https://www.urlnet.cn/
 :::
 
-::: info ChatMoney-AIGC 商业授权
+::: info 艺创AI 商业授权
 商业授权可享受官方更多技术支持拒绝盗版，尊重知识产权，从你我做起
 
 :::
@@ -19,6 +19,6 @@
 
 ## 加入我们
 
-- [ChatMoney-AIGC系统](https://www.cloudcvm.com/) 还在持续更新中，本项目欢迎您的参与，共同维护。
+- [艺创AI系统](https://www.cloudcvm.com/) 还在持续更新中，本项目欢迎您的参与，共同维护。
 - 如果你想加入我们，可以多提供一些好的建议或者提交 pr，我们会根据你的活跃度邀请你加入。
 

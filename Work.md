@@ -23,7 +23,7 @@ hero:
    
       
   image:
-    src: \images\home\logo.png
+    src: /images/home/logo.png
     alt: ''
     width: ''
     height: ''

@@ -28,7 +28,7 @@ hero:
       class: 'contact-btn'
 
   image:
-    src: \images\home\human.png
+    src: /images/home/human.png
     alt: 'CHATAIGC'
     width: ''
     height: ''

@@ -21,7 +21,7 @@ hero:
       link: /product/Project/contact
       
   image:
-    src: \images\home\paper.svg
+    src: /images/home/paper.svg
     alt: ''
     width: ''
     height: ''

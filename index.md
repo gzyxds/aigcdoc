@@ -28,7 +28,7 @@ hero:
    
 
   image:
-    src: \images\home\logo.svg
+    src: /images/home/logo.svg
     alt: '艺创AI'
     width: ''
     height: ''

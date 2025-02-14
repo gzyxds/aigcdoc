@@ -21,7 +21,7 @@ hero:
       link: /product/Project/contact
 
   image:
-    src: \images\home\chat.svg
+    src: /images/home/chat.svg
     alt: ''
     width: ''
     height: ''
