@@ -289,8 +289,8 @@ import { defineConfig } from "vitepress";
               "link": "/human/index"
             },
             {
-              "text": "📊 PPT介绍",
-              "link": "https://rwm01l8tn3x.feishu.cn/file/OSQ3bgCa8oeVARx0L5mc3haCnpe?from=from_copylink"
+              "text": "📦 飞书文档",
+              "link": "https://rwm01l8tn3x.feishu.cn/docx/NzyOdZ9yFoAfjfxTGZwc9aMpntg?from=from_copylink"
             },
             {
               "text": "🛠️ 宝塔面板部署 ①",
@@ -984,7 +984,7 @@ import { defineConfig } from "vitepress";
   "cacheDir": "./.vitepress/cache",
   "titleTemplate": "AI系统源码|AI数字人系统|聊天绘画系统|ai平台源码|ai创作系统源码|ai官网源码",
   "lang": "en-US",
-  "base": "/", // 站点的基础路径，默认值是 /
+  "base": "/doc", // 站点的基础路径，默认值是 /
   "outDir": "./.vitepress/dist",
   "cleanUrls": false,
   "rewrites": {
