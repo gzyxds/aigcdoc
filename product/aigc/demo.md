@@ -17,7 +17,11 @@
 
 :::
 
+
+
+ 
 ## 🤖 AI数字人SaaS系统演示
+![小程序演示](/public/images/home/v.png) 
 
 ::: tip 🗣️ 系统介绍
 AI数字人SaaS系统「PHP源码版」
@@ -51,6 +55,7 @@ AI数字人SaaS系统「PHP源码版」
 ---
 
 ## 🧠 全能AI知识库系统演示
+   ![小程序演示](/public/images/home/work.png) 
 
 ::: tip 🔍 系统介绍
 艺创AI-全能AI企业知识库系统「PHP源码版」
@@ -78,7 +83,7 @@ AI数字人SaaS系统「PHP源码版」
 
 
 ## 🎨 聊天绘画系统演示
-
+ ![小程序演示](/public/images/home/ChatPainting.png) 
 ::: danger 🎨 系统介绍
 艺创AI-聊天绘画系统「PHP源码版」
 :::
@@ -101,15 +106,24 @@ AI数字人SaaS系统「PHP源码版」
  
 
 ## 📚 ChatPaper-论文写作系统演示
-
+![小程序演示](/public/images/home/Thesis.png) 
 ::: tip 📖 系统介绍
 ChatPaper-论文写作系统「PHP源码版」
 :::
 
 | 🖥️ 演示平台     | 🔗 演示地址                                                                            | 🔑 账号         | 🔐 密码         |
 | -------------- | ------------------------------------------------------------------------------------- | -------------- | -------------- |
-| 💻 PC端前台   | [系统PC演示前台](https://cp.demo.yixiangonline.com/)               | 📝 自行后台添加 | 🔐 自行后台添加 |
+| 💻 PC端前台   | [系统PC演示前台](https://cp.demo.yixiangonline.com/generate/1)               | 📝 自行后台添加 | 🔐 自行后台添加 |
 | 📱 移动端H5   | [系统移动端H5演示](https://cp.demo.yixiangonline.com/mobile/) | 📝 自行后台添加 | 🔐 自行后台添加 |
 | 🛠️ 管理后台   | [系统体验后台](https://cp.demo.yixiangonline.com/admin/)   | 👤 admin        | 🔑 admin110     |
+
+
+::: info 📂 客户案例
+- 🌐 [尼卡写作](https://ai068.com/)
+- 🌐 [aicz0101.top](https://aicz0101.top)
+- 📱 [APP演示](https://www.123865.com/s/AIVRVv-eEIJA)
+- ......
+:::
+
 
 > ⚠️ 注：演示站为未授权版本，功能可能不全，购买后将获得最新完整版本
