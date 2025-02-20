@@ -77,7 +77,7 @@ import { defineConfig } from "vitepress";
           },
           {
             "text": "🤖AI数字人",
-            "link": "https://www.urlnet.cn/human"
+            "link": "https://v.cnai.art"
           },
           {
             "text": "📱APP下载", 
