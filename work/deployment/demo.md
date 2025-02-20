@@ -1,10 +1,10 @@
-# ChatMoney-AIGC企业全能AIGC知识库系统
+# 艺创AI企业全能AIGC知识库系统
 
-🚀🤖 ChatMoney：超级AI平台，赋能AI创业，为个人增效，为企业降本！ 🚀🤖
+🚀🤖 艺创AI：超级AI平台，赋能AI创业，为个人增效，为企业降本！ 🚀🤖
 
 📚 **产品定位介绍** 📚
 
-🌟 **ChatMoney-AIGC**：国内领先的超级AI平台 🚀
+🌟 **艺创AI-AIGC**：国内领先的超级AI平台 🚀
 
 - 🛠️ **私有化部署**：支持企业级私有化部署
 - 🔧 **二次开发**：提供高度定制化个性化AI机器人解决方案
@@ -53,7 +53,7 @@
 - 📦 二次开发可去除版权，易扩展开发
 - 👩‍💻 1对1售后指导，运营部署文档！
 
-::: info 🌈ChatMoneyAIGC知识库🌈
+::: info 🌈艺创AIAIGC知识库🌈
 
 * 📜 机器人角色设定、知识库训练、发布/分享机器人！
 * 🤖 AI智能对话，无限场景AI创作！*
@@ -86,17 +86,17 @@
 我们每个AI系统的版本功能都不一样，面向群体也是不一样的。
 请选择适合自己想运营的AI系统购买。
 
-## ChatMoney-AIGC-智能AI知识库系统「PHP源码版」
+## 艺创AI-AIGC-智能AI知识库系统「PHP源码版」
 
 
-::: info ChatMoney-AIGC-智能AI知识库系统「PHP源码版」
+::: info 艺创AI-AIGC-智能AI知识库系统「PHP源码版」
 基于前后端分离架构以及Vue3、uni-app、ThinkPHP6.x、PostgreSQL、pgvector技术栈开发，包含PC端、H5端。ChatWork支持问答式和文档式知识库，能够导入txt、doc、docx、pdf、md等多种格式文档。导入数据完成向量化训练后，用户提问即可进行向量化搜索，并且结合大语言模型进行AI回答，可以提升AI回答的专业性和实用性。知识库应用支持对外发布聊天网页窗口，iframe代码，js代码以及API接口，拥有强大的第三方对接能力。适用于企业智能客服、企业智能文档、专家顾问助理等多种企业级商用场景，具有较大的商业使用价值。
 :::
 
 ### 演示站点
 
 ::: danger 🌐 官方网站
-🖥️ [ChatMoneyAIGC 官网](https://www.urlnet.cn/)
+🖥️ [艺创AIAIGC 官网](https://www.urlnet.cn/)
 :::
 
 ::: tip 🔍 全能AI知识库系统 演示站点
@@ -105,9 +105,9 @@
 
 | 演示平台     | 演示地址                                                    | 账号     | 密码     |
 | -------------- | ------------------------------------------------------------- | ---------- | ---------- |
-| 💻 PC演示前台   | [PC系统演示](https://ai.chatmoney.cn/)             | 自行注册 | 自行注册 |
-| 📱 移动端H5演示 | [移动系统演示](https://ai.chatmoney.cn/mobile/) | 自行注册 | 自行注册 |
-| 🔑 体验后台     | [后台系统演示](https://ai-demo.chatmoney.cn/admin) | admin | 123456 |
+| 💻 PC演示前台   | [PC系统演示](https://ai.艺创AI.cn/)             | 自行注册 | 自行注册 |
+| 📱 移动端H5演示 | [移动系统演示](https://ai.艺创AI.cn/mobile/) | 自行注册 | 自行注册 |
+| 🔑 体验后台     | [后台系统演示](https://ai-demo.艺创AI.cn/admin) | admin | 123456 |
 
 ::: info 🏆 客户案例
 - 🌐 [www.cnai.art](http://www.cnai.art) - 艺创AI创作平台
