@@ -1,6 +1,7 @@
 import { defineConfig } from "vitepress";
 	export default defineConfig({
-  "title": "AIGC创作系统",
+  "title": "艺创AI",
+  "titleTemplate": ":title | 艺创AI",
   "description": "专注提供AI系统源代码解决方案的技术团队「超级全能AI变现系统」「AI聊天绘画系统」「AI论文写作系统」拥有PHP和Java两种语言版本，技术实力强，系统体验好支持私有部署，专业团队、售后无忧",
   "head": [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
@@ -308,6 +309,14 @@ import { defineConfig } from "vitepress";
                 {
                   "text": "💬 微信公众号",
                   "link": "/human/front/oa"
+                },
+                {
+                  "text": "🚀 微信小程序",
+                  "link": "/human/front/mnp"
+                },
+                {
+                  "text": "🚀 （一键上传）",
+                  "link": "/human/front/fastmnp"
                 }
               ]
             },
@@ -968,7 +977,7 @@ import { defineConfig } from "vitepress";
     "footer": {
       "copyright": "版权所有 © 2025 艺创AI · 让创作更简单 | 赣 ICP备2022147728号-1 | 🚀 专业AI解决方案提供商"
     },
-    "siteTitle": false,
+    "siteTitle": " 艺创AI ",  // 显示网站标题
     "sidebarMenuLabel": "菜单"
   },
   "markdown": {  
@@ -984,7 +993,7 @@ import { defineConfig } from "vitepress";
   "cacheDir": "./.vitepress/cache",
   "titleTemplate": "AI系统源码|AI数字人系统|聊天绘画系统|ai平台源码|ai创作系统源码|ai官网源码",
   "lang": "en-US",
-  "base": "/doc", // 站点的基础路径，默认值是 /
+  "base": "/", // 站点的基础路径，默认值是 /
   "outDir": "./.vitepress/dist",
   "cleanUrls": false,
   "rewrites": {
