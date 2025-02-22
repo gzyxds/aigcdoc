@@ -10,25 +10,6 @@ import { defineConfig } from "vitepress";
     ['meta', { name: 'msapplication-TileColor', content: '#3eaf7c' }]
   ],
   "themeConfig": {
-    "outlineTitle": "本页目录",
-    "docFooter": {
-      "prev": "上一页",
-      "next": "下一页"
-    },
-    "returnToTopLabel": "返回顶部",
-    "sidebarMenuLabel": "菜单",
-    "darkModeSwitchLabel": "主题",
-    "langMenuLabel": "切换语言",
-    "lastUpdatedText": "最后更新于",
-    "editLink": {
-      "text": "在 GitHub 上编辑此页"
-    },
-    "search": {
-      "placeholder": "搜索文档"
-    },
-    "toc": {
-      "label": "目录"
-    },
     "nav": [
       {
         "text": "🏚️首页",
@@ -136,7 +117,7 @@ import { defineConfig } from "vitepress";
     "sidebar": {
       "/work/": [
         {
-          "text": "📚 部署指南PHP",
+          "text": "📚 部署指南",
           "collapsed": false,
           "collapsible": true,
           "items": [
@@ -149,7 +130,7 @@ import { defineConfig } from "vitepress";
               "link": "https://rwm01l8tn3x.feishu.cn/file/BkclbxFSUohtf8xWYRuc5XB7n1g?from=from_copylink"
             },
             {
-              "text": "🎥 功能演示", 
+              "text": "🎥 功能演示",
               "link": "work/deployment/demo.md"
             },
             {
@@ -159,21 +140,6 @@ import { defineConfig } from "vitepress";
             {
               "text": "📋 更新日志",
               "link": "/work/deployment/update"
-            }
-          ]
-        },
-        {
-          "text": "☕ 部署指南Java",
-          "collapsed": false,
-          "collapsible": true,
-          "items": [
-            {
-              "text": "📖部署文档",
-              "link": "https://rwm01l8tn3x.feishu.cn/docx/QHsCduIzVoKxG7xcWEkct1oknyg?from=from_copylink"
-            },
-            {
-              "text": "📊运营文档",
-              "link": "https://rwm01l8tn3x.feishu.cn/docx/K8kBdCDG2ogcsUxX7yycelpJnyh?from=from_copylink"
             }
           ]
         },
@@ -389,89 +355,81 @@ import { defineConfig } from "vitepress";
 
       "/chat/": [
         {
-          "text": "🐳 聊天绘画部署",
+          "text": "⚡ 快速开始",
           "collapsed": false,
           "collapsible": true,
           "items": [
             {
-              "text": "🚀 宝塔部署",
-              "link": "/chat/deployment/bt"
-            },
-            {
-              "text": "🚢 Docker部署",
-              "link": "/chat/deployment/docker"
-            },
-            {
-              "text": "🌈 通用部署",
-              "link": "/chat/deployment/general"
-            },
-            {
-              "text": "🔄 更新日志",
-              "link": "/chat/deployment/update"
-            },
-            {
-              "text": "📎 聊天绘画PDF",
+              "text": "📚 系统文档",
               "link": "https://rwm01l8tn3x.feishu.cn/slides/DJrEs6r3KlzjpCdo53UcXu8mnYb?from=from_copylink"
             },
-            // {
-            //   "text": "🚧 运营文档",
-            //   "link": "/chat/deployment/Operations"
-            // },
             {
-              "text": "🎥 系统演示",
+              "text": "🎮 系统演示",
               "link": "/chat/deployment/demo"
+            },
+            {
+              "text": "📝 更新日志",
+              "link": "/chat/deployment/update"
             }
           ]
         },
         {
-          "text": "🐹 前端部署",
+          "text": "🚀 部署指南",
           "collapsed": false,
           "collapsible": true,
           "items": [
             {
-              "text": "🚀 微信公众号",
+              "text": "⚡ 宝塔部署",
+              "link": "/chat/deployment/bt"
+            },
+            {
+              "text": "🐳 Docker部署",
+              "link": "/chat/deployment/docker"
+            },
+            {
+              "text": "📦 通用部署",
+              "link": "/chat/deployment/general"
+            }
+          ]
+        },
+        {
+          "text": "📱 客户端",
+          "collapsed": false,
+          "collapsible": true,
+          "items": [
+            {
+              "text": "💬 微信公众号",
               "link": "/chat/front/oa"
             },
             {
-              "text": "🚧 后台上传微信小程序 ②",
+              "text": "📱 小程序配置",
               "link": "/chat/front/fastmnp"
             },
             {
-              "text": "🚧 编译上传微信小程序 ①",
+              "text": "🔄 小程序部署",
               "link": "/chat/front/mnp"
             },
             {
-              "text": "🚀 安卓APP",
+              "text": "🤖 安卓APP",
               "link": "/chat/front/android"
             },
             {
-              "text": "🚀 苹果APP",
+              "text": "🍎 苹果APP",
               "link": "/chat/front/ios"
             }
           ]
         },
         {
-          "text": "🎉 第三方部署",
+          "text": "⚙️ 系统配置",
           "collapsed": false,
           "collapsible": true,
           "items": [
             {
-              "text": "🚀 SD绘图部署",
-              "link": "/chat/third/sd"
-            }
-          ]
-        },
-        {
-          "text": "🐰 其他配置",
-          "collapsed": false,
-          "collapsible": true,
-          "items": [
-            {
-              "text": "🚀 微信开放平台",
+              "text": "🔑 微信开放平台",
               "link": "/chat/config/open"
             },
             {
-              "text": "💰 微信支付",
+              "text": "💳 微信支付",
               "link": "/chat/config/wechatpay"
             },
             {
@@ -479,25 +437,36 @@ import { defineConfig } from "vitepress";
               "link": "/chat/config/alipay"
             },
             {
-              "text": "📱 短信配置",
+              "text": "📲 短信配置",
               "link": "/chat/config/sms"
             },
             {
-              "text": "🚀 对象存储",
+              "text": "☁️ 对象存储",
               "link": "/chat/config/oss"
             },
             {
-              "text": "🚀 MJ配置",
+              "text": "🎨 MJ配置",
               "link": "/chat/config/MJ"
             },
             {
-              "text": "🚀 自定义API域名代理",
+              "text": "🌐 API域名代理",
               "link": "/chat/config/proxy"
             }
           ]
         },
         {
-          "text": "🐞 常见问题",
+          "text": "🎨 扩展功能",
+          "collapsed": false,
+          "collapsible": true,
+          "items": [
+            {
+              "text": "🎨 SD绘图部署",
+              "link": "/chat/third/sd"
+            }
+          ]
+        },
+        {
+          "text": "❓ 常见问题",
           "collapsed": false,
           "collapsible": true,
           "items": [
@@ -506,34 +475,34 @@ import { defineConfig } from "vitepress";
               "link": "/chat/fqa/version"
             },
             {
-              "text": "🚨 报错排查",
+              "text": "🚨 错误排查",
               "link": "/chat/fqa/error"
             },
             {
-              "text": "🚧 500错误",
+              "text": "🔧 500错误",
               "link": "/chat/fqa/debug"
             },
             {
-              "text": "🚀 GPT使用指南",
+              "text": "🤖 GPT指南",
               "link": "/chat/fqa/gpt"
             }
           ]
         },
         {
-          "text": "🦧 二次开发",
+          "text": "🛠️ 开发指南",
           "collapsed": false,
           "collapsible": true,
           "items": [
             {
-              "text": "🚀 基本介绍",
+              "text": "📖 基本介绍",
               "link": "/chat/develop/base"
             },
             {
-              "text": "🖥️ 前端开发",
+              "text": "💻 前端开发",
               "link": "/chat/develop/web"
             },
             {
-              "text": "🚧 数据库结构",
+              "text": "📊 数据库结构",
               "link": "/chat/develop/database"
             }
           ]
@@ -995,7 +964,10 @@ import { defineConfig } from "vitepress";
     "returnToTopLabel": "返回顶部",
     "lastUpdatedText": "最近更新于",
     "externalLinkIcon": true,
-    "outline": {},
+    "outline": {
+      "label": "本页目录",
+      "level": [2, 3]
+    },
     "darkModeSwitchLabel": "主题",
     "lightModeSwitchTitle": "切换到浅色模式",
     "darkModeSwitchTitle": "切换到深色模式",
@@ -1025,8 +997,8 @@ import { defineConfig } from "vitepress";
   "locales": {},
   "cacheDir": "./.vitepress/cache",
   "titleTemplate": "AI系统源码|AI数字人系统|聊天绘画系统|ai平台源码|ai创作系统源码|ai官网源码",
-  "lang": "en-US",
-  "base": "/doc", // 站点的基础路径，默认值是 /
+  "lang": "zh-CN",
+  "base": "/", // 站点的基础路径，默认值是 /
   "outDir": "./.vitepress/dist",
   "cleanUrls": false,
   "rewrites": {
