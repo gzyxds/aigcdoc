@@ -181,14 +181,14 @@ custom: {}
 
   <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); min-width: 250px; max-width: 280px; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; flex: 1 1 250px; margin-bottom: 20px;">
     <img src="/public/images/qq.png" alt="商务QQ" style="width: 100%; max-width: 200px; border-radius: 10px; margin-bottom: 15px;">
-    <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">商务QQ</p>
-    <p style="margin: 5px 0 0; font-size: 14px; color: #666;">商务合作请联系</p>
+    <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">艺创AI</p>
+    <p style="margin: 5px 0 0; font-size: 14px; color: #666;">扫码关注艺创AIGC</p>
   </div>
 
   <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); min-width: 250px; max-width: 280px; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; flex: 1 1 250px; margin-bottom: 20px;">
-    <img src="/public/images/cloud.png" alt="交流群" style="width: 100%; max-width: 200px; border-radius: 10px; margin-bottom: 15px;">
-    <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">交流群</p>
-    <p style="margin: 5px 0 0; font-size: 14px; color: #666;">加入群聊一起交流</p>
+    <img src="/public/images/cloud.png" alt="云服务" style="width: 100%; max-width: 200px; border-radius: 10px; margin-bottom: 15px;">
+    <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">优刻云计算</p>
+    <p style="margin: 5px 0 0; font-size: 14px; color: #666;">扫码关注云计算</p>
   </div>
 </div>
 
