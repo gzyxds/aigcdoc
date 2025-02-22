@@ -10,6 +10,25 @@ import { defineConfig } from "vitepress";
     ['meta', { name: 'msapplication-TileColor', content: '#3eaf7c' }]
   ],
   "themeConfig": {
+    "outlineTitle": "本页目录",
+    "docFooter": {
+      "prev": "上一页",
+      "next": "下一页"
+    },
+    "returnToTopLabel": "返回顶部",
+    "sidebarMenuLabel": "菜单",
+    "darkModeSwitchLabel": "主题",
+    "langMenuLabel": "切换语言",
+    "lastUpdatedText": "最后更新于",
+    "editLink": {
+      "text": "在 GitHub 上编辑此页"
+    },
+    "search": {
+      "placeholder": "搜索文档"
+    },
+    "toc": {
+      "label": "目录"
+    },
     "nav": [
       {
         "text": "🏚️首页",
@@ -117,7 +136,7 @@ import { defineConfig } from "vitepress";
     "sidebar": {
       "/work/": [
         {
-          "text": "📚 部署指南",
+          "text": "📚 部署指南PHP",
           "collapsed": false,
           "collapsible": true,
           "items": [
@@ -130,7 +149,7 @@ import { defineConfig } from "vitepress";
               "link": "https://rwm01l8tn3x.feishu.cn/file/BkclbxFSUohtf8xWYRuc5XB7n1g?from=from_copylink"
             },
             {
-              "text": "🎥 功能演示",
+              "text": "🎥 功能演示", 
               "link": "work/deployment/demo.md"
             },
             {
@@ -140,6 +159,21 @@ import { defineConfig } from "vitepress";
             {
               "text": "📋 更新日志",
               "link": "/work/deployment/update"
+            }
+          ]
+        },
+        {
+          "text": "☕ 部署指南Java",
+          "collapsed": false,
+          "collapsible": true,
+          "items": [
+            {
+              "text": "📖部署文档",
+              "link": "https://rwm01l8tn3x.feishu.cn/docx/QHsCduIzVoKxG7xcWEkct1oknyg?from=from_copylink"
+            },
+            {
+              "text": "📊运营文档",
+              "link": "https://rwm01l8tn3x.feishu.cn/docx/K8kBdCDG2ogcsUxX7yycelpJnyh?from=from_copylink"
             }
           ]
         },
@@ -607,7 +641,7 @@ import { defineConfig } from "vitepress";
           ]
         }
       ],
-      "/Project/": [  
+      "/Project/": [
         {
           "text": "Contact",
           "collapsed": false,
@@ -748,7 +782,7 @@ import { defineConfig } from "vitepress";
         },
         
         {
-          "text": "🎉艺创AI系统",
+          "text": "🎉AIGC系统",
           "collapsed": false,
           "collapsible": true,
           "items": [
@@ -862,21 +896,93 @@ import { defineConfig } from "vitepress";
     //     "dir": "docs"
       // }
     "chunkSizeWarningLimit": 1500,
-    "search": {
-      "provider": "local",
-      "options": {
-        "translations": {
-          "button": {
-            "buttonText": "搜索文档",
-            "buttonAriaLabel": "搜索文档"
+    "search": {   // 搜索
+      "provider": "local",  // 本地搜索
+      "options": {   // 配置项
+        "appId": "", 
+        "apiKey": "",
+        "indexName": "搜索", // 索引名称
+        "locales": {   // 配置多语言
+          "zh": {
+            "placeholder": "搜索文档",
+            "translations": {  // 搜索框提示语
+              "button": {  // 搜索按钮
+                "buttonText": "搜索文档",
+                "buttonAriaLabel": "搜索文档"
+              },
+              "modal": {
+                "searchBox": {
+                  "resetButtonTitle": "清除查询条件",
+                  "resetButtonAriaLabel": "清除查询条件",
+                  "cancelButtonText": "取消",
+                  "cancelButtonAriaLabel": "取消"
+                },
+                "startScreen": {
+                  "recentSearchesTitle": "搜索历史",
+                  "noRecentSearchesText": "没有搜索历史",
+                  "saveRecentSearchButtonTitle": "保存至搜索历史",
+                  "removeRecentSearchButtonTitle": "从搜索历史中移除",
+                  "favoriteSearchesTitle": "收藏",
+                  "removeFavoriteSearchButtonTitle": "从收藏中移除"
+                },
+                "errorScreen": {
+                  "titleText": "无法获取结果",
+                  "helpText": "你可能需要检查你的网络连接"
+                },
+                "footer": {
+                  "selectText": "选择",
+                  "navigateText": "切换",
+                  "closeText": "关闭",
+                  "searchByText": "搜索提供者"
+                },
+                "noResultsScreen": {
+                  "noResultsText": "无法找到相关结果",
+                  "suggestedQueryText": "你可以尝试查询",
+                  "reportMissingResultsText": "你认为该查询应该有结果？",
+                  "reportMissingResultsLinkText": "点击反馈"
+                }
+              }
+            }
           },
-          "modal": {
-            "noResultsText": "无法找到相关结果",
-            "resetButtonTitle": "清除查询条件",
-            "footer": {
-              "selectText": "选择",
-              "navigateText": "切换",
-              "closeText": "关闭"
+          "en": {
+            "placeholder": "搜索",
+            "translations": {
+              "button": {
+                "buttonText": "搜索",
+                "buttonAriaLabel": "搜索"
+              },
+              "modal": {
+                "searchBox": {
+                  "resetButtonTitle": "Clear query",
+                  "resetButtonAriaLabel": "Clear query",
+                  "cancelButtonText": "Cancel",
+                  "cancelButtonAriaLabel": "Cancel"
+                },
+                "startScreen": {
+                  "recentSearchesTitle": "Recent searches",
+                  "noRecentSearchesText": "No recent searches",
+                  "saveRecentSearchButtonTitle": "Save search",
+                  "removeRecentSearchButtonTitle": "Remove search",
+                  "favoriteSearchesTitle": "Favorites",
+                  "removeFavoriteSearchButtonTitle": "Remove from favorites"
+                },
+                "errorScreen": {
+                  "titleText": "Unable to fetch results",
+                  "helpText": "You may want to check your network connection"
+                },
+                "footer": {
+                  "selectText": "select",
+                  "navigateText": "navigate",
+                  "closeText": "close",
+                  "searchByText": "Search by"
+                },
+                "noResultsScreen": {
+                  "noResultsText": "No results for",
+                  "suggestedQueryText": "You can try searching for",
+                  "reportMissingResultsText": "You think it should have results?",
+                  "reportMissingResultsLinkText": "Click here to report it"  
+                }
+              }
             }
           }
         }
@@ -901,11 +1007,6 @@ import { defineConfig } from "vitepress";
       "prev": "上一页",
       "next": "下一页"
     },
-    "outlineTitle": "本页目录",
-    "darkModeSwitchLabel": "外观",
-    "sidebarMenuLabel": "菜单",
-    "returnToTopLabel": "返回顶部",
-    "langMenuLabel": "切换语言",
     "footer": {
       "copyright": "版权所有 © 2025 艺创AI · 让创作更简单 | 赣 ICP备2022147728号-1 | 🚀 专业AI解决方案提供商"
     },
@@ -924,8 +1025,8 @@ import { defineConfig } from "vitepress";
   "locales": {},
   "cacheDir": "./.vitepress/cache",
   "titleTemplate": "AI系统源码|AI数字人系统|聊天绘画系统|ai平台源码|ai创作系统源码|ai官网源码",
-  "lang": "zh-CN",
-  "base": "/", // 站点的基础路径，默认值是 /
+  "lang": "en-US",
+  "base": "/doc", // 站点的基础路径，默认值是 /
   "outDir": "./.vitepress/dist",
   "cleanUrls": false,
   "rewrites": {

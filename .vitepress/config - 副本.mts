@@ -10,6 +10,25 @@ import { defineConfig } from "vitepress";
     ['meta', { name: 'msapplication-TileColor', content: '#3eaf7c' }]
   ],
   "themeConfig": {
+    "outlineTitle": "本页目录",
+    "docFooter": {
+      "prev": "上一页",
+      "next": "下一页"
+    },
+    "returnToTopLabel": "返回顶部",
+    "sidebarMenuLabel": "菜单",
+    "darkModeSwitchLabel": "主题",
+    "langMenuLabel": "切换语言",
+    "lastUpdatedText": "最后更新于",
+    "editLink": {
+      "text": "在 GitHub 上编辑此页"
+    },
+    "search": {
+      "placeholder": "搜索文档"
+    },
+    "toc": {
+      "label": "目录"
+    },
     "nav": [
       {
         "text": "🏚️首页",
@@ -117,61 +136,49 @@ import { defineConfig } from "vitepress";
     "sidebar": {
       "/work/": [
         {
-          "text": "🐳 知识库部署PHP",
+          "text": "📚 部署指南PHP",
           "collapsed": false,
           "collapsible": true,
           "items": [
             {
-              "text": "📄 部署文档",
+              "text": "🐳 Docker部署",
               "link": "/work/deployment/btdocke"
             },
             {
-              "text": "🎥 版本演示",
-              "link": "work/deployment/demo.md"
-            },
-            {
-              "text": "📚 知识库PDF",
+              "text": "📖 知识库文档",
               "link": "https://rwm01l8tn3x.feishu.cn/file/BkclbxFSUohtf8xWYRuc5XB7n1g?from=from_copylink"
             },
             {
-              "text": "📊 运营文档",
+              "text": "🎥 功能演示", 
+              "link": "work/deployment/demo.md"
+            },
+            {
+              "text": "📊 运营指南",
               "link": "/work/fqa/operation"
             },
             {
-              "text": "📜 更新日志",
+              "text": "📋 更新日志",
               "link": "/work/deployment/update"
             }
           ]
         },
         {
-          "text": "🎉 第三方部署",
+          "text": "☕ 部署指南Java",
           "collapsed": false,
           "collapsible": true,
           "items": [
             {
-              "text": "🤖 ChatGLM本地模型部署",
-              "link": "/work/third/chatglm"
+              "text": "📖部署文档",
+              "link": "https://rwm01l8tn3x.feishu.cn/docx/QHsCduIzVoKxG7xcWEkct1oknyg?from=from_copylink"
             },
             {
-              "text": "🧮 M3E向量模型部署",
-              "link": "/work/third/m3e"
-            },
-            {
-              "text": "💬 接入个人/企业微信",
-              "link": "/work/third/wechat"
-            },
-            {
-              "text": "🎨 SD绘图部署",
-              "link": "/work/third/sd"
-            },
-            {
-              "text": "💻 LMstudio（本地大模型）",
-              "link": "/work/third/LMstudio"
+              "text": "📊运营文档",
+              "link": "https://rwm01l8tn3x.feishu.cn/docx/K8kBdCDG2ogcsUxX7yycelpJnyh?from=from_copylink"
             }
           ]
         },
         {
-          "text": "🐹 前端部署",
+          "text": "🔧 功能配置",
           "collapsed": false,
           "collapsible": true,
           "items": [
@@ -180,34 +187,37 @@ import { defineConfig } from "vitepress";
               "link": "/work/front/oa"
             },
             {
-              "text": "📲 编译上传微信小程序 ①",
-              "link": "/work/front/mnp"
+              "text": "💬 微信小程序",
+              "items": [
+                {
+                  "text": "📲 手动编译上传",
+                  "link": "/work/front/mnp"
+                },
+                {
+                  "text": "⚡ 后台快速上传",
+                  "link": "/work/front/fastmnp"
+                }
+              ]
             },
             {
-              "text": "⚡ 后台上传微信小程序 ②",
-              "link": "/work/front/fastmnp"
-            }
-          ]
-        },
-        {
-          "text": "🐰 其他配置",
-          "collapsed": false,
-          "collapsible": true,
-          "items": [
+              "text": "💰 支付配置",
+              "items": [
+                {
+                  "text": "💳 微信支付",
+                  "link": "/work/other/wechatpay"
+                },
+                {
+                  "text": "💰 支付宝支付",
+                  "link": "/work/other/alipay"
+                }
+              ]
+            },
             {
-              "text": "🔓 微信开放平台（微信帐号统一）",
+              "text": "🔓 微信开放平台",
               "link": "/work/other/open"
             },
             {
-              "text": "💳 微信支付",
-              "link": "/work/other/wechatpay"
-            },
-            {
-              "text": "💰 支付宝支付",
-              "link": "/work/other/alipay"
-            },
-            {
-              "text": "📨 短信配置",
+              "text": "📨 短信服务",
               "link": "/work/other/sms"
             },
             {
@@ -215,49 +225,72 @@ import { defineConfig } from "vitepress";
               "link": "/work/other/oss"
             },
             {
-              "text": "🌐 自定义API域名代理",
+              "text": "🌐 API域名代理",
               "link": "/work/other/proxy"
             },
             {
-              "text": "🎨 Dalle绘画配置",
+              "text": "🎨 Dalle绘图",
               "link": "/work/other/dalle"
             }
           ]
         },
         {
-          "text": "🐞 常见问题",
+          "text": "🤖 AI模型部署",
           "collapsed": false,
           "collapsible": true,
           "items": [
             {
-              "text": "🆙 升级更新",
+              "text": "🧠 ChatGLM部署",
+              "link": "/work/third/chatglm"
+            },
+            {
+              "text": "🎨 SD绘图部署",
+              "link": "/work/third/sd"
+            },
+            {
+              "text": "🧮 M3E向量模型",
+              "link": "/work/third/m3e"
+            },
+            {
+              "text": "💻 LMstudio本地模型",
+              "link": "/work/third/LMstudio"
+            }
+          ]
+        },
+        {
+          "text": "🔍 问题排查",
+          "collapsed": false,
+          "collapsible": true,
+          "items": [
+            {
+              "text": "🆙 版本升级",
               "link": "/work/fqa/version"
             },
             {
-              "text": "❌ 报错排查",
+              "text": "❌ 错误排查",
               "link": "/work/fqa/error"
             },
             {
-              "text": "500 错误",
+              "text": "🚫 500错误",
               "link": "/work/fqa/debug"
             },
             {
-              "text": "🤖 GPT使用指南",
+              "text": "🤖 GPT指南",
               "link": "/work/fqa/gpt"
             }
           ]
         },
         {
-          "text": "🦧 二次开发",
+          "text": "💻 开发指南",
           "collapsed": false,
           "collapsible": true,
           "items": [
             {
-              "text": "📝 基本介绍",
+              "text": "📝 基础说明",
               "link": "/work/develop/base"
             },
             {
-              "text": "💻 前端开发",
+              "text": "🌐 前端开发",
               "link": "/work/develop/web"
             },
             {
