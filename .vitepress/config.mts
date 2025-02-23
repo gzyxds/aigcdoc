@@ -10,25 +10,11 @@ import { defineConfig } from "vitepress";
     ['meta', { name: 'msapplication-TileColor', content: '#3eaf7c' }]
   ],
   "themeConfig": {
-    "outlineTitle": "本页目录",
     "docFooter": {
       "prev": "上一页",
       "next": "下一页"
     },
-    "returnToTopLabel": "返回顶部",
-    "sidebarMenuLabel": "菜单",
-    "darkModeSwitchLabel": "主题",
-    "langMenuLabel": "切换语言",
-    "lastUpdatedText": "最后更新于",
-    "editLink": {
-      "text": "在 GitHub 上编辑此页"
-    },
-    "search": {
-      "placeholder": "搜索文档"
-    },
-    "toc": {
-      "label": "目录"
-    },
+    "outlineTitle": "页面导航",
     "nav": [
       {
         "text": "🏚️首页",
@@ -67,7 +53,7 @@ import { defineConfig } from "vitepress";
             "link": "/human"
           },
           {
-            "text": "🤖全能知识库",
+            "text": "🤖AI知识库",
             "link": "/work/deployment/demo"
           },
           {
@@ -136,7 +122,7 @@ import { defineConfig } from "vitepress";
     "sidebar": {
       "/work/": [
         {
-          "text": "📚 部署指南PHP",
+          "text": "📚 部署指南",
           "collapsed": false,
           "collapsible": true,
           "items": [
@@ -168,11 +154,11 @@ import { defineConfig } from "vitepress";
           "collapsible": true,
           "items": [
             {
-              "text": "📖部署文档",
+              "text": "📖 部署文档",
               "link": "https://rwm01l8tn3x.feishu.cn/docx/QHsCduIzVoKxG7xcWEkct1oknyg?from=from_copylink"
             },
             {
-              "text": "📊运营文档",
+              "text": "📊 运营文档",
               "link": "https://rwm01l8tn3x.feishu.cn/docx/K8kBdCDG2ogcsUxX7yycelpJnyh?from=from_copylink"
             }
           ]
@@ -750,39 +736,39 @@ import { defineConfig } from "vitepress";
       ],
       "/product/": [
         {
-          "text": "🖥产品中心",
+          "text": "🎯产品中心", 
           "collapsed": false,
           "collapsible": true,
           "items": [
             {
-              "text": "🖥️项目介绍",
+              "text": "📖系统介绍",
               "link": "/product/Project/Product"
             },
             {
-              "text": "🏅商业授权",
-              "link": "/product/Project/auth"
+              "text": "🎫商业授权",
+              "link": "/product/Project/auth" 
             },
             {
-              "text": "✨代理加盟",
+              "text": "🤝代理合作",
               "link": "/product/Project/agent"
             },
             {
-              "text": "💰授权购买",
+              "text": "💎购买授权",
               "link": "/product/Project/shop"
             },
             {
-              "text": "📢联系我们",
+              "text": "📞联系我们",
               "link": "/product/Project/contact"
             },
             {
-              "text": "🎉产品演示",
+              "text": "⭐在线演示",
               "link": "/product/Project/demo"
             }
           ]
         },
         
         {
-          "text": "🎉AIGC系统",
+          "text": "🎉艺创AI系统",
           "collapsed": false,
           "collapsible": true,
           "items": [
@@ -945,42 +931,42 @@ import { defineConfig } from "vitepress";
             }
           },
           "en": {
-            "placeholder": "搜索",
+            "placeholder": "搜索文档",
             "translations": {
               "button": {
-                "buttonText": "搜索",
-                "buttonAriaLabel": "搜索"
+                "buttonText": "搜索文档",
+                "buttonAriaLabel": "搜索文档"
               },
               "modal": {
                 "searchBox": {
-                  "resetButtonTitle": "Clear query",
-                  "resetButtonAriaLabel": "Clear query",
-                  "cancelButtonText": "Cancel",
-                  "cancelButtonAriaLabel": "Cancel"
+                  "resetButtonTitle": "清除查询条件",
+                  "resetButtonAriaLabel": "清除查询条件",
+                  "cancelButtonText": "取消",
+                  "cancelButtonAriaLabel": "取消"
                 },
                 "startScreen": {
-                  "recentSearchesTitle": "Recent searches",
-                  "noRecentSearchesText": "No recent searches",
-                  "saveRecentSearchButtonTitle": "Save search",
-                  "removeRecentSearchButtonTitle": "Remove search",
-                  "favoriteSearchesTitle": "Favorites",
-                  "removeFavoriteSearchButtonTitle": "Remove from favorites"
+                  "recentSearchesTitle": "搜索历史",
+                  "noRecentSearchesText": "没有搜索历史",
+                  "saveRecentSearchButtonTitle": "保存至搜索历史",
+                  "removeRecentSearchButtonTitle": "从搜索历史中移除",
+                  "favoriteSearchesTitle": "收藏",
+                  "removeFavoriteSearchButtonTitle": "从收藏中移除"
                 },
                 "errorScreen": {
-                  "titleText": "Unable to fetch results",
-                  "helpText": "You may want to check your network connection"
+                  "titleText": "无法获取结果",
+                  "helpText": "你可能需要检查你的网络连接"
                 },
                 "footer": {
-                  "selectText": "select",
-                  "navigateText": "navigate",
-                  "closeText": "close",
-                  "searchByText": "Search by"
+                  "selectText": "选择",
+                  "navigateText": "切换",
+                  "closeText": "关闭",
+                  "searchByText": "搜索提供者"
                 },
                 "noResultsScreen": {
-                  "noResultsText": "No results for",
-                  "suggestedQueryText": "You can try searching for",
-                  "reportMissingResultsText": "You think it should have results?",
-                  "reportMissingResultsLinkText": "Click here to report it"  
+                  "noResultsText": "无法找到相关结果",
+                  "suggestedQueryText": "你可以尝试查询",
+                  "reportMissingResultsText": "你认为该查询应该有结果？",
+                  "reportMissingResultsLinkText": "点击反馈"
                 }
               }
             }
@@ -1005,7 +991,8 @@ import { defineConfig } from "vitepress";
     },
     "docFooter": {
       "prev": "上一页",
-      "next": "下一页"
+      "next": "下一页",
+      "onThisPage": "在本页面中"
     },
     "footer": {
       "copyright": "版权所有 © 2025 艺创AI · 让创作更简单 | 赣 ICP备2022147728号-1 | 🚀 专业AI解决方案提供商"

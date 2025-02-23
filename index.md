@@ -6,24 +6,24 @@ hero:
   tagline: 🚀我们是一支专注于提供AIGC系统源代码解决方案的技术团队，拥有「🤖AI数字人SaaS系统」「💪企业全能AI变现系统」「🎨AI聊天绘画」「📝AI论文写作」等多种产品，支持PHP和Java两种语言版本，技术实力强，系统体验好，支持私有部署，👨‍💻专业团队、💯售后无忧
   actions:
     - theme: alt
-      text: 📝企业知识库
+      text: 📝 企业知识库
       link: /Work
-      class: 'primary-btn col-2'
+      class: 'primary-btn col-2 hover-scale'
 
     - theme: alt
-      text: 🤖AI数字人
+      text: 🤖 AI数字人
       link: /hd
-      class: 'demo-btn col-2'
+      class: 'demo-btn col-2 hover-glow'
 
     - theme: alt  
-      text: 🎨 绘画聊天
+      text: 🎨 智能绘画
       link: /chat
-      class: 'demo-btn col-2'
+      class: 'demo-btn col-2 hover-rotate'
 
     - theme: alt
-      text: ✍️论文写作
+      text: ✍️ 论文助手
       link: /paper
-      class: 'code-btn col-2'
+      class: 'code-btn col-2 hover-bounce'
 
    
 
