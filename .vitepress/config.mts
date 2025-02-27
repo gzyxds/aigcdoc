@@ -276,12 +276,16 @@ import { defineConfig } from "vitepress";
               "link": "/work/develop/base"
             },
             {
-              "text": "🌐 前端开发",
+              "text": "🌐 前端开发", 
               "link": "/work/develop/web"
             },
             {
               "text": "🗃️ 数据库结构",
               "link": "/work/develop/database"
+            },
+            {
+              "text": "🔌 数据接口",
+              "link": "https://io38j82vph.apifox.cn"
             }
           ]
         }
@@ -365,7 +369,7 @@ import { defineConfig } from "vitepress";
               "items": [
                 {
                   "text": "🔌 数据接口",
-                  "link": "/human/develop/api"
+                  "link": "https://78kttw0tjc.apifox.cn"
                 }
               ]
             }
@@ -623,6 +627,10 @@ import { defineConfig } from "vitepress";
             {
               "text": "🌐 前端开发",
               "link": "/Paper/develop/web"
+            },
+            {
+              "text": "🔌 数据接口",
+              "link": "https://6h5o4vjmdk.apifox.cn"
             }
           ]
         }

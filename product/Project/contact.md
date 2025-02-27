@@ -14,7 +14,7 @@
 
 :::
 
-![联系客服](/public/images/kf.png)
+![联系客服](/public/images/kf.svg)
 
 
 ## 加入我们

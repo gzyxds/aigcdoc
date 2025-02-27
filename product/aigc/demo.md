@@ -9,17 +9,104 @@
 # 🎬 艺创AI·产品演示中心
 
 ::: tip 🌐 官网直达
-🖥️ [艺创官网](https://www.urlnet.cn/)
-🖥️ [艺创AIGC](https://www.cnai.art)
-🖥️ [艺创聊天绘画](https://cnai.art)
-🖥️ [优刻云计算](https://www.ucloud.cn/)
-🖥️ [OpenAI](https://api.cnai.art)
-
 :::
 
+<div class="site-links">
+  <div class="link-item">
+    <a href="https://www.urlnet.cn/" target="_blank">
+      🏢 艺创官网 <span class="link-desc">- 企业门户</span>
+    </a>
+  </div>
+  
+  <div class="link-item">
+    <a href="https://www.cnai.art" target="_blank">
+      🤖 艺创全能AI <span class="link-desc">- AI助手平台</span>
+    </a>
+  </div>
+
+  <div class="link-item">
+    <a href="https://v.cnai.art" target="_blank">
+      👤 艺创数字人 <span class="link-desc">- 虚拟数字人平台</span>
+    </a>
+  </div>
+
+  <div class="link-item">
+    <a href="https://cnai.art" target="_blank">
+      🎨 艺创聊天绘画 <span class="link-desc">- AI绘画创作</span>
+    </a>
+  </div>
+
+  <div class="link-item">
+    <a href="https://www.cloudcvm.com/" target="_blank">
+      ☁️ 优刻云计算 <span class="link-desc">- 云服务提供商</span>
+    </a>
+  </div>
+
+  <div class="link-item">
+    <a href="https://api.cnai.art" target="_blank">
+      🔌 OpenAI <span class="link-desc">- API服务</span>
+    </a>
+  </div>
+</div>
+
+<style>
+.site-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.link-item {
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.link-item:nth-child(1) {
+  background: #e3f2fd;
+}
+
+.link-item:nth-child(2) {
+  background: #f3e5f5;
+}
+
+.link-item:nth-child(3) {
+  background: #e8f5e9;
+}
+
+.link-item:nth-child(4) {
+  background: #fff3e0;
+}
+
+.link-item:nth-child(5) {
+  background: #e0f7fa;
+}
+
+.link-item:nth-child(6) {
+  background: #fce4ec;
+}
+
+.link-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.link-item a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link-desc {
+  color: #666;
+  font-size: 0.9em;
+  margin-left: 0.5rem;
+}
+</style>
 
 
- 
 ## 🤖 AI数字人SaaS系统演示
 ![小程序演示](/public/images/home/v.png) 
 
@@ -143,10 +230,10 @@ AI数字人SaaS系统「PHP源码版」
 
  
 
-## 📚 ChatPaper-论文写作系统演示
+## 📚 艺创AI-论文写作系统演示
 ![小程序演示](/public/images/home/Thesis.png) 
 ::: tip 📖 系统介绍
-ChatPaper-论文写作系统「PHP源码版」
+艺创AI-论文写作系统「PHP源码版」
 :::
 
 | 🖥️ 演示平台     | 🔗 演示地址                                                                            | 🔑 账号         | 🔐 密码         |
