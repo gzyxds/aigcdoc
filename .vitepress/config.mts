@@ -12,7 +12,8 @@ import { defineConfig } from "vitepress";
   "themeConfig": {
     "docFooter": {
       "prev": "上一页",
-      "next": "下一页"
+      "next": "下一页",
+      "onThisPage": "在本页面中"
     },
     "outlineTitle": "页面导航",
     "nav": [
@@ -855,7 +856,7 @@ import { defineConfig } from "vitepress";
 
     "i18nRouting": false,
     "logo": "/images/logo.svg",
-    "siteTitle": "AIGC创作系统",
+    "siteTitle": " 艺创AI ",  // 显示网站标题
     "level": 2,
     "label": "页面导航",
     "lastUpdated": {
@@ -997,15 +998,9 @@ import { defineConfig } from "vitepress";
       "text": "编辑文档",
       "pattern": "https://github.com/gzyxds/chataigc-doc"
     },
-    "docFooter": {
-      "prev": "上一页",
-      "next": "下一页",
-      "onThisPage": "在本页面中"
-    },
     "footer": {
       "copyright": "版权所有 © 2025 艺创AI · 让创作更简单 | 赣 ICP备2022147728号-1 | 🚀 专业AI解决方案提供商"
     },
-    "siteTitle": " 艺创AI ",  // 显示网站标题
     "sidebarMenuLabel": "菜单"
   },
   "markdown": {  
@@ -1019,7 +1014,7 @@ import { defineConfig } from "vitepress";
   },
   "locales": {},
   "cacheDir": "./.vitepress/cache",
-  "titleTemplate": "AI系统源码|AI数字人系统|聊天绘画系统|ai平台源码|ai创作系统源码|ai官网源码",
+  "titleTemplate": ":title | 艺创AI",
   "lang": "en-US",
   "base": "/", // 站点的基础路径，默认值是 /
   "outDir": "./.vitepress/dist",

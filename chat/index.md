@@ -118,9 +118,9 @@
 - **企业智能文档**：优化文档管理，快速检索信息。
 - **专家顾问助理**：辅助专业咨询，提高回答准确度。
   🔗 **了解更多** 🔗
-- 官方网站：[全能AI知识库系统PHP版官网](https://www.example.com)
+- 官方网站：[艺创AI](https://www.urlnet.cn)
 
-- GitHub仓库：[GitHub链接](https://github.com/example/ai-knowledge-base-system-php)
+- GitHub仓库：[GitHub链接](https://www.cnai.art)
 
 📞 **联系客服** 📞
 
@@ -172,9 +172,9 @@ VitePress 说明文档：https://vitepress.vuejs.org/
 AIGC创作系统 是一个低代码数据可视化开发平台，将图表或页面元素封装为基础组件，无需编写代码即可完成业务需求。
 它的技术栈为：**`Vue3 + TypeScript4 + Vite2 + NaiveUI + ECharts5  + Axios + Pinia2 + PlopJS`**
 
-在线 Demo 地址：[https://comnew.cn](https://comnew.cn)
+在线 Demo 地址：[https://www.cnai.art](https://www.cnai.art)
 
-Gitee 源码地址：[https://comnew.cn](https://comnew.cn)
+Gitee 源码地址：[https://www.cnai.art](https://www.cnai.art)
 
 ## 浏览器支持
 

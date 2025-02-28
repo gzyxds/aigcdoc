@@ -4,7 +4,7 @@
 
 📚 **产品定位介绍** 📚
 
-🌟 **艺创AI-AIGC**：国内领先的超级AI平台 🚀
+🌟 **艺创AI**：国内领先的超级AI平台 🚀
 
 - 🛠️ **私有化部署**：支持企业级私有化部署
 - 🔧 **二次开发**：提供高度定制化个性化AI机器人解决方案
@@ -53,7 +53,7 @@
 - 📦 二次开发可去除版权，易扩展开发
 - 👩‍💻 1对1售后指导，运营部署文档！
 
-::: info 🌈艺创AIAIGC知识库🌈
+::: info 🌈艺创AI知识库🌈
 
 * 📜 机器人角色设定、知识库训练、发布/分享机器人！
 * 🤖 AI智能对话，无限场景AI创作！*
@@ -86,7 +86,7 @@
 我们每个AI系统的版本功能都不一样，面向群体也是不一样的。
 请选择适合自己想运营的AI系统购买。
 
-## 艺创AI-AIGC-智能AI知识库系统「PHP源码版」
+## 艺创AI-智能AI知识库系统「PHP源码版」
 
 
 ::: info 艺创AI-AIGC-智能AI知识库系统「PHP源码版」
@@ -95,27 +95,44 @@
 
 ### 演示站点
 
-::: danger 🌐 官方网站
-🖥️ [艺创AIAIGC 官网](https://www.urlnet.cn/)
+## 🧠 全能AI知识库系统演示
+   ![小程序演示](/public/images/home/work.png) 
+
+::: tip 🔍 系统介绍
+艺创AI-全能AI企业知识库系统「PHP源码版」
 :::
 
-::: tip 🔍 全能AI知识库系统 演示站点
-🚀 ChatGPT-AIGC-全能AI知识库系统「PHP源码版」
+::: tip 「PHP源码版」
 :::
-
-| 演示平台     | 演示地址                                                    | 账号     | 密码     |
+| 🖥️ 演示平台     | 🔗 演示地址                                                    | 🔑 账号     | 🔐 密码     |
 | -------------- | ------------------------------------------------------------- | ---------- | ---------- |
-| 💻 PC演示前台   | [PC系统演示](https://ai.艺创AI.cn/)             | 自行注册 | 自行注册 |
-| 📱 移动端H5演示 | [移动系统演示](https://ai.艺创AI.cn/mobile/) | 自行注册 | 自行注册 |
-| 🔑 体验后台     | [后台系统演示](https://ai-demo.艺创AI.cn/admin) | admin | 123456 |
+| 💻 PC端前台   | [PC系统演示](https://www.cnai.art/)             | 📝 自行注册 | 🔐 自行注册 |
+| 📱 移动端H5   | [移动系统演示](https://www.cnai.art/mobile/) | 📝 自行注册 | 🔐 自行注册 |
+| 🛠️ 管理后台   | [后台系统演示](https://ai-demo.chatmoney.cn/admin) | 👤 admin | 🔑 123456 |
 
-::: info 🏆 客户案例
-- 🌐 [www.cnai.art](http://www.cnai.art) - 艺创AI创作平台
-- 📱 [app.72nh.com](http://app.72nh.com) - 智能AI助手应用
-- 🤖 [www.aichines.com](https://www.aichines.com/) - 智中速创平台
+
+
+::: tip 「Java源码版」
 :::
 
-> ⚠️ 注：演示站为未授权版本，功能较旧且不完整，购买后将获得最新完整版本
+| 🖥️ 演示平台     | 🔗 演示地址                                                    | 🔑 账号     | 🔐 密码     |
+| -------------- | ------------------------------------------------------------- | ---------- | ---------- |
+| 💻 PC端前台   | [PC系统演示](https://java-ai-front.chatmoney.cn)             | 📝 自行注册 | 🔐 自行注册 |
+| 🛠️ 管理后台   | [后台系统演示](https://java-ai-admin-demo.chatmoney.cn/) | 👤 admin | 🔑 123456 |
+
+
+::: info 📂 客户案例
+- 🌐 [www.cnai.art](http://www.cnai.art)
+- 🌐 [app.72nh.com](http://app.72nh.com)
+- 🌐 [www.aichines.com](https://www.aichines.com/)
+- 🌐 [lihaimao.com](https://lihaimao.com/)
+- 🌐 [ai.wozhiyi.com](https://ai.wozhiyi.com/home/)
+- 🌐 [ai.footmagic.cn](http://ai.footmagic.cn/)
+- 🌐 [hx001.fartall.cn](https://hx001.fartall.cn)
+- .....
+:::
+
+> ⚠️ 注：演示站为未授权版本，功能可能不全，购买后将获得最新完整版本
 
 <br> 
 
@@ -128,7 +145,7 @@
 1. 🛠️ 创建机器人：可单独创建和设置私有机器人
 2. 🚀 发布机器人：支持发布多种渠道，如网页、JS嵌入、API接口、微信公众号、企业（个人）微信等等
 
-![机器人管理](https://doc.2021it.com/assets/20240430170834b521c6017.BGQ3nJWa.png "看不清右击放大图片")
+![机器人管理](https://server.mddai.cn/uploads/images/20240430170834b521c6017.png "看不清右击放大图片")
 
 ---
 
@@ -138,7 +155,7 @@
 
 通过数据训练，用户在前台通过聊天对话模式快速查阅和各种内部资料和文档。使用机器学习技术，让系统自动学习并优化知识库中的知识，提高知识库的准确性和智能性。
 
-![知识库数据训练](https://doc.2021it.com/assets/202404301708507bb6c4908.BB-fmrWQ.png "看不清右击放大图片")
+![知识库数据训练](https://server.mddai.cn/uploads/images/202404301708507bb6c4908.png "看不清右击放大图片")
 
 ---
 
@@ -148,7 +165,7 @@
 
 结合语音合成、语音识别、语义理解、图像处理、机器翻译、虚拟形象驱动等多项AI 核心技术，实现了信息播报、互动交流、业务咨询、服务导览等多项功能，满足了新闻、政企、文旅、金融等多场景的需要。
 
-![AI数字人](https://doc.2021it.com/assets/2024043017080004b6e9791.0YnNT_Ij.png "看不清右击放大图片")
+![AI数字人](https://server.mddai.cn/uploads/images/2024043017080004b6e9791.png "看不清右击放大图片")
 
 ---
 
@@ -158,7 +175,7 @@
 
 对接ChatAI接口，可以对自然语言进行深度理解，识别出用户的意图和需求，从而提供更加精准的回答和服务。
 
-![AI智能问答](https://doc.2021it.com/assets/2024043017093405e292244.VxyM4MZ5.png "看不清右击放大图片")
+![AI智能问答](https://server.mddai.cn/uploads/images/2024043017093405e292244.png "看不清右击放大图片")
 
 ---
 
@@ -168,7 +185,7 @@
 
 根据不同的场景设定和角色设定，AI助手可以根据用户输入的内容一键创作。无论是对话对白、故事情节、还是其他文本形式，都可以根据所提供的信息进行创作。
 
-![AI智能创作](https://doc.2021it.com/assets/20240430170946fe6af4788.CfeTHbgC.png "看不清右击放大图片")
+![AI智能创作](https://server.mddai.cn/uploads/images/20240430170946fe6af4788.png "看不清右击放大图片")
 
 
 ## ⏱️ 5分钟构建企业智能知识库
