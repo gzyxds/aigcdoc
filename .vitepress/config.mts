@@ -1014,7 +1014,7 @@ import { defineConfig } from "vitepress";
   },
   "locales": {},
   "cacheDir": "./.vitepress/cache",
-  "titleTemplate": ":title | 艺创AI",
+  "titleTemplate": ":title|AI系统源码|AI数字人系统|聊天绘画系统|ai平台源码|ai创作系统源码|ai官网源码",  // 标题模板
   "lang": "en-US",
   "base": "/", // 站点的基础路径，默认值是 /
   "outDir": "./.vitepress/dist",

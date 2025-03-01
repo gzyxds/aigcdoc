@@ -10,26 +10,12 @@ import { defineConfig } from "vitepress";
     ['meta', { name: 'msapplication-TileColor', content: '#3eaf7c' }]
   ],
   "themeConfig": {
-    "search": {
-      "provider": "local",
-      "options": {
-        "translations": {
-          "button": {
-            "buttonText": "搜索文档",
-            "buttonAriaLabel": "搜索文档"
-          },
-          "modal": {
-            "noResultsText": "无法找到相关结果",
-            "resetButtonTitle": "清除查询条件",
-            "footer": {
-              "selectText": "选择",
-              "navigateText": "切换",
-              "closeText": "关闭"
-            }
-          }
-        }
-      }
+    "docFooter": {
+      "prev": "上一页",
+      "next": "下一页",
+      "onThisPage": "在本页面中"
     },
+    "outlineTitle": "页面导航",
     "nav": [
       {
         "text": "🏚️首页",
@@ -150,7 +136,7 @@ import { defineConfig } from "vitepress";
               "link": "https://rwm01l8tn3x.feishu.cn/file/BkclbxFSUohtf8xWYRuc5XB7n1g?from=from_copylink"
             },
             {
-              "text": "🎥 功能演示",
+              "text": "🎥 功能演示", 
               "link": "work/deployment/demo.md"
             },
             {
@@ -160,6 +146,21 @@ import { defineConfig } from "vitepress";
             {
               "text": "📋 更新日志",
               "link": "/work/deployment/update"
+            }
+          ]
+        },
+        {
+          "text": "☕ 部署指南Java",
+          "collapsed": false,
+          "collapsible": true,
+          "items": [
+            {
+              "text": "📖 部署文档",
+              "link": "https://rwm01l8tn3x.feishu.cn/docx/QHsCduIzVoKxG7xcWEkct1oknyg?from=from_copylink"
+            },
+            {
+              "text": "📊 运营文档",
+              "link": "https://rwm01l8tn3x.feishu.cn/docx/K8kBdCDG2ogcsUxX7yycelpJnyh?from=from_copylink"
             }
           ]
         },
@@ -276,12 +277,16 @@ import { defineConfig } from "vitepress";
               "link": "/work/develop/base"
             },
             {
-              "text": "🌐 前端开发",
+              "text": "🌐 前端开发", 
               "link": "/work/develop/web"
             },
             {
               "text": "🗃️ 数据库结构",
               "link": "/work/develop/database"
+            },
+            {
+              "text": "🔌 数据接口",
+              "link": "https://io38j82vph.apifox.cn"
             }
           ]
         }
@@ -365,7 +370,7 @@ import { defineConfig } from "vitepress";
               "items": [
                 {
                   "text": "🔌 数据接口",
-                  "link": "/human/develop/api"
+                  "link": "https://78kttw0tjc.apifox.cn"
                 }
               ]
             }
@@ -623,6 +628,10 @@ import { defineConfig } from "vitepress";
             {
               "text": "🌐 前端开发",
               "link": "/Paper/develop/web"
+            },
+            {
+              "text": "🔌 数据接口",
+              "link": "https://6h5o4vjmdk.apifox.cn"
             }
           ]
         }
@@ -736,39 +745,39 @@ import { defineConfig } from "vitepress";
       ],
       "/product/": [
         {
-          "text": "🖥产品中心",
+          "text": "🎯产品中心", 
           "collapsed": false,
           "collapsible": true,
           "items": [
             {
-              "text": "🖥️项目介绍",
+              "text": "📖系统介绍",
               "link": "/product/Project/Product"
             },
             {
-              "text": "🏅商业授权",
-              "link": "/product/Project/auth"
+              "text": "🎫商业授权",
+              "link": "/product/Project/auth" 
             },
             {
-              "text": "✨代理加盟",
+              "text": "🤝代理合作",
               "link": "/product/Project/agent"
             },
             {
-              "text": "💰授权购买",
+              "text": "💎购买授权",
               "link": "/product/Project/shop"
             },
             {
-              "text": "📢联系我们",
+              "text": "📞联系我们",
               "link": "/product/Project/contact"
             },
             {
-              "text": "🎉产品演示",
+              "text": "⭐在线演示",
               "link": "/product/Project/demo"
             }
           ]
         },
         
         {
-          "text": "🎉艺AI系统",
+          "text": "🎉艺创AI系统",
           "collapsed": false,
           "collapsible": true,
           "items": [
@@ -847,7 +856,7 @@ import { defineConfig } from "vitepress";
 
     "i18nRouting": false,
     "logo": "/images/logo.svg",
-    "siteTitle": "AIGC创作系统",
+    "siteTitle": " 艺创AI ",  // 显示网站标题
     "level": 2,
     "label": "页面导航",
     "lastUpdated": {
@@ -989,14 +998,9 @@ import { defineConfig } from "vitepress";
       "text": "编辑文档",
       "pattern": "https://github.com/gzyxds/chataigc-doc"
     },
-    "docFooter": {
-      "prev": "上一页",
-      "next": "下一页"
-    },
     "footer": {
       "copyright": "版权所有 © 2025 艺创AI · 让创作更简单 | 赣 ICP备2022147728号-1 | 🚀 专业AI解决方案提供商"
     },
-    "siteTitle": " 艺创AI ",  // 显示网站标题
     "sidebarMenuLabel": "菜单"
   },
   "markdown": {  
@@ -1010,7 +1014,7 @@ import { defineConfig } from "vitepress";
   },
   "locales": {},
   "cacheDir": "./.vitepress/cache",
-  "titleTemplate": "AI系统源码|AI数字人系统|聊天绘画系统|ai平台源码|ai创作系统源码|ai官网源码",
+  "titleTemplate": ":title|AI系统源码|AI数字人系统|聊天绘画系统|ai平台源码|ai创作系统源码|ai官网源码",  // 标题模板
   "lang": "en-US",
   "base": "/", // 站点的基础路径，默认值是 /
   "outDir": "./.vitepress/dist",
