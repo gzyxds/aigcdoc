@@ -88,7 +88,8 @@ title: 艺创AIGC数字人SaaS系统
 
 系统采用了完整的SaaS架构，支持多租户管理，并提供了完善的安装部署文档 📚。整体架构清晰，模块划分合理，具有良好的扩展性和维护性 💪。
 
-::: warning 💻效果展示
+::: warning 💻效果展示 
+[点击查看效果](https://rwm01l8tn3x.feishu.cn/wiki/GMH5wSCf6iegTfkkYzccjYUxnib)
 :::
 <div style="display: flex; justify-content: space-between;">
   <div style="width: 48%;">
