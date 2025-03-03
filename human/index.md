@@ -58,6 +58,8 @@ title: 艺创AIGC数字人SaaS系统
 - 开源模型，成本高昂，更新缓慢 💔
 - 充值有要求，用户量上来就卡顿或系统出问题 📈
 :::
+
+ 
  
 #### 艺创AI数字人SaaS系统全栈架构设计
 基于PHP的IP数字人SaaS系统，采用前后端分离的架构设计 🚀。主要包含以下几个核心部分
@@ -86,12 +88,25 @@ title: 艺创AIGC数字人SaaS系统
 
 系统采用了完整的SaaS架构，支持多租户管理，并提供了完善的安装部署文档 📚。整体架构清晰，模块划分合理，具有良好的扩展性和维护性 💪。
 
-
-
+::: warning 💻效果展示
+:::
+<div style="display: flex; justify-content: space-between;">
+  <div style="width: 48%;">
+    <video width="100%" controls>
+      <source src="http://srxivdih8.hn-bkt.clouddn.com/video/%E8%89%BA%E5%88%9B%E6%95%B0%E5%AD%97%E4%BA%BA.mp4" type="video/mp4">
+      您的浏览器不支持 video 标签。
+    </video>
+  </div>
+  <div style="width: 48%;">
+    <video width="100%" controls>
+      <source src="http://srxivdih8.hn-bkt.clouddn.com/video/%E5%A9%89%E9%92%B0-%E6%B0%94%E8%B4%A8.mp4" type="video/mp4">
+      您的浏览器不支持 video 标签。
+    </video>
+  </div>
+</div>
 
 
 ## 🤖 AI数字人SaaS系统演示
-
 ::: tip 🗣️ 系统介绍
 AI数字人SaaS系统「PHP源码版」
 :::
@@ -221,8 +236,7 @@ AI数字人的诞生是为了解决以下问题：
  
 ::: warning 对接要求
 - 已认证公众号或小程序
-- 微信商户
-- API自行对接
+- 微信商户- API自行对接
 :::
 
 ::: danger 系统价格
@@ -493,7 +507,7 @@ AI数字人的诞生是为了解决以下问题：
     <tr>
       <td></td>
       <td>吐字</td>
-      <td>吐字清晰，断句干脆，发音平和稳定不出现大起伏，克隆的质量会更好</td>
+      <td>吐字清晰，断句干脆，发音平稳稳定不出现大起伏，克隆的质量会更好</td>
     </tr>
     <tr>
       <td></td>
