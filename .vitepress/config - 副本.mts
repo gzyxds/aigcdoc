@@ -64,7 +64,11 @@ import { defineConfig } from "vitepress";
           {
             "text": "📝论文写作",
             "link": "/Paper/deployment/bt"
-          }
+          },
+          {
+            "text": "📚飞书知识库",
+            "link": "https://rwm01l8tn3x.feishu.cn/wiki/VqNCwBO0KiqWIWkSfdHcDigGnZg?from=from_copylink"
+          },
         ]
       },
       {
