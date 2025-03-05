@@ -108,7 +108,7 @@
 
 
 ## 🤖 AI数字人SaaS系统演示
-![小程序演示](/public/images/home/v.png) 
+![小程序演示](/public/images/home/human.svg) 
 
 ::: tip 🗣️ 系统介绍
 AI数字人SaaS系统「PHP源码版」
@@ -128,15 +128,15 @@ AI数字人SaaS系统「PHP源码版」
 ::: info 📂 客户案例
 - 🌐 [系统官网](http://urlnet.cn)
 - 🚀 系统演示版本：
-- 🛠️ 后端演示：[后端系统后台](https://1.jiweiyun.com/admin)
-- 👤 账号：13800000000
-- 🔐 密码：13800000000
+- 🛠️ 后端演示：[后端系统后台](https://demo.cnai.art/admin)
+- 👤 账号：demo
+- 🔐 密码：demo
 :::
 
 ::: info 🏭 OEM管理端
-- 🖥️ 客户OEM后台：[OEM演示站点](https://aisaas.11949.cn/admin/)
-- 👤 账号：yanjie
-- 🔐 密码：123456789
+- 🖥️ 客户OEM后台：[OEM演示站点](https://demo.cnai.art/admin)
+- 👤 账号：demo
+- 🔐 密码：demo
 :::
 
 ::: info 🏭 运营端
@@ -150,7 +150,7 @@ AI数字人SaaS系统「PHP源码版」
 ---
 
 ## 🧠 全能AI知识库系统演示
-   ![小程序演示](/public/images/home/work.png) 
+   ![小程序演示](/public/images/home/work.svg) 
 
 ::: tip 🔍 系统介绍
 艺创AI-全能AI企业知识库系统「PHP源码版」
@@ -191,7 +191,7 @@ AI数字人SaaS系统「PHP源码版」
 
 
 ## 🎨 聊天绘画系统演示
- ![小程序演示](/public/images/home/ChatPainting.png) 
+ ![小程序演示](/public/images/home/ChatPainting.svg) 
 ::: danger 🎨 系统介绍
 艺创AI-聊天绘画系统「PHP源码版」
 :::
@@ -252,3 +252,35 @@ AI数字人SaaS系统「PHP源码版」
 
 
 > ⚠️ 注：演示站为未授权版本，功能可能不全，购买后将获得最新完整版本
+
+
+### 🛠️ 先进技术栈
+
+基于前后端分离架构，采用业界领先的技术组合：
+
+#### 💻 管理后台 `/admin`
+- 🎯 Vue3驱动的现代化界面
+- 📝 TypeScript确保代码质量
+- 🔧 ESLint + Prettier打造优质代码风格
+
+#### 🌐 PC端 `/pc` 
+- ⚡ Nuxt.js提供SSR解决方案
+- 🛠️ 现代化开发工具链支持
+- 💪 TypeScript全程护航
+
+#### ⚙️ 服务端 `/server`
+- 🏗️ 基于ThinkPHP框架构建
+- 📐 MVC架构设计理念
+- 🔌 完整的RESTful API支持
+
+#### 📱 移动端 `/uniapp`
+- 🎯 uni-app跨平台解决方案
+- 🚀 支持多端一键编译部署
+- 💻 TypeScript开发体验
+
+#### 🐳 Docker环境 `/docker`
+- 📦 完整容器化配置
+- 🔧 nginx + MySQL + PHP服务集成
+- 🌟 开发与生产环境一体化
+
+> 项目采用清晰的模块化结构，技术选型紧跟业界潮流，具备出色的可维护性与扩展性。集成了Vue3、uni-app、ThinkPHP6.x、PostgreSQL、pgvector等前沿技术，打造全方位的现代化应用开发平台。

@@ -1,29 +1,29 @@
 ---
 layout: home
 hero:
-  name: 🔥艺创AI
+  name: 艺创AI
   text: 新一代AI系统赋能企业
-  tagline: 🚀专注提供AIGC系统源代码解决方案的技术团队「🤖AI数字人SaaS系统」「💪企业全能AI变现系统」「🎨AI聊天绘画」「📝AI论文写作」拥有PHP和Java两种语言版本，技术实力强，系统体验好支持私有部署，👨‍💻专业团队、💯售后无忧
+  tagline: 🚀我们是一支专注于提供AIGC系统源代码解决方案的技术团队，拥有「🤖AI数字人SaaS系统」「💪企业全能AI变现系统」「🎨AI聊天绘画」「📝AI论文写作」等多种产品，支持PHP和Java两种语言版本，技术实力强，系统体验好，支持私有部署，👨‍💻专业团队、💯售后无忧
   actions:
     - theme: alt
-      text: 📝企业知识库
+      text: 📝 企业知识库
       link: /Work
-      class: 'primary-btn col-2'
+      class: 'primary-btn col-2 hover-scale'
 
     - theme: alt
-      text: 🤖AI数字人
+      text: 🤖 AI数字人
       link: /hd
-      class: 'demo-btn col-2'
+      class: 'demo-btn col-2 hover-glow'
 
     - theme: alt  
-      text: 🎨 绘画聊天
+      text: 🎨 智能绘画
       link: /chat
-      class: 'demo-btn col-2'
+      class: 'demo-btn col-2 hover-rotate'
 
     - theme: alt
-      text: ✍️论文写作
+      text: ✍️ 论文助手
       link: /paper
-      class: 'code-btn col-2'
+      class: 'code-btn col-2 hover-bounce'
 
    
 
@@ -181,14 +181,14 @@ custom: {}
 
   <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); min-width: 250px; max-width: 280px; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; flex: 1 1 250px; margin-bottom: 20px;">
     <img src="/public/images/qq.png" alt="商务QQ" style="width: 100%; max-width: 200px; border-radius: 10px; margin-bottom: 15px;">
-    <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">商务QQ</p>
-    <p style="margin: 5px 0 0; font-size: 14px; color: #666;">商务合作请联系</p>
+    <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">艺创AI</p>
+    <p style="margin: 5px 0 0; font-size: 14px; color: #666;">扫码关注艺创AIGC</p>
   </div>
 
   <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); min-width: 250px; max-width: 280px; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; flex: 1 1 250px; margin-bottom: 20px;">
-    <img src="/public/images/cloud.png" alt="交流群" style="width: 100%; max-width: 200px; border-radius: 10px; margin-bottom: 15px;">
-    <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">交流群</p>
-    <p style="margin: 5px 0 0; font-size: 14px; color: #666;">加入群聊一起交流</p>
+    <img src="/public/images/cloud.png" alt="云服务" style="width: 100%; max-width: 200px; border-radius: 10px; margin-bottom: 15px;">
+    <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">优刻云计算</p>
+    <p style="margin: 5px 0 0; font-size: 14px; color: #666;">扫码关注云计算</p>
   </div>
 </div>
 
@@ -213,7 +213,7 @@ div[style*="flex-wrap: wrap"] > div:hover {
 }
 </style>
 
-### 🚀ChatMoneyAI企业知识库、AI数字人、智能聊天系统、AI绘画、大模型知识库训练开发
+### 🚀艺创AI企业知识库、AI数字人、智能聊天系统、AI绘画、大模型知识库训练开发
 ::: danger 📦 全套开源代码
 - 🎯 全套完整的开源系统，前端应用和后台管理系统皆可开箱即用
 - 💰 集成支付系统，可以直接商用变现

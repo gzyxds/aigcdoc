@@ -57,8 +57,7 @@ features:
   - icon: ✍
     title: AI论文写作
     details: 👉PHP && Java 持续更新中<br>AI智能生成写作大纲，10分钟生成3万字论文的系统，AI即可快速为您生成论文大纲，操作高效快捷
-    link: /paper.html
-    linkText: 了解更多
+
 
   - icon: 📚
     title: 全模型支持
@@ -69,8 +68,8 @@ features:
     details: 基于前后端分离架构以及Vue3、uni-app、ThinkPHP6.x、PostgreSQL、pgvector技术栈开发
 
   - icon: 📂
-    title: 开源代码
-    details: 所有源代码开源无加密，方便用户二次开发
+    title: 源码开放
+    details: 系统源码完全开放，无任何加密混淆，支持企业根据自身需求进行定制开发和功能扩展
 
   - icon: 📱
     title: OpenAI接口
@@ -147,9 +146,11 @@ features:
       通过数据训练，用户在前台通过聊天对话模式快速查阅和各种内部资料和文档。使用机器学习技术，让系统自动学习并优化知识库中的知识，提高知识库的准确性和智能性
       
   - icon: 💻
-    title: 私有部署
+    title: 独立部署
     details: >-
-      使用您自己的域名和品牌Logo，独立运营AI平台、打造自己的AI品牌
+      提供完整的私有化部署方案，支持独立服务器、独立域名、自定义品牌标识，让您拥有完全自主可控的AI服务平台
+
+
 
 title: false 
 description: ''
@@ -277,9 +278,41 @@ div[style*="flex-wrap: wrap"] > div:hover {
 - 💸 后续更改需支付50%费用
 :::
 
+
 ::: warning ©️ 版权信息
 - 🚫 商业授权后可去除官方版权
 - ⛔ 禁止二次发行销售
 :::
 
+::: tip 🛠️ 先进技术栈
 
+我们初产品大部分基于前后端分离架构，采用业界领先的技术组合：
+
+#### 💻 管理后台 `/admin`
+- 🎯 Vue3驱动的现代化界面
+- 📝 TypeScript确保代码质量
+- 🔧 ESLint + Prettier打造优质代码风格
+
+#### 🌐 PC端 `/pc` 
+- ⚡ Nuxt.js提供SSR解决方案
+- 🛠️ 现代化开发工具链支持
+- 💪 TypeScript全程护航
+
+#### ⚙️ 服务端 `/server`
+- 🏗️ 基于ThinkPHP框架构建
+- 📐 MVC架构设计理念
+- 🔌 完整的RESTful API支持
+
+#### 📱 移动端 `/uniapp`
+- 🎯 uni-app跨平台解决方案
+- 🚀 支持多端一键编译部署
+- 💻 TypeScript开发体验
+
+#### 🐳 Docker环境 `/docker`
+- 📦 完整容器化配置
+- 🔧 nginx + MySQL + PHP服务集成
+- 🌟 开发与生产环境一体化
+
+> 项目采用清晰的模块化结构，技术选型紧跟业界潮流，具备出色的可维护性与扩展性。集成了Vue3、uni-app、ThinkPHP6.x、PostgreSQL、pgvector等前沿技术，打造全方位的现代化应用开发平台。
+
+:::
