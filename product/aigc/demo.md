@@ -215,17 +215,6 @@ AI数字人SaaS系统「PHP源码版」
 | 🛠️ 管理后台   | [后台系统演示](https://java-chat-admin-demo.chatmoney.cn/) | 👤 admin | 🔑 123456 |
 
 
-
-
-
-
-::: info 📂 客户案例
-- 🌐 [cnai.art](http://cnai.art)
-- 🌐 [aicz0101.top](https://aicz0101.top)
-- 📱 [APP演示](https://www.123865.com/s/AIVRVv-eEIJA)
-- ......
-:::
-
 > ⚠️ 注：演示站为未授权版本，功能可能不全，购买后将获得最新完整版本
 
  
@@ -242,13 +231,6 @@ AI数字人SaaS系统「PHP源码版」
 | 📱 移动端H5   | [系统移动端H5演示](https://cp.demo.yixiangonline.com/mobile/) | 📝 自行后台添加 | 🔐 自行后台添加 |
 | 🛠️ 管理后台   | [系统体验后台](https://cp.demo.yixiangonline.com/admin/)   | 👤 admin        | 🔑 admin110     |
 
-
-::: info 📂 客户案例
-- 🌐 [尼卡写作](https://ai068.com/)
-- 🌐 [aicz0101.top](https://aicz0101.top)
-- 📱 [APP演示](https://www.123865.com/s/AIVRVv-eEIJA)
-- ......
-:::
 
 
 > ⚠️ 注：演示站为未授权版本，功能可能不全，购买后将获得最新完整版本
