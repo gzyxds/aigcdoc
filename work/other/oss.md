@@ -3,6 +3,35 @@
 ## 支持平台
 - 七牛云存储
 - 阿里云 OSS  
+  OSS对象存储配置注意
+
+注意事项
+====
+
+本地切换成OSS
+--------
+
+所有产品在切换成OSS以后，需要手动把本地server/pbulic下面的图片视频等资源文件按目录复制到对应OSS后台。  
+![](https://md.likeshop.cn/server/index.php?s=/api/attachment/visitFile&sign=9681f94c20399399d2bb7bdb5a6f9289)
+
+阿里云OSS
+------
+
+### 配置
+
+阿里云OSS上传需要3个参数，配置到系统即可。  
+参数空间域名  
+![](https://md.likeshop.cn/server/index.php?s=/api/attachment/visitFile&sign=5ecf7e3776eebc082503656342d46448)  
+ACCESS\_KEY 和SECRET\_KEY  
+![](https://md.likeshop.cn/server/index.php?s=/api/attachment/visitFile&sign=f49cfe4f4225d7d8a2f098421be7467d)  
+![](https://md.likeshop.cn/server/index.php?s=/api/attachment/visitFile&sign=37beaab4b9dd349a82b314e3e2560519)  
+  
+
+### 跨域设置
+
+阿里云OSS需要跨域设置，否则某些场景可能会加载图片失败。填写项目要设置的域名。  
+![](https://md.likeshop.cn/server/index.php?s=/api/attachment/visitFile&sign=6a2d6a95f0d160b24ab01ea5d44f0b6c)  
+![](https://md.likeshop.cn/server/index.php?s=/api/attachment/visitFile&sign=22328b8c860971754bd83c1173bf371b)
 - 腾讯云 COS
 
 ## 腾讯云 COS 配置指南
