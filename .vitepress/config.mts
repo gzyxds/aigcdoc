@@ -127,7 +127,7 @@ import { defineConfig } from "vitepress";
     "sidebar": {
       "/work/": [
         {
-          "text": "📚 部署指南",
+          "text": "📚 全能知识库",
           "collapsed": false,
           "collapsible": true,
           "items": [
@@ -542,16 +542,16 @@ import { defineConfig } from "vitepress";
           "collapsible": true,
           "items": [
             {
+              "text": "🔄 产品简介",
+              "link": "/Paper/deployment/demo"
+            },
+            {
               "text": "🚀 宝塔部署 ",
               "link": "/Paper/deployment/bt"
             },
             {
               "text": "🚧 通用部署 ",
               "link": "/Paper/deployment/general"
-            },
-            {
-              "text": "🔄 版本演示",
-              "link": "/Paper/deployment/demo"
             }
           ]
         },
