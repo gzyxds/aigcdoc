@@ -6,7 +6,11 @@ title: 艺创AIGC数字人SaaS系统
 
 ![AI数字人SaaS系统](/images/home/banner_img.png)
 
-![AI数字人SaaS系统](/images/home/aisaas.webp)
+![AI数字人SaaS系统](/images/home/share.jpg)
+
+![AI数字人SaaS系统](/images/home/banner01.png)
+
+![AI数字人SaaS系统](/images/home/banner02.png)
 
 
 ## 数字人介绍
