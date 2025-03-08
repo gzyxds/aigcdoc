@@ -95,7 +95,6 @@
 🏅 更多 AI 能力持续开发更新中。
 
 🎯 **系统技术架构**：
-🌟 **全能AI知识库系统PHP版** 🌟
 🔍 **系统特点** 🔍
 1. **前后端分离架构**：基于Vue3、uni-app、ThinkPHP6.x、PostgreSQL、pgvector技术栈开发，确保系统高效、稳定。
 2. **多端支持**：包含PC端、H5端，满足不同使用场景。
@@ -117,7 +116,117 @@
 - **企业智能客服**：提升客户服务效率，增强用户体验。
 - **企业智能文档**：优化文档管理，快速检索信息。
 - **专家顾问助理**：辅助专业咨询，提高回答准确度。
-  🔗 **了解更多** 🔗
+- 
+
+   
+# 🌟 产品特色与功能介绍
+
+## 🤖 核心功能展示
+
+### AI 智能对话
+![AI智能对话](https://aigc-1307986889.cos.ap-guangzhou.myqcloud.com/uploads/images/20250207/20250207035008c9b388780.png)
+
+✨ **智能聊天对话，AI 秒回答**
+
+通过强大的 ChatAI 接口，系统能够深度理解自然语言，精准识别用户意图和需求，提供快速准确的智能回复。
+
+### AI 模型创作
+![AI模型创作](https://aigc-1307986889.cos.ap-guangzhou.myqcloud.com/uploads/images/20250207/20250207190337cdb078503.png)
+
+🎯 **无所不知，无所不能**
+
+- 支持多种 AI 模型智能问答
+- 深度创作能力，提升创作效率
+- 精细化技能分类，确保回答精准度
+
+### AI 绘画创作
+![AI绘画](http://comnew.oss-cn-shenzhen.aliyuncs.com/uploads/images/20240820/20240820230807920be8953.png)
+
+🎨 **一句话生成精美画作**
+
+- 支持知数云 MJ
+- 即将支持：GPT3.5、API2D3.5、意间AI、SD、Midjourney官方、灵犀星火
+- 支持以图生图，生成速度快，无需排队等待
+
+## 💫 增值服务功能
+
+### VIP 会员权益
+![丰富的营销功能](https://server.mddai.cn/uploads/images/2023083117485511ff85180.png)
+
+🎁 **尊享会员特权**
+- 会员期间无限次数使用
+- 智能优惠券系统
+- 多样化会员权益
+
+### 免费福利系统
+![免费获取聊天次数](https://server.mddai.cn/uploads/images/20230831174855213ca2425.png)
+
+🎉 **多样化获取方式**
+- 每日分享获赠
+- 邀请好友奖励
+- 灵活的任务奖励机制
+
+## 🎨 个性化体验
+
+### 主题风格定制
+![主题色切换](https://server.mddai.cn/uploads/images/202308311748555700e8555.png)
+
+🌈 **打造专属 AI 助手**
+- 自定义主题风格
+- 个性化界面定制
+- 专属 ChatAI 系统
+
+### 多端完美适配
+![多终端适配](https://server.mddai.cn/uploads/images/202308311748555700e8555.png)
+
+📱 **全平台无缝体验**
+- 微信小程序
+- 微信公众号
+- H5 网页
+- PC 端
+## ⭐ 特色功能亮点
+
+### 智能对话系统
+💡 **GPT 接口助力，工作效率倍增**
+
+### AI 创意助手
+✍️ **让创作更轻松，灵感更丰富**
+
+### 智能绘画工具
+🎨 **文字秒变精美画作**
+
+### 技能模型系统
+🎯 **精准分类，专业回答**
+
+## 🌟 会员权益与福利
+
+### VIP 特权
+👑 **尊享无限使用特权**
+
+### 优惠福利
+💝 **丰富的优惠券系统**
+
+### 充值方案
+💰 **灵活的套餐选择**
+
+### 奖励机制
+🎁 **多样化奖励体系**
+
+## 🛠️ 实用工具
+
+### 卡密系统
+🔑 **便捷的兑换系统**
+
+### 主题定制
+🎨 **简单易用的个性化定制**
+
+### 响应式界面
+📱 **全设备完美适配**
+
+### 客服支持
+💬 **实时在线服务支持**
+
+🔗 **了解更多** 🔗
 - 官方网站：[艺创AI](https://www.urlnet.cn)
 
 - GitHub仓库：[GitHub链接](https://www.cnai.art)
@@ -148,84 +257,3 @@
 
 📂 **数据存储**：
 本地存储 | 阿里云 oss | 腾讯云 cos | chevereto 图床。
-
-
-
-
-------------------------------------
-
-
-## 这里是 AIGC创作系统 文档，采用 VitePress 搭建
-
-在线地址：http://comnew.cn
-
-启动代码：npm run dev
-
-打包代码：npm run build
-
-Make方式：make dev / make dist
-
-VitePress 说明文档：https://vitepress.vuejs.org/
-
-## 总览
-
-AIGC创作系统 是一个低代码数据可视化开发平台，将图表或页面元素封装为基础组件，无需编写代码即可完成业务需求。
-它的技术栈为：**`Vue3 + TypeScript4 + Vite2 + NaiveUI + ECharts5  + Axios + Pinia2 + PlopJS`**
-
-在线 Demo 地址：[https://www.cnai.art](https://www.cnai.art)
-
-Gitee 源码地址：[https://www.cnai.art](https://www.cnai.art)
-
-## 浏览器支持
-
-开发和测试平台均在 Google 和最新版 EDGE 上完成，暂未测试 IE11 等其它浏览器，如有需求请自行测试。
-
-## 安装
-
-本项目采用 pnpm 进行包管理，若要使用其它管理方式，请删除 `pnpm-lock.yaml` 并安装依赖
-
-```shell
-#pnpm（建议使用nrm切换到淘宝源）
-pnpm install
-
-# npm
-npm install
-
-# yarn
-yarn install
-
-```
-
-## 启动
-
-```shell
-#pnpm
-pnpm dev
-
-# npm
-npm run dev
-
-#yarn
-yarn dev
-
-#Makefile
-make dev
-```
-
-## 编译
-
-```shell
-#pnpm
-pnpm run build
-
-# npm
-npm run build
-
-#yarn
-yarn run build
-
-#Makefile
-make dist
-
-```
-## 交流
