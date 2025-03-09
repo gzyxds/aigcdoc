@@ -113,10 +113,10 @@
 
 | 产品名称 | <span style="color: #ff4d4f"><del>原价</del></span> | <span style="color: #1890ff">特惠价</span> | 优惠码 | 操作 |
 |---------|------|--------|--------|------|
-| AI数字人 | <span style="color: #ff4d4f"><del>¥6,800</del></span> | <span style="color: #1890ff">¥4,999</span> | `oXu3x1IZD` | [立即购买](https://autth.cnai.art) |
-| AI知识库 | <span style="color: #ff4d4f"><del>¥9,800</del></span> | <span style="color: #1890ff">¥6,600</span> | `Ju9han9Z6` | [立即购买](https://autth.cnai.art) |
-| AI聊天绘画 | <span style="color: #ff4d4f"><del>¥3,800</del></span> | <span style="color: #1890ff">¥2,999</span> | `4ZKgZfv9M` | [立即购买](https://autth.cnai.art) |
-| AI论文写作 | <span style="color: #ff4d4f"><del>¥4,698</del></span> | <span style="color: #1890ff">¥3,200</span> | `lbCG2L0Fq` | [立即购买](https://autth.cnai.art) |
+| AI数字人 | <span style="color: #ff4d4f"><del>¥6,800</del></span> | <span style="color: #1890ff">¥4,999</span> | `oXu3x1IZD` | [立即购买](https://auth.cnai.art) |
+| AI知识库 | <span style="color: #ff4d4f"><del>¥9,800</del></span> | <span style="color: #1890ff">¥6,600</span> | `Ju9han9Z6` | [立即购买](https://auth.cnai.art) |
+| AI聊天绘画 | <span style="color: #ff4d4f"><del>¥3,800</del></span> | <span style="color: #1890ff">¥2,999</span> | `4ZKgZfv9M` | [立即购买](https://auth.cnai.art) |
+| AI论文写作 | <span style="color: #ff4d4f"><del>¥4,698</del></span> | <span style="color: #1890ff">¥3,200</span> | `lbCG2L0Fq` | [立即购买](https://auth.cnai.art) |
 > 📢 **名额限制**: 每个优惠码仅限10个，抢完即止！
 ## 🌟 核心特色
 
