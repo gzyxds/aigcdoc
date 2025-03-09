@@ -16,13 +16,17 @@ import { defineConfig } from "vitepress";
       "onThisPage": "在本页面中"
     },
     "outlineTitle": "页面导航",
-    "nav": [
+    "nav": [  // 导航栏
       {
         "text": "🏚️首页",
         "link": "/"
       },
       {
-        "text": "🖥️项目介绍",
+        "text": "🛒在线授权",
+        "link": "https://auth.cnai.art/"
+      },
+      {
+        "text": "🖥️项目介绍", 
         "items": [
           {
             "text": "📗项目介绍",

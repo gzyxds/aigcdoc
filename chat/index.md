@@ -9,7 +9,40 @@
 - 支持众多模型，如 OpenAI 全模型、Midjourney 全功能绘画、Claude3、讯飞星火、豆包（Doubao-lite-4k）大模型、Stable Diffusion、DALL·E（DALL-E2/E3/E4 绘画）、ChatGLM、通义千问、腾讯混元、360 智脑、百川 AI、火山方舟、新必应、Gemini、Moonshot 等。
 - 支持对话会话隔离、云端存储、多设备共享数据，以及弹性计费和各种计划模式。
 
+## 🎉 限时特惠活动公告
 
+## 💫 产品优势
+
+- ✨ 一次购买，终身免费更新升级
+- 🏢 企业商用首选，完善售后保障
+- 🤖 AI智能聊天系统，绘画创作无限可能
+- 📚 大模型知识库，专业训练开发
+
+## 💎 优惠详情
+
+| 产品名称 | <span style="color: #ff4d4f"><del>原价</del></span> | <span style="color: #1890ff">特惠价</span> | 优惠码 | 操作 |
+|---------|------|--------|--------|------|
+| AI数字人 | <span style="color: #ff4d4f"><del>¥6,800</del></span> | <span style="color: #1890ff">¥4,999</span> | `oXu3x1IZD` | [立即购买](https://autth.cnai.art) |
+| AI知识库 | <span style="color: #ff4d4f"><del>¥9,800</del></span> | <span style="color: #1890ff">¥6,600</span> | `Ju9han9Z6` | [立即购买](https://autth.cnai.art) |
+| AI聊天绘画 | <span style="color: #ff4d4f"><del>¥3,800</del></span> | <span style="color: #1890ff">¥2,999</span> | `4ZKgZfv9M` | [立即购买](https://autth.cnai.art) |
+| AI论文写作 | <span style="color: #ff4d4f"><del>¥4,698</del></span> | <span style="color: #1890ff">¥3,200</span> | `lbCG2L0Fq` | [立即购买](https://autth.cnai.art) |
+> 📢 **名额限制**: 每个优惠码仅限10个，抢完即止！
+## 🌟 核心特色
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+  <div style="background: #f5f5f5; padding: 1rem; border-radius: 8px;">
+    💪 技术实力雄厚
+  </div>
+  <div style="background: #f5f5f5; padding: 1rem; border-radius: 8px;">
+    🔒 支持私有化部署
+  </div>
+  <div style="background: #f5f5f5; padding: 1rem; border-radius: 8px;">
+    🔄 开源代码支持二开
+  </div>
+  <div style="background: #f5f5f5; padding: 1rem; border-radius: 8px;">
+    📖 配套安装教程文档
+  </div>
+</div>
 
 ## ✨ **商业版私有化部署**：
 - 主要面向意向搭建 AI 平台的站长和公司。若只想使用 AiGC 官方站，可跳过- 此部分。
