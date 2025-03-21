@@ -833,10 +833,7 @@ import { defineConfig } from "vitepress";
             {
               "text": "🎉支付系统",
               "link": "http://www.payphp.cn/"
-            },
-            {
-              "text": "👀源码市场",
-              "link": "http://www.codepu.cn/"
+
             }
           
           ]
