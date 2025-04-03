@@ -16,13 +16,17 @@ import { defineConfig } from "vitepress";
       "onThisPage": "在本页面中"
     },
     "outlineTitle": "页面导航",
-    "nav": [
+    "nav": [  // 导航栏
       {
         "text": "🏚️首页",
         "link": "/"
       },
       {
-        "text": "🖥️项目介绍",
+        "text": "🛒在线授权",
+        "link": "https://auth.cnai.art/"
+      },
+      {
+        "text": "🖥️项目介绍", 
         "items": [
           {
             "text": "📗项目介绍",
@@ -127,7 +131,7 @@ import { defineConfig } from "vitepress";
     "sidebar": {
       "/work/": [
         {
-          "text": "📚 部署指南",
+          "text": "📚 全能知识库",
           "collapsed": false,
           "collapsible": true,
           "items": [
@@ -542,16 +546,16 @@ import { defineConfig } from "vitepress";
           "collapsible": true,
           "items": [
             {
+              "text": "🔄 产品简介",
+              "link": "/Paper/deployment/demo"
+            },
+            {
               "text": "🚀 宝塔部署 ",
               "link": "/Paper/deployment/bt"
             },
             {
               "text": "🚧 通用部署 ",
               "link": "/Paper/deployment/general"
-            },
-            {
-              "text": "🔄 版本演示",
-              "link": "/Paper/deployment/demo"
             }
           ]
         },
@@ -829,10 +833,7 @@ import { defineConfig } from "vitepress";
             {
               "text": "🎉支付系统",
               "link": "http://www.payphp.cn/"
-            },
-            {
-              "text": "👀源码市场",
-              "link": "http://www.codepu.cn/"
+
             }
           
           ]
