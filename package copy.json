@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "vitepress": "^1.6.3"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview",
+    "build": "node node_modules/vitepress/bin/vitepress.js build",
+    "dev": "vitepress dev"
+  },
+  "dependencies": {
+    "@theojs/lumen": "^3.3.2",
+    "vitepress-plugin-comment-with-giscus": "^1.1.15"
+  }
+}
