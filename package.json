@@ -1,17 +1,12 @@
 {
-  "devDependencies": {
-    "esbuild": "^0.24.0",
-    "vitepress": "^1.6.3"
-  },
+  "name": "chataigc-doc",
+  "version": "1.0.0",
+  "description": "AIGC创作系统文档",
   "scripts": {
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview",
-    "build": "npx -y vitepress build",
-    "dev": "vitepress dev"
+    "dev": "vitepress dev",
+    "build": "vitepress build"
   },
   "dependencies": {
-    "@theojs/lumen": "^3.3.2",
-    "vitepress-plugin-comment-with-giscus": "^1.1.15"
+    "vitepress": "^1.0.0"
   }
 }
