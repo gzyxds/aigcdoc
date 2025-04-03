@@ -7,7 +7,7 @@
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview",
-    "build": "node ./node_modules/.bin/vitepress build",
+    "build": "npx vitepress build",
     "dev": "vitepress dev"
   },
   "dependencies": {
