@@ -2,163 +2,91 @@
 layout: home
 
 hero:
-  name: 艺创AI
-  text: 企业AI解决方案专家
-  tagline: 用AI为企业赋能，引领企业实现数字化、智能化转型
+  name: "智汇AI"
+  text: "智能化转型的引领者"
+  tagline: "让AI赋能每一个企业，驱动数字化创新"
   actions:
     - theme: brand
-      text: 立即咨询
-      link: /contact
-      class: 'primary-button'
-    
-    - theme: alt 
-      text: 解决方案
-      link: /solutions
-      class: 'secondary-button'
+      text: "开始体验"
+      link: "/products"
+      class: "primary-button gradient-bg"
     
     - theme: alt
-      text: 产品服务
-      link: /products
-      class: 'secondary-button'
-      
+      text: "解决方案"
+      link: "/solutions"
+      class: "secondary-button outline-btn"
+    
     - theme: alt
-      text: 帮助文档
-      link: /docs
-      class: 'secondary-button'
+      text: "技术文档"
+      link: "/docs"
+      class: "secondary-button outline-btn"
 
   image:
-    src: /images/home/logo.svg
-    alt: ChatMoneyAI Logo
+    src: "/images/home/ai-tech.svg"
+    alt: "智汇AI科技"
 
 features:
-  - icon: 💬
-    title: AI智聊系统
-    details: 快速搭建智能聊天系统，支持公众号、小程序、PC端、APP端全渠道部署
+  - icon: "🤖"
+    title: "智能对话平台"
+    details: "基于大语言模型打造的新一代对话系统，支持多场景定制，全渠道部署，让沟通更智能"
+    class: "feature-card hover-lift"
     
-  - icon: 🎨
-    title: AI绘画系统
-    details: 一站式AI绘画解决方案，支持公众号、小程序、抖音小程序等多端接入
+  - icon: "🎯"
+    title: "知识库训练"
+    details: "深度学习驱动的企业知识库系统，快速构建专属AI模型，提供精准的智能问答和决策支持"
+    class: "feature-card hover-lift"
     
-  - icon: \udd0c
-    title: AI接口接入
-    details: 为企业微信、钉钉、飞书等办公工具接入AI能力，提升办公效率
+  - icon: "🎨"
+    title: "AI创意工坊"
+    details: "集成绘画、设计、创作等AI能力，激发创意灵感，提升内容生产效率，释放无限可能"
+    class: "feature-card hover-lift"
     
-  - icon: 🧠
-    title: 知识库训练
-    details: 打造专属企业知识库AI模型，应用于客服、数字人直播等场景
-    
-  - icon: 💼
-    title: 办公赋能
-    details: AI辅助PPT制作、表格处理、代码编写，全面提升工作效率
-    
-  - icon: 🎯
-    title: 营销获客
-    details: AI客服、文案创作、数据分析，助力企业精准营销
-
-  - icon: 🌐
-    title: 多端支持
-    details: 支持公众号、H5、小程序、PC端等全渠道部署，数据互通
-    
-  - icon: ⚡
-    title: 快速交付
-    details: 5个工作日内完成基础系统搭建，支持企业级定制开发
+  - icon: "⚡"
+    title: "流程自动化"
+    details: "智能工作流引擎，自动化处理日常任务，提升办公效率，降低运营成本"
+    class: "feature-card hover-lift"
 
 solutions:
-  title: 解决方案
-  description: 为不同行业提供专业的AI解决方案
+  title: "行业解决方案"
+  description: "深耕行业场景，提供专业化AI解决方案"
   items:
-    - icon: 🏢
-      title: 企业服务
-      details: 智能客服、知识库管理、办公自动化
+    - icon: "💼"
+      title: "企业服务"
+      details: "智能客服 | 知识管理 | 办公协同"
+      class: "solution-card gradient-border"
       
-    - icon: 🏪
-      title: 零售电商
-      details: 智能导购、个性化推荐、营销获客
+    - icon: "🏪"
+      title: "零售电商"
+      details: "智能营销 | 用户画像 | 个性推荐"
+      class: "solution-card gradient-border"
       
-    - icon: 🏥
-      title: 医疗健康
-      details: 智能问诊、健康管理、医疗数据分析
+    - icon: "🏥"
+      title: "医疗健康"
+      details: "智能问诊 | 健康管理 | 医疗数据"
+      class: "solution-card gradient-border"
       
-    - icon: 🎓
-      title: 教育培训
-      details: AI助教、个性化学习、教学管理
+    - icon: "🎓"
+      title: "教育培训"
+      details: "智能助教 | 个性化学习 | 教学管理"
+      class: "solution-card gradient-border"
+
+advantages:
+  title: "核心优势"
+  description: "以科技创新驱动业务增长"
+  items:
+    - icon: "🚀"
+      title: "快速部署"
+      details: "5天完成系统搭建，快速实现智能化转型"
+      
+    - icon: "🔒"
+      title: "安全可控"
+      details: "数据私有部署，确保信息安全"
+      
+    - icon: "🔄"
+      title: "持续优化"
+      details: "AI模型持续学习，服务不断进化"
+      
+    - icon: "🤝"
+      title: "专业服务"
+      details: "资深团队支持，确保项目成功"
 ---
-
-
-
-## 这里是 AIGC创作系统 文档，采用 VitePress 搭建
-
-在线地址：http://urlnet.cn
-
-启动代码：npm run dev
-
-打包代码：npm run build
-
-Make方式：make dev / make dist
-
-VitePress 说明文档：https://vitepress.vuejs.org/
-
-## 总览
-
-AIGC创作系统 是一个低代码数据可视化开发平台，将图表或页面元素封装为基础组件，无需编写代码即可完成业务需求。
-它的技术栈为：
-::: info 技术栈
-
-- Vue3 + TypeScript4 + Vite2 + NaiveUI + ECharts5  + Axios + Pinia2 + PlopJS
-  :::
-
-
-
- 
-## 浏览器支持
-
-开发和测试平台均在 Google 和最新版 EDGE 上完成，暂未测试 IE11 等其它浏览器，如有需求请自行测试。
-
-## 安装
-
-本项目采用 pnpm 进行包管理，若要使用其它管理方式，请删除 `pnpm-lock.yaml` 并安装依赖
-
-```shell
-#pnpm（建议使用nrm切换到淘宝源）
-pnpm install
-
-# npm
-npm install
-
-# yarn
-yarn install
-```
-
-## 启动
-
-```shell
-#pnpm
-pnpm dev
-
-npm run docs:dev
-
-# npm
-npm run dev
-
-#yarn
-yarn dev
-
-#Makefile
-make dev
-```
-
-## 编译
-
-```shell
-#pnpm
-pnpm run build
-
-# npm
-npm run build
-
-#yarn
-yarn run build
-
-#Makefile
-make dist
-```
