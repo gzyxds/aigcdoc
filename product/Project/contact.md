@@ -5,13 +5,16 @@
 - **微信**：userhlc
 - **备用微信**：useraqr
 - **邮箱**：[236749035@qq.com](mailto:236749035@qq.com)
+- **授权中心** https://auth.cnai.art
 - **官网**：[https://www.urlnet.cn/](https://www.urlnet.cn/)
 - **艺创AI**：[https://artaigc.cn/](https://artaigc.cn/)
 :::
 
 
 ::: tip 文档说明
-- **文档官网**：[https://doc.artaigc.cn/](https://doc.artaigc.cn/)
+- 文档官网：https://doc.artaigc.cn/
+- 国内线路：https://urlnet.cn/doc/
+- 海外线路：https://doc.cnai.cn
 :::
 ::: info 艺创AI 商业授权
 商业授权可享受官方更多技术支持拒绝盗版，尊重知识产权，从你我做起
