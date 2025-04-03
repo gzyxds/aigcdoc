@@ -1,4 +1,4 @@
 {
-  "buildCommand": "npm run docs:build",
+  "buildCommand": "npx vitepress build",
   "outputDirectory": ".vitepress/dist"
 }
