@@ -77,7 +77,7 @@ import { defineConfig } from "vitepress";
       },
       {
         "text": "🌍官网",
-        "link": "https://www.urlnet.cn"
+        "link": "https://www.artaigc.cn"
       },
       {
         "text": "🧠AI助手",
