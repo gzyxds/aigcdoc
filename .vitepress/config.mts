@@ -53,11 +53,11 @@ import { defineConfig } from "vitepress";
         "text": "📑部署文档",
         "items": [
           {
-            "text": "🚀AI数字人",
+            "text": "🤖数字分身",
             "link": "/human"
           },
           {
-            "text": "🤖AI知识库",
+            "text": "📚企业知识库",
             "link": "/work/deployment/demo"
           },
           {
@@ -65,7 +65,7 @@ import { defineConfig } from "vitepress";
             "link": "/chat/index"
           },
           {
-            "text": "📝论文写作",
+            "text": "📝论文创作",
             "link": "/Paper/deployment/bt"
           },
           {
