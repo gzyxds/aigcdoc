@@ -12,8 +12,7 @@ import { defineConfig } from "vitepress";
   "themeConfig": {
     "docFooter": {
       "prev": "上一页",
-      "next": "下一页",
-      "onThisPage": "在本页面中"
+      "next": "下一页"
     },
     "outlineTitle": "页面导航",
     "nav": [  // 导航栏
@@ -22,11 +21,11 @@ import { defineConfig } from "vitepress";
         "link": "/"
       },
       {
-        "text": "🛒在线授权",
-        "link": "https://auth.cnai.art/"
+        "text": "🛒立即购买",
+        "link": "https://console.cloudcvm.com/cart/goodsList.htm?fpg_id=61&spg_id=20"
       },
       {
-        "text": "🖥️项目介绍", 
+        "text": "🖥️项目介绍",
         "items": [
           {
             "text": "📗项目介绍",
@@ -36,7 +35,7 @@ import { defineConfig } from "vitepress";
             "text": "🤖产品授权",
             "link": "/product/Project/auth"
           },
-          {   
+          {
             "text": "🛒授权购买",
             "link": "/product/Project/shop"
           },
@@ -95,7 +94,7 @@ import { defineConfig } from "vitepress";
             "link": "https://v.cnai.art"
           },
           {
-            "text": "📱APP下载", 
+            "text": "📱APP下载",
             "link": "https://www.123865.com/s/AIVRVv-eEIJA"
           }
         ]
@@ -104,12 +103,16 @@ import { defineConfig } from "vitepress";
         "text": "🔎生态体系",
         "items": [
           {
-            "text": "OpenApi",
+            "text": "优刻云计算",
+            "link": "https://www.cloudcvm.com/"
+          },
+          {
+            "text": "数字人API",
             "link": "https://api.cnai.art"
           },
           {
-            "text": "优刻云计算",
-            "link": "https://www.cloudcvm.com/"
+            "text": "172号卡",
+            "link": "https://www.urlka.cn/"
           },
         ]
       },
@@ -124,16 +127,15 @@ import { defineConfig } from "vitepress";
             "text": "🎉技术支持",
             "link": "/product/Project/contact"
           },
-          
+
         ]
       }
-    ],     
+    ],
     "sidebar": {
       "/work/": [
         {
           "text": "📚 全能知识库",
           "collapsed": false,
-          "collapsible": true,
           "items": [
             {
               "text": "🐳 Docker部署",
@@ -144,7 +146,7 @@ import { defineConfig } from "vitepress";
               "link": "https://rwm01l8tn3x.feishu.cn/file/BkclbxFSUohtf8xWYRuc5XB7n1g?from=from_copylink"
             },
             {
-              "text": "🎥 功能演示", 
+              "text": "🎥 功能演示",
               "link": "work/deployment/demo.md"
             },
             {
@@ -160,7 +162,6 @@ import { defineConfig } from "vitepress";
         {
           "text": "☕ 部署指南Java",
           "collapsed": false,
-          "collapsible": true,
           "items": [
             {
               "text": "📖 部署文档",
@@ -175,7 +176,6 @@ import { defineConfig } from "vitepress";
         {
           "text": "🔧 功能配置",
           "collapsed": false,
-          "collapsible": true,
           "items": [
             {
               "text": "📱 微信公众号",
@@ -232,7 +232,6 @@ import { defineConfig } from "vitepress";
         {
           "text": "🤖 AI模型部署",
           "collapsed": false,
-          "collapsible": true,
           "items": [
             {
               "text": "🧠 ChatGLM部署",
@@ -255,7 +254,6 @@ import { defineConfig } from "vitepress";
         {
           "text": "🔍 问题排查",
           "collapsed": false,
-          "collapsible": true,
           "items": [
             {
               "text": "🆙 版本升级",
@@ -278,14 +276,13 @@ import { defineConfig } from "vitepress";
         {
           "text": "💻 开发指南",
           "collapsed": false,
-          "collapsible": true,
           "items": [
             {
               "text": "📝 基础说明",
               "link": "/work/develop/base"
             },
             {
-              "text": "🌐 前端开发", 
+              "text": "🌐 前端开发",
               "link": "/work/develop/web"
             },
             {
@@ -303,7 +300,6 @@ import { defineConfig } from "vitepress";
         {
           "text": "🐳 AI数字人Saas系统",
           "collapsed": false,
-          "collapsible": true,
           "items": [
             {
               "text": "🏠 项目首页",
@@ -330,13 +326,12 @@ import { defineConfig } from "vitepress";
               "link": "/human/deployment/bt"
             },
             {
-              "text": "⚙️ 通用部署 ②", 
+              "text": "⚙️ 通用部署 ②",
               "link": "/human/deployment/general"
             },
             {
               "text": "🐹 前端部署",
               "collapsed": false,
-              "collapsible": true,
               "items": [
                 {
                   "text": "💬 微信公众号",
@@ -355,7 +350,6 @@ import { defineConfig } from "vitepress";
             {
               "text": "🐰 其他配置",
               "collapsed": false,
-              "collapsible": true,
               "items": [
                 {
                   "text": "🔓 微信开放平台（微信帐号统一）",
@@ -374,7 +368,6 @@ import { defineConfig } from "vitepress";
             {
               "text": "🦧 二次开发",
               "collapsed": false,
-              "collapsible": true,
               "items": [
                 {
                   "text": "🔌 数据接口",
@@ -390,7 +383,6 @@ import { defineConfig } from "vitepress";
         {
           "text": "🐳 聊天绘画部署",
           "collapsed": false,
-          "collapsible": true,
           "items": [
             {
               "text": "🚀 宝塔部署",
@@ -425,7 +417,6 @@ import { defineConfig } from "vitepress";
         {
           "text": "🐹 前端部署",
           "collapsed": false,
-          "collapsible": true,
           "items": [
             {
               "text": "🚀 微信公众号",
@@ -452,7 +443,6 @@ import { defineConfig } from "vitepress";
         {
           "text": "🎉 第三方部署",
           "collapsed": false,
-          "collapsible": true,
           "items": [
             {
               "text": "🚀 SD绘图部署",
@@ -463,7 +453,6 @@ import { defineConfig } from "vitepress";
         {
           "text": "🐰 其他配置",
           "collapsed": false,
-          "collapsible": true,
           "items": [
             {
               "text": "🚀 微信开放平台",
@@ -498,7 +487,6 @@ import { defineConfig } from "vitepress";
         {
           "text": "🐞 常见问题",
           "collapsed": false,
-          "collapsible": true,
           "items": [
             {
               "text": "🔄 升级更新",
@@ -521,7 +509,6 @@ import { defineConfig } from "vitepress";
         {
           "text": "🦧 二次开发",
           "collapsed": false,
-          "collapsible": true,
           "items": [
             {
               "text": "🚀 基本介绍",
@@ -543,7 +530,6 @@ import { defineConfig } from "vitepress";
         {
           "text": "🐳论文写作部署",
           "collapsed": false,
-          "collapsible": true,
           "items": [
             {
               "text": "🔄 产品简介",
@@ -562,7 +548,6 @@ import { defineConfig } from "vitepress";
         {
           "text": "🐹前端部署",
           "collapsed": false,
-          "collapsible": true,
           "items": [
             {
               "text": "📱 微信公众号",
@@ -573,7 +558,6 @@ import { defineConfig } from "vitepress";
         {
           "text": "🐰其他配置",
           "collapsed": false,
-          "collapsible": true,
           "items": [
             {
               "text": "🚀 微信开放平台",
@@ -604,7 +588,6 @@ import { defineConfig } from "vitepress";
         {
           "text": "🐞常见问题",
           "collapsed": false,
-          "collapsible": true,
           "items": [
             {
               "text": "🔄 升级更新",
@@ -627,7 +610,6 @@ import { defineConfig } from "vitepress";
         {
           "text": "🦧二次开发",
           "collapsed": false,
-          "collapsible": true,
           "items": [
             {
               "text": "🚀 基本介绍",
@@ -648,7 +630,6 @@ import { defineConfig } from "vitepress";
         {
           "text": "Contact",
           "collapsed": false,
-          "collapsible": true,
           "link": "/Project/Contact"
         },
         {
@@ -753,9 +734,8 @@ import { defineConfig } from "vitepress";
       ],
       "/product/": [
         {
-          "text": "🎯产品中心", 
+          "text": "🎯产品中心",
           "collapsed": false,
-          "collapsible": true,
           "items": [
             {
               "text": "📖系统介绍",
@@ -763,7 +743,7 @@ import { defineConfig } from "vitepress";
             },
             {
               "text": "🎫商业授权",
-              "link": "/product/Project/auth" 
+              "link": "/product/Project/auth"
             },
             {
               "text": "🤝代理合作",
@@ -783,11 +763,10 @@ import { defineConfig } from "vitepress";
             }
           ]
         },
-        
+
         {
           "text": "🎉艺创AI系统",
           "collapsed": false,
-          "collapsible": true,
           "items": [
             {
               "text": "🖥️企业知识库",
@@ -809,22 +788,21 @@ import { defineConfig } from "vitepress";
               "text": "🖥️系统官网",
               "link": "https://www.urlnet.cn/"
             }
-            
+
           ]
         },
 
         {
           "text": "🍵友情连接",
           "collapsed": false,
-          "collapsible": true,
           "items": [
             {
               "text": "☁优刻云",
               "link": "https://www.cloudcvm.com/"
             },
             {
-              "text": "📫枭格科技",
-              "link": "http://www.xgphp.cn/"
+              "text": "📫艺创官网",
+              "link": "http://www.urlnet.cn/"
             },
             {
               "text": "🔍172号卡",
@@ -835,7 +813,7 @@ import { defineConfig } from "vitepress";
               "link": "http://www.payphp.cn/"
 
             }
-          
+
           ]
         }
       ]
@@ -851,7 +829,7 @@ import { defineConfig } from "vitepress";
         "icon": "discord",
         "link": "https://urlnet.cn"
       },
-      
+
       {
         "icon": "twitter",
         "link": "https://urlnet.cn"
@@ -873,7 +851,7 @@ import { defineConfig } from "vitepress";
       ['meta', { name: 'msapplication-TileImage', content: '/favicon.ico' }],
       ['meta', { name: 'msapplication-TileColor', content: '#3eaf7c' }]
     ],
-    // "carbonAds": {          
+    // "carbonAds": {
     //   "carbon": "CEBDT27Y"
     // },
     // "carbon": {  // 自定义组件
@@ -899,89 +877,27 @@ import { defineConfig } from "vitepress";
     "search": {   // 搜索
       "provider": "local",  // 本地搜索
       "options": {   // 配置项
-        "appId": "", 
+        "appId": "",
         "apiKey": "",
         "indexName": "搜索", // 索引名称
         "locales": {   // 配置多语言
           "zh": {
-            "placeholder": "搜索文档",
             "translations": {  // 搜索框提示语
               "button": {  // 搜索按钮
                 "buttonText": "搜索文档",
                 "buttonAriaLabel": "搜索文档"
               },
               "modal": {
-                "searchBox": {
-                  "resetButtonTitle": "清除查询条件",
-                  "resetButtonAriaLabel": "清除查询条件",
-                  "cancelButtonText": "取消",
-                  "cancelButtonAriaLabel": "取消"
-                },
-                "startScreen": {
-                  "recentSearchesTitle": "搜索历史",
-                  "noRecentSearchesText": "没有搜索历史",
-                  "saveRecentSearchButtonTitle": "保存至搜索历史",
-                  "removeRecentSearchButtonTitle": "从搜索历史中移除",
-                  "favoriteSearchesTitle": "收藏",
-                  "removeFavoriteSearchButtonTitle": "从收藏中移除"
-                },
-                "errorScreen": {
-                  "titleText": "无法获取结果",
-                  "helpText": "你可能需要检查你的网络连接"
-                },
-                "footer": {
-                  "selectText": "选择",
-                  "navigateText": "切换",
-                  "closeText": "关闭",
-                  "searchByText": "搜索提供者"
-                },
-                "noResultsScreen": {
-                  "noResultsText": "无法找到相关结果",
-                  "suggestedQueryText": "你可以尝试查询",
-                  "reportMissingResultsText": "你认为该查询应该有结果？",
-                  "reportMissingResultsLinkText": "点击反馈"
-                }
               }
             }
           },
           "en": {
-            "placeholder": "搜索文档",
             "translations": {
               "button": {
                 "buttonText": "搜索文档",
                 "buttonAriaLabel": "搜索文档"
               },
               "modal": {
-                "searchBox": {
-                  "resetButtonTitle": "清除查询条件",
-                  "resetButtonAriaLabel": "清除查询条件",
-                  "cancelButtonText": "取消",
-                  "cancelButtonAriaLabel": "取消"
-                },
-                "startScreen": {
-                  "recentSearchesTitle": "搜索历史",
-                  "noRecentSearchesText": "没有搜索历史",
-                  "saveRecentSearchButtonTitle": "保存至搜索历史",
-                  "removeRecentSearchButtonTitle": "从搜索历史中移除",
-                  "favoriteSearchesTitle": "收藏",
-                  "removeFavoriteSearchButtonTitle": "从收藏中移除"
-                },
-                "errorScreen": {
-                  "titleText": "无法获取结果",
-                  "helpText": "你可能需要检查你的网络连接"
-                },
-                "footer": {
-                  "selectText": "选择",
-                  "navigateText": "切换",
-                  "closeText": "关闭",
-                  "searchByText": "搜索提供者"
-                },
-                "noResultsScreen": {
-                  "noResultsText": "无法找到相关结果",
-                  "suggestedQueryText": "你可以尝试查询",
-                  "reportMissingResultsText": "你认为该查询应该有结果？",
-                  "reportMissingResultsLinkText": "点击反馈"
-                }
               }
             }
           }
@@ -1008,18 +924,17 @@ import { defineConfig } from "vitepress";
     },
     "sidebarMenuLabel": "菜单"
   },
-  "markdown": {  
-    "lineNumbers": true 
+  "markdown": {
+    "lineNumbers": true
   },
   "srcDir": "./",
   "assetsDir": "static",
-  "sitemap": {  
+  "sitemap": {
     "hostname": "https://www.cnai.art",
     "lastmodDateOnly": false
   },
   "locales": {},
   "cacheDir": "./.vitepress/cache",
-  "titleTemplate": ":title|AI系统源码|AI数字人系统|聊天绘画系统|ai平台源码|ai创作系统源码|ai官网源码",  // 标题模板
   "lang": "en-US",
   "base": "/", // 站点的基础路径，默认值是 /
   "outDir": "./.vitepress/dist",

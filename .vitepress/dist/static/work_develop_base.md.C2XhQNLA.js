@@ -1,0 +1,30 @@
+import{_ as s,c as a,o as p,ah as e}from"./chunks/framework.FtlWR-mB.js";const d=JSON.parse('{"title":"基本介绍","description":"","frontmatter":{},"headers":[],"relativePath":"work/develop/base.md","filePath":"work/develop/base.md","lastUpdated":1728302493000}'),l={name:"work/develop/base.md"};function i(r,n,c,b,m,t){return p(),a("div",null,[...n[0]||(n[0]=[e(`<h1 id="基本介绍" tabindex="-1">基本介绍 <a class="header-anchor" href="#基本介绍" aria-label="Permalink to “基本介绍”">​</a></h1><h2 id="项目目录" tabindex="-1">项目目录 <a class="header-anchor" href="#项目目录" aria-label="Permalink to “项目目录”">​</a></h2><div class="language- line-numbers-mode"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span>├─📂 server  //服务端根目录</span></span>
+<span class="line"><span>│  ├─📂 app  //应用目录</span></span>
+<span class="line"><span>│  │  ├─📂 common  //公共模块</span></span>
+<span class="line"><span>│  │  ├─📂 adminapi//管理后台模块接口</span></span>
+<span class="line"><span>│  │  ├─📂 adminapi  //前台后台模块接口</span></span>
+<span class="line"><span>│  ├─📂 license  //授权目录和PHP 扩展文件</span></span>
+<span class="line"><span>│  │  ├─📄 my.license  //授权文件</span></span>
+<span class="line"><span>│  ├─📂 public  //WEB目录（对外访问目录）</span></span>
+<span class="line"><span>│  │  ├─📄 index.php  //php入口文件</span></span>
+<span class="line"><span>│  │  ├─📂 admin  //已编译的后台前端代码入口（上线运行）</span></span>
+<span class="line"><span>│  │  ├─📂 pc  //已编译的PC前台前端代码入口（上线运行）</span></span>
+<span class="line"><span>│  │  ├─📂 mobile  //已编译的手机前台前端代码入口（上线运行）</span></span>
+<span class="line"><span>│  ├─📄 .env  //项目环境配置文件（最优化读取配置）</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>├─📂 admin  //管理后台前端源码</span></span>
+<span class="line"><span>│  ├─📄 .env.development.example  //开发环境配置文件</span></span>
+<span class="line"><span>│  ├─📄 .env.production.example  //生产环境配置文件</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>├─📂 pc  //PC前台前端源码</span></span>
+<span class="line"><span>│  ├─📄 .env.example  //开发环境配置文件</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>├─📂 uniapp  //手机前台源码</span></span>
+<span class="line"><span>│  ├─📄 .env.development.example  //开发环境配置文件</span></span>
+<span class="line"><span>│  ├─📄 .env.production.example  //生产环境配置文件</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>├─📂 docker  //docker配置目录</span></span>
+<span class="line"><span>│  ├─📂 config //所有容器配置</span></span>
+<span class="line"><span>│  ├─📂 data //所有容器数据存储（使用docker请勿删除）</span></span>
+<span class="line"><span>│  ├─📂 log //所有容器日志</span></span>
+<span class="line"><span>│  ├─📄 docker-compose.yml  //docker容器编排</span></span></code></pre><div class="line-numbers-wrapper" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br></div></div><h2 id="持续更新" tabindex="-1">持续更新 <a class="header-anchor" href="#持续更新" aria-label="Permalink to “持续更新”">​</a></h2>`,4)])])}const u=s(l,[["render",i]]);export{d as __pageData,u as default};

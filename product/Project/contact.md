@@ -5,7 +5,7 @@
 - **微信**：userhlc
 - **备用微信**：useraqr
 - **邮箱**：[236749035@qq.com](mailto:236749035@qq.com)
-- **授权中心** https://auth.cnai.art
+- **授权中心** https://cloudcvm.com/
 - **官网**：[https://www.urlnet.cn/](https://www.urlnet.cn/)
 - **艺创AI**：[https://artaigc.cn/](https://artaigc.cn/)
 :::
