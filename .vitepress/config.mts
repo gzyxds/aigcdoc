@@ -822,17 +822,17 @@ import { defineConfig } from "vitepress";
 
     "socialLinks": [    //    社交链接
       {
-        "icon": "github",
+        "icon": "slack",
         "link": "https://urlnet.cn"
       },
       {
-        "icon": "discord",
-        "link": "https://urlnet.cn"
+        "icon": "npm",
+        "link": "https://console.cloudcvm.com/cart/goodsList.htm?fpg_id=61&spg_id=20"
       },
 
       {
-        "icon": "twitter",
-        "link": "https://urlnet.cn"
+        "icon": "github",
+        "link": "https://artaigc.cn"
       },
 
     ],
