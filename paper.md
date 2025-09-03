@@ -51,18 +51,18 @@ hero:
   head: []
 
 features:
-  - icon: 💬
-    title: AI聊天系统
+  - icon: 📚
+    title: 企业知识库
     details: 👉PHP && Java 持续更新中
     link: /guide/start
     linkText: 了解更多
   - icon: 🎨
-    title: AIGC知识库
+    title: 聊天绘画
     details: 👉PHP && Java 持续更新中
     link: /guide/start
     linkText: 了解更多
   - icon: ✍
-    title: AI写作系统
+    title: 论文创作
     details: 👉PHP && Java 持续更新中
     link: /guide/start
     linkText: 了解更多

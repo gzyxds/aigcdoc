@@ -51,21 +51,20 @@ hero:
   head: []
 features:
   - icon: 💬
-    title: AI聊天系统
-    details: 👉PHP && Java 持续更新中
+    title: 企业知识库
+    details: PHP && Java 持续更新中
 
   - icon: 💬
-    title: AIGC知识库
-    details: 👉PHP && Java 持续更新中
+    title: 聊天绘画
+    details: PHP && Java 持续更新中
 
   - icon: 💬
-    title: AI写作系统
-    details: 👉PHP && Java 持续更新中
+    title: 论文创作
+    details: PHP && Java 持续更新中
 
   - icon: 💬
-    title: 接入AI接口
-    details: 👉全新的高颜值/高性能的AI模型接口管理与分发系统
-
+    title: 数字分身
+    details: PHP && Java 持续更新中
 
   - icon: 📚
     title: 全模型支持

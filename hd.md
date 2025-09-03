@@ -77,7 +77,7 @@ features:
   - icon: 🎬
     title: 视频生成
     details: 👉高性能的AI视频生成系统 <br>支持一键生成数字人短视频，可批量制作带货、直播等内容
-    link: https://api.cnai.art
+    link: https://v.cnai.art
     linkText: 了解更多
 
   - icon: 🎯
