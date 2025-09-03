@@ -9,13 +9,13 @@ hero:
       text: 📝 企业知识库
       link: /Work
     - theme: alt
-      text: 🤖 AI数字人
+      text: 🤖 数字分身
       link: /hd
-    - theme: alt  
-      text: 🎨 智能绘画
+    - theme: alt
+      text: 🎨 聊天绘画
       link: /chat
     - theme: alt
-      text: ✍️ 论文助手
+      text: ✍️ 论文创作
       link: /paper
   image:
     src: /images/home/logo.svg
@@ -125,7 +125,7 @@ custom: {}
       <p>扫码添加客服咨询</p>
     </div>
   </div>
-  
+
   <div class="qrcode-card">
     <img src="/images/qrcode.png" alt="技术支持" class="qrcode-image">
     <div class="qrcode-content">
@@ -205,19 +205,19 @@ custom: {}
     gap: 16px;
     padding: 0 16px;
   }
-  
+
   .qrcode-card {
     padding: 16px;
   }
-  
+
   .qrcode-image {
     max-width: 150px;
   }
-  
+
   .qrcode-content h3 {
     font-size: 16px;
   }
-  
+
   .qrcode-content p {
     font-size: 12px;
   }
@@ -228,11 +228,11 @@ custom: {}
     gap: 12px;
     padding: 0 12px;
   }
-  
+
   .qrcode-card {
     padding: 12px;
   }
-  
+
   .qrcode-image {
     max-width: 120px;
   }
@@ -315,7 +315,7 @@ custom: {}
 - 📝 TypeScript确保代码质量
 - 🔧 ESLint + Prettier打造优质代码风格
 
-#### 🌐 PC端 `/pc` 
+#### 🌐 PC端 `/pc`
 - ⚡ Nuxt.js提供SSR解决方案
 - 🛠️ 现代化开发工具链支持
 - 💪 TypeScript全程护航
