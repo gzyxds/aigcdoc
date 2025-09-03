@@ -795,7 +795,7 @@ import { defineConfig } from "vitepress";
               "link": "/product/aigc/Work"
             },
             {
-              "text": "🎭数字分身",
+              "text": "🤖数字分身",
               "link": "/hd"
             },
             {

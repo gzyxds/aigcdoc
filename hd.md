@@ -1,29 +1,48 @@
 ---
-title: 'AI数字人系统源码'  # 修改为您想要的标题
-description: '专注提供AI数字人直播带货解决方案的技术团队「数字人直播系统」「虚拟主播系统」「AI语音合成系统」拥有PHP和Java两种语言版本，支持多平台直播，支持真人面部捕捉，打造专属数字人IP'  # 修改为您想要的描述
+title: '艺创AI_AI系统源码_AI数字人系统_聊天绘画系统_ai平台源码_ai创作系统源码_ai官网源码'
+description: '专注提供AI数字人直播带货解决方案的技术团队「数字人直播系统」「虚拟主播系统」「AI语音合成系统」拥有PHP和Java两种语言版本，支持多平台直播，支持真人面部捕捉，打造专属数字人IP'
+head:
+  - - meta
+    - name: keywords
+      content: "AI数字人,数字人系统,虚拟主播,数字人直播,AI语音合成,直播带货,数字人源码,虚拟主播系统,AI数字员工,数字人IP,真人面部捕捉,多平台直播,PHP数字人,Java数字人,艺创AI"
+  - - meta
+    - name: description
+      content: "专注提供AI数字人直播带货解决方案的技术团队，提供数字人直播系统、虚拟主播系统、AI语音合成系统源码，支持PHP和Java两种语言版本，支持多平台直播，支持真人面部捕捉，打造专属数字人IP"
+  - - meta
+    - property: og:title
+      content: "艺创AI_AI系统源码_AI数字人系统_聊天绘画系统_ai平台源码_ai创作系统源码_ai官网源码"
+  - - meta
+    - property: og:description
+      content: "专业的AI数字人系统源码，支持直播带货、虚拟主播、AI语音合成等功能，PHP和Java双版本，助力企业数字化转型"
+  - - meta
+    - property: og:type
+      content: website
+  - - meta
+    - name: author
+      content: "艺创AI"
 layout: home
 hero:
-  name: 无限多开、全开源
-  text: AIGC数字人SaaS系统
-  tagline: 🤖 专为企业主、个人博主打造短视频IP的数字人源码系统，支持真人声音+形象克隆，一键合成知识付费、课程、带货、形象宣传、行业干货等口播视频。基于SaaS多开模式的架构设计，支持无限OEM贴牌开通站点。版本免费迭代升级+售后技术支撑，让你无后顾之忧！
+  name: 艺创AI
+  text: 数字人系统
+  tagline: 专为企业主、个人博主打造短视频IP的数字人源码系统，支持真人声音+形象克隆，一键合成知识付费、课程、带货、形象宣传、行业干货等口播视频。基于SaaS多开模式的架构设计，支持无限OEM贴牌开通站点。版本免费迭代升级+售后技术支撑，让你无后顾之忧！
   actions:
     - theme: brand
-      text: 🚀 获取演示
+      text: 获取演示
       link: /product/aigc/demo.html
       class: 'primary-btn'
 
     - theme: brand
-      text: 🎨 在线体验
+      text: 在线体验
       link: /product/aigc/demo
       class: 'demo-btn'
 
     - theme: alt
-      text: 💻 获取源码
+      text: 获取源码
       link: /product/Project/contact.html
       class: 'code-btn'
 
-    - theme: alt    
-      text: 🖥️ 官网
+    - theme: alt
+      text: 官网
       link: https://www.urlnet.cn/
       class: 'contact-btn'
 
@@ -35,6 +54,7 @@ hero:
   description: ''
   features: []
   head: []
+
 features:
   - icon: 🤖
     title: 数字人直播
@@ -68,12 +88,12 @@ features:
     title: 高性能系统
     details: >-
       采用分布式架构设计，支持高并发直播，稳定可靠，支持多账号同时在线直播
-  
+
   - icon: 🤖
     title: AI驱动
     details: >-
       支持GPT对话、情感分析、多轮对话等AI能力，让数字人更智能，互动更自然
-      
+
   - icon: 🎨
     title: 形象定制
     details: >-
@@ -103,7 +123,7 @@ features:
     title: 多端适配
     details: >-
       支持PC、手机、平板等多种终端设备，界面自适应，用户体验优良
-      
+
   - icon: 🎤
     title: 实时互动
     details: 支持弹幕互动、礼物打赏、实时问答等多种互动方式，提升直播间活跃度
@@ -148,6 +168,128 @@ custom: {}
 
 ---
 
+<div class="qrcode-container">
+  <div class="qrcode-card">
+    <img src="/images/qrcode.png" alt="客服二维码" class="qrcode-image">
+    <div class="qrcode-content">
+      <h3>客服二维码</h3>
+      <p>扫码添加客服咨询</p>
+    </div>
+  </div>
+
+  <div class="qrcode-card">
+    <img src="/images/qrcode.png" alt="技术支持" class="qrcode-image">
+    <div class="qrcode-content">
+      <h3>技术支持</h3>
+      <p>专业技术团队为您服务</p>
+    </div>
+  </div>
+
+  <div class="qrcode-card">
+    <img src="/images/qq.png" alt="商务QQ" class="qrcode-image">
+    <div class="qrcode-content">
+      <h3>艺创AI</h3>
+      <p>扫码关注艺创AIGC</p>
+    </div>
+  </div>
+
+  <div class="qrcode-card">
+    <img src="/images/cloud.png" alt="云服务" class="qrcode-image">
+    <div class="qrcode-content">
+      <h3>优刻云计算</h3>
+      <p>扫码关注云计算</p>
+    </div>
+  </div>
+</div>
+
+<style>
+.qrcode-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin: 40px auto;
+  max-width: 1400px;
+  padding: 0 20px;
+}
+
+.qrcode-card {
+  background: var(--vp-c-bg-soft);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid var(--vp-c-divider);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qrcode-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--vp-shadow-2);
+  border-color: var(--vp-c-brand);
+}
+
+.qrcode-image {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.qrcode-content h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+
+.qrcode-content p {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: var(--vp-c-text-2);
+}
+
+@media (max-width: 1024px) {
+  .qrcode-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  .qrcode-card {
+    padding: 16px;
+  }
+
+  .qrcode-image {
+    max-width: 150px;
+  }
+
+  .qrcode-content h3 {
+    font-size: 16px;
+  }
+
+  .qrcode-content p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .qrcode-container {
+    gap: 12px;
+    padding: 0 12px;
+  }
+
+  .qrcode-card {
+    padding: 12px;
+  }
+
+  .qrcode-image {
+    max-width: 120px;
+  }
+}
+</style>
+
 ### 🚀数字人直播系统、虚拟主播、企业数字员工解决方案
 
 ::: danger 全套开源代码
@@ -186,11 +328,11 @@ custom: {}
 * 🌟 商业授权包含源码使用权和技术支持服务
 :::
 
-::: tip 🔥 **为什么需要商业授权** 
+::: tip 🔥 **为什么需要商业授权**
 - 商业授权可获得完整源码和技术支持，保障您的商业应用合法合规
 :::
 
-::: info 👉 **如何获取商业授权** 
+::: info 👉 **如何获取商业授权**
 - 联系官方客服购买，提供专业的技术支持和售后服务
 :::
 

@@ -3,26 +3,26 @@ layout: home
 hero:
   name: 艺创AI
   text: 新一代AI系统赋能企业
-  tagline: 我们是一支专注于提供AIGC系统源代码解决方案的技术团队，拥有「🤖AI数字人SaaS系统」「💪企业全能AI变现系统」「🎨AI聊天绘画」「📝AI论文写作」等多种产品，支持PHP和Java两种语言版本，技术实力强，系统体验好，支持私有部署，👨‍💻专业团队、💯售后无忧
+  tagline: 专注于提供AI系统源代码解决方案的技术团队，拥有「🤖AI数字人系统」「💪企业全能AI变现系统」「🎨AI聊天绘画」「📝AI论文写作」等多种产品，支持PHP和Java两种语言版本，技术实力强，系统体验好，支持私有部署，👨‍💻专业团队、💯售后无忧
   actions:
-    - theme: brand
-      text: 📝 企业知识库
+    - theme: alt
+      text: 企业知识库
       link: /Work
     - theme: alt
-      text: 🤖 数字分身
+      text: 数字分身
       link: /hd
     - theme: alt
-      text: 🎨 聊天绘画
+      text: 聊天绘画
       link: /chat
     - theme: alt
-      text: ✍️ 论文创作
+      text: 论文创作
       link: /paper
   image:
     src: /images/home/logo.svg
     alt: 艺创AI
 features:
   - icon: 💻
-    title: SaaS数字人
+    title: 数字分身
     details: 持续更新中，支持声音克隆、数字人合成、SaaS无限多开、代码开源、多终端适配、自定义装修首页
     link: /HD
     linkText: 了解更多
@@ -32,12 +32,12 @@ features:
     link: /Work
     linkText: 了解更多
   - icon: 🎨
-    title: AI绘画聊天
+    title: 绘画聊天
     details: PHP && Java持续更新中，打造属于自己的GPT，实现人人都能拥有自己的ChatAI聊天对话系统
     link: /chat
     linkText: 了解更多
   - icon: ✍
-    title: AI论文写作
+    title: 论文写作
     details: PHP && Java持续更新中，AI智能生成写作大纲，10分钟生成3万字论文的系统
     link: /paper
     linkText: 了解更多

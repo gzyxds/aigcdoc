@@ -14,7 +14,7 @@
 > [!NOTE] 💻 艺创AI开源系统源码程序
 
 > [!TIP] 🔓 平台端 | 用户端 | 管理端 | 后端| 开源源代码【开源代码】和 一个商业授权文件
- 
+
 > [!IMPORTANT] 🔄 系统永久授权永久免费更新、一次性付费、无后续任何费用
 
 > [!WARNING] 🛠️ 支持系统二开、所有源代码开源无加密，方便用户二次开发
@@ -22,7 +22,7 @@
 > [!NOTE] 📄 部署+系统配置文档（提供一份部署文档、提供代部署服务（不免费））
 
 
-> [!TIP]  商业版私有化部署 
+> [!TIP]  商业版私有化部署
 > - 主要面向意向搭建 AI 平台的站长和公司。若只想在线使用 可直接在 ``艺创AI`` 官网官方站使用
 
 
@@ -65,7 +65,7 @@
 
 
 
-> [!IMPORTANT] 系统功能特性 
+> [!IMPORTANT] 系统功能特性
 > - 🚀 基于Vue3、uni-app、ThinkPHP6.x、PostgreSQL、pgvector技术栈开发，支持高并发（万级甚至千万级用户同时请求使用），提供更高的可用性和稳定性。
 > - 📡 支持宝塔常规部署和 Decker 一键部署方式，所有对接配置均可在后台界面上完成。
 > - 🤖 支持 OpenAI 官方 API + One API 等中转对接使用，涵盖 OpenAI 全模型、三方大模型、国内全模型。包括 OpenAI / Azure OpenAI / Anthropic Claude / Google Gemini / Midjourney / 讯飞星火 / 百川 AI / Moonshot / 智谱 ChatGLM / 通义千问 / 云雀大模型 / 腾讯混元 / 360 智脑等模型，还适配 LocalAI / Ollama 等模型 (LLaMa / RWKV / SDXL )，支持 openai 发布最新 gpt-4o 大模型对接使用。
@@ -137,7 +137,7 @@
 - 📝 TypeScript确保代码质量
 - 🔧 ESLint + Prettier打造优质代码风格
 
-#### 🌐 PC端 `/pc` 
+#### 🌐 PC端 `/pc`
 - ⚡ Nuxt.js提供SSR解决方案
 - 🛠️ 现代化开发工具链支持
 - 💪 TypeScript全程护航
@@ -158,7 +158,7 @@
 - 🌟 开发与生产环境一体化
 
 > 项目采用清晰的模块化结构，技术选型紧跟业界潮流，具备出色的可维护性与扩展性。集成了Vue3、uni-app、ThinkPHP6.x、PostgreSQL、pgvector等前沿技术，打造全方位的现代化应用开发平台。
-> 
+>
 
 ## 🌟 核心功能特性
 
@@ -178,12 +178,12 @@
 | 🛠️ 功能亮点 | • 高效文档管理<br>• 智能向量检索<br>• 便捷系统集成 | • 多格式文档一站式导入与管理<br>• AI驱动的精准向量搜索<br>• 丰富的API与插件支持 |
 | 🌐 应用场景 | • 智能客服系统<br>• 文档管理中心<br>• 专业知识服务 | • 提升服务效率,优化用户体验<br>• 智能文档管理与检索<br>• AI辅助的专业知识服务 |
 | 🔗 持续发展 | • 创新能力<br>• 技术支持<br>• 实践经验 | • 持续创新的产品能力<br>• 专业的技术支持<br>• 丰富的行业实践 |
-  
+
 ::: info 📂 官方站点 🌐
-- [🖥️官方网站：](https://www.urlnet.cn/) 
-- [🧠艺创全能知识库：](https://www.cnai.art/) 
-- [🎨艺创聊天绘画：](https://cnai.art/) 
-- 📱官方公众号：艺创AIGC 
+- [🖥️官方网站：](https://www.urlnet.cn/)
+- [🧠艺创全能知识库：](https://www.cnai.art/)
+- [🎨艺创聊天绘画：](https://cnai.art/)
+- 📱官方公众号：艺创AIGC
 :::
 
 
@@ -202,7 +202,7 @@
 *工作时间: 周一至周五 9:00-18:00*
 
 ![联系客服](/images/kf.svg)
- 
+
 💻 **服务器配置要求**：
 服务器配置 2C4G 起步，推荐 4C48G 以及以上配置。
 
@@ -231,12 +231,12 @@
 
 :::
 
- 
 
 
- 
+
+
 ## 🤖 AI数字人SaaS系统演示
-![小程序演示](/images/home/human.svg) 
+![小程序演示](/images/home/human.svg)
 
 ::: tip 🗣️ 系统介绍
 AI数字人SaaS系统「PHP源码版」
@@ -250,7 +250,7 @@ AI数字人SaaS系统「PHP源码版」
 <!-- | ☁️ SaaS平台   | [SaaS端系统演示](https://dm-saas-demo.chatmoney.cn/platform/) | 👤 admin | 🔑 mddaiSaas | -->
 
 
-::: tip ☁️ 小程序演示    ![小程序演示](/images/vxcx.png) 
+::: tip ☁️ 小程序演示    ![小程序演示](/images/vxcx.png)
 :::
 
 ::: info 📂 客户案例
@@ -268,7 +268,7 @@ AI数字人SaaS系统「PHP源码版」
 :::
 
 ::: info 🏭 运营端
-- #### 🖥️ 运营端： [艺创数字人](https://v.cnai.art/) 
+- #### 🖥️ 运营端： [艺创数字人](https://v.cnai.art/)
 - #### 👤 账号：自行注册
 - #### 🔐 密码：自行注册
 :::
@@ -315,7 +315,7 @@ AI数字人SaaS系统「PHP源码版」
 
 
 ## 🧠 全能AI知识库系统演示
-   ![小程序演示](/images/home/work.svg) 
+   ![小程序演示](/images/home/work.svg)
 
 ::: tip 🔍 系统介绍
 艺创AI-全能AI企业知识库系统「PHP源码版」
@@ -405,7 +405,7 @@ AI数字人SaaS系统「PHP源码版」
 
 
 ## 🎨 聊天绘画系统演示
- ![小程序演示](/images/home/ChatPainting.png) 
+ ![小程序演示](/images/home/ChatPainting.png)
 ::: danger 🎨 系统介绍
 艺创AI-聊天绘画系统「PHP源码版」
 :::
@@ -444,10 +444,10 @@ AI数字人SaaS系统「PHP源码版」
 
 > ⚠️ 注：演示站为未授权版本，功能可能不全，购买后将获得最新完整版本
 
- 
+
 
 ## 📚 艺创AI论文写作系统演示
-![小程序演示](/images/home/Thesis.png) 
+![小程序演示](/images/home/Thesis.png)
 ::: tip 📖 系统介绍
 ChatPaper-论文写作系统「PHP源码版」
 :::
@@ -527,8 +527,8 @@ ChatPaper-论文写作系统「PHP源码版」
 ![联系客服](/images/kf.png)
 
 🍵 友情连接：
-- 🔍 AIGC官网：[https://www.urlnet.cn](https://www.urlnet.cn)
-- ☁ 优刻云计算：[https://www.clouudcvm.com](https://www.clouudcvm.com)
+- 🔍 艺创IA官网：[https://www.urlnet.cn](https://www.urlnet.cn)
+- ☁ 优刻云计算：[https://www.cloudcvm.com](https://www.cloudcvm.com)
 - 🔍 172号卡：[https://urlka.cn](https://urlka.cn)
 - 🎉 支付系统：[https://payphp.cn](https://payphp.cn)
 
