@@ -115,7 +115,7 @@ import { defineConfig } from "vitepress";
         ]
       },
       {
-        "text": "💬联系我们",
+        "text": "📞联系我们",
         "items": [
           {
             "text": "📢联系方式",
@@ -852,12 +852,13 @@ import { defineConfig } from "vitepress";
         "icon": "discord",
         "link": "https://urlnet.cn"
       },
-
       {
-        "icon": "discord",
-        "link": "https://urlnet.cn"
+        "icon": {
+          "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\"><path d=\"M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5\"/></svg>"
+        },
+        "link": "https://urlnet.cn",
+        "ariaLabel": "自定义图标"
       },
-
     ],
 
     "i18nRouting": false,
