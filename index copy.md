@@ -168,25 +168,25 @@ custom: {}
 ---
 <div style="display: flex; gap: 20px; margin: 40px auto; max-width: 1200px; justify-content: center; flex-wrap: wrap;">
   <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); min-width: 250px; max-width: 280px; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; flex: 1 1 250px; margin-bottom: 20px;">
-    <img src="/public/images/qrcode.png" alt="客服二维码" style="width: 100%; max-width: 200px; border-radius: 10px; margin-bottom: 15px;">
+    <img src="/images/qrcode.png" alt="客服二维码" style="width: 100%; max-width: 200px; border-radius: 10px; margin-bottom: 15px;">
     <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">客服二维码</p>
     <p style="margin: 5px 0 0; font-size: 14px; color: #666;">扫码添加客服咨询</p>
   </div>
   
   <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); min-width: 250px; max-width: 280px; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; flex: 1 1 250px; margin-bottom: 20px;">
-    <img src="/public/images/qrcode.png" alt="技术支持" style="width: 100%; max-width: 200px; border-radius: 10px; margin-bottom: 15px;">
+    <img src="/images/qrcode.png" alt="技术支持" style="width: 100%; max-width: 200px; border-radius: 10px; margin-bottom: 15px;">
     <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">技术支持</p>
     <p style="margin: 5px 0 0; font-size: 14px; color: #666;">专业技术团队为您服务</p>
   </div>
 
   <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); min-width: 250px; max-width: 280px; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; flex: 1 1 250px; margin-bottom: 20px;">
-    <img src="/public/images/qq.png" alt="商务QQ" style="width: 100%; max-width: 200px; border-radius: 10px; margin-bottom: 15px;">
+    <img src="/images/qq.png" alt="商务QQ" style="width: 100%; max-width: 200px; border-radius: 10px; margin-bottom: 15px;">
     <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">艺创AI</p>
     <p style="margin: 5px 0 0; font-size: 14px; color: #666;">扫码关注艺创AIGC</p>
   </div>
 
   <div style="text-align: center; background: linear-gradient(145deg, #ffffff, #f5f5f5); padding: 25px; border-radius: 15px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); min-width: 250px; max-width: 280px; transition: all 0.3s ease; display: flex; flex-direction: column; align-items: center; flex: 1 1 250px; margin-bottom: 20px;">
-    <img src="/public/images/cloud.png" alt="云服务" style="width: 100%; max-width: 200px; border-radius: 10px; margin-bottom: 15px;">
+    <img src="/images/cloud.png" alt="云服务" style="width: 100%; max-width: 200px; border-radius: 10px; margin-bottom: 15px;">
     <p style="margin: 0; font-size: 18px; color: #333; font-weight: 500;">优刻云计算</p>
     <p style="margin: 5px 0 0; font-size: 14px; color: #666;">扫码关注云计算</p>
   </div>

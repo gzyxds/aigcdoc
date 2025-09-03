@@ -171,7 +171,7 @@
 ## 🔍演示站点
 
 ####  🧠 全能AI知识库系统演示
-   ![小程序演示](/public/images/home/work.png) 
+   ![小程序演示](/images/home/work.png) 
 
 ::: tip 🔍 系统介绍
 艺创AI-全能AI企业知识库系统「PHP源码版」

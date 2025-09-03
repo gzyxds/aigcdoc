@@ -119,7 +119,7 @@ custom: {}
 
 <div class="qrcode-container">
   <div class="qrcode-card">
-    <img src="/public/images/qrcode.png" alt="客服二维码" class="qrcode-image">
+    <img src="/images/qrcode.png" alt="客服二维码" class="qrcode-image">
     <div class="qrcode-content">
       <h3>客服二维码</h3>
       <p>扫码添加客服咨询</p>
@@ -127,7 +127,7 @@ custom: {}
   </div>
   
   <div class="qrcode-card">
-    <img src="/public/images/qrcode.png" alt="技术支持" class="qrcode-image">
+    <img src="/images/qrcode.png" alt="技术支持" class="qrcode-image">
     <div class="qrcode-content">
       <h3>技术支持</h3>
       <p>专业技术团队为您服务</p>
@@ -135,7 +135,7 @@ custom: {}
   </div>
 
   <div class="qrcode-card">
-    <img src="/public/images/qq.png" alt="商务QQ" class="qrcode-image">
+    <img src="/images/qq.png" alt="商务QQ" class="qrcode-image">
     <div class="qrcode-content">
       <h3>艺创AI</h3>
       <p>扫码关注艺创AIGC</p>
@@ -143,7 +143,7 @@ custom: {}
   </div>
 
   <div class="qrcode-card">
-    <img src="/public/images/cloud.png" alt="云服务" class="qrcode-image">
+    <img src="/images/cloud.png" alt="云服务" class="qrcode-image">
     <div class="qrcode-content">
       <h3>优刻云计算</h3>
       <p>扫码关注云计算</p>

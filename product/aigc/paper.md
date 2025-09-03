@@ -21,7 +21,7 @@ hero:
       link: /api-examples
       
   image:
-    src: /public/images/paper.svg
+    src: /images/paper.svg
     alt: ''
     width: ''
     height: ''

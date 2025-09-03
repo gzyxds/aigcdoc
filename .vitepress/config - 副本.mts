@@ -26,7 +26,7 @@ import { defineConfig } from "vitepress";
         "link": "https://auth.cnai.art/"
       },
       {
-        "text": "🖥️项目介绍", 
+        "text": "🖥️项目介绍",
         "items": [
           {
             "text": "📗项目介绍",
@@ -36,7 +36,7 @@ import { defineConfig } from "vitepress";
             "text": "🤖产品授权",
             "link": "/product/Project/auth"
           },
-          {   
+          {
             "text": "🛒授权购买",
             "link": "/product/Project/shop"
           },
@@ -77,7 +77,7 @@ import { defineConfig } from "vitepress";
       },
       {
         "text": "🌍官网",
-        "link": "https://www.urlnet.cn"
+        "link": "https://www.artaigc.cn"
       },
       {
         "text": "🧠AI助手",
@@ -95,7 +95,7 @@ import { defineConfig } from "vitepress";
             "link": "https://v.cnai.art"
           },
           {
-            "text": "📱APP下载", 
+            "text": "📱APP下载",
             "link": "https://www.123865.com/s/AIVRVv-eEIJA"
           }
         ]
@@ -124,10 +124,10 @@ import { defineConfig } from "vitepress";
             "text": "🎉技术支持",
             "link": "/product/Project/contact"
           },
-          
+
         ]
       }
-    ],     
+    ],
     "sidebar": {
       "/work/": [
         {
@@ -144,7 +144,7 @@ import { defineConfig } from "vitepress";
               "link": "https://rwm01l8tn3x.feishu.cn/file/BkclbxFSUohtf8xWYRuc5XB7n1g?from=from_copylink"
             },
             {
-              "text": "🎥 功能演示", 
+              "text": "🎥 功能演示",
               "link": "work/deployment/demo.md"
             },
             {
@@ -285,7 +285,7 @@ import { defineConfig } from "vitepress";
               "link": "/work/develop/base"
             },
             {
-              "text": "🌐 前端开发", 
+              "text": "🌐 前端开发",
               "link": "/work/develop/web"
             },
             {
@@ -330,7 +330,7 @@ import { defineConfig } from "vitepress";
               "link": "/human/deployment/bt"
             },
             {
-              "text": "⚙️ 通用部署 ②", 
+              "text": "⚙️ 通用部署 ②",
               "link": "/human/deployment/general"
             },
             {
@@ -753,7 +753,7 @@ import { defineConfig } from "vitepress";
       ],
       "/product/": [
         {
-          "text": "🎯产品中心", 
+          "text": "🎯产品中心",
           "collapsed": false,
           "collapsible": true,
           "items": [
@@ -763,7 +763,7 @@ import { defineConfig } from "vitepress";
             },
             {
               "text": "🎫商业授权",
-              "link": "/product/Project/auth" 
+              "link": "/product/Project/auth"
             },
             {
               "text": "🤝代理合作",
@@ -783,7 +783,7 @@ import { defineConfig } from "vitepress";
             }
           ]
         },
-        
+
         {
           "text": "🎉艺创AI系统",
           "collapsed": false,
@@ -809,7 +809,7 @@ import { defineConfig } from "vitepress";
               "text": "🖥️系统官网",
               "link": "https://www.urlnet.cn/"
             }
-            
+
           ]
         },
 
@@ -835,7 +835,7 @@ import { defineConfig } from "vitepress";
               "link": "http://www.payphp.cn/"
 
             }
-          
+
           ]
         }
       ]
@@ -851,7 +851,7 @@ import { defineConfig } from "vitepress";
         "icon": "discord",
         "link": "https://urlnet.cn"
       },
-      
+
       {
         "icon": "twitter",
         "link": "https://urlnet.cn"
@@ -873,7 +873,7 @@ import { defineConfig } from "vitepress";
       ['meta', { name: 'msapplication-TileImage', content: '/favicon.ico' }],
       ['meta', { name: 'msapplication-TileColor', content: '#3eaf7c' }]
     ],
-    // "carbonAds": {          
+    // "carbonAds": {
     //   "carbon": "CEBDT27Y"
     // },
     // "carbon": {  // 自定义组件
@@ -899,7 +899,7 @@ import { defineConfig } from "vitepress";
     "search": {   // 搜索
       "provider": "local",  // 本地搜索
       "options": {   // 配置项
-        "appId": "", 
+        "appId": "",
         "apiKey": "",
         "indexName": "搜索", // 索引名称
         "locales": {   // 配置多语言
@@ -1008,12 +1008,12 @@ import { defineConfig } from "vitepress";
     },
     "sidebarMenuLabel": "菜单"
   },
-  "markdown": {  
-    "lineNumbers": true 
+  "markdown": {
+    "lineNumbers": true
   },
   "srcDir": "./",
   "assetsDir": "static",
-  "sitemap": {  
+  "sitemap": {
     "hostname": "https://www.cnai.art",
     "lastmodDateOnly": false
   },

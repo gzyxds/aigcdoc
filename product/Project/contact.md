@@ -57,7 +57,7 @@
 </div>
 
 
-![联系客服](/public/images/kf.svg)
+![联系客服](/images/kf.svg)
 
 
 ## 加入我们
