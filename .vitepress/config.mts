@@ -19,7 +19,7 @@ import { defineConfig } from "vitepress";
     "outlineTitle": "页面导航",
     "nav": [  // 导航栏
       {
-        "text": "🏚️首页",
+        "text": "⌂ 首页",
         "link": "/"
       },
       {

@@ -5,9 +5,9 @@
 - **微信**：userhlc
 - **备用微信**：useraqr
 - **邮箱**：[236749035@qq.com](mailto:236749035@qq.com)
-- **授权中心** https://auth.cnai.art
-- **官网**：[https://www.urlnet.cn/](https://www.urlnet.cn/)
-- **艺创AI**：[https://artaigc.cn/](https://artaigc.cn/)
+- **授权中心** [授权中心](https://console.cloudcvm.com/cart/goodsList.htm?fpg_id=61&spg_id=20)
+- **官网国内**：[https://www.urlnet.cn/](https://www.urlnet.cn/)
+- **官网海外**：[https://www.artaigc.cn/](https://www.artaigc.cn/)
 :::
 
 
@@ -21,16 +21,15 @@
 
 :::
 
-## 🎉 限时特惠活动公告
+## 限时特惠活动公告
 
-## 💫 产品优势
+## 产品优势
+- 一次购买，终身免费更新升级
+- 企业商用首选，完善售后保障
+- AI智能聊天系统，绘画创作无限可能
+- 大模型知识库，专业训练开发
 
-- ✨ 一次购买，终身免费更新升级
-- 🏢 企业商用首选，完善售后保障
-- 🤖 AI智能聊天系统，绘画创作无限可能
-- 📚 大模型知识库，专业训练开发
-
-## 💎 优惠详情
+## 优惠详情
 
 | 产品名称 | <span style="color: #ff4d4f"><del>原价</del></span> | <span style="color: #1890ff">特惠价</span> | 优惠码 | 操作 |
 |---------|------|--------|--------|------|
@@ -39,7 +38,7 @@
 | AI聊天绘画 | <span style="color: #ff4d4f"><del>¥3,800</del></span> | <span style="color: #1890ff">¥2,999</span> | `4ZKgZfv9M` | [立即购买](https://auth.cnai.art) |
 | AI论文写作 | <span style="color: #ff4d4f"><del>¥4,698</del></span> | <span style="color: #1890ff">¥3,200</span> | `lbCG2L0Fq` | [立即购买](https://auth.cnai.art) |
 > 📢 **名额限制**: 每个优惠码仅限10个，抢完即止！
-## 🌟 核心特色
+## 核心特色
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
   <div style="background: #f5f5f5; padding: 1rem; border-radius: 8px;">
