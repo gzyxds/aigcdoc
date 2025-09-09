@@ -71,6 +71,10 @@ import { defineConfig } from "vitepress";
             "link": "/Paper/deployment/bt"
           },
           {
+            "text": "💰艺创智能体",
+            "link": "/agent/doc/demo"
+          },
+          {
             "text": "📚飞书文档",
             "link": "https://rwm01l8tn3x.feishu.cn/wiki/VqNCwBO0KiqWIWkSfdHcDigGnZg?from=from_copylink"
           },
@@ -643,6 +647,7 @@ import { defineConfig } from "vitepress";
               "link": "https://6h5o4vjmdk.apifox.cn"
             }
           ]
+          
         }
       ],
       "/Project/": [
@@ -750,6 +755,31 @@ import { defineConfig } from "vitepress";
         {
           "text": "Markdown",
           "link": "/project/Markdown"
+        }
+      ],
+      "/agent/": [
+        {
+          "text": "艺创智能体",
+          "collapsed": false,
+          "collapsible": true,
+          "items": [
+            {
+              "text": "📖系统介绍",
+              "link": "/agent/doc/demo"
+            },
+            {
+              "text": "🐳Docker部署",
+              "link": "/agent/doc/docker"
+            },
+            {
+              "text": "📊运营指南",
+              "link": "/agent/doc/Operations"
+            },
+            {
+              "text": "🔄更新日志",
+              "link": "/agent/doc/update"
+            }
+          ]
         }
       ],
       "/product/": [

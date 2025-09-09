@@ -45,8 +45,6 @@ import {
   extendRef,
   formatDate,
   formatTimeAgo,
-  formatTimeAgoIntl,
-  formatTimeAgoIntlParts,
   get,
   getLifeCycleTarget,
   getSSRHandler,
@@ -248,7 +246,6 @@ import {
   useThrottleFn,
   useThrottledRefHistory,
   useTimeAgo,
-  useTimeAgoIntl,
   useTimeout,
   useTimeoutFn,
   useTimeoutPoll,
@@ -284,8 +281,8 @@ import {
   watchTriggerable,
   watchWithFilter,
   whenever
-} from "./chunk-XZMJPEYU.js";
-import "./chunk-TH7GRLUQ.js";
+} from "./chunk-ZRLJZSVF.js";
+import "./chunk-U237GAJ4.js";
 export {
   DefaultMagicKeysAliasMap,
   StorageSerializers,
@@ -340,8 +337,6 @@ export {
   extendRef,
   formatDate,
   formatTimeAgo,
-  formatTimeAgoIntl,
-  formatTimeAgoIntlParts,
   get,
   getLifeCycleTarget,
   getSSRHandler,
@@ -549,7 +544,6 @@ export {
   useThrottleFn,
   useThrottledRefHistory,
   useTimeAgo,
-  useTimeAgoIntl,
   useTimeout,
   useTimeoutFn,
   useTimeoutPoll,
@@ -586,3 +580,4 @@ export {
   watchWithFilter,
   whenever
 };
+//# sourceMappingURL=vitepress___@vueuse_core.js.map
