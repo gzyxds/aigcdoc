@@ -31,7 +31,7 @@ hero:
       link: http://localhost:5173/product/Project/auth.html
 
     - text: 部署文档
-      link: /chat
+      link: /agent/doc/demo
 
     - theme: alt
       text: 在线体验
@@ -54,15 +54,15 @@ features:
     title: 企业知识库
     details: PHP && Java 持续更新中
 
-  - icon: 💬
+  - icon: 🎨
     title: 聊天绘画
     details: PHP && Java 持续更新中
 
-  - icon: 💬
+  - icon: 📝
     title: 论文创作
     details: PHP && Java 持续更新中
 
-  - icon: 💬
+  - icon: 🧑
     title: 数字分身
     details: PHP && Java 持续更新中
 
@@ -91,14 +91,14 @@ features:
       用户绘图可自定义公开展示，活跃AIGC社区氛围，同时也可以私有化绘图
 
 
-  - icon: ✨
+  - icon: 🔒
     title:  安全过滤
     details: >-
       多重安全词汇过滤机制：内置词库 -> 自定义词库 -> 第三方（百度内容审核）安全检测，可同时启用
 
 
 
-  - icon: 🎨
+  - icon: 👥
     title: 账号池支持
     details: >-
       同时支持对话、绘画的账号池，包含实时的账号可用性检测以及在线服务开关重启
@@ -146,7 +146,7 @@ features:
       可定义不同的技能模型，用户根据不同技能进行提问，技能分类得越细，AI回答得越准确
 
 
-  - icon: ✨
+  - icon: 🎁
     title: 任务奖励
     details: >-
       注册奖励、分享奖励、邀请奖励，完成任务后会获得对话次数奖励
