@@ -71,8 +71,8 @@ import { defineConfig } from "vitepress";
             "link": "/Paper/deployment/bt"
           },
           {
-            "text": "💰艺创智能体",
-            "link": "/agent/doc/demo"
+            "text": "📖艺创智能体",
+            "link": "/agent/doc/index"
           },
           {
             "text": "📚飞书文档",
