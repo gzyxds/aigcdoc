@@ -611,3 +611,55 @@ git push origin main
 | 应用加载 Logo | `FastbuildAI/apps/web/public/spa-loading.svg` |  
 
 
+## Logo-full.svg 文件应用分析
+
+### 1. `apps/web/public/logo-full.svg`
+
+**应用场景：** 前端Web应用的静态资源
+
+- 这是前端源码中的静态资源文件
+
+**用于登录页面** (`apps/web/app/login/index.vue`)：
+- 当系统没有配置自定义 logo 时，作为默认的完整 logo 显示
+- 显示在登录页面顶部，作为品牌标识
+
+**用于后台管理布局** (`apps/web/common/components/console/layout/components/site-logo.vue`)：
+- 在 "mixture" 布局模式下使用
+- 当没有自定义 logo 时，作为后台管理系统的品牌标识
+
+### 2. `apps/web/.output/public/logo-full.svg`
+
+**应用场景：** 构建后的静态资源
+
+- 这是 Nuxt.js 构建后的输出文件
+- 与源码中的 `apps/web/public/logo-full.svg` 内容相同
+- 在生产环境中被浏览器实际访问的文件
+- 通过 `/logo-full.svg` 路径可以直接访问
+
+### 3. `packages/assets/images/logo-full.svg`
+
+**应用场景：** 共享资源包
+
+- 这是项目共享资源包中的 logo 文件
+- 作为项目的标准品牌资源，可被多个应用模块引用
+- 用于保持项目中所有应用的品牌一致性
+- 可能被后端应用或其他模块引用
+
+### 4. `public/web/logo-full.svg`
+
+**应用场景：** 根目录公共资源
+
+- 根据目录结构分析，`public/web/` 目录当前是空的
+- 这个文件路径在代码中没有被引用
+- 可能是历史遗留文件或者用于特定的部署配置
+
+---
+
+## 使用逻辑总结
+
+| 阶段 | 文件路径 | 说明 |
+|------|----------|------|
+| **源码开发阶段** | `apps/web/public/logo-full.svg` | 源码中的静态资源文件 |
+| **构建生产阶段** | `apps/web/.output/public/logo-full.svg` | 自动复制到构建输出目录 |
+| **共享资源管理** | `packages/assets/images/logo-full.svg` | 统一管理的共享资源 |
+| **降级显示策略** | 所有相关文件 | 当系统未配置自定义 logo 时，使用 logo-full.svg 作为默认品牌标识 |
