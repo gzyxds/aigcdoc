@@ -782,6 +782,10 @@ import { defineConfig } from "vitepress";
             {
               "text": "❓常见问题",
               "link": "/agent/doc/faq"
+            },
+            {
+              "text": "🔄备份恢复",
+              "link": "/agent/doc/backup"
             }
           ]
         }
