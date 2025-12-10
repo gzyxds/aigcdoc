@@ -149,7 +149,7 @@ WebView2。这两者都是在 Windows 上进行开发所必需的。
    安装程序并打开它以开始安装。
 2. 在安装过程中，选中"使用 C++ 的桌面开发"选项。
 
-![Visual Studio C++ 生成工具 安装程序 截图](/images/image.png)
+![Visual Studio C++ 生成工具 安装程序 截图](/public/images/image.png)
 
 下一步：[下载并安装 WebView2](#webview2).
 
