@@ -211,7 +211,7 @@ rustup default stable-msvc
 请务必重新启动终端（在某些情况下重新启动系统）以使更改生效。
 
 
-下一步：如果您想要在 Android 或 iOS 上开发应用，前往[移动端配置](#移动端配置)。或者，如果您想使用 JavaScript 前端框架，前往[安装 Node](#nodejs)。否则，前往[创建新项目](/zh-cn/start/create-project/)。
+下一步：如果您想要在 Android 或 iOS 上开发应用，前往[移动端配置](#移动端配置)。或者，如果您想使用 JavaScript 前端框架，前往[安装 Node](#nodejs)。否则，请参考 Tauri 官方文档创建新项目。
 
 ## Node.js
 
@@ -242,7 +242,7 @@ npm -v
 虽然 npm 是 Node.js 的默认包管理器，但您也可以使用其他包管理器，比如 pnpm 或 yarn。如果您想启用这些包管理器，可以在终端中运行
 `corepack enable`。这一步是可选的，只有在您想使用 npm 以外的包管理器时才需要。
 
-下一步：[移动端配置](#移动端配置)或者[创建新项目](/zh-cn/start/create-project/)。
+下一步：[移动端配置](#移动端配置)或者参考 Tauri 官方文档创建新项目。
 
 ## 应用程序管理
 
@@ -266,7 +266,7 @@ pnpm build:desktop
 
 ## 故障排除
 
-如果您在安装过程中遇到任何问题，请务必查看[故障诊断指南](/zh-cn/develop/debug/)或联系
+如果您在安装过程中遇到任何问题，请参考 Tauri 官方文档的故障诊断指南或联系
 [Tauri Discord](https://discord.com/invite/tauri) 以寻求帮助。
 
 现在，您已经安装了所有前置要求，您可以尝试本地运行或打包桌面端应用。

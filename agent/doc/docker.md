@@ -81,11 +81,11 @@ docker compose up -d
 
 拉取完所有镜像之后，需要 5~10 分钟等待项目构建完成（取决于设备性能和网络环境），具体进度可以查看 nodejs 服务日志。
 
-当日志出现 `➜ Local: http://localhost:4090` 等字样，则表示项目构建完成。
+当日志出现 `➜ Local: `http://localhost:4090`` 等字样，则表示项目构建完成。
 
 ## 访问应用
 
-本地部署访问地址：http://localhost:4090/install 进行站点初始化配置
+本地部署访问地址：`http://localhost:4090` 进行站点初始化配置
 
 ## 服务管理
 
