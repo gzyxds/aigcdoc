@@ -1,264 +1,525 @@
+# BuildingAI 项目结构文档
 
+> 版本: 25.1.0  
+> 生成日期: 2024-12-10
 
-# FastbuildAI项目
+## 📋 项目概述
 
-## 项目概述
+**BuildingAI** 是一个企业级开源智能代理平台，专为 AI 开发者、AI 创业者和前瞻性组织设计。通过可视化配置界面（DIY），无需编码即可构建原生企业 AI 应用。
 
-**FastbuildAI** 是一个现代化的 AI 应用快速开发平台，采用 **Monorepo** 架构，目标是为开发者提供一站式的 AI 应用构建解决方案。
+### 核心特性
 
-## 技术栈架构
+- **AI 对话**: 基于大语言模型的对话式 AI 和文本生成，支持多模态模型
+- **AI 智能体**: 创建具有记忆、目标和工具使用能力的智能体，实现自主任务执行
+- **知识库**: 从文档构建知识库，支持向量搜索和 RAG 增强生成
+- **MCP 集成**: 通过 SSE 和 Streamable HTTP 协议调用 MCP 工具
+- **模型管理**: 在统一 API 规范下集成主流大模型
+- **扩展机制**: 通过安装扩展来扩展系统能力和 AI 技能
+- **计费与支付**: 内置会员管理、计费和支付功能
 
-### 后端技术栈
-- **框架**: NestJS 11.x + TypeScript 5.x
-- **数据库**: PostgreSQL 17.x + TypeORM 0.3.x
-- **缓存**: Redis 4.x
-- **构建工具**: SWC（高性能编译器）
-- **包管理**: pnpm 10.x
-- **进程管理**: PM2
-- **认证**: JWT + bcryptjs
+---
 
-### 前端技术栈
-- **框架**: Nuxt 4.x + Vue 3.x + TypeScript
-- **UI 库**: Nuxt UI 3.x（基于 Radix Vue）
-- **样式**: TailwindCSS 4.x + Sass
-- **构建工具**: Vite 6.x
-- **国际化**: Vue I18n 9.x
-- **状态管理**: Pinia 3.x
+## 🛠️ 技术栈
 
-### 移动端
-- **框架**: uni-app（支持多端：微信小程序、H5、App等）
-- **技术栈**: Vue 3.x + TypeScript
+| 层级 | 技术 | 版本 |
+|------|------|------|
+| **后端框架** | NestJS | 11.x |
+| **ORM** | TypeORM | 0.3.x |
+| **数据库** | PostgreSQL | 17.x |
+| **缓存** | Redis | 8.x |
+| **前端框架** | Vue.js | 3.x |
+| **SSR/SSG** | Nuxt.js | 4.x |
+| **UI 组件** | Nuxt UI | 3.x |
+| **构建工具** | Vite | 7.x |
+| **Monorepo** | Turborepo | 2.x |
+| **包管理器** | pnpm | 10.x |
+| **语言** | TypeScript | 5.x |
+| **桌面应用** | Tauri | - |
+| **进程管理** | PM2 | 6.x |
 
-### DevOps & 工具
-- **构建系统**: Turbo (monorepo 管理)
-- **代码质量**: ESLint + Prettier
-- **容器化**: Docker + Docker Compose
-- **开发工具**: PM2 脚本管理
+---
 
-## 项目架构设计
+## 📁 目录结构
 
-### 1. Monorepo 结构
 ```
-FastbuildAI/
-├── apps/                     # 应用程序
-│   ├── server/              # 后端 API 服务
-│   ├── web/                 # 前端 Web 应用
-│   └── mobile/              # 移动端应用
-├── packages/                # 共享包
-│   ├── ui/                  # UI 组件库
-│   ├── utils/               # 工具函数
-│   ├── constants/           # 常量定义
-│   ├── http/                # HTTP 客户端
-│   ├── config/              # 配置文件
-│   ├── designer/            # 设计器组件
-│   └── assets/              # 静态资源
-└── docker/                  # Docker 配置
+BuildingAI/
+├── 📄 配置文件
+│   ├── .env                    # 环境变量配置
+│   ├── .env.example            # 环境变量示例
+│   ├── package.json            # 根包配置
+│   ├── pnpm-workspace.yaml     # pnpm 工作区配置
+│   ├── turbo.json              # Turborepo 配置
+│   ├── docker-compose.yml      # Docker 编排配置
+│   └── ecosystem.config.js     # PM2 配置
+│
+├── 📦 packages/                # 核心包目录
+│   ├── @buildingai/            # 共享库包
+│   ├── api/                    # 后端 API 服务
+│   ├── cli/                    # 命令行工具
+│   ├── core/                   # 核心业务逻辑
+│   ├── desktop/                # 桌面应用 (Tauri)
+│   └── web/                    # 前端应用
+│
+├── 🔌 extensions/              # 扩展插件目录
+│   └── buildingai-simple-blog/ # 示例博客扩展
+│
+├── 🐳 docker/                  # Docker 相关文件
+│   ├── conf/                   # 配置文件
+│   └── data/                   # 数据持久化
+│
+├── 📜 scripts/                 # 构建脚本
+│   ├── copy-extension-build.mjs
+│   ├── release.mjs
+│   ├── sync-env.mjs
+│   └── translate-i18n.mjs
+│
+├── 🖼️ assets/                  # 静态资源
+├── 📂 public/                  # 公共静态文件
+├── 📂 storage/                 # 存储目录
+├── 📂 templates/               # 模板文件
+└── 📂 logs/                    # 日志目录
 ```
 
-### 2. 后端架构（NestJS）
+---
 
-#### 模块分层
-- **`src/core/`**: 核心基础模块（数据库、缓存、Redis、日志等）
-- **`src/common/`**: 通用组件和工具（基础服务、装饰器、过滤器等）
-- **`src/modules/`**: 业务模块
-  - **`console/`**: 后台管理接口（16个子模块）
-  - **`web/`**: 前台用户接口（10个子模块）
-- **`src/sdk/`**: AI SDK（统一的 AI 接口层）
-- **`src/plugins/`**: 插件系统
+## 📦 packages/@buildingai/ - 共享库包
 
-#### 关键设计模式
-1. **控制器装饰器规范**:
-   - `@ConsoleController()`: 后台管理接口
-   - `@WebController()`: 前台用户接口
-   - `@PluginConsoleController()`: 插件后台接口
+共享库包提供了整个项目的基础设施和通用功能：
 
-2. **基础服务继承**: `BaseService<T>` 提供通用 CRUD 操作
+| 包名 | 说明 |
+|------|------|
+| `ai-sdk` | AI SDK 封装，提供统一的 AI 模型调用接口 |
+| `base` | 基础类和抽象层 |
+| `cache` | 缓存服务封装 (Redis) |
+| `config` | 配置管理模块 |
+| `constants` | 全局常量定义 |
+| `db` | 数据库实体和仓库层 |
+| `decorators` | 自定义装饰器 |
+| `di` | 依赖注入工具 |
+| `dict` | 字典数据管理 |
+| `dto` | 数据传输对象定义 |
+| `errors` | 统一错误处理 |
+| `eslint-config` | ESLint 共享配置 |
+| `extension-sdk` | 扩展开发 SDK |
+| `logger` | 日志服务 |
+| `pipe` | NestJS 管道 |
+| `types` | TypeScript 类型定义 |
+| `typescript-config` | TypeScript 共享配置 |
+| `upgrade` | 版本升级工具 |
+| `utils` | 通用工具函数 |
+| `wechat-sdk` | 微信 SDK 封装 |
 
-3. **权限控制**: 
-   - `@Permissions()`: 后台权限控制
-   - `@Playground()`: 用户上下文信息
-   - `@Public()`: 公共路由标记
+---
 
-### 3. 前端架构（Nuxt）
+## 🖥️ packages/api/ - 后端 API 服务
 
-#### 目录结构
-- **`app/`**: 页面路由（自动路由生成）
-- **`common/`**: 通用组件、工具、状态管理
-- **`core/`**: 核心模块（布局、中间件、插件）
-- **`services/`**: API 服务层
-- **`models/`**: TypeScript 类型定义
+基于 **NestJS 11.x** 构建的后端服务，提供 RESTful API。
 
-#### 特色功能
-1. **多布局支持**: 3种不同的聊天界面布局
-2. **国际化**: Vue I18n 支持多语言
-3. **PWA 就绪**: 支持离线使用
-4. **SSR/SPA**: 混合渲染模式
+### 目录结构
 
-## 核心功能模块分析
+```
+packages/api/
+├── src/
+│   ├── main.ts                 # 应用入口
+│   ├── assets/                 # 静态资源
+│   ├── common/                 # 通用模块
+│   ├── core/                   # 核心配置
+│   └── modules/                # 业务模块
+│       ├── ai/                 # AI 相关模块
+│       │   ├── agent/          # 智能体管理
+│       │   ├── chat/           # 对话管理
+│       │   ├── datasets/       # 数据集/知识库
+│       │   ├── mcp/            # MCP 工具集成
+│       │   ├── model/          # 模型管理
+│       │   ├── provider/       # 模型提供商
+│       │   └── secret/         # 密钥管理
+│       ├── analyse/            # 数据分析
+│       ├── auth/               # 认证授权
+│       ├── channel/            # 渠道管理
+│       ├── config/             # 系统配置
+│       ├── decorate/           # 装修/页面配置
+│       ├── extension/          # 扩展管理
+│       ├── finance/            # 财务管理
+│       ├── health/             # 健康检查
+│       ├── membership/         # 会员管理
+│       ├── menu/               # 菜单管理
+│       ├── pay/                # 支付模块
+│       ├── permission/         # 权限管理
+│       ├── pm2/                # PM2 管理
+│       ├── recharge/           # 充值模块
+│       ├── role/               # 角色管理
+│       ├── schedule/           # 定时任务
+│       ├── system/             # 系统管理
+│       ├── tag/                # 标签管理
+│       ├── upload/             # 文件上传
+│       └── user/               # 用户管理
+```
 
-### 1. AI 对话系统 🤖
+### 主要依赖
 
-**核心特性**:
-- **多模型支持**: 集成 OpenAI、百度文心一言等多个 AI 提供商
-- **流式对话**: 支持实时流式响应
-- **上下文管理**: 智能对话历史管理
-- **MCP 协议**: 支持 Model Context Protocol，可调用外部工具
+- `@nestjs/*` - NestJS 核心模块
+- `typeorm` - ORM 框架
+- `bullmq` - 任务队列
+- `bcryptjs` - 密码加密
+- `openai` - OpenAI SDK
 
-**技术实现**:
-- 统一的 AI SDK 抽象层（`src/sdk/ai/`）
-- 适配器模式支持多个 AI 提供商
-- WebSocket 或 SSE 实现流式响应
-- Token 计费和用户算力管理
+---
 
-### 2. 用户管理系统 👥
+## 🌐 packages/web/ - 前端应用
 
-**功能特点**:
-- **多角色权限**: 超级管理员、普通管理员、用户
-- **JWT 认证**: 安全的身份验证机制
-- **用户算力**: 基于算力的付费计费系统
-- **多端登录**: 支持 Web、移动端统一账户
+基于 **Nuxt 4.x** 和 **Vue 3.x** 构建的前端应用。
 
-### 3. 模型管理 🔧
+### 目录结构
 
-**管理功能**:
-- **提供商管理**: 支持多个 AI 服务提供商
-- **模型配置**: 灵活的模型参数配置
-- **计费规则**: 自定义模型使用计费策略
-- **密钥管理**: 安全的 API Key 管理系统
+```
+packages/web/
+├── @buildingai/                # 前端共享库
+│   ├── designer/               # 可视化设计器
+│   ├── hooks/                  # Vue Composables
+│   ├── http/                   # HTTP 请求封装
+│   ├── i18n-config/            # 国际化配置
+│   ├── layouts/                # 布局组件
+│   ├── nuxt/                   # Nuxt 模块配置
+│   ├── service/                # 业务服务层
+│   ├── stores/                 # Pinia 状态管理
+│   ├── storybook/              # Storybook 配置
+│   ├── ui/                     # UI 组件库
+│   └── web-config/             # Web 配置
+│
+└── buildingai-ui/              # 主前端应用
+    ├── app/
+    │   ├── components/         # 组件
+    │   ├── i18n/               # 国际化文件
+    │   ├── layouts/            # 布局
+    │   ├── middleware/         # 中间件
+    │   ├── pages/              # 页面路由
+    │   │   ├── console/        # 管理后台
+    │   │   │   ├── ai/         # AI 管理
+    │   │   │   ├── dashboard.vue
+    │   │   │   ├── decorate/   # 页面装修
+    │   │   │   ├── financial/  # 财务管理
+    │   │   │   ├── membership/ # 会员管理
+    │   │   │   ├── order/      # 订单管理
+    │   │   │   ├── plugins/    # 插件管理
+    │   │   │   ├── role/       # 角色管理
+    │   │   │   ├── system-setting/ # 系统设置
+    │   │   │   └── user/       # 用户管理
+    │   │   ├── chat/           # 对话页面
+    │   │   ├── login/          # 登录页面
+    │   │   ├── profile/        # 个人中心
+    │   │   ├── install/        # 安装向导
+    │   │   └── public/         # 公开页面
+    │   ├── stores/             # 状态管理
+    │   ├── types/              # 类型定义
+    │   └── utils/              # 工具函数
+    ├── modules/                # Nuxt 模块
+    ├── public/                 # 静态资源
+    └── server/                 # 服务端代码
+```
 
-### 4. 智能体系统 🤖
+### 主要依赖
 
-**核心能力**:
-- **代理配置**: 可配置的智能代理
-- **工具调用**: 支持外部工具集成
-- **自动化任务**: 智能体自主执行任务能力
+- `nuxt` - SSR/SSG 框架
+- `@nuxt/ui` - UI 组件库
+- `pinia` - 状态管理
+- `@vueuse/*` - Vue 工具集
+- `echarts` - 图表库
+- `tiptap` - 富文本编辑器
 
-### 5. 知识库管理 📚
+---
 
-**数据管理**:
-- **文档上传**: 支持多种文档格式
-- **向量检索**: 文本嵌入和语义搜索
-- **知识组织**: 层次化的知识管理
+## ⚙️ packages/core/ - 核心业务逻辑
 
-### 6. 支付充值系统 💰
+提供可复用的核心业务模块：
 
-**支付功能**:
-- **微信支付**: 集成微信支付 v3 API
-- **用户余额**: 算力充值和消费管理
-- **订单管理**: 完整的支付订单流程
+```
+packages/core/src/
+├── @nestjs/                    # NestJS 扩展
+├── decorators/                 # 装饰器
+├── interfaces/                 # 接口定义
+├── modules/
+│   ├── billing/                # 计费模块
+│   ├── extension/              # 扩展模块
+│   ├── queue/                  # 队列模块
+│   ├── secret/                 # 密钥模块
+│   └── upload/                 # 上传模块
+└── services/                   # 服务层
+```
 
-## 数据库设计
+---
 
-### 核心实体关系
-1. **用户体系**: [User](file://e:\Github\FastbuildAI\apps\web\models\order-recharge.d.ts#L106-L109) ↔ [Role](file://e:\Github\FastbuildAI\apps\server\src\common\modules\auth\entities\role.entity.ts#L20-L87) ↔ [Permission](file://e:\Github\FastbuildAI\apps\web\models\permission.d.ts#L3-L20)
-2. **AI 对话**: [AiChatRecord](file://e:\Github\FastbuildAI\apps\server\src\modules\console\ai\entities\ai-chat-record.entity.ts#L19-L187) ↔ [AiChatMessage](file://e:\Github\FastbuildAI\apps\server\src\modules\console\ai\entities\ai-chat-message.entity.ts#L42-L248)
-3. **模型管理**: [AiProvider](file://e:\Github\FastbuildAI\apps\web\models\ai-conversation.d.ts#L237-L250) ↔ [AiModel](file://e:\Github\FastbuildAI\apps\web\models\ai-conversation.d.ts#L217-L235) ↔ [KeyConfig](file://e:\Github\FastbuildAI\apps\web\models\key-templates.d.ts#L43-L55)
-4. **智能体**: [Agent](file://e:\Github\FastbuildAI\apps\web\models\ai-agent.d.ts#L56-L111) ↔ `AgentConfig`
-5. **财务系统**: [AccountLog](file://e:\Github\FastbuildAI\apps\server\src\modules\console\finance\entities\account-log.entity.ts#L17-L114) ↔ [RechargeOrder](file://e:\Github\FastbuildAI\apps\server\src\modules\console\recharge\entities\recharge-order.entity.ts#L16-L147)
+## 🔧 packages/cli/ - 命令行工具
 
-### 设计特点
-- **UUID 主键**: 所有实体使用 UUID 作为主键
-- **软删除**: 支持数据软删除机制
-- **审计字段**: 自动的创建时间和更新时间
-- **命名策略**: 使用 snake_case 数据库命名规范
+提供项目管理的 CLI 工具：
 
-## 安全设计
+```bash
+# 可用命令
+pnpm buildingai <command>
 
-### 1. 认证授权
-- **JWT Token**: 无状态的身份认证
-- **角色权限**: RBAC 权限控制模型
-- **路由守卫**: 前后端统一的权限验证
+# PM2 相关命令
+pnpm pm2:start      # 启动服务
+pnpm pm2:stop       # 停止服务
+pnpm pm2:restart    # 重启服务
+pnpm pm2:status     # 查看状态
+pnpm pm2:logs       # 查看日志
+pnpm pm2:monitor    # 监控面板
 
-### 2. 数据安全
-- **密码加密**: bcryptjs 哈希加密
-- **API Key**: 安全的第三方服务密钥管理
-- **CORS 配置**: 跨域请求安全控制
+# 更新命令
+pnpm bd:update      # 更新项目
+pnpm bd:update-git  # 从 Git 更新
+```
 
-### 3. 输入验证
-- **DTO 验证**: class-validator 数据传输对象验证
-- **管道验证**: NestJS 验证管道
-- **XSS 防护**: DOMPurify 清理用户输入
+---
 
-## 性能优化
+## 🖥️ packages/desktop/ - 桌面应用
 
-### 1. 缓存策略
-- **Redis 缓存**: 热点数据缓存
-- **内存缓存**: 应用内缓存机制
-- **CDN 支持**: 静态资源加速
+基于 **Tauri** 构建的跨平台桌面应用：
 
-### 2. 数据库优化
-- **连接池**: TypeORM 连接池管理
-- **索引优化**: 关键查询字段索引
-- **分页查询**: 统一分页组件
+```
+packages/desktop/
+├── src-tauri/                  # Tauri 源码 (Rust)
+├── scripts/                    # 构建脚本
+├── README.md                   # 英文文档
+└── README.zh-CN.md             # 中文文档
+```
 
-### 3. 前端优化
-- **代码分割**: Vite 动态导入
-- **组件懒加载**: 路由级别的懒加载
-- **图片优化**: 响应式图片和懒加载
+---
 
-## 开发规范
+## 🔌 extensions/ - 扩展系统
 
-### 1. 代码规范
-- **ESLint**: 统一的代码风格检查
-- **Prettier**: 自动代码格式化
-- **TypeScript**: 严格的类型检查
+扩展系统允许开发者扩展平台功能：
 
-### 2. 提交规范
-- **Git 工作流**: 基于分支的开发流程
-- **代码审查**: PR/MR 代码审查机制
+### 扩展结构示例
 
-### 3. 测试策略
-- **单元测试**: Jest 测试框架
-- **集成测试**: API 接口测试
-- **E2E 测试**: 端到端测试覆盖
+```
+extensions/buildingai-simple-blog/
+├── manifest.json               # 扩展清单
+├── package.json                # 包配置
+├── src/
+│   ├── api/                    # 后端 API
+│   └── web/                    # 前端页面
+└── build/                      # 构建输出
+```
 
-## 部署架构
+### 扩展开发
 
-### 1. 容器化部署
-- **Docker**: 应用容器化
-- **Docker Compose**: 多服务编排
-- **数据持久化**: PostgreSQL 数据卷
+扩展可以使用以下共享包：
+- `@buildingai/extension-sdk` - 扩展开发 SDK
+- `@buildingai/core` - 核心功能
+- `@buildingai/db` - 数据库访问
+- `@buildingai/ui` - UI 组件
 
-### 2. 环境配置
-- **多环境**: development/production 环境隔离
-- **环境变量**: 敏感信息环境变量管理
-- **配置中心**: 集中式配置管理
+---
 
-## 项目亮点与特色
+## 🐳 Docker 部署
 
-### 1. 🚀 **现代化技术栈**
-- 采用最新的 NestJS 11 和 Nuxt 4
-- TypeScript 全栈开发
-- 高性能 SWC 编译器
+### 服务组成
 
-### 2. 🔧 **灵活的架构设计**
-- Monorepo 统一管理
-- 模块化设计，高度解耦
-- 插件系统支持功能扩展
+| 服务 | 镜像 | 端口 | 说明 |
+|------|------|------|------|
+| `nodejs` | node:22.20.0 | 4090 | 主应用服务 |
+| `postgres` | postgres:17.6 | 5432 | 数据库 |
+| `redis` | redis:8.2.2 | 6379 | 缓存 |
 
-### 3. 🤖 **强大的 AI 能力**
-- 统一的 AI SDK 抽象层
-- 多提供商无缝切换
-- MCP 协议支持工具调用
+### 快速启动
 
-### 4. 💡 **开发者友好**
-- 详细的开发规范文档
-- 丰富的组件库和工具函数
-- 完善的错误处理机制
+```bash
+# 复制环境变量
+cp .env.example .env
 
-### 5. 🎨 **优秀的用户体验**
-- 响应式设计，支持多设备
-- 多主题和布局选择
-- 流畅的聊天交互体验
+# 启动服务
+docker compose up -d
 
-## 总结
+# 访问安装向导
+# http://localhost:4090/install
+```
 
-**FastbuildAI** 是一个设计精良、架构合理的现代化 AI 应用开发平台。项目采用了业界最佳实践，具有以下突出优势：
+## 更新项目
 
-1. **技术先进性**: 使用最新的技术栈，保证项目的先进性和可维护性
-2. **架构扩展性**: Monorepo + 模块化设计，便于功能扩展和团队协作
-3. **AI 能力强**: 统一的 AI SDK，支持多种 AI 模型和工具调用
-4. **用户体验佳**: 现代化的界面设计和流畅的交互体验
-5. **部署简单**: 容器化部署，支持一键启动
+针对使用 Docker Compose 部署的环境（包括宝塔 Docker 方式），更新步骤如下：
 
-这是一个非常值得学习和参考的现代化全栈 AI 应用项目，无论是技术选型、架构设计还是代码质量都达到了很高的水准。
+1. **进入项目目录**
+   （请根据实际安装路径调整）
+   ```bash
+   cd /www/wwwroot/buildingai
+   ```
+
+2. **拉取最新代码**
+   ```bash
+   git pull
+   # 如果有本地修改冲突，可尝试重置：git reset --hard
+   ```
+
+3. **拉取最新镜像**
+   ```bash
+   docker compose pull
+   ```
+
+4. **重启容器服务**
+   此命令会重建容器并启动服务，启动过程会自动执行构建（可能需要几分钟）。
+   ```bash
+   docker compose up -d
+   ```
+
+#### 处理 Git 更新冲突
+
+如果执行 `git pull` 时提示冲突（例如 `error: Your local changes...`），请根据情况选择以下方法：
+
+**方法一：强制覆盖（推荐）**
+
+这会丢弃服务器上所有未提交的修改，将代码重置为远程仓库的最新状态。
+
+```bash
+# 1. 重置所有文件到最新状态
+git reset --hard  
+
+- 这个命令会将当前分支的HEAD重置到当前分支的最新提交
+- 它不会与远程仓库进行任何同步
+- 如果您的本地已经落后于远程仓库，这个命令不会获取最新的远程更改
+- 它只会丢弃您本地的未提交更改，但不会获取远程的新代码
+
+# git reset --hard origin/master
+
+- 这个命令会将当前分支的HEAD重置到远程仓库(origin)的master分支的最新提交
+- 它会强制使您的本地分支与远程master分支完全一致
+- 这会丢弃所有本地提交和未提交的更改
+- 即使您的本地落后于远程，这个命令也会使您的本地与远程完全同步
+
+# 2. 拉取最新代码
+git pull
+
+# 3. 重启容器（会自动重新构建）
+docker compose up -d
+```
+
+**方法二：保留修改（仅当您修改了源码想保留时）**
+
+```bash
+# 1. 暂存您的修改
+git stash
+
+# 2. 拉取最新代码
+git pull
+
+# 3. 恢复您的修改（可能会有冲突需要手动解决）
+git stash pop
+
+# 4. 重启容器
+docker compose up -d
+```
+
+---
+
+## 📜 NPM Scripts
+
+### 开发命令
+
+```bash
+pnpm dev              # 启动所有开发服务
+pnpm dev:api          # 启动后端开发服务
+pnpm dev:web          # 启动前端开发服务
+pnpm dev:desktop      # 启动桌面应用开发
+```
+
+### 构建命令
+
+```bash
+pnpm build            # 构建所有包
+pnpm build:api        # 构建后端
+pnpm build:web        # 构建前端
+pnpm build:desktop    # 构建桌面应用
+```
+
+### 代码质量
+
+```bash
+pnpm lint             # 代码检查
+pnpm lint:fix         # 自动修复
+pnpm format           # 代码格式化
+pnpm typecheck        # 类型检查
+```
+
+### 其他命令
+
+```bash
+pnpm clean            # 清理构建产物
+pnpm sync-env         # 同步环境变量
+pnpm start            # 生产环境启动
+```
+
+---
+
+## 🔐 环境变量
+
+主要环境变量配置（参考 `.env.example`）：
+
+| 变量 | 说明 | 默认值 |
+|------|------|--------|
+| `APP_NAME` | 应用名称 | BuildingAI |
+| `APP_DOMAIN` | 应用域名 | localhost |
+| `SERVER_PORT` | 服务端口 | 4090 |
+| `JWT_SECRET` | JWT 密钥 | - |
+| `DB_HOST` | 数据库主机 | localhost |
+| `DB_PORT` | 数据库端口 | 5432 |
+| `DB_DATABASE` | 数据库名 | buildingai |
+| `REDIS_HOST` | Redis 主机 | localhost |
+| `REDIS_PORT` | Redis 端口 | 6379 |
+
+---
+
+## 📊 系统要求
+
+### 最低配置
+
+- **CPU**: ≥ 2 核
+- **内存**: ≥ 4 GB RAM
+- **存储**: ≥ 5 GB 可用空间
+- **Node.js**: 22.20.x (< 23)
+
+### 推荐配置
+
+- **CPU**: ≥ 4 核
+- **内存**: ≥ 8 GB RAM
+- **存储**: ≥ 20 GB SSD
+
+## 🖼️ Logo 资源路径
+
+### 主要 Logo 文件
+
+| 路径 | 说明 |
+|------|------|
+| `assets/logo.png` | 项目主 Logo |
+| `packages/web/buildingai-ui/public/logo.svg` | 前端 Logo (SVG) |
+| `packages/web/buildingai-ui/public/logo-full.svg` | 前端完整 Logo (SVG) |
+| `public/web/logo.svg` | 构建输出 Logo |
+| `public/web/logo-full.svg` | 构建输出完整 Logo |
+
+### Favicon 图标
+
+| 路径 | 说明 |
+|------|------|
+| `packages/web/buildingai-ui/public/favicon.ico` | 网站图标 |
+| `packages/web/buildingai-ui/public/maskable-icon.png` | PWA 可遮罩图标 |
+| `public/web/favicon.ico` | 构建输出图标 |
+
+### 桌面应用图标 (Tauri)
+
+| 路径 | 说明 |
+|------|------|
+| `packages/desktop/src-tauri/icons/icon.ico` | Windows 图标 |
+| `packages/desktop/src-tauri/icons/icon.icns` | macOS 图标 |
+| `packages/desktop/src-tauri/icons/32x32.png` | 32x32 PNG |
+| `packages/desktop/src-tauri/icons/128x128.png` | 128x128 PNG |
+| `packages/desktop/src-tauri/icons/128x128@2x.png` | 128x128 @2x PNG |
+
+### Logo 组件
+
+| 路径 | 说明 |
+|------|------|
+| `packages/web/@buildingai/layouts/src/console/components/site-logo.vue` | 后台 Logo 组件 |
+| `packages/web/@buildingai/layouts/src/web/components/web-site-logo.vue` | 前台 Logo 组件 |
+
+
+
+
+

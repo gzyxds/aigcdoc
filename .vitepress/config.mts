@@ -71,7 +71,7 @@ import { defineConfig } from "vitepress";
             "link": "/Paper/deployment/bt"
           },
           {
-            "text": "📖艺创智能体",
+            "text": "📖BuildingAI",
             "link": "/agent/doc/index"
           },
           {
@@ -759,25 +759,29 @@ import { defineConfig } from "vitepress";
       ],
       "/agent/": [
         {
-          "text": "艺创智能体",
+          "text": "BuildingAI",
           "collapsed": false,
           "collapsible": true,
           "items": [
             {
               "text": "📖系统介绍",
-              "link": "/agent/doc/demo"
+              "link": "/agent/doc"
             },
             {
               "text": "🐳Docker部署",
               "link": "/agent/doc/docker"
             },
             {
-              "text": "📊运营指南",
-              "link": "/agent/doc/Operations"
+              "text": "📊开发文档",
+              "link": "/agent/doc/development"
             },
             {
-              "text": "🔄更新日志",
-              "link": "/agent/doc/update"
+              "text": "🔄打包文档",
+              "link": "/agent/doc/bale"
+            },
+            {
+              "text": "❓常见问题",
+              "link": "/agent/doc/faq"
             }
           ]
         }
